@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>동북선도시철도(주)</title>
+  <script type="module" crossorigin src="/assets/main-Ca1rWdEc.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/main.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <!--  메인일때와 서브일때 분기 필요 -->
+<div id="skipnavi">
+   <!-- 메인 페이지일때 -->
+	<a href="#main-content">메인본문 바로가기</a>
+	<a href="#gnb">대메뉴 바로가기</a>
+
+  <!-- 서브 페이지일때 -->
+	<!-- <a href="#page-content">본문 바로가기</a>
+	<a href="#gnb">대메뉴 바로가기</a> -->
+  <!--// 서브 페이지일때 -->
+</div>
+
+<header id="header">
+  <div class="inner">
+    <h1 class="logo">
+      <a href="/"> <img src="/icons/logo.svg" alt="동북선도시철도(주) 메인으로이동" /> </a>
+      <a href="/" class="mobile-logo" aria-hidden="true" tabindex="-1">
+        <img src="/icons/logo.svg" alt="동북선도시철도(주) 메인으로이동" />
+      </a>
+    </h1>
+    <!-- nav -->
+    <div class="nav-wrap">
+      <nav id="gnb" aria-label="메인 메뉴">
+        <ul class="gnb-list">
+          <li>
+            <a href="#" class="gnb-link">이용안내</a>
+            <div class="gnb-submenu-wrap">
+              <div class="gnb-box">
+                <div class="gnb-title">
+                  <h2>이용안내</h2>
+                </div>
+                <ul class="gnb-depth2-list">
+                  <li>
+                    <a href="#"><span>역정보</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>열차시간표</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>실시간 열차 정보</span></a>
+                  </li>
+                  <li>
+                    <a href="#" id="list-01-4"><span>운임안내</span></a><!-- 웹접근성 2026-01-27 : id 추가 -->
+                    <ul class="gnb-depth3-list" aria-labelledby="list-01-4"><!-- 웹접근성 2026-01-27 : aria 추가 -->
+                      <li>
+                        <a href="#"><span>운임제도</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>승차권 안내</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>여객운송약관</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" id="list-01-5"><span>편의시설</span></a><!-- 웹접근성 2026-01-27 : id 추가 -->
+                    <ul class="gnb-depth3-list" aria-labelledby="list-01-5"><!-- 웹접근성 2026-01-27 : aria 추가 -->
+                      <li>
+                        <a href="#"><span>편의시설 소개</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>교통약자 편의시설</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>이용자 편의시설</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"><span>유실물 센터</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>간편지연증명서</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>승강설비가동현황</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="gnb-link">고객참여</a>
+            <div class="gnb-submenu-wrap">
+              <div class="gnb-box">
+                <ul class="gnb-depth2-list">
+                  <li>
+                    <a href="#" id="list-02-1"><span>고객의 소리</span></a>
+                    <ul class="gnb-depth3-list" aria-labelledby="list-02-1">
+                      <li>
+                        <a href="#"><span>이용안내</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>승차권 안내</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" id="list-02-2"><span>문화마당</span></a>
+                    <ul class="gnb-depth3-list" aria-labelledby="list-02-2">
+                      <li>
+                        <a href="#"><span>이용안내</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>신청하기</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" id="list-02-3"><span>촬영신청</span></a>
+                    <ul class="gnb-depth3-list" aria-labelledby="list-02-3">
+                      <li>
+                        <a href="#"><span>이용안내</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>신청하기</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"><span>광고문의</span></a>
+                  </li>
+                  <li>
+                    <a href="#" id="list-02-5"><span>이벤트/공모</span></a>
+                    <ul class="gnb-depth3-list" aria-labelledby="list-02-5">
+                      <li>
+                        <a href="#"><span>이벤트/공모 참여</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>당첨자 확인</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>참여후기</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"><span>자주묻는 질문</span></a>
+                  </li>
+                  <li>
+                    <a href="#" id="list-02-7"><span>부패방지신고센터</span></a>
+                    <ul class="gnb-depth3-list" aria-labelledby="list-02-7">
+                      <li>
+                        <a href="#"><span>이용안내</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>신고하기</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="gnb-link">알림마당</a>
+            <div class="gnb-submenu-wrap">
+              <div class="gnb-box">
+                <div class="gnb-title">
+                  <h2>알림마당</h2>
+                </div>
+                <ul class="gnb-depth2-list">
+                  <li>
+                    <a href="#"><span>공지사항</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>보도자료</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>자료실</span></a>
+                  </li>
+                  <li>
+                    <a href="#" id="list-03-4"><span>홍보관</span></a>
+                    <ul class="gnb-depth3-list" aria-labelledby="list-03-4">
+                      <li>
+                        <a href="#"><span>홍보영상</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>포토갤러리</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"><span>입찰공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>감사결과</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="gnb-link">안전/기술</a>
+            <div class="gnb-submenu-wrap">
+              <div class="gnb-box">
+                <div class="gnb-title">
+                  <h2>안전/기술</h2>
+                </div>
+                <ul class="gnb-depth2-list">
+                  <li>
+                    <a href="#"><span>안전관리체계</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>비상시 행동요령</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>안전장비 및 사용법</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>지하철이용 안전수칙</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>종합관제센터</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>차량소개</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="gnb-link">회사소개</a>
+            <div class="gnb-submenu-wrap">
+              <div class="gnb-box">
+                <div class="gnb-title">
+                  <h2>회사소개</h2>
+                </div>
+                <ul class="gnb-depth2-list">
+                  <li>
+                    <a href="#" id="list-05-1"><span>에스지레일(주)</span></a>
+                    <ul class="gnb-depth3-list" aria-labelledby="list-05-1">
+                      <li>
+                        <a href="#"><span>회사소개</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>채용공고</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>찾아오시는 길</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" id="list-05-2"><span>지티엑스에이운영㈜</span></a>
+                    <ul class="gnb-depth3-list" aria-labelledby="list-05-2">
+                      <li>
+                        <a href="#"><span>회사소개</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>인재상</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>채용공고</span></a>
+                      </li>
+                      <li>
+                        <a href="#"><span>찾아오시는 길</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!--// nav -->
+    <!-- 전체메뉴 버튼 -->
+    <button class="btn-total-menu" aria-controls="allMenuPop" aria-expanded="false">
+      <i class="ico-menu" aria-hidden="true"></i>
+      <span class="txt-hide">전체메뉴</span>
+    </button>
+    <!--// 전체메뉴 버튼 -->
+    <!-- 모바일메뉴 버튼 -->
+    <button class="btn-gnb-toggle" aria-controls="mobile-menu" aria-expanded="false">
+      <i class="ico-menu-mobile" aria-hidden="true"></i>
+      <span class="txt-hide">모바일메뉴</span>
+    </button>
+    <!--// 모바일메뉴 버튼 -->
+  </div>
+</header>
+
+    <!--// header -->
+
+    <!-- 전체메뉴 -->
+    <div class="all-menu" id="allMenuPop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="all-menu-inner">
+    <div class="all-menu-header">
+      <h2>
+        <img src="/icons/logo.svg" alt="동북선도시철도(주) 로고" />
+      </h2>
+      <button type="button" class="all-menu-close" aria-label="전체메뉴 닫기">
+        <i class="ico-allmenu-close" aria-hidden="true"></i>
+      </button>
+    </div>
+    <nav class="all-menu-body" aria-label="사이트맵">
+      <section class="all-menu-col" aria-labelledby="allmenu-title-1">
+        <h3 id="allmenu-title-1" class="all-menu-title">이용안내</h3>
+        <ul class="all-menu-list">
+          <li>
+            <a href="#" class="all-menu-link"><span>역정보</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link" id="menu-01-2"><span>열차시간표</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-01-2">
+              <li>
+                <a href="#"><span>운정중앙역-서울역</span></a>
+              </li>
+              <li>
+                <a href="#"><span>수서역-동탄역</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>실시간 열차 정보</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link" id="menu-01-3"><span>운임안내</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-01-3">
+              <li>
+                <a href="#"><span>운임제도</span></a>
+              </li>
+              <li>
+                <a href="#"><span>승차권안내</span></a>
+              </li>
+              <li>
+                <a href="#"><span>여객운송약관</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link" id="menu-01-4"><span>편의시설</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-01-4">
+              <li>
+                <a href="#"><span>편의시설 소개</span></a>
+              </li>
+              <li>
+                <a href="#"><span>교통약자 편의시설</span></a>
+              </li>
+              <li>
+                <a href="#"><span>이용자 편의시설</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>유실물센터</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>간편지연증명서</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>승강설비가동현황</span></a>
+          </li>
+        </ul>
+      </section>
+      <!-- 고객참여 -->
+      <section class="all-menu-col" aria-labelledby="allmenu-title-2">
+        <h3 id="allmenu-title-2" class="all-menu-title">고객참여</h3>
+        <ul class="all-menu-list">
+          <li>
+            <a href="#" class="all-menu-link" id="menu-02-1"><span>고객의 소리</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-02-1">
+              <li>
+                <a href="#"><span>이용안내</span></a>
+              </li>
+              <li>
+                <a href="#"><span>작성하기</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link" id="menu-02-2"><span>문화마당</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-02-2">
+              <li>
+                <a href="#"><span>이용안내</span></a>
+              </li>
+              <li>
+                <a href="#"><span>신청하기</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link" id="menu-02-3"><span>이벤트/공모</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-02-3">
+              <li>
+                <a href="#"><span>이벤트/공모 참여</span></a>
+              </li>
+              <li>
+                <a href="#"><span>당첨자확인</span></a>
+              </li>
+              <li>
+                <a href="#"><span>참여후기</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>FAQ</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link" id="menu-02-4"><span>부패방지신고센터</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-02-4">
+              <li>
+                <a href="#"><span>이용안내</span></a>
+              </li>
+              <li>
+                <a href="#"><span>신고하기</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 알림마당 -->
+      <section class="all-menu-col" aria-labelledby="allmenu-title-3">
+        <h3 id="allmenu-title-3" class="all-menu-title">알림마당</h3>
+        <ul class="all-menu-list">
+          <li>
+            <a href="#" class="all-menu-link"><span>공지사항</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>보도자료</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>자료실</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link" id="menu-03-4"><span>홍보관</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-03-4">
+              <li>
+                <a href="#"><span>홍보영상</span></a>
+              </li>
+              <li>
+                <a href="#"><span>포토갤러리</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>입찰공고</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>감사결과</span></a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 안전/기술 -->
+      <section class="all-menu-col" aria-labelledby="allmenu-title-4">
+        <h3 id="allmenu-title-4" class="all-menu-title">안전/기술</h3>
+        <ul class="all-menu-list">
+          <li>
+            <a href="#" class="all-menu-link"><span>안전관리체계</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>비상시 행동요령</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>안전장비 및 사용법</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>지하철이용 안전수칙</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>종합관제센터</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>차량소개</span></a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 회사소개 -->
+      <section class="all-menu-col" aria-labelledby="allmenu-title-5">
+        <h3 id="allmenu-title-5" class="all-menu-title">회사소개</h3>
+        <ul class="all-menu-list">
+          <li>
+            <a href="#" class="all-menu-link" id="menu-05-1"><span>에스지레일(주)</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-05-1">
+              <li>
+                <a href="#"><span>회사소개</span></a>
+              </li>
+              <li>
+                <a href="#"><span>채용공고</span></a>
+              </li>
+              <li>
+                <a href="#"><span>찾아오시는 길</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link" id="menu-05-2"><span>지티엑스에이운영(주)</span></a>
+            <ul class="all-menu-depth2" aria-labelledby="menu-05-2">
+              <li>
+                <a href="#"><span>회사소개</span></a>
+              </li>
+              <li>
+                <a href="#"><span>인재상</span></a>
+              </li>
+              <li>
+                <a href="#"><span>채용공고</span></a>
+              </li>
+              <li>
+                <a href="#"><span>찾아오시는 길</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 외부링크 -->
+       <section class="all-menu-col" aria-labelledby="allmenu-title-6">
+        <h3 id="allmenu-title-5" class="all-menu-title">외부링크</h3>
+        <ul class="all-menu-list">
+          <li>
+            <a href="#" class="all-menu-link"><span>네이버</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>단테하는사람 나야나</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>관리자페이지</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>다음</span></a>
+          </li>
+          <li>
+            <a href="#" class="all-menu-link"><span>유튜브</span></a>
+          </li>
+        </ul>
+      </section>
+
+    </nav>
+  </div>
+</div>
+
+    <!--// 전체메뉴 -->
+
+    <!-- 모바일 메뉴 -->
+    <div class="modal" id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <img src="/images/main/logo-w.svg" alt="동북선도시철도(주) 로고" />
+      <button type="button" class="modal-btn-close">
+        <i class="ico-menu-close" aria-hidden="true"></i>
+        <span class="txt-hide">메뉴닫기</span>
+      </button>
+    </div>
+    <div class="menu-body">
+      <ul class="mobile-depth1-list">
+        <li class="is-open">
+          <a href="#"><span>이용안내</span></a>
+          <ul class="mobile-depth2-list">
+            <li>
+              <a href="#"><span>역정보</span></a>
+            </li>
+            <li>
+              <a href="#"><span>열차시간표</span></a>
+            </li>
+            <li>
+              <a href="#"><span>실시간 열차 정보</span></a>
+            </li>
+            <li>
+              <a href="#"><span>운임안내</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>운임제도</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>승차권 안내</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>여객운송약관</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>편의시설</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>편의시설 소개</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>교통약자 편의시설</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>이용자 편의시설</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>유실물 센터</span></a>
+            </li>
+            <li>
+              <a href="#"><span>간편지연증명서</span></a>
+            </li>
+            <li>
+              <a href="#"><span>승강설비가동현황</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><span>고객참여</span></a>
+          <ul class="mobile-depth2-list">
+            <li>
+              <a href="#"><span>고객의 소리</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>이용안내</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>승차권 안내</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>문화마당</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>이용안내</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>신청하기</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>촬영신청</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>이용안내</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>신청하기</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>광고문의</span></a>
+            </li>
+            <li>
+              <a href="#"><span>이벤트/공모</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>이벤트/공모 참여</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>당첨자 확인</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>참여후기</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>자주묻는 질문</span></a>
+            </li>
+            <li>
+              <a href="#"><span>부패방지신고센터</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>이용안내</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>신고하기</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><span>알림마당</span></a>
+          <ul class="mobile-depth2-list">
+            <li>
+              <a href="#"><span>공지사항</span></a>
+            </li>
+            <li>
+              <a href="#"><span>보도자료</span></a>
+            </li>
+            <li>
+              <a href="#"><span>자료실</span></a>
+            </li>
+            <li>
+              <a href="#"><span>홍보관</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>홍보영상</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>포토갤러리</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>입찰공고</span></a>
+            </li>
+            <li>
+              <a href="#"><span>감사결과</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><span>안전/기술</span></a>
+          <ul class="mobile-depth2-list">
+            <li>
+              <a href="#"><span>안전관리체계</span></a>
+            </li>
+            <li>
+              <a href="#"><span>비상시 행동요령</span></a>
+            </li>
+            <li>
+              <a href="#"><span>안전장비 및 사용법</span></a>
+            </li>
+            <li>
+              <a href="#"><span>지하철이용 안전수칙</span></a>
+            </li>
+            <li>
+              <a href="#"><span>종합관제센터</span></a>
+            </li>
+            <li>
+              <a href="#"><span>차량소개</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><span>회사소개</span></a>
+          <ul class="mobile-depth2-list">
+            <li>
+              <a href="#"><span>에스지레일(주)</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>회사소개</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>채용공고</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>찾아오시는 길</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>지티엑스에이운영㈜</span></a>
+              <ul class="mobile-depth3-list">
+                <li>
+                  <a href="#"><span>회사소개</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>인재상</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>채용공고</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>찾아오시는 길</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <!--// 모바일 메뉴 -->
+
+    <!-- main -->
+    <main id="sub-content" role="main">
+      <div class="inner">
+        <!-- contents -->
+        <section id="page-content" class="page-intro">
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>CI Brand Identity</strong><span>CI소개</span>
+              </h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li class="is-active">
+                    <span>CI소개</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/images/intro/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+
+          
+          <!-- sub-contents -->
+          <div class="ci-wrap">
+            <div class="ci-box" data-animation="fade-up">
+              <div class="ci-box-img">
+                <img src="/images/intro/logo.svg" alt="동북선도시철도 로고" />
+              </div>
+              <p class="ci-box-desc">
+                기업의 아이덴티티는 임직원들로 하여금 기업의 가치를 공유하게 하고 기업의 정체성을 <br>내재화시키는 경영전량 가운데 하나이다. 지속성, 일관성, 통일성이 매우 중요하다
+              </p>
+            </div>
+            <section class="ci-section" data-animation="fade-up">
+              <div class="ci-section-head">
+                <h3 class="ci-section-title">국문 상하조합</h3>
+              </div>
+              <div class="ci-section-body-wrap">
+                <div class="ci-section-body">
+                  <div class="ci-imgs">
+                    <div class="ci-img">
+                      <img src="/images/intro/gtx-a-logo-02.svg" alt="GTXA 지티엑스에이 운영주식회사 가로형1" />
+                    </div>
+                    <div class="ci-img">
+                      <img src="/images/intro/gtx-a-logo-03.svg" alt="GTXA - Great Train eXpress A-Line Operation 가로형2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="ci-section-body">
+                  <div class="ci-imgs">
+                    <div class="ci-img">
+                      <img src="/images/intro/gtx-a-logo-02.svg" alt="GTXA 지티엑스에이 운영주식회사 가로형1" />
+                    </div>
+                    <div class="ci-img">
+                      <img src="/images/intro/gtx-a-logo-03.svg" alt="GTXA - Great Train eXpress A-Line Operation 가로형2" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="ci-section" data-animation="fade-up">
+              <div class="ci-section-head">
+                <h3 class="ci-section-title">심볼형</h3>
+              </div>
+              <div class="ci-section-body">
+                <div class="ci-imgs">
+                  <div class="ci-img">
+                    <img src="/images/intro/gtx-a-logo-04.svg" alt="GTXA 지티엑스에이운영(주) 심볼 로고타입1" />
+                  </div>
+                  <div class="ci-img">
+                    <img src="/images/intro/gtx-a-logo-05.svg" alt="GTXA 지티엑스에이운영(주) GREAT TRAIN EXPRESS A-LINE OPERATION 심볼 로고타입2" />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- text box -->
+            <div class="text-box" data-animation="fade-up">
+              <p class="text-box-desc">
+                CI는 브랜드 커뮤니케이션에서 핵심이 되는 대표적인 디자인 상징물이자 중요한
+                자산입니다. 임의로 변경하거나 왜곡하는 것을 금지하며, 구현되는 환경에
+                최적화되도록 신중하게 사용하기 바랍니다.
+              </p>
+            </div>
+            <!--// text box -->
+
+            <!-- 버튼 -->
+            <div class="btn-wrap" data-animation="fade-up">
+              <a href="#" class="btn-primary lg">
+                <span>CI 가이드 다운로드</span>
+                <i class="ico-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <!--// 버튼 -->
+          </div>
+          <!--// sub-contents -->
+
+
+        </section>
+        <!--// contents -->
+      </div>
+    </main>
+    <!--// main -->
+
+    <!-- footer -->
+    <footer id="footer" role="contentinfo">
+  <div class="inner">
+    <div class="footer-top">
+      <nav aria-label="푸터 메뉴">
+        <ul class="footer-nav">
+          <li><a href="/#">개인정보처리방침</a></li>
+          <li><a href="#footerPop">이메일무단수집거부</a></li>
+          <li><a href="/#">여객운송약관</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <address>
+        <p><strong>동북선</strong>서울시 동대문구 왕산로 127(제기동 1132)</p>
+        <p>COPYRIGHT © Dongbuk Urban Railway Co.,Ltd.</p>
+      </address>
+      <div class="logo"><img src="/images/main/logo-footer.svg" alt="동북선 로고" /></div>
+    </div>
+  </div>
+</footer>
+
+    <!--// footer -->
+  </div>
+
+</body>
+</html>
