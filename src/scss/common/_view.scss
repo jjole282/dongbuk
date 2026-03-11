@@ -1,0 +1,265 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.table-view {
+  .title-area {
+    padding: rem(16) rem(20);
+    border-top: 2px solid $color-secondary07;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+      @include font(16, 700);
+    }
+  }
+  .info-area {
+    padding: rem(16) rem(20);
+    border-top: 1px solid $color-stroke09;
+    display: flex;
+    gap: rem(20);
+    @include mobile-sm {
+      flex-direction: column;
+    }
+    dl {
+      display: flex;
+      gap: rem(24);
+      dt {
+        @include font(16, 700);
+        position: relative;
+        &::after {
+          position: absolute;
+          content: '';
+          top: 50%;
+          transform: translateY(-50%);
+          right: rem(-12);
+          width: 1px;
+          height: rem(12);
+          background-color: $color-stroke09;
+        }
+      }
+      dd {
+        @include font(16, 400, $color: $color-text09);
+      }
+    }
+  }
+  .cont-area {
+    border-bottom: 1px solid $color-stroke04;
+    font-size: 1rem;
+    color: $color-text01;
+    font-weight: 400;
+    line-height: 1.5;
+    word-break: break-word;
+    border-top: 1px solid $color-stroke09;
+    padding: rem(40) 0 rem(80);
+    @include mobile-sm {
+      padding: rem-m(20) 0;
+    }
+    .faq-label {
+      margin-right: 0;
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+    .file-area {
+      margin-top: rem(40);
+      display: flex;
+      align-items: center;
+      padding: rem(23) rem(20);
+      background-color: $color-fill12;
+      border-radius: rem(16);
+      border: 1px solid $color-fill11;
+      strong {
+        position: relative;
+        flex-shrink: 0;
+        @include font(16, 700);
+        padding-right: rem(30);
+        @include mobile-sm {
+          align-self: baseline;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        flex: 1;
+        min-width: 0;
+        li > a {
+          display: flex;
+          align-items: center;
+          min-width: 0;
+          @include font(16, 400, $color: $color-text09);
+          i {
+            flex-shrink: 0;
+            margin-right: rem(4);
+          }
+          .ellipsis {
+            width: 100%;
+            min-width: 0;
+          }
+        }
+      }
+    }
+    &:has(+ form) {
+      border-bottom: 0;
+    }
+    .video-area {
+      iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: rem(16);
+        border: none;
+      }
+      & + .text-area {
+        margin-top: rem(20);
+      }
+    }
+    .img-area {
+      & + .img-area {
+        margin-top: rem(20);
+      }
+    }
+    .subtitle-area {
+      margin-top: rem(20);
+      padding: rem(20);
+      border: 1px solid $color-stroke04;
+      border-radius: rem(8);
+      color: $color-text01 !important;
+      height: rem(180);
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-fill03;
+        border-radius: 12px;
+      }
+    }
+    .text-area {
+      flex: 1 1 auto;
+      min-width: 0;
+      width: auto;
+      padding: 0 rem(20);
+      @include responsive {
+          max-width: 100%;
+          width: 100%;
+          overflow: auto;
+        }
+      p {
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+          height: auto !important;
+        }
+      }
+      table {
+        // width: auto !important;
+        max-width: 100% !important;
+        @include responsive {
+          max-width: 100%;
+          width: 100%;
+          overflow: auto;
+        }
+      }
+    }
+    .table-template-scroll {
+      width: 100%;
+      overflow: auto;
+      table {
+        // width: auto !important; 2025-12-17 : 사용자가 테이블 생성시 width px값 자동 입력되서 삭제
+        th,
+        td {
+          border: 1px solid #ddd;
+          padding: rem(5);
+        }
+        tr {
+          border-top: 0 none !important;
+        }
+      }
+    }
+    .subtitle-title {
+      font-size: 1rem;
+    }
+  }
+  .post-nav {
+    border-top: 1px solid $color-secondary07;
+    border-bottom: 1px solid $color-secondary07;
+    dl {
+      display: flex;
+      padding: rem(16) rem(20);
+      &.next {
+        border-bottom: 1px solid $color-stroke04;
+      }
+      dt {
+        @include font(16, 700);
+        position: relative;
+        padding-right: rem(24);
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        &::after {
+          position: absolute;
+          content: '';
+          top: 50%;
+          transform: translateY(-50%);
+          right: rem(12);
+          width: 1px;
+          height: rem(12);
+          background-color: $color-stroke04;
+        }
+        i {
+          margin-right: rem(12);
+        }
+      }
+      dd {
+        @include font(16, 400, $color: $color-text02);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  .btn-wrap {
+    margin-top: rem(80);
+    justify-content: flex-start;
+  }
+  .faq-label {
+    width: rem(30);
+    height: rem(30);
+    background-color: $color-primary01;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: rem(10);
+    vertical-align: middle;
+  }
+  // 입찰공고 조회
+  &.table-wrap {
+    th {
+      padding: rem(20) rem(16);
+      border-top: 1px solid $color-stroke06;
+    }
+    tr:first-child {
+      border-top: 2px solid $color-primary01;
+    }
+    tr:last-child {
+      th {
+        border-bottom: 1px solid $color-stroke06;
+      }
+    }
+  }
+  // 답변보기
+  &.answer {
+    margin-top: rem(40);
+    .title-area {
+      border-top: 1px solid $color-stroke03;
+      h3 {
+        i {
+          margin-right: rem(10);
+        }
+        @include font(18, 700, $color: $color-primary01);
+      }
+    }
+  }
+}

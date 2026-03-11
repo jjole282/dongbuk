@@ -1,0 +1,17 @@
+{
+  "name": "dongbuk",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.3.3",
+    "sass": "^1.97.2",
+    "vite": "^7.2.4",
+    "vite-plugin-ejs": "^1.7.0"
+  }
+}

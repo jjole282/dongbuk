@@ -1,0 +1,179 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.acc-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .acc-box {
+    &:first-child {
+      border-top: 2px solid $color-primary01;
+    }
+    .acc-label {
+      width: rem(30);
+      height: rem(30);
+      border-radius: 999px;
+      background-color: $color-primary01;
+      @include font(20, 500, $color: $color-text00);
+      @include flexCenter();
+      flex-shrink: 0;
+      margin-right: rem(10);
+    }
+    .acc-head {
+      .acc-btn {
+        width: 100%;
+        position: relative;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding: rem(20) rem(40) rem(20) rem(20);
+        border-bottom: 1px solid $color-stroke00;
+        @include mobile {
+          padding: rem(16) rem(32) rem(16) rem(16);
+        }
+        .acc-title {
+          @include font(20, 500);
+        }
+        &::after {
+          position: absolute;
+          content: '';
+          right: rem(20);
+          width: rem(20);
+          height: rem(20);
+          margin-left: auto;
+          @include background('/icons/ico-arrow-down02.svg', center, 100%);
+          transform-origin: 50% 50%;
+          transition: transform 0.25s ease;
+          @include mobile {
+            right: rem(16);
+            width: rem(16);
+            height: rem(16);
+          }
+        }
+        &.is-open {
+          border-bottom: 1px solid $color-primary01;
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    .acc-panel {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+      will-change: max-height;
+      .acc-body {
+        display: flex;
+        align-items: center;
+        @include font(16, 400, $color: $color-text00);
+        .acc-label {
+          align-self: baseline;
+          background-color: $color-secondary00;
+        }
+        padding: rem(20);
+        background-color: $color-primary01;
+      }
+    }
+  }
+  &.round {
+    .acc-box {
+      &:first-child {
+        border: none;
+      }
+      .acc-head {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-color: transparent;
+          border-left: 1px solid $color-stroke00;
+          border-right: 1px solid $color-stroke00;
+          border-radius: rem(16) rem(16) 0 0;
+          pointer-events: none;
+          z-index: 0;
+          opacity: 0;
+          transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        &:has(.acc-btn.is-open)::after {
+          background-color: $color-fill00;
+          border-left: 1px solid $color-stroke00;
+          border-right: 1px solid $color-stroke00;
+          opacity: 1;
+        }
+        .acc-btn {
+          position: relative;
+          z-index: 1;
+          padding: rem(24) rem(24) rem(24) rem(24);
+          border: 1px solid $color-stroke00;
+          border-radius: rem(16);
+          overflow: hidden;
+          background-color: $color-fill00;
+          @include mobile {
+            padding: rem(16) rem(32) rem(16) rem(16);
+          }
+          .acc-title {
+            @include font(20, 700, $color: $color-primary01);
+            font-family: $font-family-gmarket;
+            @include mobile-sm {
+              font-size: rem-m(15);
+            }
+          }
+          &::after {
+            position: absolute;
+            content: '';
+            right: rem(0);
+            width: rem(78);
+            height: rem(76);
+            @include background('/icons/ico-arrow-bold01.svg', center, 100%);
+            background-color: $color-fill00;
+            border-left: 1px solid $color-stroke00;
+            transition: none;
+          }
+          &.is-open {
+            border-color: $color-primary01;
+            &::after {
+              @include background('/icons/ico-arrow-bold02.svg', center, 100%);
+              background-color: $color-primary01;
+              border-left: 1px solid $color-primary01;
+            }
+          }
+        }
+      }
+      .acc-panel {
+        .acc-body {
+          padding: rem(30);
+          background-color: $color-fill00;
+          border-radius: 0 0 rem(24) rem(24);
+          border: 1px solid $color-stroke00;
+          border-top: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          color: initial;
+          overflow-x: auto;
+          // 여객운송약관
+          p {
+            @include font(18, 700);
+            margin-bottom: rem(20);
+          }
+          h4 {
+            @include font(18, 700);
+            margin-bottom: rem(16);
+            span {
+              font-weight: 400;
+            }
+          }
+          .notice-text {
+            @include font(16, 500, $color: $color-text00);
+          }
+        }
+      }
+      & + .acc-box {
+        margin-top: rem(40);
+      }
+    }
+  }
+}

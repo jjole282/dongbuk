@@ -1,0 +1,32 @@
+@use "@/scss/common/mixin" as *;
+
+.guide-container {
+  padding: 0 16px;
+  &__title {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+}
+.giude-contents {
+  h3 {
+    @include font(24, 500);
+  }
+  & + & {
+    margin-top: 30px;
+  }
+}
+.guide-view {
+  padding: 16px;
+  border: solid 1px #eee;
+  border-radius: 10px;
+}
+.dash {
+  display: block;
+  height: 1px;
+  border: none;
+  margin: 15px 0;
+  background-color: #fff;
+  background-image: repeating-linear-gradient(to right, #111, #111 1px, #fff 1px, #fff 4px);
+}

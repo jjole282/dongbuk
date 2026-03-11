@@ -1,0 +1,180 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+// align
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+// flex
+.d-flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.col-start {
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+.flex-end {
+  justify-content: end;
+}
+// space
+.ml-10 {
+  margin-left: rem(10) !important;
+}
+.mb-4 {
+  margin-bottom: rem(4) !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mt-10 {
+  margin-top: rem(10) !important;
+}
+.mt-20 {
+  margin-top: rem(20) !important;
+}
+.mt-40 {
+  margin-top: rem(40) !important;
+}
+.pl-24 {
+  padding-left: rem(24) !important;
+}
+.pl-10 {
+  padding-left: rem(10) !important;
+}
+// font
+.text-basic {
+  color: $color-text01 !important;
+}
+// .text-secondary {
+//   color: $color-text02 !important;
+// }
+.text-primary {
+  color: $color-primary01 !important;
+}
+// .text-primary02 {
+//   color: $color-primary02 !important;
+// }
+// .text-primary05 {
+//   color: $color-primary05 !important;
+// }
+// disabled (a태그)
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+// hr
+.divider {
+  border: none;
+  height: 1px;
+  //background-color: $color-stroke06;
+  margin: rem(40) 0;
+}
+// 모바일에서 줄바꿈(span)
+.mo-br {
+  display: inline;
+}
+@media (max-width: 767px) {
+  .mo-br {
+    display: block;
+  }
+}
+.m-block {
+  display: block;
+  @include responsive {
+    display: inline;
+  }
+}
+// state
+.is-active {
+  display: block;
+}
+.is-hidden {
+  display: none;
+}
+// 영역숨김(접근성준수)
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+
+  white-space: nowrap !important;
+}
+.dot-bullet {
+  width: rem(10);
+  height: rem(10);
+  background: var(--brand);
+}
+.badge {
+  display: inline-block;
+  font-size: rem(18);
+  font-weight: 600;
+  border-radius: rem(20);
+  padding: rem(2) rem(12);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.b-pink {
+  background: $color-primary01;
+  color: #fff;
+}
+.b-gray {
+  background: #333;
+  color: #fff;
+}
+
+
+// animation
+[data-animation] {
+  opacity: 0;
+  transform: translateY(0);
+}
+
+[data-animation].animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-animation='fade-up'] {
+  transform: translateY(30px);
+}
+
+[data-animation='fade-down'] {
+  transform: translateY(-30px);
+}
+
+[data-animation='fade-left'] {
+  transform: translateX(30px);
+}
+
+[data-animation='fade-right'] {
+  transform: translateX(-30px);
+}

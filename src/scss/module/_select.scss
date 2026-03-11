@@ -1,0 +1,99 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-wrap: wrap;
+  min-width: auto !important;
+  .select-btn {
+    border: 1px solid $color-stroke00;
+    background-color: $color-fill00;
+    border-radius: rem(8);
+    padding: 0 rem(12);
+    text-align: left;
+    height: rem(52);
+    position: relative;
+    span {
+      @include font(18, 600);
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: rem(20);
+      height: rem(20);
+      right: rem(12);
+      @include background('/icons/ico-arrow-down.svg', center, 100%);
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 0.3s;
+    }
+    &.is-open {
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+  // medium
+  &.md {
+    .select-btn {
+      height: rem(60);
+      padding: 0 rem(16);
+      span {
+        @include font(20, 500);
+      }
+    }
+  }
+  // small
+  &.sm {
+    .select-btn {
+      height: rem(44);
+      padding: 0 rem(12);
+      span {
+        @include font(16, 400);
+      }
+    }
+  }
+  // 셀렉트 리스트
+  .select-list {
+    position: absolute;
+    top: calc(100% + rem(4));
+    left: 0;
+    width: 100%;
+    background-color: $color-fill00;
+    border: 1px solid $color-stroke00;
+    border-radius: rem(8);
+    z-index: 10;
+    display: none;
+    height: rem(150);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-fill00;
+      border-radius: 12px;
+    }
+    &.is-open {
+      display: block;
+    }
+    button,
+    a {
+      display: flex;
+      width: 100%;
+      padding: rem(5) rem(12);
+      text-align: left;
+      span {
+        @include font(18, 500, 1.3);
+      }
+      &:hover {
+        background-color: $color-fill00;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

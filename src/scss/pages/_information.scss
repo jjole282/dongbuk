@@ -1,0 +1,381 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.page-information {
+  // 역정보 (라디오 탭버튼, 셀렉트)
+  h3 ~ h3 {
+    margin-top: rem(40);
+  }
+  .station-line-wrap {
+    padding-bottom: rem(60);
+    .station-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0 rem(50);
+      width: 100%;
+      height: rem(16);
+      border-radius: rem(32);
+      background-color: $color-secondary01;
+      @include mobile-sm {
+        padding: 0 rem-m(20);
+      }
+      .station-link {
+        @include flexCenterColumn();
+        position: relative;
+        top: clamp(rem(-15), 1vw, rem(-15));
+        @include mobile-sm {
+          top: rem-m(-10);
+        }
+        .circle {
+          width: rem(32);
+          height: rem(32);
+          border: rem(6) solid $color-secondary01;
+          background-color: $color-fill00;
+          border-radius: 999px;
+          @include mobile-sm {
+            width: rem-m(24);
+            height: rem-m(24);
+          }
+        }
+        .text {
+          margin-top: rem(10);
+          @include font(18, 400);
+          font-family: $font-family-gmarket;
+        }
+        // 활성화
+        &.on {
+          top: clamp(rem(-15), 1vw, rem(-10));
+          .circle {
+            width: rem(40);
+            height: rem(40);
+            border: rem(8) solid $color-secondary01;
+            @include mobile-sm {
+              width: rem-m(30);
+              height: rem-m(30);
+            }
+          }
+          .text {
+            @include font(20, 700);
+          }
+        }
+      }
+    }
+  }
+  .station-search {
+    @include flexCenter();
+    background-color: $color-fill05;
+    border-radius: rem(10);
+    padding: rem(23) 0;
+    @include mobile-sm {
+      padding: rem-m(20);
+    }
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      @include mobile {
+        gap: rem(20);
+        justify-content: center;
+      }
+      .search-wrap {
+        margin-bottom: 0;
+        .select-box {
+          @include mobile {
+            margin: 0;
+            width: rem(250);
+          }
+        }
+      }
+    }
+    // 역 라디오
+    .radio-tablist {
+      display: flex;
+      gap: rem(20);
+      .radio-tabitem {
+        position: relative;
+        display: flex;
+        align-items: center;
+        label {
+          @include font(18, 600);
+          cursor: pointer;
+          position: relative;
+          padding-left: rem(38);
+          white-space: nowrap;
+          @include mobile-sm {
+            font-size: rem-m(16);
+          }
+          &::before {
+            position: absolute;
+            content: '';
+            width: rem(30);
+            height: rem(30);
+            left: 0;
+            top: 0;
+            @include background('/icons/ico-check03.png', center, 100%);
+            @include mobile-sm {
+              width: rem-m(24);
+              height: rem-m(24);
+            }
+          }
+        }
+        input[type='radio']:checked + label {
+          &::before {
+            @include background('/icons/ico-check04.png', center, 100%);
+          }
+          font-weight: 700;
+        }
+      }
+    }
+    .station-search-tablist {
+      display: flex;
+      gap: rem(20);
+      .station-search-tab {
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include font(18, 600);
+        cursor: pointer;
+        position: relative;
+        padding-left: rem(38);
+        white-space: nowrap;
+        @include mobile-sm {
+          font-size: rem-m(16);
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          width: rem(30);
+          height: rem(30);
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include background('/icons/ico-check03.png', center, 100%);
+          @include mobile-sm {
+            width: rem-m(24);
+            height: rem-m(24);
+          }
+        }
+        &.is-active {
+          &::before {
+            @include background('/icons/ico-check04.png', center, 100%);
+          }
+          font-weight: 700;
+        }
+      }
+    }
+    .select-box {
+      width: rem(204);
+      margin-left: rem(20);
+    }
+  }
+  // 역정보
+  .station-slide-wrap {
+    padding: rem(70) rem(50);
+    border: 1px solid $color-stroke07;
+    margin-bottom: rem(80);
+    @include flexCenter();
+    text-align: center;
+    .station-slide {
+      width: 100%;
+      .station-bar {
+        position: relative;
+        @include flexCenter();
+        background-color: $color-fill07;
+        border-radius: rem(50);
+        height: rem(50);
+        padding: 0 rem(20);
+        .select-box {
+          border: 8px solid $color-primary01;
+          background-color: $color-fill00;
+          border-radius: rem(60);
+          padding: rem(24);
+          .station-select {
+            padding-right: rem(77);
+            display: flex;
+            align-items: center;
+            .station-select-value {
+              margin-right: rem(52);
+              color: $color-text00;
+              background-color: $color-primary01;
+              border-radius: rem(40);
+              padding: rem(10) rem(17);
+              @include font(20, 500);
+            }
+            .station-select-txt {
+              font-size: rem(40);
+              font-weight: 700;
+            }
+            &::after {
+              display: block;
+              content: '';
+              position: absolute;
+              top: 50%;
+              right: rem(34);
+              transform: translateY(-50%);
+              width: rem(25);
+              height: rem(15);
+              @include background('/icons/arrow2.svg', center, 25px);
+              transition: transform 0.3s ease;
+            }
+            &.is-active {
+              &::after {
+                transform: translateY(-50%) rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+      .station-btn {
+        position: absolute;
+        @include font(24, 600);
+        @include mobile-sm {
+          font-size: rem-m(13);
+          white-space: nowrap;
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: rem(24);
+          height: rem(24);
+          @include background('/icons/arrow.svg', center, 24px);
+          transition: transform 0.2s ease;
+        }
+        &.prev {
+          padding-left: rem(34);
+          left: rem(20);
+          &::before {
+            //transform: translateY(-50%) rotate(-180deg);
+          }
+        }
+        &.next {
+          padding-right: rem(34);
+          right: rem(20);
+          &::before {
+            left: auto;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+      }
+      .station-box {
+        position: relative;
+        top: rem(10);
+        .station-list {
+          display: none;
+          position: absolute;
+          top: rem(20);
+          left: 50%;
+          transform: translateX(-50%);
+          width: rem(260);
+          padding: rem(10) rem(16);
+          text-align: left;
+          background: $color-fill00;
+          border: 3px solid $color-primary01;
+          border-radius: rem(10);
+          z-index: 20;
+          height: rem(170);
+          overflow-y: auto;
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $color-primary01;
+            border-radius: 12px;
+          }
+          @include mobile-sm {
+            width: 100%;
+            top: rem-m(10);
+            left: 50%;
+          }
+          ul {
+            top: rem(20);
+            li {
+              @include flexCenter();
+              + li {
+                margin-top: rem(10);
+              }
+              a {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                cursor: pointer;
+                .station-value {
+                  @include flexCenter();
+                  width: rem(30);
+                  height: rem(30);
+                  background-color: $color-primary01;
+                  @include font(10, 700);
+                  color: $color-text00;
+                  margin-right: rem(10);
+                  border-radius: 50%;
+                }
+              }
+              .station-text {
+                line-height: rem(45);
+                @include mobile-sm {
+                  //width: rem-m(170);
+                  width: auto;
+                  padding: rem(16) rem(10);
+                }
+              }
+              .station-value {
+                @include flexCenter();
+                width: rem(45);
+                height: rem(45);
+                background-color: $color-primary01;
+                @include font(14, 500, 1, $color-text00);
+                margin-right: rem(16);
+                border-radius: 999px;
+              }
+            }
+          }
+          &.is-active {
+            display: flex;
+          }
+        }
+      }
+      .station-name {
+        margin-top: rem(30);
+        display: flex;
+        gap: rem(10);
+        justify-content: center;
+        span {
+          position: relative;
+          @include font(20, 500, $color: $color-text01);
+          @include mobile-sm {
+            font-size: rem-m(14);
+          }
+          & + span {
+            padding-left: rem(5);
+            &::before {
+              position: absolute;
+              content: '';
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 1px;
+              height: rem(20);
+              background-color: $color-stroke01;
+            }
+          }
+        }
+      }
+    }
+  }
+  .subtab-panels {
+    h3 {
+      @include font(40, 700);
+      margin: rem(80) 0 rem(40);
+    }
+    .map-box {
+      margin: rem(48) 0 rem(40);
+    }
+  }
+
+}

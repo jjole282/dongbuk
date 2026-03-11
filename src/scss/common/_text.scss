@@ -1,0 +1,40 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+// 서브 페이지 공통 헤더
+.section-header {
+  //font-family: $font-family-gmarket;
+  margin-bottom: rem(40);
+  @include mobile {
+    margin-bottom: rem(20);
+  }
+}
+// h3 sm
+.heading-sm {
+  font-family: $font-family-base !important;
+  font-size: rem(24) !important;
+  font-weight: 700;
+  // h3 + 간격
+  & + .table-scroll {
+    margin-top: rem(20);
+  }
+  & + .info-box-wrap {
+    margin-top: rem(20);
+  }
+  & + .step-wrap {
+    margin-top: rem(20);
+  }
+  & + .media-box {
+    margin-top: rem(20);
+  }
+  & + .form {
+    margin-top: rem(20);
+  }
+  & + .form-section {
+    margin-top: rem(20);
+  }
+  & + .img-box {
+    margin-top: rem(24);
+  }
+}

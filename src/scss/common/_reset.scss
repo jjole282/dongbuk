@@ -1,0 +1,173 @@
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+@use '@/scss/common/mixin' as *;
+
+html {
+  font-size: 16px; // 1rem = 16px
+  @include responsive {
+    font-size: 15px; // 1rem = 15px
+  }
+  @include mobile {
+    font-size: 14px; // 1rem = 14px
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0 none;
+}
+img {
+  max-width: 100%;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+body {
+  background: $color-fill00;
+  color: $color-text01;
+  line-height: 1.5;
+  font-family: $font-family-base;
+}
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-family: $font-family-base;
+}
+a {
+  color: $color-text01;
+  text-decoration: none;
+}
+i {
+  font-style: normal;
+}
+a:active,
+a:hover {
+  text-decoration: none;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+b,
+strong {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  font-weight: 700;
+}
+//애플관련
+input {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+// 웹 접근성 고려한 포커스 스타일
+textarea:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+textarea:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #304691;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+#skipnavi{position:absolute;top:-1px;left:0;background-color:#333;z-index:999999}
+#skipnavi a{position:absolute;top:0;left:0;padding:5px 25px;margin-top:-100px;text-align:center;line-height:1;white-space:nowrap;background:#000;}
+#skipnavi a:link{color:#333;}
+#skipnavi a:focus{margin-top:0;text-decoration:underline;color:#fff}

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>동북선도시철도(주)</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <%- include('./components/_header') %>
+    <!--// header -->
+
+    <!-- 전체메뉴 -->
+    <%- include('./components/_allmenu.ejs') %>
+    <!--// 전체메뉴 -->
+
+    <!-- 모바일 메뉴 -->
+    <%- include('./components/_mobilemenu.ejs') %>
+    <!--// 모바일 메뉴 -->
+
+    <!-- main -->
+    <main id="sub-content" role="main">
+      <div class="inner">
+        <!-- contents -->
+        <section id="page-content" class="page-safety">
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Safety/Technology</strong><span>안전/기술</span>
+              </h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <span>안전관리</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/images/safety/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+
+          
+          <!-- sub-contents -->
+          <div class="tab-wrap type02">
+            <div class="tabs" role="tablist" aria-label="지하철이용 안전수칙">
+              <button
+                class="tab-btn"
+                role="tab"
+                id="tab-1"
+                aria-controls="panel-1"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                열차 내 안전수칙
+              </button>
+              <button
+                class="tab-btn"
+                role="tab"
+                id="tab-2"
+                aria-controls="panel-2"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                역사 내 안전수칙
+              </button>
+              <button
+                class="tab-btn"
+                role="tab"
+                id="tab-3"
+                aria-controls="panel-3"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                에스컬레이터 이용수칙
+              </button>
+              <button
+                class="tab-btn is-active"
+                role="tab"
+                id="tab-4"
+                aria-controls="panel-4"
+                aria-selected="true"
+                tabindex="0"
+              >
+                엘리베이터 이용수칙
+              </button>
+            </div>
+
+            <div class="tab-panels">
+              <div
+                class="tab-panel"
+                id="panel-1"
+                role="tabpanel"
+                aria-labelledby="tab-1"
+                hidden
+              >
+                <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+              </div>
+
+              <div
+                class="tab-panel"
+                id="panel-2"
+                role="tabpanel"
+                aria-labelledby="tab-2"
+                hidden
+              ></div>
+              <div
+                class="tab-panel"
+                id="panel-3"
+                role="tabpanel"
+                aria-labelledby="tab-3"
+                hidden
+              >
+                <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+              </div>
+              <div
+                class="tab-panel"
+                id="panel-4"
+                role="tabpanel"
+                aria-labelledby="tab-4"
+              >
+                <h3 class="txt-hide">엘리베이터 이용수칙</h3>
+                <!-- 이미지 -->
+                <div class="img-box" data-animation="fade-up">
+                  <div class="img-box-label">
+                    <i class="ico-safe-02" aria-hidden="true"></i>
+                    <p class="img-box-text">엘리베이터 이용수칙</p>
+                  </div>
+                  <img src="/images/safety/safe-img04.png" alt="" />
+                </div>
+                <!--// 이미지 -->
+                <!-- 리스트 -->
+                <div class="text-list-box sm" data-animation="fade-up">
+                  <h4 class="text-list-title">디딤판에 표시된 황색안전선 안에 발을 놓습니다.</h4>
+                  <ul class="text-list">
+                    <li>
+                      엘리베이터의 정원과 적재하중의 제한은 안전운행을 위하여 꼭 지켜져야 합니다.
+                      경고음이 울릴 경우 다음 순서를 기다려야 합니다.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="text-list-box sm" data-animation="fade-up">
+                  <h4 class="text-list-title">
+                    엘리베이터 내 조작반 버튼을 함부로 누르지 않습니다.
+                  </h4>
+                  <ul class="text-list">
+                    <li>
+                      엘리베이터는 편리하면서도 위험한 시설물이므로 여러 가지 안전장치를 구비하고
+                      있습니다. 그러나 이런 장치는 매우 정교한 전자회로에 의하여 제어되므로 무리한
+                      조작이나 장난은 큰 사고나 고장을 유발할 수 있습니다.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="text-list-box sm" data-animation="fade-up">
+                  <h4 class="text-list-title">엘리베이터 안에서 ‘쿵쿵’ 뛰지 않습니다.</h4>
+                  <ul class="text-list">
+                    <li>
+                      엘리베이터 안에서 뛰거나 장난을 쳐 엘리베이터에 충격을 주면 엘리베이터가
+                      이상을 감지하고 급정지할 수 있습니다. 급·정지 시 승객이 다칠 수도 있으며
+                      엘리베이터 안에 갇힐 수도 있습니다.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="text-list-box sm" data-animation="fade-up">
+                  <h4 class="text-list-title">승강장 문에 충격을 주지 맙시다.</h4>
+                  <ul class="text-list">
+                    <li>
+                      엘리베이터 문은 충격에 매우 약합니다. 승강기 문에 기대거나 충격을 주게 되면
+                      문짝이 승강로 안으로 이탈하면서 이용자와 함께 승강로로 추락할 위험이
+                      있습니다.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="text-list-box sm" data-animation="fade-up">
+                  <h4 class="text-list-title">
+                    운전 중 갑자기 정지하거나 정전 등의 문제가 생기면 우선 인터폰으로 연락합니다.
+                  </h4>
+                  <ul class="text-list">
+                    <li>
+                      고장이나 사고로 엘리베이터에 갇히게 되면 무리해서 탈출을 시도하다가 큰
+                      사고를 당하게 됩니다. 엘리베이터 안은 질식이나 추락의 염려가 없는 안전한
+                      공간이므로 비상 인터폰으로 연락한 후 안전한 승강기 내부에서 구조를
+                      기다립시다.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="text-list-box sm" data-animation="fade-up">
+                  <h4 class="text-list-title">
+                    엘리베이터 문틈에 지저분한 것을 버리지 않습니다.
+                  </h4>
+                  <ul class="text-list">
+                    <li>
+                      성냥개비, 껌, 종이조각 등을 문틈에 버리면 엘리베이터 작동을 원활치 못하게
+                      하고 고장을 유발할 수 있습니다.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="text-list-box sm" data-animation="fade-up">
+                  <p class="text-list-title">엘리베이터 문을 흔들거나 억지로 열지 않습니다.</p>
+                </div>
+                <!--// 리스트 -->
+              </div>
+            </div>
+          </div>
+          <!--// sub-contents -->
+
+
+        </section>
+        <!--// contents -->
+      </div>
+    </main>
+    <!--// main -->
+
+    <!-- footer -->
+    <%- include('./components/_footer.ejs') %>
+    <!--// footer -->
+  </div>
+
+  <script type="module" src="../../js/main.js"></script>
+</body>
+</html>

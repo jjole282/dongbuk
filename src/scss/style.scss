@@ -1,0 +1,32 @@
+// 공통 + 변수 + 믹스인
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+@use '@/scss/common/reset' as *;
+@use '@/scss/common/font' as *;
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/utility' as *;
+@use '@/scss/common/layout' as *;
+@use '@/scss/common/text' as *;
+@use '@/scss/common/table' as *;
+@use '@/scss/common/button' as *;
+@use '@/scss/common/input' as *;
+// @use '@/scss/common/box' as *;
+@use '@/scss/common/icon' as *;
+@use '@/scss/common/textList' as *;
+// @use '@/scss/common/search' as *;
+@use '@/scss/common/pagination' as *;
+@use '@/scss/common/view' as *;
+
+// 모듈
+@use '@/scss/module/guide' as *;
+@use '@/scss/module/tab' as *;
+@use '@/scss/module/select' as *;
+@use '@/scss/module/accordion' as *;
+
+// 페이지
+@use '@/scss/pages/main' as *; // 메인
+// @use '@/scss/pages/meta' as *; // 공통
+@use '@/scss/pages/information' as *; //01 이용안내
+// @use '@/scss/pages/customer' as *; // 01 고객참여
+@use '@/scss/pages/safetyManagement' as *; // 05 안전기술
+@use '@/scss/pages/intro' as *; // 06 회사소개

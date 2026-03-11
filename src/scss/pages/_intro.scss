@@ -1,0 +1,1103 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.page-intro {
+  // 경영이념
+  .service-wrap {
+    @include background('/images/intro/sg-img.png', center, cover);
+    color: $color-text00;
+    text-align: center;
+    padding-top: rem(80);
+    .service-tit-sm {
+      position: relative;
+      @include font(14, 300, 1.5);
+      margin-bottom: rem(27);
+      &::before {
+        position: absolute;
+        content: '';
+        width: rem(28);
+        height: 1px;
+        background-color: $color-fill00;
+        top: rem(-4);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .service-tit {
+      @include font(32, 700, 1.3);
+      font-family: $font-family-gmarket;
+      @include mobile {
+        font-size: rem(28);
+      }
+      @include mobile-sm {
+        font-size: rem(24);
+      }
+    }
+    .service-box {
+      margin-top: rem(151);
+      .service-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid rgba(255, 255, 255, 0.35);
+        @include mobile {
+          grid-template-columns: repeat(1, 4fr);
+        }
+        li {
+          padding: rem(32) 0;
+          transition: background-color 0.3s ease;
+          & + li {
+            border-left: 1px solid rgba(255, 255, 255, 0.35);
+            @include mobile {
+              border-left: none;
+              border-top: 1px solid rgba(255, 255, 255, 0.35);
+            }
+          }
+          &:hover {
+            background-color: rgba(15, 45, 148, 0.7);
+          }
+          .service-content {
+            .service-title {
+              margin-top: rem(24);
+              @include font(20, 700, 1.3);
+            }
+            .service-text {
+              margin-top: rem(8);
+              @include font(16, 500, 1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+  // sg 회사소개
+  .ci-wrap {
+    .ci-box {
+      @include flexCenter();
+      flex-direction: column;
+      &-img {
+        @include mobile-sm {
+          width: rem-m(200);
+        }
+      }
+      &-desc {
+        margin-top: rem(24);
+        text-align: center;
+      }
+    }
+    .ci-section {
+      margin-top: rem(60);
+      &-title {
+        @include font(24, 700);
+        margin-bottom: rem(24);
+        font-size: rem(24) !important;
+        font-family: $font-family-base !important;
+      }
+      &-body {
+        .ci-imgs {
+          display: flex;
+          border: solid 1px $color-stroke05;
+          border-radius: rem(16);
+          padding: rem(33) 0;
+          > .ci-img {
+            width: 50%;
+            @include flexCenter();
+            position: relative;
+            &:first-child::after {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 1px;
+              height: rem(100);
+              background-color: $color-stroke05;
+            }
+            img {
+              @include mobile-sm {
+                padding: rem-m(20);
+              }
+            }
+          }
+        }
+        &-wrap {
+          display: flex;
+          justify-content: space-between;
+          gap: rem(40);
+        }
+      }
+      & + .text-box {
+        margin-top: rem(40);
+        & + .btn-wrap {
+          margin-top: rem(40);
+          justify-content: end;
+          button span {
+            margin-right: rem(4);
+          }
+        }
+      }
+    }
+  }
+  // 안전경영방침
+  .management-wrap {
+    padding: 0 rem(50);
+    @include responsive {
+      padding: 0;
+    }
+    .management-box {
+      background-color: $color-fill05;
+      border-radius: rem(24);
+      padding: rem(30);
+      overflow: hidden;
+      @include mobile-sm {
+        padding: rem-m(20);
+      }
+      .management-inner {
+        position: relative;
+        padding: rem(80) rem(90);
+        background-color: $color-fill00;
+        border-radius: rem(20);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+        @include mobile {
+          padding: rem(50);
+        }
+        @include mobile-sm {
+          padding: rem-m(30);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: rem(-92);
+          width: rem(315);
+          height: rem(44);
+          background-color: #041495;
+          transform: rotate(45deg);
+          @include mobile-sm {
+            display: none;
+          }
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: rem(-92);
+          width: rem(315);
+          height: rem(44);
+          background-color: #041495;
+          transform: rotate(45deg);
+          @include mobile-sm {
+            display: none;
+          }
+        }
+      }
+      .title {
+        @include font(40, 700);
+        font-family: $font-family-gmarket;
+        text-align: center;
+        @include mobile-sm {
+          font-size: rem-m(25);
+        }
+      }
+      ol {
+        margin-top: rem(50);
+        @include mobile-sm {
+          margin-top: rem-m(25);
+        }
+        li {
+          display: flex;
+          align-items: center;
+          gap: rem(48);
+          @include mobile {
+            flex-direction: column;
+            gap: rem(20);
+          }
+          .label {
+            flex-shrink: 0;
+            width: rem(56);
+            height: rem(56);
+            border-radius: rem(999);
+            background-color: $color-primary01;
+            @include flexCenter();
+            @include font(18, 700, $color: $color-text00);
+            font-family: $font-family-gmarket;
+          }
+          .text {
+            position: relative;
+            @include font(18, 500, $color: $color-text02);
+            &::before {
+              position: absolute;
+              content: '';
+              left: rem(-36);
+              top: 50%;
+              transform: translateY(-50%);
+              width: rem(24);
+              height: 1px;
+              background-color: $color-primary01;
+              @include mobile {
+                display: none;
+              }
+            }
+          }
+          &:nth-child(even) .num {
+            background-color: $color-primary02;
+          }
+          & + li {
+            margin-top: rem(36);
+          }
+        }
+      }
+      .date {
+        margin: rem(50);
+        text-align: center;
+        font-size: rem(24);
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        div:first-child {
+          width: rem(155);
+          margin-right: rem(50);
+        }
+        div:last-child {
+          width: rem(264);
+        }
+      }
+    }
+    &.gtx {
+      .management-box {
+        .management-inner {
+          &::after,
+          &::before {
+            background-color: #af1d2f;
+          }
+          .title {
+            margin-bottom: rem(50);
+          }
+          .desc {
+            padding: rem(30);
+            border-radius: rem(8);
+            background-color: $color-disabled;
+            @include font(18, 500, $color: $color-text02);
+          }
+        }
+        ol {
+          margin-top: rem(36);
+          li {
+            &:nth-of-type(odd) {
+              .label {
+                background-color: #af1d2f;
+              }
+            }
+            &:nth-of-type(even) {
+              .label {
+                background-color: #64696f;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // 연혁
+  .history-wrap {
+    .history-box {
+      @include background('/images/intro/sg-img02.png', center, cover);
+      color: $color-text00;
+      text-align: center;
+      padding: rem(70) 0;
+    }
+    .history-tit-sm {
+      position: relative;
+      @include font(14, 300, 1.5);
+      margin-bottom: rem(27);
+      &::before {
+        position: absolute;
+        content: '';
+        width: rem(28);
+        height: 1px;
+        background-color: $color-fill00;
+        top: rem(-4);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .history-tit {
+      @include font(32, 700, 1.3);
+      font-family: $font-family-gmarket;
+      @include mobile {
+        font-size: rem(28);
+      }
+      @include mobile-sm {
+        font-size: rem(24);
+      }
+    }
+    .history-list {
+      margin-top: rem(40);
+      position: relative;
+      height: rem(680);
+      padding-left: rem(32);
+      @include mobile {
+        height: auto;
+      }
+      @include mobile-sm {
+        padding: 0 rem(30);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: rem(272);
+        width: 1px;
+        height: 100%;
+        background-color: $color-stroke05;
+        @include mobile {
+          left: rem(130);
+        }
+        @include mobile-sm {
+          //left: 47.8%;
+        }
+      }
+      > li {
+        display: grid;
+        grid-template-columns: rem(240) rem(20) 1fr; // left / dot / right
+        align-items: start;
+        @include mobile {
+          grid-template-columns: rem(100) rem(20) 1fr;
+        }
+        @include mobile-sm {
+          //grid-template-columns: repeat(3, 1fr);
+        }
+        &:first-child {
+          padding-top: rem(10);
+        }
+        & + li {
+          padding-top: rem(109);
+        }
+        .dot {
+          width: rem(19);
+          height: rem(19);
+          border: 4px solid #014195;
+          border-radius: 999px;
+          z-index: 1;
+          background-color: $color-fill00;
+          box-sizing: border-box;
+          grid-column: 2;
+          justify-self: start;
+          transform: translateX(-50%);
+          margin-top: 4px;
+          @include mobile {
+            grid-template-columns: repeat(3, 1fr);
+            justify-self: center;
+          }
+        }
+        .left {
+          position: relative;
+          .year {
+            @include font(24, 700);
+          }
+        }
+        .right {
+          position: relative;
+          display: flex;
+          align-items: center;
+          flex: 1;
+          padding-left: rem(80);
+          gap: rem(20);
+          @include mobile {
+            flex-direction: column;
+            padding-left: 0;
+            align-items: flex-start;
+          }
+          .date {
+            display: inline-block;
+            width: rem(120);
+            @include font(20, 700, 1.3);
+          }
+          .text {
+            @include font(18, 600, $color: $color-text02);
+            @include mobile-sm {
+              font-size: rem-m(14);
+            }
+          }
+          ul li {
+            display: flex;
+            gap: rem(20);
+            @include mobile {
+              flex-direction: column;
+            }
+            & + li {
+              margin-top: rem(30);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 찾아오시는길
+  .location-wrap {
+    .location-info {
+      position: relative;
+      top: -7px;
+      @include flexBetween();
+      padding: rem(40) rem(48);
+      background-color: $color-primary07;
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @include mobile-sm {
+        padding: rem-m(30) rem-m(25);
+      }
+      .location-text {
+        strong {
+          display: block;
+          @include font(28, 400, $color: $color-text00);
+          font-family: $font-family-gmarket;
+          margin-bottom: rem(8);
+          @include mobile-sm {
+            font-size: rem-m(20);
+          }
+        }
+        p {
+          @include font(18, 500, $color: $color-text00);
+          span {
+            font-weight: 700;
+            font-family: $font-family-gmarket;
+            margin-right: rem(24);
+          }
+        }
+      }
+      .btn-wrap {
+        @include mobile {
+          width: 100%;
+          margin-top: rem(20);
+        }
+        a {
+          width: rem(119);
+          border-radius: rem(8);
+          @include mobile {
+            width: 100%;
+          }
+          span {
+            margin-right: rem(4);
+          }
+        }
+      }
+    }
+  }
+  .direction-wrap {
+    margin-top: rem(60);
+    h3 {
+      margin-bottom: rem(24);
+    }
+    ul {
+      border-top: 3px solid $color-secondary07;
+      li {
+        padding: rem(40) rem(86);
+        border-bottom: 1px solid $color-stroke04;
+        display: flex;
+        align-items: center;
+        gap: rem(86);
+        @include mobile {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem(40);
+          padding: rem(40);
+        }
+        @include mobile-sm {
+          padding: rem-m(30) rem-m(20);
+        }
+        i {
+          position: relative;
+          width: rem(77);
+          height: rem(76);
+          background-color: $color-primary06;
+          border-radius: rem(2);
+          @include mobile {
+            align-self: center;
+          }
+        }
+        .direction-info {
+          h4 {
+            @include font(20, 700, 1.3, $color-primary01);
+            margin-bottom: rem(20);
+          }
+          dl {
+            display: flex;
+            align-items: center;
+            gap: rem(16);
+            .direction-label {
+              @include font(18, 700);
+              min-width: rem(102);
+              height: rem(35);
+              @include flexCenter();
+              border: 1px solid $color-stroke01;
+            }
+            .direction-text {
+              @include font(16, 400);
+            }
+            & + dl {
+              margin-top: rem(12);
+            }
+          }
+        }
+      }
+    }
+  }
+  // ceo 인사말
+  .ceo-intro-wrap {
+    .ceo-box {
+      @include background('/images/intro/ceo-bg.png', center, cover);
+      aspect-ratio: 1100 / 340; // 높이는 비율로 자동 계산
+      @include flexBetween();
+      .ceo-text {
+        font-family: $font-family-gmarket;
+        position: relative;
+        top: clamp(rem(50), 2vw, rem(70));
+        left: clamp(rem(80), 2vw, rem(100));
+        @include responsive {
+          width: 56%;
+        }
+        @include mobile {
+          top: clamp(rem(30), 2vw, rem(70));
+          left: clamp(rem(60), 2vw, rem(100));
+          width: 65%;
+        }
+        @include mobile-sm {
+          top: clamp(rem(20), 2vw, rem(70));
+          left: clamp(rem(20), 2vw, rem(100));
+          width: 68%;
+        }
+        p {
+          @include font(18, $color: $color-text02);
+          margin-bottom: rem(8);
+          @include mobile {
+            display: none;
+          }
+        }
+        strong {
+          @include font(26, 400);
+          @include responsive {
+            font-size: rem(24);
+          }
+          @include mobile {
+            font-size: rem-m(14);
+          }
+        }
+      }
+      .ceo-img {
+        width: rem(370);
+      }
+    }
+    .ceo-speech {
+      margin-top: rem(40);
+      padding: 0 rem(240) 0 rem(50);
+      @include responsive {
+        padding: 0;
+      }
+      p {
+        @include font(18, 500, $color: $color-text02);
+        strong {
+          color: #af1d2f;
+        }
+        & + p {
+          margin-top: rem(25);
+        }
+      }
+    }
+    .ceo-name {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: rem(50);
+      padding-right: rem(50);
+      @include font(16, 500);
+      span {
+        margin-left: rem(16);
+        @include font(24, 700);
+      }
+    }
+    &.sg {
+      .ceo-speech {
+        padding-left: rem(50);
+        @include responsive {
+          padding-left: 0;
+        }
+      }
+      .ceo-box {
+        @include background('/images/intro/sg-bg.jpg', center, cover);
+      }
+      .ceo-text {
+        font-family: $font-family-gmarket;
+        position: absolute;
+        top: clamp(rem(70), 2vw, rem(100));
+        left: clamp(rem(100), 2vw, rem(120));
+        @include mobile {
+          top: clamp(rem(40), 2vw, rem(70));
+          left: clamp(rem(40), 2vw, rem(70));
+        }
+        @include mobile-sm {
+          top: clamp(rem(20), 2vw, rem(70));
+          left: clamp(rem(30), 2vw, rem(100));
+        }
+        &-lead {
+          @include font(18, $color: $color-text02);
+          margin-bottom: rem(8);
+        }
+        &-headline {
+          font-size: rem(28) !important;
+          font-weight: 500 !important;
+          color: $color-text01 !important;
+          margin-bottom: 0;
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+      .ceo-speech {
+        p {
+          strong {
+            color: $color-primary01;
+            text-decoration: underline;
+            text-decoration-color: $color-primary01;
+          }
+        }
+      }
+      .ceo-name {
+        @include mobile-sm {
+          flex-direction: column;
+          align-items: end;
+          gap: rem(10);
+        }
+      }
+    }
+  }
+  // 캐릭터소개
+  .gt-intro-wrap {
+    .gt-box {
+      position: relative;
+      @include background('/images/intro/gt-bg.png', center, 100%);
+      aspect-ratio: 1100 / 340; // 높이는 비율로 자동 계산
+      @include flexBetween();
+      @include mobile {
+        flex-direction: column;
+        background-size: cover;
+        border-radius: rem(100);
+        padding: rem(25);
+      }
+      @include mobile-sm {
+        background: none;
+      }
+      .gt-text {
+        font-family: $font-family-gmarket;
+        position: relative;
+        top: clamp(rem(1), 2vw, rem(10));
+        left: clamp(rem(80), 2vw, rem(100));
+        @include mobile {
+          text-align: center;
+          left: clamp(rem(1), 2vw, rem(100));
+        }
+        .gt-title {
+          @include font(32, 700, 1.3, #ba0c2e);
+          margin-bottom: rem(12);
+          @include mobile {
+            font-size: rem(22);
+          }
+        }
+        strong {
+          display: block;
+          @include font(20, 700);
+          margin-bottom: rem(4);
+          @include mobile {
+            font-size: rem(18);
+          }
+        }
+        p {
+          @include font(16, 400, $color: $color-text02);
+        }
+      }
+      .gt-img {
+        width: rem(604);
+        @include mobile {
+          width: rem(302);
+        }
+      }
+    }
+    .gt-img-box {
+      margin-top: rem(40);
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include mobile {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+    .gt-img-wrap {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        li {
+          @include flexCenterColumn();
+          span {
+            @include font(18, 600);
+          }
+        }
+      }
+    }
+    .btn-wrap {
+      margin-top: rem(40);
+      justify-content: flex-end;
+    }
+  }
+  // 경영이념
+  .philosophy-wrap {
+    position: relative;
+    padding: rem(120) rem(40);
+    @media screen and (max-width: 950px) {
+      padding: rem(80) rem(40);
+    }
+    @include mobile-sm {
+      padding: 0;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      top: rem(100);
+      transform: translate(-50%);
+      @include background('/images/intro/philosophy-bg.svg', center center, 100%);
+      width: rem(500);
+      height: rem(500);
+      z-index: -1;
+      @media screen and (max-width: 950px) {
+        width: 80%;
+        height: 80%;
+        z-index: -1;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    .philosophy-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      p {
+        text-align: center;
+        @include font(28, 500);
+        font-family: $font-family-gmarket;
+        span {
+          color: $color-secondary02;
+        }
+      }
+      @media screen and (max-width: 950px) {
+        display: none;
+      }
+    }
+    .philosophy-row {
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: 950px) {
+        flex-direction: column;
+        align-items: center;
+        gap: rem(30);
+      }
+      &:last-child {
+        margin-top: rem(162);
+        @media screen and (max-width: 950px) {
+          margin-top: rem(80);
+        }
+      }
+      .philosophy-item {
+        width: rem(400);
+        gap: rem(40);
+        @include flexCenter();
+        justify-content: initial;
+        .item-text {
+          flex-shrink: 0;
+          .item-title {
+            @include font(18, 600);
+            margin-bottom: rem(4);
+          }
+          .item-desc {
+            @include font(16, 500, $color: $color-text02);
+          }
+        }
+        .item-icon {
+          @include flexCenterColumn();
+          width: rem(150);
+          height: rem(150);
+          border-radius: 999px;
+          background-color: $color-secondary01;
+          flex-shrink: 0;
+          align-self: flex-start;
+          i {
+            margin-bottom: rem(4);
+          }
+          span {
+            @include font(20, 600, 1.3, $color: $color-text00);
+            @include mobile {
+              font-size: rem(16);
+            }
+          }
+        }
+      }
+    }
+  }
+  // 연혁
+  .history-wrap {
+    .history-info {
+      .history-item {
+        @include flexBetween();
+        @include mobile {
+          flex-direction: column;
+          gap: rem(50);
+        }
+        .history-text {
+          @include mobile {
+            order: 2;
+          }
+        }
+        p {
+          @include font(28, 700);
+          margin-bottom: rem(20);
+        }
+        ul {
+          li {
+            position: relative;
+            @include font(18, 500);
+            padding-left: rem(12);
+            & + li {
+              margin-top: rem(6);
+            }
+            &::before {
+              position: absolute;
+              content: '';
+              left: 0;
+              top: rem(10);
+              width: rem(4);
+              height: rem(4);
+              background-color: $color-stroke01;
+              border-radius: 999px;
+            }
+          }
+        }
+        .history-img {
+          position: relative;
+          width: rem(480);
+          @include mobile {
+            width: 100%;
+          }
+          &::before {
+            position: absolute;
+            content: '';
+            left: rem(-85);
+            top: 0;
+            width: rem(80);
+            height: rem(80);
+            background-color: $color-primary05;
+            border-radius: 999px;
+          }
+          &::after {
+            position: absolute;
+            content: '';
+            right: rem(-5);
+            bottom: rem(-10);
+            width: rem(30);
+            height: rem(30);
+            background-color: #fff0d3;
+            border-radius: 999px;
+          }
+        }
+        & + .history-item {
+          margin-top: rem(24);
+          justify-content: initial;
+          gap: rem(80);
+          @include mobile {
+            margin-top: rem(50);
+            gap: rem(50);
+          }
+          .history-text {
+            position: relative;
+            @include mobile {
+              position: relative;
+              left: clamp(rem(80), 2vw, rem(100));
+              align-self: flex-start;
+            }
+            &::before {
+              position: absolute;
+              content: '';
+              right: rem(-40);
+              bottom: rem(-50);
+              width: rem(80);
+              height: rem(80);
+              background-color: $color-primary03;
+              border-radius: 999px;
+            }
+          }
+          .history-img {
+            &::before {
+              position: absolute;
+              content: '';
+              left: rem(-30);
+              top: 0;
+              width: rem(50);
+              height: rem(50);
+              background-color: $color-fill00;
+              border-radius: 999px;
+              border: 20px solid $color-secondary03;
+              z-index: -1;
+            }
+            &::after {
+              position: absolute;
+              content: '';
+              right: rem(15);
+              bottom: rem(10);
+              width: rem(50);
+              height: rem(50);
+              background-color: #f2f5ff;
+              border-radius: 999px;
+              z-index: -1;
+            }
+          }
+        }
+      }
+      & + .history-list {
+        height: rem(430);
+        @include mobile {
+          height: auto;
+          margin-top: rem(50);
+        }
+      }
+    }
+  }
+  // 인재상
+  .talent-wrap {
+    @include flexCenterColumn();
+    font-family: $font-family-gmarket;
+    > .title {
+      position: relative;
+      @include font(34, 500, 1.3);
+      width: rem(564);
+      height: rem(178);
+      margin-bottom: rem(60);
+      padding: rem(45) 0;
+      @include mobile {
+        width: auto;
+        height: auto;
+        margin-bottom: 0;
+      }
+      strong {
+        color: $color-secondary02;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        @include background('/images/intro/quote-bg.svg', center center, 100%);
+        width: rem(100);
+        height: rem(63);
+        z-index: -1;
+        @include mobile {
+          left: rem(-100);
+          top: -3px;
+        }
+        @include mobile-sm {
+          display: none;
+        }
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: 0;
+        @include background('/images/intro/quote-bg.svg', center center, 100%);
+        width: rem(100);
+        height: rem(63);
+        z-index: -1;
+        transform: rotate(180deg);
+        @include mobile {
+          right: rem(-130);
+          bottom: 10px;
+        }
+        @include mobile-sm {
+          display: none;
+        }
+      }
+      p {
+        &:first-child {
+          position: relative;
+          left: clamp(rem(-80), 2vw, rem(-100));
+          @include mobile-sm {
+            //left: clamp(rem-m(-84), 2vw, rem-m(-100));
+            left: 0;
+          }
+        }
+        &:last-child {
+          margin-top: rem(6);
+          position: relative;
+          right: clamp(rem(-90), 2vw, rem(-100));
+           @include mobile-sm {
+            right: 0;
+           }
+        }
+      }
+    }
+    .talent-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include mobile {
+        grid-template-columns: repeat(1, 3fr);
+        gap: rem(30);
+      }
+      .item {
+        @include flexCenterColumn();
+        position: relative;
+        width: rem(298);
+        height: rem(298);
+        border: rem(20) solid rgba(73, 101, 195, 0.5);
+        box-sizing: border-box;
+        border-radius: 999px;
+        &:nth-of-type(2) {
+          border-color: rgba(123, 116, 209, 0.5);
+          margin-left: rem(-20);
+          @include mobile {
+            margin-left: 0;
+          }
+        }
+        &:nth-of-type(3) {
+          border-color: rgba(141, 17, 121, 0.5);
+          margin-left: rem(-40);
+          @include mobile {
+            margin-left: 0;
+          }
+        }
+        .title {
+          @include font(20, 700);
+          margin-bottom: rem(8);
+        }
+        .text {
+          @include font(16, 500, $color: $color-text02);
+          font-family: $font-family-base;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+          height: 90%;
+          border: 1px dashed $color-stroke03;
+          border-radius: 999px;
+        }
+      }
+    }
+  }
+}

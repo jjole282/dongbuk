@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>동북선도시철도(주)</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <%- include('./components/_header') %>
+    <!--// header -->
+
+    <!-- 전체메뉴 -->
+    <%- include('./components/_allmenu.ejs') %>
+    <!--// 전체메뉴 -->
+
+    <!-- 모바일 메뉴 -->
+    <%- include('./components/_mobilemenu.ejs') %>
+    <!--// 모바일 메뉴 -->
+
+    <!-- main -->
+    <main id="sub-content" role="main">
+      <div class="inner">
+        <!-- contents -->
+        <section id="page-content" class="page-intro">
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Location</strong><span>찾아오시는 길</span>
+              </h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li class="is-active">
+                    <span>찾아오시는 길</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/images/intro/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+
+          
+          <!-- sub-contents -->
+          <div class="location-wrap" data-animation="fade-up">
+              <div class="location-map">
+                <img src="/images/intro/location.jpg" alt="동북선경전철 위치 지도 이미지" />
+              </div>
+              <div class="location-info">
+                <div class="location-text">
+                  <strong>동북선경전철(주)</strong>
+                  <p><span>주소</span>(02585) 서울특별시 동대문구 무학로36길 46</p>
+                </div>
+                <div class="btn-wrap">
+                  <a
+                    href="https://map.kakao.com/?urlX=458174.9999999972&urlY=1147959.9999999988&urlLevel=3&itemId=2060478272&q=%EC%97%90%EC%8A%A4%EC%A7%80%EB%A0%88%EC%9D%BC&srcid=2060478272&map_type=TYPE_MAP"
+                    class="btn-white lg"
+                  >
+                    <span>길안내</span>
+                    <i class="ico-arrow-right03" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+          </div>
+          <div class="direction-wrap">
+            <h3 class="heading-sm" data-animation="fade-up">교통안내</h3>
+            <ul data-animation="fade-up">
+              <li data-animation="fade-up">
+                <i class="ico-subway" aria-hidden="true" data-animation="fade-up"></i>
+                <div class="direction-info" data-animation="fade-up">
+                  <h4>지하철 이용시</h4>
+                  <dl>
+                    <dt class="direction-label">3호선</dt>
+                    <dd class="direction-text">대곡역 하차 5번 출구, 대곡 본사동 이동</dd>
+                  </dl>
+                  <dl>
+                    <dt class="direction-label">경의중앙선</dt>
+                    <dd class="direction-text">하차 5번 출구, 대곡 본사동 이동</dd>
+                  </dl>
+                  <dl>
+                    <dt class="direction-label">서해선</dt>
+                    <dd class="direction-text">하차 5번 출구, 대곡 본사동 이동</dd>
+                  </dl>
+                </div>
+              </li>
+              <li data-animation="fade-up">
+                <i class="ico-bus" aria-hidden="true" data-animation="fade-up"></i>
+                <div class="direction-info" data-animation="fade-up">
+                  <h4>버스 이용시</h4>
+                  <dl>
+                    <dt class="direction-label">마을버스</dt>
+                    <dd class="direction-text">66, 67, 72, 75, 84, 89 95, 97, 2000</dd>
+                  </dl>
+                  <dl>
+                    <dt class="direction-label">간선버스</dt>
+                    <dd class="direction-text">700, 707, 921</dd>
+                  </dl>
+                  <dl>
+                    <dt class="direction-label">광역버스</dt>
+                    <dd class="direction-text">3800, 9700</dd>
+                  </dl>
+                </div>
+              </li>
+              <li data-animation="fade-up">
+                <i class="ico-car" aria-hidden="true" data-animation="fade-up"></i>
+                <div class="direction-info" data-animation="fade-up">
+                  <h4>승용차 및 택시 이용시</h4>
+                  <p class="direction-text">
+                    대곡역(고가) 및 고양시 덕양구 대장동 방면(GTX-A 본사동 주차장)
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--// sub-contents -->
+
+
+        </section>
+        <!--// contents -->
+      </div>
+    </main>
+    <!--// main -->
+
+    <!-- footer -->
+    <%- include('./components/_footer.ejs') %>
+    <!--// footer -->
+  </div>
+
+  <script type="module" src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+// table reset
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-align: left;
+  vertical-align: baseline;
+  background: transparent;
+  empty-cells: show;
+  margin: 0;
+  padding: 0;
+}
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+  vertical-align: baseline;
+  background: transparent;
+  white-space: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: inherit;
+}
+
+th {
+  font-weight: inherit;
+  text-align: inherit;
+}
+
+caption {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-align: left;
+  caption-side: top;
+}
+
+colgroup,
+col {
+  border: none;
+  background: transparent;
+}
+
+thead,
+tbody,
+tfoot {
+  vertical-align: baseline;
+  background: transparent;
+}
+
+tr {
+  vertical-align: baseline;
+  background: transparent;
+}
+
+// table custom
+.table-wrap {
+  width: 100%;
+  border-top: 2px solid $color-stroke01;
+
+  .heading-sm {
+    margin-bottom: rem(20);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    font-size: rem(14);
+  }
+  & + .table-wrap {
+    margin-top: rem(40);
+  }
+  & + h3 {
+    margin-top: rem(40);
+  }
+  table + table {
+    margin-top: rem(20);
+  }
+  caption {
+    @include txtHide();
+  }
+
+  thead {
+    background-color: #f2f5ff;
+  }
+  th {
+    @include font(16, 700);
+    border-bottom: 1px solid $color-stroke08;
+    border-left: 1px solid $color-stroke08;
+    padding: rem(16);
+    word-break: keep-all;
+    vertical-align: middle;
+    height: rem(56);
+    background-color: $color-fill08;
+    @include font(18, 700);
+    &.no-pd {
+      padding-inline: 0 !important;
+    }
+    &:first-child {
+      border-left: 0 none;
+    }
+  }
+  td {
+    @include font(18, 500);
+    border-bottom: 1px solid $color-stroke08;
+    border-left: 1px solid $color-stroke08;
+    padding: rem(16);
+    word-break: break-word;
+    vertical-align: middle;
+    background-color: $color-fill00;
+    strong {
+      color: $color-text01;
+      display: inline-block;
+    }
+    &.nowrap {
+      white-space: nowrap;
+    }
+    &:first-child {
+      border-left: 0 none;
+    }
+  }
+  tr {
+    &.row-line th {
+      border-top: 1px solid $color-stroke04;
+    }
+    &.fix {
+      .fix-txt {
+        color: $color-text00;
+        display: inline-block;
+        padding: 0 rem(10);
+        line-height: rem(24);
+        background-color: $color-fill04;
+      }
+      .link {
+        font-weight: 700;
+      }
+    }
+  }
+  // no data
+  tr.empty {
+    cursor: default;
+    pointer-events: none;
+    td {
+      padding: rem(52) 0;
+      border: none;
+      border-top: 1px solid $color-stroke04;
+    }
+    i {
+      margin-bottom: rem(16);
+    }
+    span {
+      display: block;
+      @include font(16, 500, $color-text02);
+    }
+  }
+  .left {
+    text-align: left;
+  }
+}
+// 모바일에서 테이블 스크롤(열 많을때)
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  .table-wrap {
+    display: inline-block;
+    vertical-align: top;
+    @include mobile {
+      width: 950px;
+    }
+    //pc에만 보이는 테이블 설정
+    &.table-pc {
+      @include mobile {
+        display: none;
+      }
+    }
+    &.table-mobile {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}
+// 목록 조회 테이블 리스트
+.table-wrap {
+  .table-list {
+    th {
+      padding: rem(16) rem(8);
+      .sort-btn {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 700;
+        i {
+          margin-left: rem(5);
+        }
+      }
+    }
+    td {
+      color: $color-text09;
+      a {
+        color: $color-text09;
+      }
+      &.align-left {
+        padding-left: rem(20);
+      }
+      .faq-label {
+        width: rem(30);
+        height: rem(30);
+        border-radius: 999px;
+        background-color: $color-primary01;
+        @include font(20, 500, $color: $color-text00);
+        @include flexCenter();
+        display: inline-flex;
+        flex-shrink: 0;
+        margin-right: rem(10);
+      }
+      .link {
+        &.ellipsis {
+          display: inline-block;
+          width: 100%;
+          vertical-align: top;
+        }
+      }
+      .text-badge {
+        position: relative;
+        display: inline-block;
+        align-items: center;
+        padding: 0.1rem 0.5rem;
+        border-radius: 2.4rem;
+        font-size: rem(16);
+        font-weight: 500;
+        background-color: #fff;
+        white-space: nowrap;
+        margin-right: 0.8rem;
+        vertical-align: top;
+        margin-top: rem(-2);
+        &.line-A {
+          color: $color-text04;
+          border: 1px solid $color-stroke04;
+        }
+        &.line-B {
+            color: $color-text04;
+            border: 1px solid $color-stroke04;
+        }
+        + .link {
+          &.ellipsis {
+            width: calc(100% - rem(110));
+            vertical-align: top;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &.type02 {
+      th {
+        background-color: $color-fill10;
+        &:first-child {
+          border-left: 1px solid $color-stroke08;
+        }
+        &:last-child {
+          border-right: 1px solid $color-stroke08;
+        }
+      }
+      td {
+        &:first-child {
+          border-left: 1px solid $color-stroke08;
+        }
+        &:last-child {
+          border-right: 1px solid $color-stroke08;
+        }
+      }
+    }
+  }
+}
+
+// 가로형 테이블
+.table-wrap.horizontal {
+  th {
+    border-top: 1px solid $color-stroke04;
+  }
+  tr:first-child {
+    border-top: 2px solid $color-primary01;
+  }
+  tr:last-child {
+    th {
+      border-bottom: 1px solid $color-stroke04;
+    }
+  }
+}
+// 폼테이블 (촬영신청하기)
+.table-wrap.form-table {
+  th {
+    background-color: $color-fill05;
+    border-top: 2px solid $color-stroke01;
+    height: rem(50);
+  }
+  thead {
+    tr {
+      border-top: 2px solid $color-stroke01;
+    }
+  }
+  &.horizontal {
+    tr {
+      &:first-child {
+        border-color: $color-stroke01;
+      }
+    }
+    th {
+      border-top: 1px solid $color-stroke04;
+    }
+  }
+}
+// pc에서만 flex
+.tb-scroll-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @include mobile {
+    display: block;
+  }
+}

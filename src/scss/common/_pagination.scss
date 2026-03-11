@@ -1,0 +1,60 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.pagination-box {
+  margin-top: rem(20);
+  ul {
+    @include flexCenter();
+    gap: rem(8);
+    .page-item {
+      span {
+        position: relative;
+        &::before {
+          position: absolute;
+          content: '';
+          width: rem(20);
+          height: rem(20);
+          left: rem(-20);
+          top: 50%;
+          transform: translateY(-50%) rotate(180deg);
+          @include background('/icons/ico-arrow-right04.svg', center, 100%);
+        }
+        &.pg-ellipsis {
+          display: block;
+          width: rem(24);
+          height: rem(24);
+          background: url('/icons/ellipsis_horizontal.svg') no-repeat center 100%;
+          &::before {
+            display: none;
+          }
+          span {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+      &.next {
+        span {
+          &::before {
+            left: initial;
+            right: rem(-20);
+            transform: translateY(-50%) rotate(0deg);
+          }
+        }
+      }
+      a {
+        @include flexCenter();
+        width: rem(40);
+        height: rem(40);
+        @include font(16, 400, $color: $color-text09);
+      }
+      &.on a {
+        background-color: $color-fill10;
+        border-radius: 999px;
+        @include font(17, 700, $color: $color-primary01);
+      }
+    }
+  }
+}

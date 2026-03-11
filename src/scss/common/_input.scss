@@ -1,0 +1,321 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.input-box {
+  display: flex;
+  input {
+    width: 100%;
+    border: 1px solid $color-stroke03;
+    background-color: $color-fill00;
+    border-radius: rem(8);
+    padding: rem(10) rem(12);
+    text-align: left;
+    height: rem(44);
+    position: relative;
+    @include font(16, 400);
+    &::placeholder {
+      color: $color-text03;
+    }
+  }
+  &:has(.input-unit) {
+    align-items: center;
+    gap: rem(12);
+    input {
+      width: rem(80);
+    }
+  }
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(20);
+  @include mobile-sm {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(10);
+  }
+  .search-text {
+    position: relative;
+    padding-left: rem(10);
+    @include font(16, 500, $color: $color-text09);
+    &::before {
+      position: absolute;
+      content: '';
+      width: rem(4);
+      height: rem(4);
+      background-color: $color-stroke03;
+      border-radius: 999px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    span {
+      color: $color-primary01;
+      font-weight: 500;
+    }
+  }
+  .search-box {
+    display: flex;
+    gap: rem(10);
+    @include mobile-sm {
+      width: 100%;
+    }
+    .input-box {
+      width: rem(240);
+      @include mobile-sm {
+        flex: 1;
+      }
+      input {
+        &::placeholder {
+          @include font(16, 600, $color: $color-text01);
+        }
+      }
+    }
+    .btn-wrap {
+      i {
+        margin-right: rem(4);
+      }
+    }
+  }
+  // select + input
+  &.filter {
+    .search-box {
+      .select-box {
+        width: rem(120);
+        height: rem(44);
+        button {
+          width: 100%;
+          height: 100%;
+        }
+        .select-btn span {
+          font-size: rem(16);
+        }
+        .select-list {
+          height: auto;
+          button span {
+            font-size: rem(16);
+          }
+        }
+        &.bid {
+          display: none;
+          &.is-active {
+            display: block;
+          }
+        }
+      }
+    }
+    .input-box {
+      &.is-hidden {
+        display: none;
+      }
+    }
+  }
+}
+.radio-box {
+  @include flexCenter();
+  gap: rem(20);
+  .radio-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    label {
+      display: flex;
+      position: relative;
+      padding-left: rem(32);
+      height: 27px;
+      cursor: pointer;
+      @include font(18, 600, $color: $color-text02);
+      @include mobile {
+        font-size: rem(16);
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: rem(24);
+        height: rem(24);
+        border: 1px solid $color-stroke03;
+        border-radius: 999px;
+        transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+      }
+    }
+    input[type='radio']:checked + label {
+      &::before {
+        border: 2px solid $color-primary01;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 52%;
+        left: 9px;
+        width: rem(10);
+        height: rem(10);
+        transform: translateY(-50%);
+        background-color: $color-primary01;
+        border-radius: 999px;
+      }
+    }
+    input[type='radio']:focus-visible + label::before {
+      //box-shadow: 0 0 0 4px rgba(26, 92, 255, 0.25);
+      outline-offset: -2px;
+      box-shadow: 0 0 0 4px #7fff00;
+    }
+    input[type='radio']:focus {
+      box-shadow: none;
+      outline-offset: 0;
+    }
+  }
+  &.has-text {
+    justify-content: flex-end;
+    p {
+      @include font(18, 500, $color: $color-text02);
+      margin-right: auto;
+    }
+  }
+}
+.checkbox-box {
+  .checkbox-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: rem(24);
+    height: rem(24);
+    background-color: $color-fill04;
+    border-radius: rem(6);
+    &::before {
+      position: absolute;
+      content: '';
+      width: rem(20);
+      height: rem(20);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include background('/icons/ico-check05.svg', center, 100%);
+    }
+    &:has(input[type='checkbox']:checked) {
+      background-color: $color-primary01;
+    }
+    > input[type='checkbox'] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+  }
+  &:has(label) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+  }
+  label {
+    font-weight: 600;
+    color: $color-text01;
+  }
+}
+// datepicker
+.input-box.date {
+  position: relative;
+  width: rem(240);
+  input[type='text']#date,
+  input[type='text'].flatpickr-input {
+    width: 100%;
+    height: rem(44);
+    padding: rem(10) rem(12);
+    border: 1px solid $color-stroke04;
+    border-radius: rem(8);
+    background-color: $color-fill00;
+    color: $color-text01;
+    font-size: 1rem;
+    &::placeholder {
+      @include font(16, 400, $color: $color-text03);
+    }
+    &:focus,
+    &:focus-visible {
+      outline: 0;
+      border-color: $color-primary01;
+    }
+    &:disabled {
+      background: $color-fill02;
+      color: $color-text04;
+      cursor: not-allowed;
+    }
+    &:read-only {
+      cursor: not-allowed;
+    }
+  }
+}
+.custom-file {
+  position: relative;
+  padding: 0 !important;
+  width: 98px;
+  input[type='file'] {
+    opacity: 0;
+    &:focus {
+      + .file-txt {
+        outline: 4px solid #7fff00;
+        outline-offset: -4px;
+        border-radius: rem(8);
+      }
+    }
+    + .file-txt {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0 rem(12);
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.file-area {
+  margin-top: rem(10);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: rem(23) rem(20);
+  background-color: $color-fill06;
+  border-radius: rem(16);
+  border: 1px solid $color-stroke05;
+  strong {
+    position: relative;
+    flex-shrink: 0;
+    @include font(16, 700);
+    padding-right: rem(30);
+    @include mobile-sm {
+      align-self: baseline;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    flex: 1;
+    min-width: 0;
+    li {
+      .ico-modal-close {
+        width: rem(20);
+        height: rem(20);
+        filter: invert(63%) sepia(7%) saturate(142%) hue-rotate(177deg) brightness(95%)
+          contrast(81%);
+        margin-right: rem(5);
+      }
+      & + li {
+        margin-top: rem(8);
+      }
+    }
+  }
+}
+.media-box {
+  > ul {
+    > li {
+      > a {
+        display: block;
+      }
+    }
+  }
+}

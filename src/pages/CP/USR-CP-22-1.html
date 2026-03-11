@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>동북선도시철도(주)</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <%- include('./components/_header') %>
+    <!--// header -->
+
+    <!-- 전체메뉴 -->
+    <%- include('./components/_allmenu.ejs') %>
+    <!--// 전체메뉴 -->
+
+    <!-- 모바일 메뉴 -->
+    <%- include('./components/_mobilemenu.ejs') %>
+    <!--// 모바일 메뉴 -->
+
+    <!-- main -->
+    <main id="sub-content" role="main">
+      <div class="inner">
+        <!-- contents -->
+        <section id="page-content" class="page-customer">
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>FAQ</strong><span>고객참여</span>
+              </h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>고객참여</span></a>
+                  </li>
+                  <li class="is-active">
+                    <span>FAQ</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/images/customer/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+
+          <!-- sub-contents -->
+          <div class="table-view">
+            <div class="title-area">
+              <h3><span class="faq-label"><img src="/icons/faq-q.svg" alt="Q"></span>역사나 열차 내에서 비상 상황이 발생했을 때 어떻게 해야 하나요?</h3>
+              <div class="info-area">
+              <dl>
+                  <dt>조회수</dt>
+                  <dd>1336</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="cont-area">
+              <span class="faq-label"><img src="/icons/faq-a.svg" alt="A"></span>
+              <!-- 내용 -->
+              <div class="text-area">지하역사 특성상 자연 환기가 어려우므로, 공기질 실시간 모니터링을 통해 유지기준 초과가 예상되거나 초과된 역사에 대해 공기조화기 즉시 확장 가동 등 선제 조치 등을 시행하고 있습니다. <br>또한 여타 역사와 차별화된 환경 관리를 위해 관련 연구 및 유기적인 전략 수립에 최선을 다하고 있습니다.</div>
+            </div>
+            <form action="#">
+              <div class="post-nav">
+                <dl class="next">
+                  <dt><i class="ico-arrow-up" aria-hidden="true"></i>다음글</dt>
+                  <dd>다음글이 없습니다.</dd>
+                </dl>
+                <dl class="prev">
+                  <dt><i class="ico-arrow-down02" aria-hidden="true"></i>이전글</dt>
+                  <dd>
+                    <a href="#">OLED 공모전 당선자 명단</a>
+                  </dd>
+                </dl>
+              </div>
+            </form>
+
+            <div class="btn-wrap">
+              <a href="#" class="btn-line sm"><span>목록</span></a>
+            </div>
+          </div>
+          <!--// sub-contents -->
+
+        </section>
+        <!--// contents -->
+      </div>
+    </main>
+    <!--// main -->
+
+    <!-- footer -->
+    <%- include('./components/_footer.ejs') %>
+    <!--// footer -->
+  </div>
+
+  <script type="module" src="../../js/main.js"></script>
+</body>
+</html>

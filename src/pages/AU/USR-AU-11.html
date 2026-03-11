@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>동북선도시철도(주)</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <%- include('./components/_header') %>
+    <!--// header -->
+
+    <!-- 전체메뉴 -->
+    <%- include('./components/_allmenu.ejs') %>
+    <!--// 전체메뉴 -->
+
+    <!-- 모바일 메뉴 -->
+    <%- include('./components/_mobilemenu.ejs') %>
+    <!--// 모바일 메뉴 -->
+
+    <!-- main -->
+    <main id="sub-content" role="main">
+      <div class="inner">
+        <!-- contents -->
+        <section id="page-content" class="page-intro">
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>CI Brand Identity</strong><span>CI소개</span>
+              </h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li class="is-active">
+                    <span>CI소개</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/images/intro/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+
+          
+          <!-- sub-contents -->
+          <div class="ci-wrap">
+            <div class="ci-box" data-animation="fade-up">
+              <div class="ci-box-img">
+                <img src="/images/intro/logo.svg" alt="동북선도시철도 로고" />
+              </div>
+              <p class="ci-box-desc">
+                기업의 아이덴티티는 임직원들로 하여금 기업의 가치를 공유하게 하고 기업의 정체성을 <br>내재화시키는 경영전량 가운데 하나이다. 지속성, 일관성, 통일성이 매우 중요하다
+              </p>
+            </div>
+            <section class="ci-section" data-animation="fade-up">
+              <div class="ci-section-head">
+                <h3 class="ci-section-title">국문 상하조합</h3>
+              </div>
+              <div class="ci-section-body-wrap">
+                <div class="ci-section-body">
+                  <div class="ci-imgs">
+                    <div class="ci-img">
+                      <img src="/images/intro/gtx-a-logo-02.svg" alt="GTXA 지티엑스에이 운영주식회사 가로형1" />
+                    </div>
+                    <div class="ci-img">
+                      <img src="/images/intro/gtx-a-logo-03.svg" alt="GTXA - Great Train eXpress A-Line Operation 가로형2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="ci-section-body">
+                  <div class="ci-imgs">
+                    <div class="ci-img">
+                      <img src="/images/intro/gtx-a-logo-02.svg" alt="GTXA 지티엑스에이 운영주식회사 가로형1" />
+                    </div>
+                    <div class="ci-img">
+                      <img src="/images/intro/gtx-a-logo-03.svg" alt="GTXA - Great Train eXpress A-Line Operation 가로형2" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="ci-section" data-animation="fade-up">
+              <div class="ci-section-head">
+                <h3 class="ci-section-title">심볼형</h3>
+              </div>
+              <div class="ci-section-body">
+                <div class="ci-imgs">
+                  <div class="ci-img">
+                    <img src="/images/intro/gtx-a-logo-04.svg" alt="GTXA 지티엑스에이운영(주) 심볼 로고타입1" />
+                  </div>
+                  <div class="ci-img">
+                    <img src="/images/intro/gtx-a-logo-05.svg" alt="GTXA 지티엑스에이운영(주) GREAT TRAIN EXPRESS A-LINE OPERATION 심볼 로고타입2" />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- text box -->
+            <div class="text-box" data-animation="fade-up">
+              <p class="text-box-desc">
+                CI는 브랜드 커뮤니케이션에서 핵심이 되는 대표적인 디자인 상징물이자 중요한
+                자산입니다. 임의로 변경하거나 왜곡하는 것을 금지하며, 구현되는 환경에
+                최적화되도록 신중하게 사용하기 바랍니다.
+              </p>
+            </div>
+            <!--// text box -->
+
+            <!-- 버튼 -->
+            <div class="btn-wrap" data-animation="fade-up">
+              <a href="#" class="btn-primary lg">
+                <span>CI 가이드 다운로드</span>
+                <i class="ico-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <!--// 버튼 -->
+          </div>
+          <!--// sub-contents -->
+
+
+        </section>
+        <!--// contents -->
+      </div>
+    </main>
+    <!--// main -->
+
+    <!-- footer -->
+    <%- include('./components/_footer.ejs') %>
+    <!--// footer -->
+  </div>
+
+  <script type="module" src="../../js/main.js"></script>
+</body>
+</html>

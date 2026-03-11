@@ -1,0 +1,110 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.text-list-box {
+  .text-list-title {
+    @include font(24, 700);
+    margin-bottom: rem(12);
+  }
+  .text-list {
+    > li {
+      @include font(18, 500, $color: $color-text09);
+      position: relative;
+      padding-left: rem(10);
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: rem(10);
+        width: rem(4);
+        height: rem(4);
+        background-color: $color-stroke03;
+        border-radius: 999px;
+      }
+      & + li {
+        margin-top: rem(8);
+      }
+      strong {
+        color: $color-primary01;
+      }
+      &.no-bullet {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    .depth-2 {
+      margin-top: rem(8);
+      li {
+        position: relative;
+        padding-left: rem(14);
+        @include font(15, 400, 1.5, $color-text02);
+        &::before {
+          content: '※';
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        & + li {
+          margin-top: rem(8);
+        }
+      }
+    }
+  }
+  & + .text-list-box {
+    margin-top: rem(40);
+  }
+  & + .search-wrap {
+    margin-top: rem(40);
+  }
+  &.sm {
+    .text-list-title {
+      @include font(20, 700, 1.3);
+      margin-bottom: rem(8);
+    }
+    & + & {
+      margin-top: rem(20);
+    }
+  }
+}
+// 여객운송약관
+.policy-list-box {
+  h4 {
+    @include font(18, 700);
+    margin-bottom: rem(4);
+  }
+  p {
+    @include font(16, 500, $color: $color-text02);
+  }
+  & + .policy-list-box {
+    margin-top: rem(20);
+  }
+  ol,
+  ul {
+    li {
+      @include font(16, 500, $color: $color-text02);
+      & + li {
+        margin-top: rem(4);
+      }
+    }
+  }
+  .indent-list {
+    > li {
+      padding-left: 15px;
+      text-indent: -15px;
+    }
+  }
+  .number-list {
+    li {
+      padding-left: rem(20);
+    }
+    &.type02 {
+      margin-top: rem(4);
+      text-indent: rem(-20);
+      li {
+        margin-top: 0;
+      }
+    }
+  }
+}

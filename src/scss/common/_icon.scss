@@ -1,0 +1,233 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+// 공통 아이콘 베이스
+[class^='ico-'],
+[class*=' ico-'] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+}
+.ico-add {
+  background-image: url('/icons/ico-add.svg');
+  width: rem(14);
+  height: rem(14);
+}
+.ico-arrow-down {
+  background-image: url('/icons/ico-arrow-down.svg');
+  width: rem(20);
+  height: rem(20);
+}
+.ico-arrow-right {
+  background-image: url('/icons/ico-arrow-right.svg');
+  width: rem(20);
+  height: rem(20);
+}
+.ico-arrow-right02 {
+  background-image: url('/icons/ico-arrow-right02.svg');
+  width: rem(30);
+  height: rem(30);
+}
+.ico-arrow-right03 {
+  background-image: url('/icons/ico-arrow-right03.svg');
+  width: rem(20);
+  height: rem(20);
+}
+.ico-arrow-right04 {
+  background-image: url('/icons/ico-arrow-right04.svg');
+  width: rem(20);
+  height: rem(20);
+}
+.ico-secure {
+  background-image: url('/icons/ico-secure.svg');
+  width: rem(44);
+  height: rem(44);
+}
+.ico-train {
+  background-image: url('/icons/ico-train.svg');
+  width: rem(44);
+  height: rem(44);
+}
+.ico-system {
+  background-image: url('/icons/ico-system.svg');
+  width: rem(44);
+  height: rem(44);
+}
+.ico-paper {
+  background-image: url('/icons/ico-paper.svg');
+  width: rem(44);
+  height: rem(44);
+}
+.ico-report {
+  background-image: url('/icons/ico-report.svg');
+  width: rem(56);
+  height: rem(56);
+}
+.ico-bomb {
+  background-image: url('/icons/ico-bomb.svg');
+  width: rem(56);
+  height: rem(56);
+}
+.ico-triangle-up {
+  background-image: url('/icons/ico-triangle-up.svg');
+  width: rem(24);
+  height: rem(24);
+}
+.ico-menu {
+  background-image: url('/icons/ico-menu.svg');
+  width: rem(30);
+  height: rem(30);
+}
+.ico-menu-mobile {
+  background-image: url('/icons/ico-menu-mobile.svg');
+  width: rem(32);
+  height: rem(32);
+}
+.ico-menu-close {
+  background-image: url('/icons/ico-menu-close.svg');
+  width: rem(32);
+  height: rem(32);
+}
+.ico-modal-close {
+  background-image: url('/icons/ico-modal-close.svg');
+  width: rem(28);
+  height: rem(28);
+}
+@for $i from 1 through 4 {
+  $num: if($i < 10, '0#{$i}', '#{$i}');
+  .ico-safe-#{$num} {
+    width: rem(44);
+    height: rem(44);
+    background-image: url('/icons/ico-safe-#{$num}.svg');
+  }
+}
+@for $i from 1 through 8 {
+  $num: if($i < 10, '0#{$i}', '#{$i}');
+  .ico-train-#{$num}::after {
+    width: rem(60);
+    height: rem(60);
+    background: url('/icons/ico-train-#{$num}.svg');
+  }
+}
+.ico-arrow-circle {
+  background-image: url('/icons/ico-arrow-circle.png');
+  width: rem(40);
+  height: rem(40);
+}
+@for $i from 1 through 4 {
+  $num: if($i < 10, '0#{$i}', '#{$i}');
+  .ico-service-#{$num} {
+    width: rem(60);
+    height: rem(60);
+    background: url('/icons/ico-service-#{$num}.svg');
+  }
+}
+.ico-subway {
+  background-image: url('/icons/ico-subway.svg');
+  width: rem(77);
+  height: rem(76);
+}
+.ico-bus {
+  background-image: url('/icons/ico-bus.svg');
+  width: rem(77);
+  height: rem(76);
+}
+.ico-car {
+  background-image: url('/icons/ico-car.svg');
+  width: rem(77);
+  height: rem(76);
+}
+.ico-file {
+  background-image: url('/icons/ico-file.svg');
+  width: rem(24);
+  height: rem(24);
+}
+.ico-arrow-up {
+  background-image: url('/icons/ico-arrow-up.svg');
+  width: rem(16);
+  height: rem(16);
+}
+.ico-arrow-down02 {
+  background-image: url('/icons/ico-arrow-down02.svg');
+  width: rem(16);
+  height: rem(16);
+}
+.ico-arrow-line {
+  background-image: url('/icons/ico-arrow-line.svg');
+  width: rem(24);
+  height: rem(24);
+}
+.ico-search {
+  background-image: url('/icons/ico-search.svg');
+  width: rem(20);
+  height: rem(20);
+}
+.ico-empty {
+  background-image: url('/icons/ico-empty.svg');
+  width: rem(64);
+  height: rem(64);
+}
+.ico-growth {
+  background-image: url('/icons/ico-growth.svg');
+  width: rem(60);
+  height: rem(60);
+}
+.ico-allmenu-close {
+  background-image: url('/icons/ico-allmenu-close.png');
+  width: rem(44);
+  height: rem(44);
+}
+.ico-scroll-down {
+  background-image: url('/icons/ico-scroll-down.svg');
+  width: 10px;
+  height: 21px;
+}
+.ico-time::after {
+  background-image: url('/icons/ico-time.svg');
+  width: 24px;
+  height: 24px;
+}
+.ico-center::after {
+  background-image: url('/icons/ico-center.svg');
+  width: 24px;
+  height: 24px;
+}
+.ico-write::after {
+  background-image: url('/icons/ico-write.svg');
+  width: 24px;
+  height: 24px;
+}
+.ico-emergency::after {
+  background-image: url('/icons/ico-emergency.svg');
+  width: 24px;
+  height: 24px;
+}
+.ico-faq::after {
+  background-image: url('/icons/ico-faq.svg');
+  width: 24px;
+  height: 24px;
+}
+.ico-quick {
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.ico-main-calendar {
+  background-image: url('/icons/ico-main-calendar.svg');
+  width: rem(20);
+  height: rem(20);
+}
+.ico-top {
+  background-image: url('/icons/ico-top.svg');
+  width: rem(24);
+  height: rem(24);
+}
+.ico-sort {
+  background-image: url('/icons/ico-sort.svg');
+  width: rem(10);
+  height: rem(15);
+}

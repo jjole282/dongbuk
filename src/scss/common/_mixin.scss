@@ -1,0 +1,155 @@
+@use 'sass:math';
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+// pxTorem
+@function rem($size, $ratio: 1) {
+  @return math.div(math.div($size, $ratio), $rootFontsize) * 1rem;
+}
+
+@function rem-m($size, $ratio: 1) {
+  @return math.div(math.div($size, $ratio), 14) * 1rem;
+}
+// font
+@mixin font($size, $weight: 400, $lineHeight: null, $color: null) {
+  font-size: rem($size);
+  @if $lineHeight != null {
+    line-height: $lineHeight;
+  }
+  @if $color != null {
+    color: $color;
+  }
+  font-weight: $weight;
+}
+// size
+@mixin size($width, $height: null) {
+  width: rem($width);
+  @if $height != null {
+    height: rem($height);
+  }
+}
+// flex
+@mixin flex($justify: space-between, $align: center, $direction: row, $wrap: nowrap, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+// flexCenter
+@mixin flexCenter($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+//flexBetween
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+//flexColumn
+@mixin flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+// background
+@mixin background($url, $position: center, $size: cover, $repeat: no-repeat) {
+  background-image: url($url);
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+// boxShadow
+@mixin box-shadow($x: 0px, $y: 2px, $blur: 4px, $spread: 0px, $color: rgba(0, 0, 0, 0.06)) {
+  box-shadow: $x $y $blur $spread $color;
+}
+
+// ui 텍스트 숨김처리
+@mixin txtHidden() {
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  text-indent: -9999px;
+  white-space: nowrap;
+  line-height: 0;
+}
+
+// 접근성
+@mixin txtHide() {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+//...한줄처리
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap !important;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  word-wrap: normal !important;
+}
+// 말줄임
+@mixin ellipsis_multi($textLine: 1, $txtHeight: 1.5em) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $textLine;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: $txtHeight;
+  max-height: ($txtHeight * $textLine);
+}
+
+// 0 ~ 500
+@mixin mobile-sm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+// 0 ~ 767
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+// 0 ~ 1200
+@mixin responsive {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+// 0 ~ 1400px
+@mixin desktop-medium {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+// 접근성 텍스트 (스크린리더)
+.txt-hide {
+  @include txtHide();
+}
+// 말줄임
+.ellipsis {
+  @include ellipsis();
+}
+.ellipsis_multi {
+  @include ellipsis_multi();
+}
