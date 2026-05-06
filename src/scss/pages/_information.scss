@@ -113,7 +113,7 @@
             height: rem(30);
             left: 0;
             top: 0;
-            @include background('/icons/ico-check03.png', center, 100%);
+            @include background('/assets/icons/ico-check03.png', center, 100%);
             @include mobile-sm {
               width: rem-m(24);
               height: rem-m(24);
@@ -122,7 +122,7 @@
         }
         input[type='radio']:checked + label {
           &::before {
-            @include background('/icons/ico-check04.png', center, 100%);
+            @include background('/assets/icons/ico-check04.png', center, 100%);
           }
           font-weight: 700;
         }
@@ -151,7 +151,7 @@
           left: 0;
           top: 50%;
           transform: translateY(-50%);
-          @include background('/icons/ico-check03.png', center, 100%);
+          @include background('/assets/icons/ico-check03.png', center, 100%);
           @include mobile-sm {
             width: rem-m(24);
             height: rem-m(24);
@@ -159,7 +159,7 @@
         }
         &.is-active {
           &::before {
-            @include background('/icons/ico-check04.png', center, 100%);
+            @include background('/assets/icons/ico-check04.png', center, 100%);
           }
           font-weight: 700;
         }
@@ -216,7 +216,7 @@
               transform: translateY(-50%);
               width: rem(25);
               height: rem(15);
-              @include background('/icons/arrow2.svg', center, 25px);
+              @include background('/assets/icons/arrow2.svg', center, 25px);
               transition: transform 0.3s ease;
             }
             &.is-active {
@@ -242,7 +242,7 @@
           transform: translateY(-50%);
           width: rem(24);
           height: rem(24);
-          @include background('/icons/arrow.svg', center, 24px);
+          @include background('/assets/icons/arrow.svg', center, 24px);
           transition: transform 0.2s ease;
         }
         &.prev {

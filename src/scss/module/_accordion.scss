@@ -42,7 +42,7 @@
           width: rem(20);
           height: rem(20);
           margin-left: auto;
-          @include background('/icons/ico-arrow-down02.svg', center, 100%);
+          @include background('/assets/icons/ico-arrow-down02.svg', center, 100%);
           transform-origin: 50% 50%;
           transition: transform 0.25s ease;
           @include mobile {
@@ -127,7 +127,7 @@
             right: rem(0);
             width: rem(78);
             height: rem(76);
-            @include background('/icons/ico-arrow-bold01.svg', center, 100%);
+            @include background('/assets/icons/ico-arrow-bold01.svg', center, 100%);
             background-color: $color-fill00;
             border-left: 1px solid $color-stroke00;
             transition: none;
@@ -135,7 +135,7 @@
           &.is-open {
             border-color: $color-primary01;
             &::after {
-              @include background('/icons/ico-arrow-bold02.svg', center, 100%);
+              @include background('/assets/icons/ico-arrow-bold02.svg', center, 100%);
               background-color: $color-primary01;
               border-left: 1px solid $color-primary01;
             }

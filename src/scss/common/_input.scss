@@ -193,7 +193,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      @include background('/icons/ico-check05.svg', center, 100%);
+      @include background('/assets/icons/ico-check05.svg', center, 100%);
     }
     &:has(input[type='checkbox']:checked) {
       background-color: $color-primary01;

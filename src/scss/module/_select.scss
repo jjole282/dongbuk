@@ -25,7 +25,7 @@
       width: rem(20);
       height: rem(20);
       right: rem(12);
-      @include background('/icons/ico-arrow-down.svg', center, 100%);
+      @include background('/assets/icons/ico-arrow-down.svg', center, 100%);
       top: 50%;
       transform: translateY(-50%) rotate(0deg);
       transition: transform 0.3s;
@@ -85,6 +85,7 @@
       width: 100%;
       padding: rem(5) rem(12);
       text-align: left;
+      align-items: center;
       span {
         @include font(18, 500, 1.3);
       }

@@ -5,7 +5,7 @@
 .page-intro {
   // 경영이념
   .service-wrap {
-    @include background('/images/intro/sg-img.png', center, cover);
+    @include background('/assets/images/intro/sg-img.png', center, cover);
     color: $color-text00;
     text-align: center;
     padding-top: rem(80);
@@ -303,7 +303,7 @@
   // 연혁
   .history-wrap {
     .history-box {
-      @include background('/images/intro/sg-img02.png', center, cover);
+      @include background('/assets/images/intro/sg-img02.png', center, cover);
       color: $color-text00;
       text-align: center;
       padding: rem(70) 0;
@@ -550,7 +550,7 @@
   // ceo 인사말
   .ceo-intro-wrap {
     .ceo-box {
-      @include background('/images/intro/ceo-bg.png', center, cover);
+      @include background('/assets/images/intro/ceo-bg.png', center, cover);
       aspect-ratio: 1100 / 340; // 높이는 비율로 자동 계산
       @include flexBetween();
       .ceo-text {
@@ -628,7 +628,7 @@
         }
       }
       .ceo-box {
-        @include background('/images/intro/sg-bg.jpg', center, cover);
+        @include background('/assets/images/intro/sg-bg.jpg', center, cover);
       }
       .ceo-text {
         font-family: $font-family-gmarket;
@@ -679,7 +679,7 @@
   .gt-intro-wrap {
     .gt-box {
       position: relative;
-      @include background('/images/intro/gt-bg.png', center, 100%);
+      @include background('/assets/images/intro/gt-bg.png', center, 100%);
       aspect-ratio: 1100 / 340; // 높이는 비율로 자동 계산
       @include flexBetween();
       @include mobile {
@@ -769,7 +769,7 @@
       left: 50%;
       top: rem(100);
       transform: translate(-50%);
-      @include background('/images/intro/philosophy-bg.svg', center center, 100%);
+      @include background('/assets/images/intro/philosophy-bg.svg', center center, 100%);
       width: rem(500);
       height: rem(500);
       z-index: -1;
@@ -1000,7 +1000,7 @@
         content: '';
         left: 0;
         top: 0;
-        @include background('/images/intro/quote-bg.svg', center center, 100%);
+        @include background('/assets/images/intro/quote-bg.svg', center center, 100%);
         width: rem(100);
         height: rem(63);
         z-index: -1;
@@ -1017,7 +1017,7 @@
         content: '';
         right: 0;
         bottom: 0;
-        @include background('/images/intro/quote-bg.svg', center center, 100%);
+        @include background('/assets/images/intro/quote-bg.svg', center center, 100%);
         width: rem(100);
         height: rem(63);
         z-index: -1;

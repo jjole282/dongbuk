@@ -278,7 +278,7 @@
         height: rem(300);
         right: rem(-170);
         bottom: rem(-88);
-        @include background('/images/safety/safe-bg.png', center, 100% 100%);
+        @include background('/assets/images/safety/safe-bg.png', center, 100% 100%);
       }
 
       .step-item {
@@ -405,7 +405,7 @@
         width: 100%;
         height: 100%;
         background: $color-stroke05;
-        @include background('/images/safety/img-card-hover.png', center, 100%, 100%);
+        @include background('/assets/images/safety/img-card-hover.png', center, 100%, 100%);
         opacity: 0;
         transition: opacity 0.3s ease;
         z-index: 0;
@@ -434,7 +434,7 @@
         height: rem(353);
         top: rem(-130);
         left: rem(179);
-        @include background('/images/safety/train-intro-bg.svg', center, 100% 100%);
+        @include background('/assets/images/safety/train-intro-bg.svg', center, 100% 100%);
       }
       &::after {
         position: absolute;
@@ -443,7 +443,7 @@
         height: rem(372);
         right: rem(-100);
         bottom: 0;
-        @include background('/images/safety/train.png', center, 100% 100%);
+        @include background('/assets/images/safety/train.png', center, 100% 100%);
         @include mobile {
           display: none;
         }

@@ -132,6 +132,10 @@
   width: rem(10);
   height: rem(10);
   background: var(--brand);
+  @include mobile {
+    width: rem-m(10);
+    height: rem-m(10);
+  }
 }
 .badge {
   display: inline-block;

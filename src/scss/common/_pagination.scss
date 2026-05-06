@@ -18,13 +18,13 @@
           left: rem(-20);
           top: 50%;
           transform: translateY(-50%) rotate(180deg);
-          @include background('/icons/ico-arrow-right04.svg', center, 100%);
+          @include background('/assets/icons/ico-arrow-right04.svg', center, 100%);
         }
         &.pg-ellipsis {
           display: block;
           width: rem(24);
           height: rem(24);
-          background: url('/icons/ellipsis_horizontal.svg') no-repeat center 100%;
+          background: url('/assets/icons/ellipsis_horizontal.svg') no-repeat center 100%;
           &::before {
             display: none;
           }
