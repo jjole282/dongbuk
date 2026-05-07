@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에스지레일㈜_채용공고 목록</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>회사소개</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>에스지레일(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>동북선도시철도운영(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>인재상</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-intro">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">채용공고</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>동북선도시철도운영(주)</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- search -->
+            <div class="search-bar">
+              <p class="search-text">총 <span>23</span>건</p>
+              <div class="search-box">
+                <div class="input-box">
+                  <label for="search" class="txt-hide">검색어 입력란</label><!-- 웹접근성 2026-01-06 : label 추가 -->
+                  <input type="text" aria-label="검색어 입력" id="search" placeholder="검색어를 입력하세요." /><!-- 웹접근성 2026-01-06 : id 추가 -->
+                </div>
+                <div class="btn-wrap">
+                  <button class="btn-primary sm">
+                    <i class="ico-search" aria-hidden="true"></i>
+                    <span>검색</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// search -->
+            <div class="table-scroll">
+              <div class="table-wrap">
+                <table class="table-list">
+                  <caption>
+                    채용공고 - 번호,	제목,	첨부,	등록일,	조회수에 대한 정보를 제공
+                  </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                  <colgroup>
+                    <col style="width: 10%" />
+                    <col style="width: auto" />
+                    <col style="width: 7%" />
+                    <col style="width: 11%" />
+                    <col style="width: 10%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">제목</th>
+                      <th scope="col">첨부</th>
+                      <th scope="col">등록일</th>
+                      <th scope="col">조회수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2</td>
+                      <td class="align-left">
+                        <a class="link ellipsis" href="#"
+                          >[프로젝트 계약직] 동북선도시철도 민자사업 건축분야 사업관리 담당자 채용</a
+                        >
+                      </td>
+                      <td><i class="ico-file" aria-hidden="true"></i></td>
+                      <td>2025-06-05</td>
+                      <td>1335</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="align-left">
+                        <a class="link ellipsis" href="#"
+                          >[프로젝트 계약직] 동북선도시철도 민자사업 건축분야 사업관리 담당자 채용</a
+                        >
+                      </td>
+                      <td><i class="ico-file" aria-hidden="true"></i></td>
+                      <td>2024-05-14</td>
+                      <td>393</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="pagination-box">
+              <ul>
+                <li class="page-item prev">
+                  <a href="#">
+                    <span>이전</span>
+                  </a>
+                </li>
+                <li class="page-item on">
+                  <a href="#" aria-label="현재 페이지">1</a><!-- 웹접근성 2026-01-27 : aria 추가 -->
+                </li>
+                <li class="page-item">
+                  <a href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a href="#">3</a>
+                </li>
+                <li class="page-item next">
+                  <a href="#">
+                    <span>다음</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

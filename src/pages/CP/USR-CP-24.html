@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>고객참여</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>고객의 소리</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>작성하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>문화마당</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>촬영신청</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>광고문의</span></a>
+              </li>
+              <li>
+                <a href="#"><span>이벤트/공모</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이벤트/공모 참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>당첨자 확인</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>참여후기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>자주묻는 질문</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>부패방지신고센터</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>신고하기</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">신고하기</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>고객참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>부패방지신고센터</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>신고하기</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <form id="" action="#" method="#">
+              <div class="terms-box" tabindex="0" role="region" aria-label="개인정보 처리방침">
+                동북선도시철도운영㈜는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br /><br />
+                <strong>1. 개인정보의 수집 및 이용 목적</strong><br />
+                - 동북선도시철도선 고객의 소리 서비스 이용에 따른 본인식별 확인<br />
+                - 고객상담, 고객불만접수 및 처리 의사소통 경로 확보<br />
+                - 불량회원의 부정이용방지 및 허가되지 않은 사용 방지<br /><br />
+
+                <strong>2. 수집하는 개인정보의 항목</strong><br />
+                - 필수 항목: 성명, 전화번호, 이메일<br /><br />
+
+                <strong>3. 개인정보 보유 및 이용기간</strong><br />
+                - 게시물 등록 후 혼선방지, 불법적 사용자에 대한 관련 기관 수사협조 등의 이유로 1년간
+                보존 후 파기 합니다.<br />
+                - 단 개인정보 파기를 요청한 경우에는 지체 없이 파기합니다.<br /><br />
+
+                <strong
+                  >※ 위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있으나 동의를 거부할 경우
+                  고객의 소리 서비스 이용에 제한을 받을 수 있습니다.</strong
+                >
+              </div>
+
+              <fieldset class="radio-box">
+                <legend class="txt-hide">개인정보 처리방침 동의 여부</legend>
+                <p id="agree-help" class="txt-hide">동의 또는 동의하지 않음을 선택하세요.</p><!-- 웹접근성 2026-02-06 : 추가 -->
+                <div class="radio-item">
+                  <input type="radio" id="radio01" name="agreement" value="yes" /><!-- 웹접근성 2026-02-06 : required삭제, value 추가 -->
+                  <label for="radio01">위의 정책에 동의합니다.</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="radio02" name="agreement" value="no" /><!-- 웹접근성 2026-02-06 : required삭제, value 추가 -->
+                  <label for="radio02">동의하지 않습니다.</label>
+                </div>
+              </fieldset>
+
+              <div class="form-section">
+                <div class="form-row">
+                  <div class="form-label">
+                    <span>작성자</span>
+                  </div>
+                  <div class="form-field">
+                    <span class="form-value">홍길동</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">
+                    <span>전화번호</span>
+                  </div>
+                  <div class="form-field">
+                    <span class="form-value">010-1234-5467</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">
+                    <label for="emailLocal">이메일</label>
+                  </div>
+                  <div class="form-field">
+                    <fieldset class="email-box">
+                      <legend class="txt-hide">이메일 주소 입력</legend>
+                      <div class="input-box">
+                        <input
+                          id="emailLocal"
+                          name="emailLocal"
+                          type="text"
+                          autocomplete="off"
+                          aria-label="이메일 아이디"
+                        />
+                      </div>
+                      <span aria-hidden="true">@</span>
+                      <div class="input-box">
+                        <label for="emailDomain" class="txt-hide">이메일 도메인 입력란</label><!-- 웹접근성 2026-01-06 : 추가 -->
+                        <input
+                          id="emailDomain"
+                          name="emailDomain"
+                          type="text"
+                          aria-label="이메일 도메인"
+                        />
+                      </div>
+                      <div class="select-box sm" data-filter="email">
+                        <button
+                          type="button"
+                          class="select-btn"
+                          id="select-trigger-email"
+                          aria-expanded="false"
+                          title="이메일 도메인 설정"
+                        ><!-- 웹접근성 2026-01-27 : aria-haspopup 삭제, title 추가 -->
+                          <span>이메일 선택</span>
+                        </button>
+                        <ul class="select-list" hidden tabindex="-1"><!-- 웹접근성 2026-01-27 : role 삭제 --><!-- 웹접근성 2026-01-06 : role 추가 -->
+                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                            <button type="button">
+                              <span>naver.com</span>
+                            </button>
+                          </li>
+                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                            <button type="button">
+                              <span>gmail.com</span>
+                            </button>
+                          </li>
+                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                            <button type="button">
+                              <span>hanmail.net</span>
+                            </button>
+                          </li>
+                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                            <button type="button">
+                              <span>nate.com</span>
+                            </button>
+                          </li>
+                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                            <button type="button">
+                              <span>kakao.com</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">
+                    <label for="title">제목</label>
+                  </div>
+                  <div class="form-field">
+                    <div class="input-box">
+                      <input type="text" id="title" name="title" placeholder="제목을 입력하세요." />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">
+                    <label for="content">내용</label>
+                  </div>
+                  <div class="form-field">
+                    <textarea name="content" id="content"></textarea>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">
+                    <span>첨부파일</span><!-- 웹접근성 2026-01-06 : label을 span으로 변경 -->
+                  </div>
+                  <div class="form-field file">
+                    <div class="btn-wrap">
+                      <label for="file-upload" class="custom-file btn-primary xs"><!-- 웹접근성 2026-01-27 : custom-file 추가 -->
+                        <input
+                          type="file"
+                          id="file-upload"
+                          aria-describedby="file-notice"
+                        /><!-- 웹접근성 2026-01-27 : 위치 변경, class 삭제 -->
+                        <div class="file-txt"><!-- 웹접근성 2026-01-27 : 신규 태그 추가 및 위치 이동 -->
+                          <i class="ico-file"></i><!-- 웹접근성 2026-01-27 : aria 삭제 -->
+                          <span>파일첨부</span>
+                        </div>
+                      </label>
+                    </div>
+                    <p class="noti-text" id="file-notice">
+                      첨부파일은 <span>20MB</span>까지 등록가능 합니다. (첨부파일명에 특수문자를
+                      사용할 수 없습니다.)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn-wrap">
+                <button type="button" class="btn-secondary sm"><span>취소</span></button>
+                <button type="submit" class="btn-primary sm"><span>저장</span></button>
+              </div>
+            </form>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

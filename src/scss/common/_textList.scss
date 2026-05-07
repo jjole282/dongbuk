@@ -83,7 +83,7 @@
   ol,
   ul {
     li {
-      @include font(16, 500, $color: $color-text02);
+      @include font(16, 500);
       & + li {
         margin-top: rem(4);
       }

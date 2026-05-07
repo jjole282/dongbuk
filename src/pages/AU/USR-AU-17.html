@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>회사소개</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>에스지레일(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>동북선도시철도운영(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>인재상</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-intro">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">회사소개</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>동북선도시철도운영(주)</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" data-tab-level="main" aria-label="회사소개"><!-- 웹접근성 2026-01-27 : aria-label 값 수정 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  CEO인사말
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  CI소개
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  캐릭터소개
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-4"
+                  aria-controls="panel-4"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  경영이념
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-5"
+                  aria-controls="panel-5"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  연혁
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-6"
+                  aria-controls="panel-6"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  조직도
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-7"
+                  aria-controls="panel-7"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  윤리경영
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-8"
+                  aria-controls="panel-8"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  안전경영방침
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-4"
+                  role="tabpanel"
+                  aria-labelledby="tab-4"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-5"
+                  role="tabpanel"
+                  aria-labelledby="tab-5"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-6"
+                  role="tabpanel"
+                  aria-labelledby="tab-6"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-7"
+                  role="tabpanel"
+                  aria-labelledby="tab-7"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <!-- 서브탭 영역 -->
+                  <div class="subtab-wrap">
+                    <div class="sub-tabs" data-tab-level="sub"><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                      <button
+                        class="subtab-btn is-active"
+                        id="sub-tab-1"
+                        aria-controls="sub-panel-1"
+                      >
+                        업무추진비 집행내역
+                      </button>
+                      <button class="subtab-btn" id="sub-tab-2" aria-controls="sub-panel-2">
+                        이사회 의결
+                      </button>
+                      <button class="subtab-btn" id="sub-tab-3" aria-controls="sub-panel-3">
+                        정관 및 내규
+                      </button>
+                      <button class="subtab-btn" id="sub-tab-4" aria-controls="sub-panel-4">
+                        기타공시
+                      </button>
+                    </div>
+
+                    <div class="subtab-panels">
+                      <div
+                        class="subtab-panel"
+                        id="sub-panel-1"
+                        role="tabpanel"
+                        aria-labelledby="sub-tab-1"
+                      >
+                        <div class="table-view">
+                          <div class="title-area">
+                            <h3>2025년 7월 업무추진비 집행내역</h3>
+                          </div>
+                          <div class="info-area">
+                            <dl>
+                              <dt>작성자</dt>
+                              <dd>GTX 홈페이지 관리자</dd>
+                            </dl>
+                            <dl>
+                              <dt>등록일</dt>
+                              <dd>2025-06-05</dd>
+                            </dl>
+                            <dl>
+                              <dt>조회수</dt>
+                              <dd>1336</dd>
+                            </dl>
+                          </div>
+                          <div class="cont-area">
+                            <!-- 내용 -->
+                            <div class="text-area">2025년 7월 업무추진비 집행내역</div>
+                            <!-- 첨부파일 -->
+                            <div class="file-area">
+                              <strong>첨부파일</strong>
+                              <ul>
+                                <li>
+                                  <a href="#"
+                                    ><i class="ico-file"></i>
+                                    <span class="ellipsis"
+                                      >붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집
+                                      안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임
+                                      2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp</span
+                                    >
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    ><i class="ico-file"></i
+                                    ><span class="ellipsis"
+                                      >붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집
+                                      안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임
+                                      2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp</span
+                                    ></a
+                                  >
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    ><i class="ico-file"></i
+                                    ><span class="ellipsis"
+                                      >붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집
+                                      안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임
+                                      2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp</span
+                                    ></a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                            <!--// 첨부파일 -->
+                          </div>
+                          <form action="#">
+                            <div class="post-nav">
+                              <dl class="next">
+                                <dt><i class="ico-arrow-up" aria-hidden="true"></i>다음글</dt>
+                                <dd>다음글이 없습니다.</dd>
+                              </dl>
+                              <dl class="prev">
+                                <dt><i class="ico-arrow-down02" aria-hidden="true"></i>이전글</dt>
+                                <dd>
+                                  <a href="#">2025년 7월 업무추진비 집행내역</a>
+                                </dd>
+                              </dl>
+                            </div>
+                          </form>
+
+                          <div class="btn-wrap">
+                            <a href="#" class="btn-line sm"><span>목록</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="sub-panel-2"
+                        role="tabpanel"
+                        aria-labelledby="sub-tab-2"
+                        hidden
+                      ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                        <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="sub-panel-3"
+                        role="tabpanel"
+                        aria-labelledby="sub-tab-3"
+                        hidden
+                      ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                        <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="sub-panel-4"
+                        role="tabpanel"
+                        aria-labelledby="sub-tab-4"
+                        hidden
+                      ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                        <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-8"
+                  role="tabpanel"
+                  aria-labelledby="tab-8"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

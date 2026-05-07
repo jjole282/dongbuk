@@ -3,21 +3,21 @@
 // GmarketSans
 @font-face {
   font-family: "GmarketSans";
-  src: url("/fonts/GmarketSansLight.woff") format("woff");
+  src: url("/assets/fonts/GmarketSansLight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "GmarketSans";
-  src: url("/fonts/GmarketSansMedium.woff") format("woff");
+  src: url("/assets/fonts/GmarketSansMedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "GmarketSans";
-  src: url("/fonts/GmarketSansBold.woff") format("woff");
+  src: url("/assets/fonts/GmarketSansBold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -32,29 +32,29 @@
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("/fonts/Pretendard-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/Pretendard-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/fonts/Pretendard-SemiBold.woff2") format("woff2");
+  src: url("/assets/fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/assets/fonts/Pretendard-SemiBold.woff2") format("woff2");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/assets/fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }

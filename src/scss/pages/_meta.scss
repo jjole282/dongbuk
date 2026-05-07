@@ -1,0 +1,299 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.page-meta {
+  // 개인정보처리방침
+  .cont-box {
+    margin-top: rem(40);
+    h3 {
+      @include font(24, 700, $color: $color-text01);
+      margin-bottom: rem(20);
+      text-align: center;
+    }
+    .cont-list {
+      border: 1px solid $color-stroke05;
+      border-radius: rem(16);
+      padding: rem(30);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(rem(300), rem(380)));
+      row-gap: clamp(rem(12), 2.5vw, rem(20));
+      column-gap: clamp(rem(40), 5vw, rem(200));
+      justify-content: center;
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+      li {
+        a {
+          display: flex;
+          align-items: flex-start;
+          gap: rem(10);
+          @include font(16, 500);
+          //white-space: nowrap;
+          img {
+            width: rem(22);
+            margin-top: rem(2);
+          }
+        }
+      }
+    }
+    .notice-text {
+      margin-top: rem(20);
+      @include font(16, 600, $color: $color-primary02);
+    }
+  }
+  .list-num {
+    h3 {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+      @include font(18, 700, $color: $color-text01);
+      img {
+        width: rem(35);
+      }
+      margin-bottom: rem(16);
+    }
+    .text {
+      @include font(16, 500, $color: $color-text01);
+      margin-bottom: rem(16);
+      span {
+        color: $color-error;
+      }
+    }
+    .text-num {
+      font-weight: 500;
+      color: $color-text02;
+      margin-bottom: rem(16);
+    }
+    & + .list-num {
+      margin-top: rem(40);
+    }
+    .policy-list-box {
+      margin-top: rem(16);
+      & + .table-scroll {
+        margin: rem(16) 0;
+      }
+    }
+  }
+  // 작성하기
+  .terms-box {
+    padding: rem(20) rem(12);
+    border: 1px solid $color-stroke04;
+    border-radius: rem(8);
+    height: rem(210);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-fill03;
+      border-radius: 12px;
+    }
+  }
+  .radio-box {
+    margin-top: rem(20);
+    & + .form-section {
+      margin-top: rem(40);
+    }
+    & + h3 {
+      margin-top: rem(40);
+    }
+  }
+  .form-section {
+    & + h3 {
+      margin-top: rem(40);
+    }
+    border-top: 2px solid $color-primary01;
+    @include mobile {
+      border-top: 1px solid $color-primary01;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: rem(240) minmax(0, 1fr);
+      border-bottom: 1px solid $color-stroke04;
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+    .form-label {
+      padding: rem(16) rem(20);
+      background-color: $color-primary06;
+      text-align: left;
+      label,
+      span {
+        font-weight: 700;
+      }
+    }
+    .form-field {
+      display: flex;
+      align-items: center;
+      padding: rem(6) rem(20);
+      min-width: 0;
+      @include mobile {
+        min-height: rem(50);
+        padding: rem(20);
+      }
+      * {
+        min-width: 0;
+      }
+      .input-box {
+        width: 100%;
+        input {
+          border: 1px solid $color-stroke04;
+        }
+      }
+      .select-box {
+        .select-btn {
+          border: 1px solid $color-stroke04;
+        }
+      }
+      .noti-text {
+        position: relative;
+        margin-top: rem(8);
+        @include font(16, 500, $color: $color-text02);
+        padding-left: rem(10);
+        min-width: 0;
+        text-align: left;
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: rem(10);
+          width: rem(4);
+          height: rem(4);
+          background-color: $color-stroke03;
+          border-radius: 999px;
+        }
+        span {
+          color: $color-error;
+        }
+      }
+      #select-trigger-reason,
+      #select-trigger-duration {
+        width: rem(300);
+      }
+      .w300 {
+        width: rem(300);
+      }
+      // 이메일 선택
+      .email-box {
+        display: flex;
+        align-items: center;
+        .input-box {
+          width: clamp(rem(140), 45vw, rem(200));
+          min-width: 0;
+          @include mobile {
+            width: 100%;
+          }
+        }
+        .input-box + span {
+          margin: 0 rem(10);
+        }
+        .select-box {
+          margin-left: rem(10);
+          width: clamp(rem(140), 45vw, rem(180));
+          min-width: 0;
+          @include mobile {
+            width: 100%;
+          }
+          .select-btn {
+            border: 1px solid $color-stroke04;
+          }
+          .select-list span {
+            font-size: rem(16);
+          }
+        }
+      }
+      textarea {
+        width: 100%;
+        min-height: rem(206);
+        padding: rem(12);
+        border: 1px solid $color-stroke04;
+        border-radius: rem(8);
+        resize: none;
+      }
+      // 파일
+      &.file {
+        //display: flex;
+        display: block;
+        align-items: center;
+        > div {
+          display: flex;
+        }
+        .btn-wrap {
+          min-width: auto;
+        }
+        .file-desc-wrap {
+          display: flex;
+          align-items: center;
+          padding-left: rem(56);
+          label {
+            display: block;
+            width: rem(130);
+            color: $color-primary01;
+            font-size: rem(15);
+          }
+        }
+        @include mobile {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem(10);
+        }
+        .btn-primary.xs {
+          flex-shrink: 0;
+          i {
+            filter: brightness(0) saturate(100%) invert(100%);
+            width: rem(20);
+            height: rem(20);
+            margin-right: rem(04);
+          }
+          &:focus-visible {
+            box-shadow: 0 0 0 4px rgba(26, 92, 255, 0.25);
+          }
+        }
+        .noti-text {
+          position: relative;
+          margin-left: rem(12);
+          @include font(16, 500, $color: $color-text02);
+          padding-left: rem(10);
+          flex: 1 1 auto;
+          min-width: 0;
+          text-align: left;
+          &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: rem(10);
+            width: rem(4);
+            height: rem(4);
+            background-color: $color-stroke03;
+            border-radius: 999px;
+          }
+          span {
+            color: $color-error;
+          }
+        }
+        &.has-text {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    & + .btn-wrap {
+      margin-top: rem(40);
+      justify-content: space-between;
+      gap: rem(10);
+    }
+  }
+  // 이용안내
+  .line-box + .btn-wrap {
+    justify-content: center;
+    margin-bottom: rem(40);
+    a {
+      width: rem(300);
+    }
+  }
+  .img-center {
+    text-align: center;
+  }
+}

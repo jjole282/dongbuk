@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li>
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">비상시 행동요령</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>비상시 행동요령</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="비상시 행동요령"><!-- 웹접근성 2026-01-27 : aria-label 값 변경 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  화재 발생시
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  지진 발생시
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  테러 발생시
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <h3 class="txt-hide">테러발생시 비상행동요령</h3>
+                  <div class="report-box">
+                    <div class="report-item" data-animation="fade-up">
+                      <i class="ico-report" aria-hidden="true"></i>
+                      <span class="report-item-title">테러범 신고</span>
+                      <span class="report-item-desc">
+                        비상통화장치(열차내 및 역사내)<br />
+                        119(소방), 111(국가정보원), 112(경찰)
+                      </span>
+                    </div>
+                    <div class="report-item" data-animation="fade-up">
+                      <i class="ico-bomb" aria-hidden="true"></i>
+                      <span class="report-item-title">신고대상</span>
+                      <span class="report-item-desc">의심스러운 사람<br />또는 물체</span>
+                    </div>
+                  </div>
+                  <!-- 리스트 -->
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">폭발물이 발견된 현장에서는</h4>
+                    <ul class="text-list">
+                      <li>
+                        큰 충격이 닥쳐올 수 있으므로 손잡이 등을 꽉 잡아서 넘어지지 않도록 합니다.
+                        차내 방송 등에 따라서 침착하게 행동합니다.
+                      </li>
+                      <li>
+                        지하철 안은 비교적 안전합니다. 지진이 발생하여 지하철이 정차했다고 해서
+                        서둘러 밖으로 나가면 다칠 위험이 있습니다.
+                      </li>
+                      <li>
+                        열차 내 정전 시 바로 차내에 비상등이 켜지도록 되어 있으니, 서둘러서 출구로
+                        뛰어나가는 것은 가장 위험한 행동이며, 큰 혼란의 원인이 될 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">생물테러 의심 물질(물체)이 발견된 현장에서는</h4>
+                    <ul class="text-list">
+                      <li>건드리지 말고 그대로 두어야 합니다.</li>
+                      <li>
+                        실내에서 열었을 경우에는 창문과 문을 모두 닫고 주변 사람들을 대피시키며
+                        에어컨·환기시설 등을 모두 꺼야 합니다.
+                      </li>
+                      <li>
+                        방독면을 찾아 쓰거나 손수건 또는 휴지 여러장 이용하여 입과 코를 가리고
+                        현장을 즉시 벗어나도록 해야 합니다.
+                      </li>
+                      <li>현장을 벗어난 다음 손과 몸을 비누로 씻고 옷을 갈아입습니다.</li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">폭발현장에서는</h4>
+                    <ul class="text-list">
+                      <li>
+                        신체를 보호하기 위해서 즉시 바닥에 엎드려 양팔과 팔꿈치를 옆구리에 붙이고
+                        손으로 귀와 머리를 감싸야 합니다.
+                      </li>
+                      <li>
+                        2차 폭발이 있을 수 있으므로 미리 일어나지 말고 이동할 필요가 있을 때에는
+                        엎드린 자세로 이동해야 합니다.
+                      </li>
+                      <li>
+                        강당, 로비 등 기둥 간격이 넓은 곳은 붕괴위험이 높으므로 이런 곳에서 벗어나야
+                        합니다.
+                      </li>
+                      <li>
+                        유리·간판·전등 등의 비산·낙하물이 없을 만한 곳이나 책상 등의 아래에 피신해야
+                        합니다.
+                      </li>
+                      <li>
+                        휴대전화를 켜 놓아 붕괴·매몰 시 자신의 위치가 알려질 수 있도록 합니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">총격 현장에서는</h4>
+                    <ul class="text-list">
+                      <li>바닥에 엎드리거나 자세를 낮추어 몸을 숨길 수 있는 곳으로 이동합니다.</li>
+                      <li>
+                        경찰·경비원의 대응사격에 방해가 되지 않도록 경찰·경비원의 지시에 따라야
+                        합니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">화학물질이 유포된 현장에서는</h4>
+                    <ul class="text-list">
+                      <li>즉시 방독면을 찾아 착용하거나 손수건 등으로 입과 코를 가립니다.</li>
+                      <li>
+                        오염지역 내에 있을 때에는 바람이 불어오는 방향 또는 옆 방향으로 신속하게
+                        대피해야 합니다.
+                      </li>
+                      <li>오염된 실내(건물)에서는 신속히 빠져 나와야 합니다.</li>
+                      <li>
+                        오염지역을 벗어난 경우, 맑은 공기를 찾아 호흡하거나 샤워를 하고 옷을
+                        갈아입도록 합니다.
+                      </li>
+                      <li>
+                        오염되지 않은 구역에 있던 사람은 가능한 오염구역을 통과하지 않도록 해야
+                        합니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">방사능 물질이 유포된 현장에서는</h4>
+                    <ul class="text-list">
+                      <li>
+                        방독면을 쓰거나 코와 입을 손수건 또는 휴지로 가리고 주변사람들과 함께
+                        오염되지 않은 곳으로 대피해야 합니다.
+                      </li>
+                      <li>대피한 곳에서는 창문을 모두 닫고 에어컨, 환풍기 등을 모두 끕니다.</li>
+                      <li>
+                        방사능물질에 노출되었다고 판단되면 신속하게 옷을 벗고 온몸을 비누로 깨끗이
+                        씻도록 합니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">화재가 발생한 경우에는</h4>
+                    <ul class="text-list">
+                      <li>경보기를 눌러 주변 사람들에게 신속히 알립니다.</li>
+                      <li>
+                        주변에 있는 손전등을 찾아 들도록 합니다.- 손수건 등을 물에 적셔 코와 입을
+                        가립니다.
+                      </li>
+                      <li>
+                        화염·연기가 적은 피난통로를 선택하여 대피합니다. 이 때 엘리베이터는 이용하지
+                        말아야 하며 문을 열 때에는 손으로 짚어 뜨거우면 열지 말고 다른 곳으로
+                        대피해야 합니다.
+                      </li>
+                      <li>
+                        피난통로의 한쪽을 이용하여 구조·소방대원이 이동할 수 있도록 해야 합니다.
+                      </li>
+                      <li>대피할 때에는 자세를 낮추고 벽 가까이로 질서 있게 대피합니다.</li>
+                      <li>귀중품 등을 챙기려고 지체하지 말고 즉시 대피해야 합니다.</li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">매몰·붕괴된 경우에는</h4>
+                    <ul class="text-list">
+                      <li>불필요한 활동이나 고함으로 체력을 소모하지 않도록 합니다.</li>
+                      <li>입과 코를 옷이나 천으로 가려서 먼지 흡입을 최소화 합니다.</li>
+                      <li>규칙적으로 벽, 파이프 등을 두드려 자신의 위치를 알립니다.</li>
+                      <li>
+                        휴대전화의 전파는 매몰자 탐색에 도움이 될 수 있기 때문에 전화기의 전원을
+                        절약해야 합니다.
+                      </li>
+                      <li>
+                        2차 붕괴나 낙하물에 대비하여 단단한 테이블 밑이나 창문이 없는 단단한 벽체
+                        옆에서 기다리도록 합니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <!--// 리스트 -->
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

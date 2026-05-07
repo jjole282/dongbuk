@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>알림마당</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>공지사항</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>참여후기</span></a>
+              </li>
+              <li>
+                <a href="#"><span>자료실</span></a>
+              </li>
+              <li>
+                <a href="#"><span>홍보관</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>홍보영상</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>포토갤러리</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>입찰공고</span></a>
+              </li>
+              <li>
+                <a href="#"><span>감사결과</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-notice">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">참여후기</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>알림마당</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>참여후기</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="table-view">
+              <div class="title-area">
+                <h3>OLED 공모전 당선자 입니다. 감사합니다.</h3>
+              </div>
+              <div class="info-area">
+                <dl>
+                  <dt>작성자</dt>
+                  <dd>홍**</dd>
+                  <!-- dev) 마스킹 처리 -->
+                </dl>
+                <dl>
+                  <dt>등록일</dt>
+                  <dd>2025-06-05</dd>
+                </dl>
+                <dl>
+                  <dt>조회수</dt>
+                  <dd>1336</dd>
+                </dl>
+                <dl>
+                  <dt>상태</dt>
+                  <dd>답변대기</dd>
+                </dl>
+              </div>
+              <div class="cont-area">
+                <!-- 내용 -->
+                <div class="text-area">
+                  이번에 참여한 이벤트가 기대 이상으로 즐겁고 유익했습니다. 다양한 프로그램과 세심한
+                  준비 덕분에 편안하게 즐길 수 있었고, 새로운 경험도 할 수 있었습니다. 덕분에 좋은
+                  추억을 만들었고 다음에도 꼭 다시 참여하고 싶습니다!
+                </div>
+                <!-- 첨부파일 -->
+                <div class="file-area">
+                  <strong>첨부파일</strong>
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><i class="ico-file"></i>
+                        <span class="ellipsis"
+                          >붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임
+                          2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2.
+                          모집 안내문.hwp</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="ico-file"></i
+                        ><span class="ellipsis"
+                          >붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임
+                          2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2.
+                          모집 안내문.hwp</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="ico-file"></i
+                        ><span class="ellipsis"
+                          >붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임
+                          2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2. 모집 안내문.hwp붙임 2.
+                          모집 안내문.hwp</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!--// 첨부파일 -->
+              </div>
+              <form action="#">
+                <div class="post-nav">
+                  <dl class="next">
+                    <dt><i class="ico-arrow-up" aria-hidden="true"></i>다음글</dt>
+                    <dd><a href="#">동북선도시철도 운정중앙역 첫손님맞이 행사</a></dd>
+                  </dl>
+                  <dl class="prev">
+                    <dt><i class="ico-arrow-down02" aria-hidden="true"></i>이전글</dt>
+                    <dd>
+                      <a href="#">동북선도시철도 ‘운정중앙~서울역’ 구간 28일 개통</a>
+                    </dd>
+                  </dl>
+                </div>
+              </form>
+
+              <div class="btn-wrap">
+                <a href="#" class="btn-line sm"><span>목록</span></a>
+              </div>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

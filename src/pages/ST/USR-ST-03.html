@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li>
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">비상시 행동요령</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>비상시 행동요령</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="비상시 행동요령"><!-- 웹접근성 2026-01-27 : aria-label 값 변경 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  화재 발생시
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  지진 발생시
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  테러 발생시
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <h3 class="txt-hide">지진발생시 비상행동요령</h3>
+                  <!-- 이미지 -->
+                  <div class="img-box" data-animation="fade-up">
+                    <div class="img-box-label">
+                      <i class="ico-safe-01" aria-hidden="true"></i>
+                      <p class="img-box-text">비상시 행동요령</p>
+                    </div>
+                    <img src="/assets/images/safety/safe-img03.png" alt="" />
+                  </div>
+                  <!--// 이미지 -->
+                  <!-- 리스트 -->
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">지하철에 타고 있을 경우</h4>
+                    <ul class="text-list">
+                      <li>
+                        큰 충격이 닥쳐올 수 있으므로 손잡이 등을 꽉 잡아서 넘어지지 않도록 합니다.
+                        차내 방송 등에 따라서 침착하게 행동합니다.
+                      </li>
+                      <li>
+                        지하철 안은 비교적 안전합니다. 지진이 발생하여 지하철이 정차했다고 해서
+                        서둘러 밖으로 나가면 다칠 위험이 있습니다.
+                      </li>
+                      <li>
+                        열차 내 정전 시 바로 차내에 비상등이 켜지도록 되어 있으니, 서둘러서 출구로
+                        뛰어나가는 것은 가장 위험한 행동이며, 큰 혼란의 원인이 될 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">지하철 역사에 있을 경우</h4>
+                    <ul class="text-list">
+                      <li>
+                        지하철 역사는 정전이 되더라도 바로 비상등이 켜지게 되어 있으니 당황하지 말고
+                        침착하게 역사 안내방송이나 역 직원의 안내에 따라서 행동합니다.
+                      </li>
+                      <li>
+                        지하철 역사는 많은 사람들이 모이는 장소이므로, 큰 혼란이 발생되지 않도록
+                        침착하게 행동합시다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">엘리베이터에 타고 있을 경우</h4>
+                    <ul class="text-list">
+                      <li>
+                        엘리베이터를 타고 있을 때는 지진을 느끼면 버튼을 눌러 엘리베이터가 정지하면
+                        신속하게 내려 대피합니다.
+                      </li>
+                      <li>
+                        만일 엘리베이터에 갇혔을 경우에는 인터폰으로 고객안내센터에 연락해서 구조를
+                        요청합니다. 지진 발생 시에는 엘리베이터를 이용해서는 안 됩니다.
+                        <ul class="depth-2">
+                          <li>
+                            진도5 이상의 지진이 발생하면 지하철은 일시적으로 운행을 중지합니다.
+                          </li>
+                          <li>
+                            지진은 길어야 1분 이내에(강한 진동은 15초 정도) 종료되므로 있던 장소에서
+                            안전한 위치를 확인합니다.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--// 리스트 -->
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

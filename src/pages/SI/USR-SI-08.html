@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>이용안내</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>역정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>열차시간표</span></a>
+              </li>
+              <li>
+                <a href="#"><span>실시간 열차 정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>운임안내</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>운임제도</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>승차권안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>여객운송약관</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>편의시설</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>편의시설 소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>교통약자 편의시설</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>이용자 편의시설</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>유실물센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>간편지연증명서</span></a>
+              </li>
+              <li>
+                <a href="#"><span>승강설비가동현황</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">이용자 편의시설</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>편의시설</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>이용자 편의시설</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="line-box" data-animation="fade-up">
+              <div class="line-box-img-wrap">
+                <img src="/assets/images/information/amenity-user.png" alt="" /><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+              </div>
+              <div class="line-box-body">
+                <p class="line-box-title">이용자 편의시설</p>
+                <p class="line-box-desc">
+                  고객의 눈높이에 맞추었습니다. 공간, 동선, 환경 그리고 기능에 이르기까지, 고객의
+                  눈높이를 가장 먼저 생각했습니다.<br />정거장내 여유공간을 활용하여 공동체가 함께
+                  활용할 수 있는 공간을 마련했습니다.<br />고객 중심의 시설 계획으로 수준 높은
+                  쾌적한 환경을 조성했습니다. 현대인의 인체 치수에 맞춘 공간 설계로 고객의
+                  이용편의를 극대화했습니다.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2025-12-19 : 사진추가 -->
+             <ul class="fc-photo-list" data-animation="fade-up">
+              <li>
+                <div class="photo-box">
+                  <img src="/assets/images/information/amenity-fc01.png" alt="고객안전센터" />
+                  <span>고객안전센터</span>
+                </div>
+              </li>
+              <li>
+                <div class="photo-box">
+                  <img src="/assets/images/information/amenity-fc02.png" alt="수유실" />
+                  <span>수유실</span>
+                </div>
+              </li>
+              <li>
+                <div class="photo-box">
+                  <img src="/assets/images/information/amenity-fc03.png" alt="에스컬레이터" />
+                  <span>에스컬레이터</span>
+                </div>
+              </li>
+              <li>
+                <div class="photo-box">
+                  <img src="/assets/images/information/amenity-fc04.png" alt="엘리베이터" />
+                  <span>엘리베이터</span>
+                </div>
+              </li>
+             </ul>
+            <!--// 2025-12-19 : 사진추가 -->
+
+            <h3 class="heading-sm" data-animation="fade-up">시설현황</h3>
+            <div class="table-scroll" data-animation="fade-up">
+              <div class="table-wrap">
+                <table>
+                  <caption>
+                    시설현황 - 역명,	고객안전센터,	수유실,	에스컬레이터,	엘리베이터에 대한 정보를 제공
+                  </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                  <colgroup>
+                    <col style="width: 10%" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">역명</th>
+                      <th scope="col">고객안전센터</th>
+                      <th scope="col">수유실</th>
+                      <th scope="col">에스컬레이터</th>
+                      <th scope="col">엘리베이터</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><strong>운정중앙</strong></td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td><strong>킨텍스</strong></td>
+                      <td>O</td>
+                      <td>O</td>
+                      <td>O</td>
+                      <td>O</td>
+                    </tr>
+                    <tr>
+                      <td><strong>대곡</strong></td>
+                      <td>O</td>
+                      <td>O</td>
+                      <td>O</td>
+                      <td>O</td>
+                    </tr>
+                    <tr>
+                      <td><strong>연신내</strong></td>
+                      <td>O</td>
+                      <td>O</td>
+                      <td>O</td>
+                      <td>O</td>
+                    </tr>
+                    <tr>
+                      <td><strong>서울역</strong></td>
+                      <td>O</td>
+                      <td>O</td>
+                      <td>O</td>
+                      <td>O</td>
+                    </tr>
+                    <tr>
+                      <td><strong>수서</strong></td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>O</td>
+                      <td>O</td>
+                    </tr>
+                    <tr>
+                      <td><strong>성남</strong></td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>O</td>
+                      <td>O</td>
+                    </tr>
+                    <tr>
+                      <td><strong>구성</strong></td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>O</td>
+                      <td>O</td>
+                    </tr>
+                    <tr>
+                      <td><strong>동탄</strong></td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>O</td>
+                      <td>O</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>이용안내</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>역정보</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>운정중앙역-서울역</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>수서역-동탄역</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>열차시간표</span></a>
+              </li>
+              <li>
+                <a href="#"><span>실시간 열차 정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>운임안내</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>운임제도</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>승차권안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>여객운송약관</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>편의시설</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>편의시설 소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>교통약자 편의시설</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>이용자 편의시설</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>유실물센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>간편지연증명서</span></a>
+              </li>
+              <li>
+                <a href="#"><span>승강설비가동현황</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">열차시간표</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>열차시간표</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+
+            <div class="tab-wrap radius">
+              <div class="tabs" data-tab-level="main" role="tablist" aria-label="GTX 노선 선택"><!-- 웹접근성 2026-01-27 : aria 값 수정 -->
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="main-tab-1"
+                  aria-controls="main-panel-1"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  운정중앙역 - 서울역
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="main-tab-2"
+                  aria-controls="main-panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  수서역 - 동탄역
+                </button>
+              </div>
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="main-panel-1"
+                  role="tabpanel"
+                  aria-labelledby="main-tab-1"
+                >
+                  <!-- station line -->
+                  <div class="station-line-wrap">
+                    <div class="station-line">
+                      <button type="button" class="station-link on" title="선택됨"><!-- 웹접근성 2026-01-27 : 선택되는 button에 title 추가 -->
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">운정중앙</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">킨텍스</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">대곡</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">연신내</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">서울역</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!--// station line -->
+                  <!-- station slide -->
+                  <div class="station-slide-wrap">
+                    <div class="station-slide">
+                      <!-- 역 선택 -->
+                      <div class="station-bar" role="group" aria-label="역 선택">
+                        <div class="station-text">
+                          <span class="station-value">x101</span>
+                          <span class="station-label">운정중앙</span>
+                        </div>
+                        <button class="station-btn next" title="도착역 선택">킨텍스</button><!-- 웹접근성 2026-01-27 : aria를 title로 변경 -->
+                      </div>
+                      <!--// 역 선택 -->
+                      <!-- 역 이름 -->
+                      <div class="station-name">
+                        <span class="station-name-en" lang="en">Unjeong</span>
+                        <span class="station-name-zh" lang="zh">雲井中央</span>
+                        <span class="station-name-ja" lang="ja">ウンジョンチュンアン</span>
+                      </div>
+                      <!--// 역 이름 -->
+                    </div>
+                  </div>
+                  <!--// station slide -->
+                  <div class="table-wrap" data-animation="fade-up">
+                    <h3 class="heading-sm">열차시간표</h3>
+                    <table>
+                      <caption>
+                        열차시간표- 구분,	상행선 (운정중앙 방면),	하행선 (서울 방면)에 대한 정보를 제공
+                      </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                      <colgroup>
+                        <col style="width: 20%" />
+                        <col style="width: 40%" />
+                        <col style="width: 40%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">상행선 (운정중앙 방면)</th>
+                          <th scope="col">하행선 (서울 방면)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>첫차</td>
+                          <td>05:47</td>
+                          <td>05:34</td>
+                        </tr>
+                        <tr>
+                          <td>막차</td>
+                          <td>00:55:47</td>
+                          <td>00:42</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="table-wrap train-schedule" data-animation="fade-up">
+                    <table>
+                      <caption>
+                        열차시간표 - 운정중앙 방면,	시간,	서울 방면에 대한 정보를 제공
+                      </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                      <colgroup>
+                        <col style="width: 45%" />
+                        <col style="width: 10%" />
+                        <col style="width: 45%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">운정중앙 방면</th>
+                          <th scope="col">시간</th>
+                          <th scope="col">서울 방면</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="align-right">
+                            <strong class="text-primary">첫차<span>47분</span></strong>
+                          </td>
+                          <td>
+                            <strong class="hour">05</strong>
+                          </td>
+                          <td class="align-left">
+                            <strong class="text-primary">첫차<span>47분</span></strong>
+                            <span>44분</span>
+                            <span>55분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>02분</span>
+                            <span>17분</span>
+                            <span>27분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">06</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>02분</span>
+                            <span>17분</span>
+                            <span>27분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">07</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">08</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">09</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">10</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">11</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">12</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <strong class="text-primary">막차<span>47분</span></strong>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="main-panel-2"
+                  role="tabpanel"
+                  aria-labelledby="main-tab-2"
+                  aria-hidden="true"
+                ><!-- 웹접근성 2026-01-06 : hidden 삭제 -->
+                  <!-- station line -->
+                  <div class="station-line-wrap">
+                    <div class="station-line">
+                      <button type="button" class="station-link on" title="선택됨"><!-- 웹접근성 2026-01-27 : 선택되는 button에 title 추가 -->
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">수서</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">성남</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">구성</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">동탄</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!--// station line -->
+                  <!-- station slide -->
+                  <div class="station-slide-wrap">
+                    <div class="station-slide">
+                      <!-- 역 선택 -->
+                      <div class="station-bar" role="group" aria-label="역 선택">
+                        <div class="station-text">
+                          <span class="station-value">x108</span>
+                          <span class="station-label">수서</span>
+                        </div>
+                        <button class="station-btn next" aria-label="도착역 선택">성남</button>
+                      </div>
+                      <!--// 역 선택 -->
+                      <!-- 역 이름 -->
+                      <div class="station-name">
+                        <span class="station-name-en" lang="en">Suseo</span>
+                        <span class="station-name-zh" lang="zh">水西</span>
+                        <span class="station-name-ja" lang="ja">スソ</span>
+                      </div>
+                      <!--// 역 이름 -->
+                    </div>
+                  </div>
+                  <!--// station slide -->
+                  <div class="table-wrap" data-animation="fade-up">
+                    <h3 class="heading-sm">열차시간표</h3>
+                    <table>
+                      <caption>
+                        열차시간표 - 구분,	상행선 (수서 방면),	하행선 (동탄 방면)에 대한 정보를 제공
+                      </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                      <colgroup>
+                        <col style="width: 20%" />
+                        <col style="width: 40%" />
+                        <col style="width: 40%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">상행선 (수서 방면)</th>
+                          <th scope="col">하행선 (동탄 방면)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>첫차</td>
+                          <td>05:47</td>
+                          <td>05:34</td>
+                        </tr>
+                        <tr>
+                          <td>막차</td>
+                          <td>00:55:47</td>
+                          <td>00:42</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="table-wrap train-schedule" data-animation="fade-up">
+                    <table>
+                      <caption>
+                        열차시간표 - 수서 방면,	시간,	동탄 방면에 대한 정보를 제공
+                      </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                      <colgroup>
+                        <col style="width: 45%" />
+                        <col style="width: 10%" />
+                        <col style="width: 45%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">수서 방면</th>
+                          <th scope="col">시간</th>
+                          <th scope="col">동탄 방면</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="align-right">
+                            <strong class="text-primary">첫차<span>47분</span></strong>
+                          </td>
+                          <td>
+                            <strong class="hour">05</strong>
+                          </td>
+                          <td class="align-left">
+                            <strong class="text-primary">첫차<span>47분</span></strong>
+                            <span>44분</span>
+                            <span>55분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>02분</span>
+                            <span>17분</span>
+                            <span>27분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">06</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>02분</span>
+                            <span>17분</span>
+                            <span>27분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">07</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">08</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">09</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">10</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">11</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-right">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <span>13분</span>
+                            <span>19분</span>
+                            <span>37분</span>
+                            <span>47분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                            <span>53분</span>
+                          </td>
+                          <td>
+                            <strong class="hour">12</strong>
+                          </td>
+                          <td class="align-left">
+                            <span>01분</span>
+                            <span>07분</span>
+                            <strong class="text-primary">막차<span>47분</span></strong>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

@@ -67,7 +67,7 @@
       .acc-body {
         display: flex;
         align-items: center;
-        @include font(16, 400, $color: $color-text00);
+        @include font(16, 400);
         .acc-label {
           align-self: baseline;
           background-color: $color-secondary00;
@@ -107,7 +107,7 @@
           position: relative;
           z-index: 1;
           padding: rem(24) rem(24) rem(24) rem(24);
-          border: 1px solid $color-stroke00;
+          border: 1px solid $color-stroke05;
           border-radius: rem(16);
           overflow: hidden;
           background-color: $color-fill00;
@@ -124,10 +124,10 @@
           &::after {
             position: absolute;
             content: '';
-            right: rem(0);
-            width: rem(78);
-            height: rem(76);
-            @include background('/assets/icons/ico-arrow-bold01.svg', center, 100%);
+            right: rem(24);
+            width: rem(30);
+            height: rem(30);
+            @include background('/assets/icons/arrow-down-30.svg', center, 100%);
             background-color: $color-fill00;
             border-left: 1px solid $color-stroke00;
             transition: none;
@@ -135,9 +135,7 @@
           &.is-open {
             border-color: $color-primary01;
             &::after {
-              @include background('/assets/icons/ico-arrow-bold02.svg', center, 100%);
-              background-color: $color-primary01;
-              border-left: 1px solid $color-primary01;
+              transform: rotate(180);
             }
           }
         }
@@ -145,22 +143,20 @@
       .acc-panel {
         .acc-body {
           padding: rem(30);
-          background-color: $color-fill00;
+          background-color: $color-fill06;
           border-radius: 0 0 rem(24) rem(24);
-          border: 1px solid $color-stroke00;
+          border: 1px solid $color-stroke05;
           border-top: 0;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
-          color: initial;
-          overflow-x: auto;
+          overflow-x: hidden;
           // 여객운송약관
           p {
-            @include font(18, 700);
             margin-bottom: rem(20);
           }
           h4 {
-            @include font(18, 700);
+            @include font(18, 700, $color: $color-text01);
             margin-bottom: rem(16);
             span {
               font-weight: 400;
@@ -168,6 +164,10 @@
           }
           .notice-text {
             @include font(16, 500, $color: $color-text00);
+          }
+          .table-scroll {
+            width: 100%;
+            max-width: 100%;
           }
         }
       }

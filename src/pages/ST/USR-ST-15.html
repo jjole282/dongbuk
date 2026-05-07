@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li>
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li>
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">차량소개</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>차량소개</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="열차소개 및 외부특징">
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  열차소개 및 외부특징
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  열차편의시설 및 내부특징
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <div class="train-intro" data-animation="fade-up">
+                    <div class="train-intro-inner">
+                      <div class="train-intro-info" data-animation="fade-up">
+                        <strong
+                          >빠르고 안전하고 <span class="mo-br" aria-hidden="true"></span> 쾌적한
+                          급행철도
+                        </strong>
+                        <div>
+                          <img src="/assets/images/main/logo.png" alt="gtx로고" />
+                        </div>
+                      </div>
+                      <ul class="train-intro-list">
+                        <li data-animation="fade-up">
+                          <span class="label">운행속도</span>
+                          <p>180km/h(설계 최고속도 198km/h)</p>
+                        </li>
+                        <li data-animation="fade-up">
+                          <span class="label">기본편성</span>
+                          <p>8량 1편성(4M4T)</p>
+                        </li>
+                        <li data-animation="fade-up">
+                          <span class="label">차체치수</span>
+                          <p>19.5m x 3.05m x 3.7m(길이x폭x높이)</p>
+                        </li>
+                        <li data-animation="fade-up">
+                          <span class="label">승객정원</span>
+                          <p>1,062명(혼잡률 100%, 착석 + 입석)</p>
+                        </li>
+                        <li data-animation="fade-up">
+                          <span class="label">출입문</span>
+                          <p>180km/h(설계 최고속도 198km/h)</p>
+                        </li>
+                        <li data-animation="fade-up">
+                          <span class="label">의자(폭)</span>
+                          <p>480mm(분리대 적용)</p>
+                        </li>
+                        <li data-animation="fade-up">
+                          <span class="label">가선전압</span>
+                          <p>교류 25kV</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <h3 class="heading-sm" data-animation="fade-up">주요 특징</h3>
+                  <ul class="train-feature" data-animation="fade-up">
+                    <li data-animation="fade-up">
+                      <i class="ico-train-01" aria-hidden="true"></i>
+                      <strong class="feature-title">고품질 디자인, 스타일링</strong>
+                      <span class="feature-desc">
+                        준고속형 매력적인<br />유선형 전두부 적용(Aero Dynamic)
+                      </span>
+                    </li>
+                    <li data-animation="fade-up">
+                      <i class="ico-train-02" aria-hidden="true"></i>
+                      <strong class="feature-title">차체 경량화 및 안전 강화</strong>
+                      <span class="feature-desc">
+                        경량화된 알루미늄 압출 차체<br />고속철급 충돌에너지 흡수시스템 적용
+                      </span>
+                    </li>
+                    <li data-animation="fade-up">
+                      <i class="ico-train-03" aria-hidden="true"></i>
+                      <strong class="feature-title">주행성능향상 기술</strong>
+                      <span class="feature-desc">
+                        준고속형 매력적인<br />유선형 전두부 적용(Aero Dynamic)
+                      </span>
+                    </li>
+                    <li data-animation="fade-up">
+                      <i class="ico-train-04" aria-hidden="true"></i>
+                      <strong class="feature-title">소음 및 기밀 향상</strong>
+                      <span class="feature-desc"> 광폭형 플러그인 도어<br />복층형 강화 유리 </span>
+                    </li>
+                    <li data-animation="fade-up">
+                      <i class="ico-train-05" aria-hidden="true"></i>
+                      <strong class="feature-title">프리미엄 전동차</strong>
+                      <span class="feature-desc">
+                        의자폭 증대(480mm) 및 좌석분리대<br />친환경인증카펫 및 공기질개선장치
+                      </span>
+                    </li>
+                    <li data-animation="fade-up">
+                      <i class="ico-train-06" aria-hidden="true"></i>
+                      <strong class="feature-title">승객서비스 향상</strong>
+                      <span class="feature-desc"> 와이드형 승객정보안내 표시기</span>
+                    </li>
+                    <li data-animation="fade-up">
+                      <i class="ico-train-07" aria-hidden="true"></i>
+                      <strong class="feature-title">스마트 상태기반 모니터링</strong>
+                      <span class="feature-desc">
+                        주요 21종의 상태정보 수집/분석<br />효율적 유지보수 구현
+                      </span>
+                    </li>
+                    <li data-animation="fade-up">
+                      <i class="ico-train-08" aria-hidden="true"></i>
+                      <strong class="feature-title">영속도 회생 제동</strong>
+                      <span class="feature-desc">
+                        소비전력 절약 / 승차감 개선<br />마찰소음감소 / 정위치 정차 실현
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

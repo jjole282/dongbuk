@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>이용안내</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>역정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>열차시간표</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>실시간 열차 정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>운임안내</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>운임제도</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>승차권안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>여객운송약관</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>편의시설</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>편의시설 소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>교통약자 편의시설</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>이용자 편의시설</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>유실물센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>간편지연증명서</span></a>
+              </li>
+              <li>
+                <a href="#"><span>승강설비가동현황</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">실시간 열차정보</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>실시간 열차정보</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+
+            <!-- 실시간 열차정보 -->
+            <div class="train-time-wrap">
+              <div class="train-time-box">
+                <div class="train-route">운정중앙역 - 서울역</div>
+                <div class="train-map">
+                  <div class="train-list-box">
+                    <ul>
+                      <li>
+                        운정중앙
+                        <span class="line" aria-hidden="true"></span>
+                      </li>
+                      <li>
+                        킨텍스
+                        <span class="line" aria-hidden="true"></span>
+                      </li>
+                      <li>
+                        대곡
+                        <span class="line" aria-hidden="true"></span>
+                      </li>
+                      <li>
+                        연신내
+                        <span class="line" aria-hidden="true"></span>
+                      </li>
+                      <li>서울역</li>
+                    </ul>
+                  </div>
+                  <div class="train-line left"><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                    <span class="train" style="top: 100px" aria-hidden="true">
+                    </span><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                    <!-- top값으로 조정 -->
+                    <span class="train" style="top: 200px" aria-hidden="true">
+                    </span><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                  </div>
+                  <div class="train-line right"><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                    <span class="train" aria-hidden="true">
+                    </span><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                    <span class="train" style="top: 300px" aria-hidden="true">
+                    </span><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                  </div>
+                  <div class="txt-hide" aria-live="polite" aria-atomic="true" id="train-live-01"></div><!-- 웹접근성 2026-01-06 : 추가 -->
+                </div>
+              </div>
+              <div class="train-time-box suseo">
+                <div class="train-route">수서역 - 동탄역</div>
+                <div class="train-map">
+                  <div class="train-list-box">
+                    <ul>
+                      <li>
+                        수서
+                        <span class="line" aria-hidden="true"></span>
+                      </li>
+                      <li>
+                        성남
+                        <span class="line" aria-hidden="true"></span>
+                      </li>
+                      <li>
+                        구성
+                        <span class="line" aria-hidden="true"></span>
+                      </li>
+                      <li>동탄</li>
+                    </ul>
+                  </div>
+                  <div class="train-line left"><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                    <span
+                      class="train"
+                      style="top: 100px"
+                      aria-hidden="true"
+                    >
+                    </span><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                    <span
+                      class="train"
+                      style="top: 200px"
+                      aria-hidden="true"
+                    >
+                  </span><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                  </div>
+                  <div class="train-line right"><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                    <span
+                      class="train"
+                      style="top: 140px"
+                      aria-hidden="true"
+                    >
+                  </span><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                    <span
+                      class="train"
+                      style="top: 300px"
+                      aria-hidden="true"
+                    >
+                  </span><!-- 웹접근성 2026-01-06 : aria-label 삭제 -->
+                  </div>
+                  <div class="txt-hide" aria-live="polite" aria-atomic="true" id="train-live-02"></div><!-- 웹접근성 2026-01-06 : 추가 -->
+                </div>
+              </div>
+            </div>
+
+            <!--// 실시간 열차정보 -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+    <!-- 웹접근성 2026-01-06 : script 추가 -->
+    <script>
+      // 운정중앙역 - 서울역 라인 업데이트
+      document.getElementById('train-live-01').textContent =
+        '운정중앙역 - 서울역 / 현재 열차 위치 : 운정중앙역 방면 1열차가 ' + '운정중앙' + '역으로 이동중입니다. '
+        + '운정중앙역 방면 2열차가 ' + '킨텍스역' + '에 도착했습니다. '
+        + '운정중앙역 - 서울역 / 현재 열차 위치 : 서울역 방면 1열차가 ' + '운정중앙' + '역으로 이동중입니다. '
+        + '서울역 방면 2열차가 ' + '연신내' + '역에 도착했습니다. ';
+
+      // 수서역 - 동탄역 라인 업데이트
+      document.getElementById('train-live-02').textContent =
+        '수서역 - 동탄역 / 현재 열차 위치 : 수서역 방면 1열차가 ' + '성남' + '역으로 이동중입니다. '
+        + '수서역 방면 2열차가 ' + '구성' + '에 도착했습니다. '
+        + '수서역 - 동탄역 / 현재 열차 위치 : 동탄역 방면 1열차가 ' + '동탄' + '역으로 이동중입니다. '
+        + '동탄역 방면 2열차가 ' + '성남' + '역에 도착했습니다. ';
+    </script>
+    <!--// 웹접근성 2026-01-06 : script 추가 -->
+  </body>
+</html>

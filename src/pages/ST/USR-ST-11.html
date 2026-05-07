@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li>
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li>
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">지하철이용 안전수칙</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>지하철이용 안전수칙</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="지하철이용 안전수칙"><!-- 웹접근성 2026-01-27 : aria-label 값 변경 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  열차 내 안전수칙
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  역사 내 안전수칙
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  에스컬레이터 이용수칙
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-4"
+                  aria-controls="panel-4"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  엘리베이터 이용수칙
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <ul class="img-card-list" data-animation="fade-up">
+                    <li data-animation="fade-up">
+                      <div class="img-card-item">
+                        <img src="/assets/images/safety/safe-img11.png" alt="" data-animation="fade-up" />
+                        <div class="card-text" data-animation="fade-up">
+                          <p class="card-title">소화기</p>
+                          <p class="card-desc">승강장 및 대합실에<br />보행거리 20m마다 배치</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-animation="fade-up">
+                      <div class="img-card-item">
+                        <img src="/assets/images/safety/safe-img12.png" alt="" data-animation="fade-up" />
+                        <div class="card-text" data-animation="fade-up">
+                          <p class="card-title">소화전</p>
+                          <p class="card-desc">승강장에 50m간격 설치</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-animation="fade-up">
+                      <div class="img-card-item">
+                        <img src="/assets/images/safety/safe-img13.png" alt="" data-animation="fade-up" />
+                        <div class="card-text" data-animation="fade-up">
+                          <p class="card-title">통로 유도등</p>
+                          <p class="card-desc">
+                            피난통로를 안내하기 위하여<br />
+                            벽체 및 바닥에 설치된 백색등
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-animation="fade-up">
+                      <div class="img-card-item">
+                        <img src="/assets/images/safety/safe-img14.png" alt="" data-animation="fade-up" />
+                        <div class="card-text" data-animation="fade-up">
+                          <p class="card-title">피난 유도등</p>
+                          <p class="card-desc">
+                            피난구 또는 피난경로로 사용되는<br />출입구를 표시하는 천정에 설치된<br />녹색등
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- 리스트 -->
+                  <div class="text-list-box" data-animation="fade-up">
+                    <ul class="text-list">
+                      <li>열차가 들어올 때는 안전선 뒤로 물러나 주십시오.</li>
+                      <li>열차 내의 승객이 내린 후에 승차하여 주십시오.</li>
+                      <li>열차와 승강장 사이에 발이 빠지지 않도록 주의하십시오.</li>
+                      <li>선로에 내려가거나, 물건을 떨어뜨리지 않도록 주의하십시오.</li>
+                      <li>
+                        알루미늄 풍선이나 낚싯대 등이 역사 내 고압선에 닿지 않도록 주의하십시오.
+                      </li>
+                    </ul>
+                  </div>
+                  <!--// 리스트 -->
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-4"
+                  role="tabpanel"
+                  aria-labelledby="tab-4"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

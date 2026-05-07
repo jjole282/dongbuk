@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>알림마당</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>공지사항</span></a>
+              </li>
+              <li>
+                <a href="#"><span>보도자료</span></a>
+              </li>
+              <li>
+                <a href="#"><span>자료실</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>홍보관</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>홍보영상</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>포토갤러리</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>입찰공고</span></a>
+              </li>
+              <li>
+                <a href="#"><span>감사결과</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-notice">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">홍보관</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>홍보관</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>포토갤러리</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- search -->
+            <div class="search-bar">
+              <p class="search-text">총 <span>23</span>건</p>
+              <div class="search-box">
+                <div class="input-box">
+                  <label for="search" class="txt-hide">검색어 입력란</label><!-- 웹접근성 2026-01-06 : label 추가 -->
+                  <input type="text" aria-label="검색어 입력" id="search" placeholder="검색어를 입력하세요." /><!-- 웹접근성 2026-01-06 : id 추가 -->
+                </div>
+                <div class="btn-wrap">
+                  <button class="btn-primary sm">
+                    <i class="ico-search" aria-hidden="true"></i>
+                    <span>검색</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// search -->
+            <div class="media-box">
+              <ul>
+                <li data-animation="fade-up">
+                  <a href="#">
+                    <figure role="none"><!-- 웹접근성 2026-01-27 : role 추가 -->
+                      <img src="/assets/images/notice/dummy-thumbnail.png" alt="" /><!-- 웹접근성 2026-01-27 : alt값 삭제 -->
+                    </figure>
+                    <p class="title">동북선도시철도 홍보영상</p>
+                    <p class="date">2025-08-15</p>
+                  </a>
+                </li>
+                <li data-animation="fade-up">
+                  <a href="#">
+                    <figure role="none"><!-- 웹접근성 2026-01-27 : role 추가 -->
+                      <img src="/assets/images/notice/dummy-thumbnail.png" alt="" /><!-- 웹접근성 2026-01-27 : alt값 삭제 -->
+                    </figure>
+                    <p class="title">동북선도시철도 홍보영상</p>
+                    <p class="date">2025-08-15</p>
+                  </a>
+                </li>
+                <li data-animation="fade-up">
+                  <a href="#">
+                    <figure role="none"><!-- 웹접근성 2026-01-27 : role 추가 -->
+                      <img src="/assets/images/notice/dummy-thumbnail.png" alt="" /><!-- 웹접근성 2026-01-27 : alt값 삭제 -->
+                    </figure>
+                    <p class="title">동북선도시철도 홍보영상</p>
+                    <p class="date">2025-08-15</p>
+                  </a>
+                </li>
+                <li data-animation="fade-up">
+                  <a href="#">
+                    <figure role="none"><!-- 웹접근성 2026-01-27 : role 추가 -->
+                      <img src="/assets/images/notice/dummy-thumbnail.png" alt="동북선도시철도 홍보영상" /><!-- 웹접근성 2026-01-27 : alt값 삭제 -->
+                    </figure>
+                    <p class="title">동북선도시철도 홍보영상</p>
+                    <p class="date">2025-08-15</p>
+                  </a>
+                </li>
+                <li data-animation="fade-up">
+                  <a href="#">
+                    <figure role="none"><!-- 웹접근성 2026-01-27 : role 추가 -->
+                      <img src="/assets/images/notice/dummy-thumbnail.png" alt="" /><!-- 웹접근성 2026-01-27 : alt값 삭제 -->
+                    </figure>
+                    <p class="title">동북선도시철도 홍보영상</p>
+                    <p class="date">2025-08-15</p>
+                  </a>
+                </li>
+                <li data-animation="fade-up">
+                  <a href="#">
+                    <figure role="none"><!-- 웹접근성 2026-01-27 : role 추가 -->
+                      <img src="/assets/images/notice/dummy-thumbnail.png" alt="" /><!-- 웹접근성 2026-01-27 : alt값 삭제 -->
+                    </figure>
+                    <p class="title">동북선도시철도 홍보영상</p>
+                    <p class="date">2025-08-15</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="pagination-box" data-animation="fade-up">
+              <ul>
+                <li class="page-item prev">
+                  <a href="#">
+                    <span>이전</span>
+                  </a>
+                </li>
+                <li class="page-item on">
+                  <a href="#" aria-label="현재 페이지">1</a><!-- 웹접근성 2026-01-27 : aria 추가 -->
+                </li>
+                <li class="page-item">
+                  <a href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a href="#">3</a>
+                </li>
+                <li class="page-item next">
+                  <a href="#">
+                    <span>다음</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

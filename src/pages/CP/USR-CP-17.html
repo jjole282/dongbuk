@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>고객참여</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>고객의 소리</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>작성하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>문화마당</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>촬영신청</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>광고문의</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>이벤트/공모</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>이벤트/공모 참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>당첨자 확인</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>참여후기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>자주묻는 질문</span></a>
+              </li>
+              <li>
+                <a href="#"><span>부패방지신고센터</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">이벤트/공모 참여</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>고객참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>이벤트/공모</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>이벤트/공모 참여</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+
+            <div class="table-view table-wrap">
+              <h3 class="heading-sm">이벤트/공모</h3>
+              <table>
+                <caption>
+                  이벤트/공모 - 이벤트 제목, 신청기간, 세부내용에 대한 정보를 제공
+                </caption><!-- 웹접근성 2026-02-11 : 문구 수정 --><!-- 웹접근성 2026-01-06 : 추가 -->
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">이벤트 제목</th>
+                    <td class="align-left">동북선도시철도 열차 창문 투명 OLED 콘텐츠 공모전</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">신청기간</th>
+                    <td class="align-left">2024-12-16~2025-01-10</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">세부내용</th>
+                    <td>
+                      <img
+                        src="https://www.gtx-a.com/common/dowloadImage.do?fileMastrId=9acb4322df38428c87c96f877a63d941&fileDetailId=1"
+                        alt=""
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="btn-wrap justify-between">
+                <a href="#" class="btn-line sm"><span>목록</span></a>
+                <a href="#" class="btn-primary sm disabled"><span>응모하기</span></a>
+              </div>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

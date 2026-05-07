@@ -82,9 +82,10 @@ section {
   }
 }
 .main-title {
-  font-size: rem(72);
+  font-size: rem(60);
   font-weight: 600;
   letter-spacing: -0.8px;
+  color: $color-text01;
   @include mobile {
     font-size: rem-m(28);
   }
@@ -229,6 +230,7 @@ section {
       margin-top: rem(160);
       padding-left: rem(87);
       font-family: $font-family-gmarket;
+      color: $color-text01;
       @include mobile {
         padding: 0;
         margin-top: rem-m(60);
@@ -264,7 +266,7 @@ section {
   .label {
     font-size: 1rem;
     letter-spacing: rem(-0.5);
-    color: $color-text00;
+    color: $color-stroke00;
   }
   .arrows {
     display: flex;
@@ -503,7 +505,7 @@ section {
 
     &-more {
       position: relative;
-      color: $color-text00;
+      color: $color-stroke00;
       padding: rem(1) rem(26) rem(1) rem(12);
       border: 1px solid rgba(255, 255, 255, 0.55);
       border-radius: rem(50);
@@ -592,7 +594,7 @@ section {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              color: $color-text00;
+              color: $color-stroke00;
               width: rem(50);
               height: rem(50);
               border-radius: 50%;
@@ -951,6 +953,7 @@ section {
           text-align: left;
           margin-top: rem(5);
           border: 0 none;
+          color: $color-text01;
           &.is-active {
             font-size: rem(20);
             font-weight: 600;
@@ -1150,6 +1153,7 @@ section {
         height: 100%;
         .title {
           font-size: rem(28);
+          color: $color-stroke00;
           @include mobile {
             font-size: rem-m(20);
           }
@@ -1158,6 +1162,7 @@ section {
           margin-top: rem(15);
           font-size: rem(18);
           font-weight: 400;
+          color: $color-stroke00;
         }
       }
     }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- contents -->
+          <section id="page-content" class="page-meta">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">고충상담</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>고충상담</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="line-box">
+              <div class="line-box-img-wrap">
+                <img src="/assets/images/customer/notice-img.png" alt="" /><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+              </div>
+              <div class="line-box-body">
+                <p class="line-box-title">이용안내</p>
+                <ul class="line-box-list">
+                  <li>동북선도시철도운영 주식회사 임직원들의 고충처리 공간입니다.</li>
+                  <li>직원분들의 목소리에 귀 기울이고 함께 해결책을 도모하겠습니다.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="btn-wrap">
+              <a href="#" class="btn-primary lg"><span>글쓰기</span></a>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

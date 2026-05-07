@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>회사소개</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>에스지레일(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>동북선도시철도운영(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>인재상</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-intro">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">회사소개</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>동북선도시철도운영(주)</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="회사소개"><!-- 웹접근성 2026-01-27 : aria-label 값 수정 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  CEO인사말
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  CI소개
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="false"
+                  tabindex="-1"
+                ><!-- 웹접근성 2026-01-06 : aria-selected, tabindex 중복으로 삭제 -->
+                  캐릭터소개
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-4"
+                  aria-controls="panel-4"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  경영이념
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-5"
+                  aria-controls="panel-5"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  연혁
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-6"
+                  aria-controls="panel-6"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  조직도
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-7"
+                  aria-controls="panel-7"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  윤리경영
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-8"
+                  aria-controls="panel-8"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  안전경영방침
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-4"
+                  role="tabpanel"
+                  aria-labelledby="tab-4"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-5"
+                  role="tabpanel"
+                  aria-labelledby="tab-5"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <div class="history-wrap">
+                    <div class="history-info">
+                      <div class="history-item">
+                        <div class="history-text">
+                          <p data-animation="fade-up">설립근거</p>
+                          <ul data-animation="fade-up">
+                            <li>지방공기업법 제54조(다른 법인에 대한 출자)</li>
+                            <li>서울교통공사 설립 및 운영에 관한 조례 제19조(사업의 범위)</li>
+                            <li>
+                              동북선도시철도 운영 자회사 설립(안) 서울시 승인(23.9.21, 서울시 도시철도과)
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="history-img" data-animation="fade-up">
+                          <img src="/assets/images/intro/history-img01.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="history-item">
+                        <div class="history-img" data-animation="fade-up">
+                          <img src="/assets/images/intro/history-img02.png" alt="" />
+                        </div>
+                        <div class="history-text">
+                          <p data-animation="fade-up">주요업무</p>
+                          <ul data-animation="fade-up">
+                            <li>여객운송 및 운임의 징수, 관리</li>
+                            <li>전동차량의 정비 및 열차의 운행관리</li>
+                            <li>철도시설물 유지보수 및 관리, 감독</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="history-list" data-animation="fade-up">
+                      <li>
+                        <div class="left" data-animation="fade-up">
+                          <span class="year">2024</span>
+                        </div>
+                        <span class="dot" aria-hidden="true" data-animation="fade-up"></span>
+                        <div class="right" data-animation="fade-up">
+                          <ul>
+                            <li>
+                              <span class="date">2024.03</span>
+                              <span class="text">동북선도시철도 개통</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="left" data-animation="fade-up">
+                          <span class="year">2023</span>
+                        </div>
+                        <span class="dot" aria-hidden="true" data-animation="fade-up"></span>
+                        <div class="right" data-animation="fade-up">
+                          <ul>
+                            <li>
+                              <span class="date">2023.10.</span>
+                              <span class="text">동북선도시철도 운영자회사 법인 설립 등기</span>
+                            </li>
+                            <li>
+                              <span class="date">2023.09.</span>
+                              <span class="text">동북선도시철도 운영자회사 설립(안) 승인 통보</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="left" data-animation="fade-up">
+                          <span class="year">2019</span>
+                        </div>
+                        <span class="dot" aria-hidden="true" data-animation="fade-up"></span>
+                        <div class="right" data-animation="fade-up">
+                          <ul>
+                            <li>
+                              <span class="date">2019.09.</span>
+                              <span class="text"
+                                >수도권광역급행철도에이선 민간투자사업 관리운영계약 체결</span
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-6"
+                  role="tabpanel"
+                  aria-labelledby="tab-6"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-7"
+                  role="tabpanel"
+                  aria-labelledby="tab-7"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-8"
+                  role="tabpanel"
+                  aria-labelledby="tab-8"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

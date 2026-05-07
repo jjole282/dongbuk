@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li>
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">안전장비 및 사용법</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>안전장비 및 사용법</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="안정장비 사용법"><!-- 웹접근성 2026-01-27 : aria-label 값 변경 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  소화기 사용법
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  소화전 사용법
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  승강설비 사용방법
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-4"
+                  aria-controls="panel-4"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  방독면 착용법
+                </button>
+                <button
+                  class="tab-btn wide is-active"
+                  role="tab"
+                  id="tab-5"
+                  aria-controls="panel-5"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  AED(자동제세동기) 사용법
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-4"
+                  role="tabpanel"
+                  aria-labelledby="tab-4"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-5"
+                  role="tabpanel"
+                  aria-labelledby="tab-5"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <!-- AED(자동제세동기) 사용법 -->
+                  <ol class="step-wrap line" data-animation="fade-up">
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 1</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/aed-step01.png" alt="자동심장충격기 전원켜기" />
+                      </div>
+                      <div class="step-title">자동심장충격기 전원켜기</div>
+                      <i class="ico-arrow-right02" aria-hidden="true"></i>
+                    </li>
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 2</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/aed-step02.png" alt="두 개의 패드 부착" />
+                      </div>
+                      <div class="step-title">두 개의 패드 부착</div>
+                      <i class="ico-arrow-right02" aria-hidden="true"></i>
+                    </li>
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 3</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/aed-step03.png" alt="심장리듬 분석" />
+                      </div>
+                      <div class="step-title">
+                        환자에게서 손을 떼고<br />
+                        심장리듬 분석
+                      </div>
+                      <i class="ico-arrow-right02" aria-hidden="true"></i>
+                    </li>
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 4</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/aed-step04.png" alt="제세동(심장충격) 시행" />
+                      </div>
+                      <div class="step-title">제세동(심장충격)<br />시행하기</div>
+                    </li>
+                  </ol>
+                  <!--// AED(자동제세동기) 사용법 -->
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

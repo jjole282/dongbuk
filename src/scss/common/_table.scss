@@ -102,26 +102,25 @@ tr {
     background-color: #f2f5ff;
   }
   th {
-    @include font(16, 700);
-    border-bottom: 1px solid $color-stroke08;
-    border-left: 1px solid $color-stroke08;
+    @include font(16, 700, $color: $color-text01);
+    border-bottom: 1px solid $color-stroke04;
+    border-left: 1px solid $color-stroke04;
+    border-right: 1px solid $color-stroke04;
     padding: rem(16);
     word-break: keep-all;
     vertical-align: middle;
     height: rem(56);
-    background-color: $color-fill08;
-    @include font(18, 700);
+    background-color: $color-primary04;
+    font-weight: 700;
     &.no-pd {
       padding-inline: 0 !important;
     }
-    &:first-child {
-      border-left: 0 none;
-    }
   }
   td {
-    @include font(18, 500);
-    border-bottom: 1px solid $color-stroke08;
-    border-left: 1px solid $color-stroke08;
+    font-weight: 400;
+    border-bottom: 1px solid $color-stroke04;
+    border-left: 1px solid $color-stroke04;
+    border-right: 1px solid $color-stroke04;
     padding: rem(16);
     word-break: break-word;
     vertical-align: middle;
@@ -132,9 +131,6 @@ tr {
     }
     &.nowrap {
       white-space: nowrap;
-    }
-    &:first-child {
-      border-left: 0 none;
     }
   }
   tr {

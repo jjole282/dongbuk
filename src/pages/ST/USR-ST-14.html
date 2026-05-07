@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li>
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li>
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">종합관제센터</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>종합관제센터</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="visual-box" data-animation="fade-up">
+              <div class="visual-box-img-wrap">
+                <img
+                  src="/assets/images/safety/chart-img.png"
+                  alt=""
+                  class="visual-box-img"
+                /><!-- 웹접근성 2026-01-06 : aira 삭제 -->
+              </div>
+              <div class="visual-box-body">
+                <p class="visual-box-title">종합상황실</p><!-- 2025-12-10 : 텍스트 수정 -->
+                <p class="visual-box-desc"><!-- 2025-12-10 : 영역안의 텍스트 수정 -->
+                  안전하고 편리한 수도권광역급행철도(동북선도시철도)선의 열차 운행을 위해 차량기지 내 열차 입환 취급 및 입·출고 관리, 본선 열차 운행 감시 등 통제 업무와 각종 설비(전기, 신호, 통신, 기계, 승강, 환기설비 등) 및 시스템의 동작상태를 감시하는 장소입니다. 이례 상황 발생 시에는 내용을 정확히 파악하여 고객 안전을 최우선으로 병발 사고 방지 및 신속한 조치로 사고나 장애로 인한 영향이 최소화되도록 후속 업무를 진행합니다. 또한 불편 사항에 대한 신속 처리의 민원업무(콜센터)와 열차가 운행되지 않는 심야 시간대에는 각종 설비의 정상 기능 확보를 위한 유지보수 관련 작업 통제 업무를 수행하고 있습니다.
+                  <br>동북선도시철도 열차 이용 시 가장 안전하고 편안하게 여행할 수 있도록 최선의 노력을 다하겠습니다.
+                </p>
+              </div>
+            </div>
+            <!-- 종합관제시스템 -->
+            <!-- 2025-12-10 : 영역안 내용 모두 수정 -->
+            <div class="desc-box" data-animation="fade-up">
+              <h3 class="heading-sm">안전관제시스템</h3>
+              <div>
+                <img src="/assets/images/safety/total01.jpg" alt="안전관제시스템 참고 화면 이미지" />
+              </div>
+            </div>
+            <ul class="desc-list" data-animation="fade-up">
+              <li> 
+                <span>1</span>
+                <p>
+                  <strong>안전정보 현황판 :</strong>
+                  <span>전체 감시 상황을 통합하여 비상 및 알람 발생 건수에 따라 총 5단계(정상, 관심, 주의, 경계, 심각)</span>
+                </p>
+              </li>
+              <li> 
+                <span>2</span>
+                <p>
+                  <strong>감시 종류 별 비상 발생 건수 : </strong>
+                  <span>각 감시 설비 별 비상 상황 발생 건수를 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>3</span>
+                <p>
+                  <strong>비상/알람 발생 목록 :</strong>
+                  <span>현재 발생된 비상과 알람을 리스트 형식으로 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>4</span>
+                <p>
+                  <strong>PSD 감시 :</strong>
+                  <span>각 역사의 PSD 상태(열림/닫힘/이상)를 한눈에 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>5</span>
+                <p>
+                  <strong>화재 감시 :</strong>
+                  <span>각 위치 별로 설치된 화재감시 설비의 화재발생 감지 상태를 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>6</span>
+                <p>
+                  <strong>비상대피 감시 :</strong>
+                  <span>각 위치 별로 설치된 비상대피 유도 발생 상태를 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>7</span>
+                <p>
+                  <strong>자동제어설비 감시 :</strong>
+                  <span>각 위치 별로 설치된 자동제어설비(송풍기/방화문/비상EV)의 동작 및 고장 상태를 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>8</span>
+                <p>
+                  <strong>방수문 감시 :</strong>
+                  <span>한강 양쪽에 설치된 방수문의 상태(열림/폐쇄)를 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>9</span>
+                <p>
+                  <strong>노반구조물계측 감시 :</strong>
+                  <span>각 위치 별로 설치된 노반구조물계측기(내공변위계, 라이닝응력계, 간극 수압계, 구조물경사계, 누수감지계 등)의 감지 상태를 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>10</span>
+                <p>
+                  <strong>지진 감시 :</strong>
+                  <span>대곡역에 설치된 지진감시 설비의 지진발생 상황을 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>11</span>
+                <p>
+                  <strong>보수자 횡단장치 :</strong>
+                  <span>각 위치 별로 설치된 보수자횡단장치제어반의 상태(고장)를 표시한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>12</span>
+                <p>
+                  <strong>개별 감시화면 선택 :</strong>
+                  <span>각 감시 설비별로 개별 감시 상세화면을 선택한다.</span>
+                </p>
+              </li>
+              <li> 
+                <span>13</span>
+                <p>
+                  <strong>운영관리 선택 :</strong>
+                  <span>관리자의 안전관제 운영을 위한 운영관리를 선택한다.</span>
+                </p>
+              </li>
+            </ul>
+            <p class="desc-text mt-20" data-animation="fade-up">
+              수도권광역급행철도에이선(동북선도시철도)에는 우리나라 철도운영기관 중 최초로 도입된 ‘안전관제시스템’을 설치 운영 중에 있으며, 이는 대심도 열차 운행에 있어서 고객 안전 확보의 가장 핵심 역할을 수행하는 설비입니다.<br>
+              종합상황실의 여러 가지 안전설비 중 가장 중요한 설비로 안전 정보 현황, PSD, 화재, 비상 대피, 자동제어설비, 방수문, 노반 구조물 계측, 지진 설비를 감시하고 작업자들의 안전을 책임지기 위해 보수자 횡단 장치 상태 확인이 가능합니다. 모든 제반 설비가 표시되도록 총괄 설치되어 있어서 안전한 열차 운행이 가능합니다.<br>
+              안전 정보 현황판을 통해 전체 감시 상황을 통합하여 비상 및 알람 발생 건수에 따라 총 5단계(정상, 관심, 주의, 경계, 심각)의 그래프로 한눈에 현황 파악이 가능하여 이례 상황 발생 시 신속한 대응이 가능합니다.
+            </p>
+            <div class="desc-box mt-40" data-animation="fade-up">
+              <h3 class="heading-sm">열차 운행 감시/제어 시스템</h3>
+              <div class="monitoring-wrap">
+                <span class="monitoring-tit">
+                  <img src="/assets/images/safety/total02-tit.png" alt="종합상황실 감시/제어" />
+                  <span><b>종합상황실</b> 감시/제어</span>
+                </span>
+                <ul class="monitoring-list type01">
+                  <li>
+                    <b>지진감지설비</b>
+                    <img src="/assets/images/safety/total02-01.jpg" alt="" />
+                    <p>지진발생 강도에 따른 <br>신속대응</p>
+                  </li>
+                  <li>
+                    <b>승객대피</b>
+                    <img src="/assets/images/safety/total02-02.jpg" alt="" />
+                    <p>역사/선로대피 상황<br>인지형 대피안내 시스템</p>
+                  </li>
+                  <li>
+                    <b>전력설비</b>
+                    <img src="/assets/images/safety/total02-03.jpg" alt="" />
+                    <p>스마트 급전 <br>제어 시스템</p>
+                  </li>
+                  <li>
+                    <b>신호설비</b>
+                    <img src="/assets/images/safety/total02-04.jpg" alt="" />
+                    <p>신호제어, <br>상태감시</p>
+                  </li>
+                  <li>
+                    <b>승강장안전문</b>
+                    <img src="/assets/images/safety/total02-05.jpg" alt="" />
+                    <p>이상동작 <br>상시감시</p>
+                  </li>
+                  <li>
+                    <b>터널경보장치</b>
+                    <img src="/assets/images/safety/total02-06.jpg" alt="" />
+                    <p>열차접근 경보 <br>작업자 보호</p>
+                  </li>
+                  <li>
+                    <b>자동제어</b>
+                    <img src="/assets/images/safety/total02-07.jpg" alt="" />
+                    <p>송풍기,방화문,비상E/V 상태감시 원격 제어</p>
+                  </li>
+                  <li>
+                    <b>화재탐지설비</b>
+                    <img src="/assets/images/safety/total02-08.jpg" alt="" />
+                    <p>스마트 대피 <br>안내 시스템</p>
+                  </li>
+                  <li>
+                    <b>방송장치</b>
+                    <img src="/assets/images/safety/total02-09.jpg" alt="" />
+                    <p>관제비상상황 <br>일체방송시스템</p>
+                  </li>
+                  <li>
+                    <b>CCTV설비</b>
+                    <img src="/assets/images/safety/total02-10.jpg" alt="" />
+                    <p>승강장 및 주요시설 <br>영상감시</p>
+                  </li>
+                  <li>
+                    <b>방수설비</b>
+                    <img src="/assets/images/safety/total02-11.jpg" alt="" />
+                    <p>터널침수 <br>대비감시</p>
+                  </li>
+                  <li>
+                    <b>구조물계측</b>
+                    <img src="/assets/images/safety/total02-12.jpg" alt="" />
+                    <p>구조물 변형 및 <br>침출수 모니터링</p>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- 웹접근성 2026-01-06 : div 태그의 닫힘 / 가 없어서 추가함 -->
+            <div class="desc-box mt-40" data-animation="fade-up">
+              <h3 class="heading-sm">선로/전차선 견함 감시 시스템</h3>
+              <div class="img-bg-box">
+                <img src="/assets/images/safety/total03.jpg" alt="" aria-describedby="img-desc-01" />
+              </div>
+              <div id="img-desc-01" class="txt-hide">
+                <dl>
+                  <dt>열차 진행방향 : 상행(운정)</dt>
+                  <dd>TC2</dd>
+                  <dd>선로(궤도) 결함 검사장치(TC2)</dd>
+                  <dd>차상통합서버(TC2 선로(궤도)결함) -차상 네트워크 활용(Ethernet)</dd>
+                </dl>
+                <dl>
+                  <dt>열차 진행방향 : 하행(동탄)</dt>
+                  <dd>TC1</dd>
+                  <dd>선로[궤도] 결함 검사장치[TC1]</dd>
+                  <dd>차상통합서버(TC1 선로(궤도)결함) -차상 네트워크 활용(Ethernet)</dd>
+                  <dd>타코메타</dd>
+                  <dd>전자선로 결함검사 장치 및 차상통합서버(TC1 전차선로 결함)</dd>
+                  <dd>착탈식 스토리지</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="desc-box mt-40" data-animation="fade-up">
+              <h3 class="heading-sm">차량 진동/차축발열 감지 시스템</h3>
+              <div class="monitoring-wrap">
+                <ul class="monitoring-list type02">
+                  <li>
+                    <b>차량감지</b>
+                    <img src="/assets/images/safety/total04-01.jpg" alt="" />
+                  </li>
+                  <li>
+                    <b>자량번호인식</b>
+                    <img src="/assets/images/safety/total04-02.jpg" alt="" />
+                  </li>
+                  <li>
+                    <b>차량진동감지</b>
+                    <img src="/assets/images/safety/total04-03.jpg" alt="" />
+                  </li>
+                  <li>
+                    <b>차축발열감지</b>
+                    <img src="/assets/images/safety/total04-04.jpg" alt="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--// 2025-12-10 : 영역안 내용 모두 수정 -->
+            <!--// 종합관제시스템 -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

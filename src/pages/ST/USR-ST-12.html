@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li>
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li>
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">지하철이용 안전수칙</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>지하철이용 안전수칙</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="지하철이용 안전수칙"><!-- 웹접근성 2026-01-27 : aria-label 값 변경 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  열차 내 안전수칙
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  역사 내 안전수칙
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  에스컬레이터 이용수칙
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-4"
+                  aria-controls="panel-4"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  엘리베이터 이용수칙
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <h3 class="txt-hide">에스컬레이터 이용수칙</h3>
+                  <!-- 이미지 -->
+                  <div class="img-box" data-animation="fade-up">
+                    <div class="img-box-label">
+                      <i class="ico-safe-03" aria-hidden="true"></i>
+                      <p class="img-box-text">에스컬레이터 이용수칙</p>
+                    </div>
+                    <img src="/assets/images/safety/safe-img05.png" alt="" />
+                  </div>
+                  <!--// 이미지 -->
+                  <!-- 리스트 -->
+                  <div class="text-list-box sm" data-animation="fade-up">
+                    <h4 class="text-list-title">디딤판에 표시된 황색안전선 안에 발을 놓습니다.</h4>
+                    <ul class="text-list">
+                      <li>
+                        신발이 덜 디딤판 접속부나 측면에 있는 굴곡자이나 구멍 등에 틈새에 끼일
+                        염려가 있으므로 위험합니다.
+                        <p>반드시 표시된 황색 안전선 안에 발을 놓아야 합니다.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box sm" data-animation="fade-up">
+                    <h4 class="text-list-title">
+                      유치원생이나 저학년 어린이는 보호자와 함께 탑니다.
+                    </h4>
+                    <ul class="text-list">
+                      <li>
+                        핸드레일에 매달리는 등 유치원생이나 저학년 어린이는 오르고 내릴 때 넘어지기
+                        쉽고 이로 인해 크게 다칠 수도 있습니다.
+                        <p>
+                          반드시 보호자의 보호 손잡고 황색안전선 안에 타는 습관을 들여야 합니다.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box sm" data-animation="fade-up">
+                    <h4 class="text-list-title">핸드레일은 반드시 잡습니다.</h4>
+                    <ul class="text-list">
+                      <li>
+                        핸드레일을 잡으면 중심을 쉽게 유지할 수도 있고 갑작스러운 정지 시에도
+                        넘어지지 않습니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box sm" data-animation="fade-up">
+                    <h4 class="text-list-title">내릴 때는 미리미리 준비합니다.</h4>
+                    <ul class="text-list">
+                      <li>
+                        갑작스럽게 멈추면 디딤판 끝부분 사이에 신발이나 발끝이 끼일 수 있으며 균형을
+                        잃고 넘어지기 쉽습니다. 내릴 때가 되면 앞을 보고 미리 준비해야 합니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box sm" data-animation="fade-up">
+                    <h4 class="text-list-title">핸드레일 밖으로 몸을 내밀지 맙시다.</h4>
+                    <ul class="text-list">
+                      <li>
+                        특히, 구경을 하거나 친구를 찾기 위해 몸을 핸드레일 밖으로 내미는 경우
+                        천정이나 기타 시설물에 머리를 다치는 경우가 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box sm" data-animation="fade-up">
+                    <h4 class="text-list-title">핸드레일에 올라타면 위험합니다.</h4>
+                    <ul class="text-list">
+                      <li>
+                        에스컬레이터 난간은 정지되어 있고 핸드레일은 이동하므로 핸드레일에 올라탈
+                        경우 몸이 균형을 잃고 떨어지는 수가 있으므로 절대 올라타지 말아야 합니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box sm" data-animation="fade-up">
+                    <h4 class="text-list-title">디딤판에 앉거나 신발을 벗지 맙시다.</h4>
+                    <ul class="text-list">
+                      <li>
+                        디딤판에 앉을 경우 허리 부분에 상처를 입거나 옷자락이 디딤판 사이에 끼일 수
+                        있습니다. 맨발로 탈 경우에도 발가락이 디딤판 홈 사이에 끼일 수가 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="text-list-box sm" data-animation="fade-up">
+                    <h4 class="text-list-title">에스컬레이터 부근에서 놀면 위험합니다.</h4>
+                    <ul class="text-list">
+                      <li>
+                        손가락이나 옷자락이 디딤판에 끼어 상처가 나기도 하고, 장난감 조각이나 휴지
+                        등이 운행을 멈추게 할 수도 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                  <!--// 리스트 -->
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-4"
+                  role="tabpanel"
+                  aria-labelledby="tab-4"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

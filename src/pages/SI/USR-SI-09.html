@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>이용안내</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>역정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>열차시간표</span></a>
+              </li>
+              <li>
+                <a href="#"><span>실시간 열차 정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>운임안내</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>운임제도</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>승차권안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>여객운송약관</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>편의시설</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>편의시설 소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>교통약자 편의시설</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>이용자 편의시설</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>유실물센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>간편지연증명서</span></a>
+              </li>
+              <li>
+                <a href="#"><span>승강설비가동현황</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">유실물 센터</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>유실물 센터</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="line-box info" data-animation="fade-up">
+              <div class="line-box-left">
+                <div class="line-box-img-wrap">
+                  <img src="/assets/images/information/time-img.png" alt="" /><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                </div>
+                <div class="line-box-body">
+                  <p class="line-box-title">운영시간</p>
+                  <p class="line-box-desc">오전 05:30 ~ 오후 11:30</p>
+                </div>
+              </div>
+              <div class="line-box-right">
+                <div>
+                  <span class="line-box-label">서울역 유실물 센터</span>
+                  <p>
+                    <strong class="line-box-tell">02-6048-7294</strong>
+                    <span class="line-box-range">(운정중앙역~서울역)</span>
+                  </p>
+                </div>
+                <div>
+                  <span class="line-box-label">수서역 유실물 센터</span>
+                  <p>
+                    <strong class="line-box-tell">02-6048-7293</strong>
+                    <span class="line-box-range">(수서역~동탄역)</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="heading-sm" data-animation="fade-up">문의사항</h3>
+            <div class="table-scroll tb-scroll-flex" data-animation="fade-up"><!-- 웹접근성 2026-01-06 : style 추가 -->
+              <!-- 웹접근성 2026-01-06 : 전체적 수정 & 추가 -->
+              <div class="table-wrap table-pc">
+                <table>
+                  <caption>
+                    문의사항 - 서울역,	연신내역,	대곡역,	킨텍스역,	운정중앙역에 대한 정보를 제공
+                  </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">서울역</th>
+                      <th scope="col">연신내역</th>
+                      <th scope="col">대곡역</th>
+                      <th scope="col">킨텍스역</th>
+                      <th scope="col">운정중앙역</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">02-6048-7061</td>
+                      <td class="nowrap">02-6048-7051</td>
+                      <td class="nowrap">02-6048-7031</td>
+                      <td class="nowrap">02-6048-7021</td>
+                      <td class="nowrap">02-6048-7021</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-wrap table-pc mt-0">
+                <table>
+                  <caption>
+                    문의사항 - 수서역,	성남역,	구성역,	동탄역에 대한 정보를 제공
+                  </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">수서역</th>
+                      <th scope="col">성남역</th>
+                      <th scope="col">구성역</th>
+                      <th scope="col">동탄역</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">02-6048-7011</td>
+                      <td class="nowrap">02-6048-7011</td>
+                      <td class="nowrap">02-6048-7011</td>
+                      <td class="nowrap">02-6048-7011</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--// 웹접근성 2026-01-06 : 전체적 수정 & 추가 -->
+              <div class="table-wrap table-mobile">
+                <table>
+                  <caption>
+                    문의사항 - 서울역,	연신내역,	대곡역,	킨텍스역,	운정중앙역, 수서역,	성남역,	구성역,	동탄역에 대한 정보를 제공
+                  </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col /><!-- 웹접근성 2026-01-06 : 추가 -->
+                    <col /><!-- 웹접근성 2026-01-06 : 추가 -->
+                    <col /><!-- 웹접근성 2026-01-06 : 추가 -->
+                    <col /><!-- 웹접근성 2026-01-06 : 추가 -->
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">서울역</th>
+                      <th scope="col">연신내역</th>
+                      <th scope="col">대곡역</th>
+                      <th scope="col">킨텍스역</th>
+                      <th scope="col">운정중앙역</th>
+                      <th scope="col">수서역</th>
+                      <th scope="col">성남역</th>
+                      <th scope="col">구성역</th>
+                      <th scope="col">동탄역</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">02-6048-7061</td>
+                      <td class="nowrap">02-6048-7051</td>
+                      <td class="nowrap">02-6048-7031</td>
+                      <td class="nowrap">02-6048-7021</td>
+                      <td class="nowrap">02-6048-7021</td>
+                      <td class="nowrap">02-6048-7011</td>
+                      <td class="nowrap">02-6048-7011</td>
+                      <td class="nowrap">02-6048-7011</td>
+                      <td class="nowrap">02-6048-7011</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <h3 class="heading-sm lostproperty" data-animation="fade-up">유실물 신고요령</h3>
+            <div class="lostproperty-step-wrap" data-animation="fade-up">
+              <ol class="step-box" data-animation="fade-up">
+                <li class="step-item" data-animation="fade-up">
+                  <span class="step-num">step 1</span>
+                  <div class="step-content">
+                    <img src="/assets/images/information/lostproperty-step01.png" alt="" />
+                    <p class="step-text">
+                      하차한 열차 방향, 시간, 하차 위치 확인해주세요 (서울역 방향 플랫폼번호 예)4-2)
+                    </p>
+                  </div>
+                </li>
+                <li class="step-item" data-animation="fade-up">
+                  <span class="step-num">step 2</span>
+                  <div class="step-content">
+                    <img src="/assets/images/information/lostproperty-step02.png" alt="" />
+                    <p class="step-text">
+                      <strong>1551-2979</strong> (콜센터) 전화 혹은 내린 역 고객안전센터(역무실)에
+                      전화 혹은 방문하여 물건과 열차 방향/시간/하차 위치를 설명해주세요<br />(정보가
+                      애매한 경우 정확한 열차번호를 특정하기 위해 승차권 제시가 필요할 수 있습니다.)
+                    </p>
+                  </div>
+                </li>
+                <li class="step-item" data-animation="fade-up">
+                  <span class="step-num">step 3</span>
+                  <div class="step-content">
+                    <img src="/assets/images/information/lostproperty-step03.png" alt="" />
+                    <p class="step-text">
+                      역직원이 유실물을 찾을 때까지 잠시 기다려주세요 유실물 발견 즉시 고객님께
+                      알려드립니다
+                    </p>
+                  </div>
+                </li>
+                <li class="step-item" data-animation="fade-up">
+                  <span class="step-num">step 4</span>
+                  <div class="step-content">
+                    <img src="/assets/images/information/lostproperty-step04.png" alt="" />
+                    <p class="step-text">
+                      보관 중인 유실물센터/역에 방문하여 신분증 확인 후 유실물을 수령해주세요<br />
+                      (출퇴근/혼잡시간에는 열차 내부 진입이 곤란하여 유실물 수배가 어려울 수
+                      있습니다.)
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="lostproperty-wrap" data-animation="fade-up">
+              <div class="lostproperty-img" data-animation="fade-up">
+                <img src="/assets/images/information/lostproperty-img.png" alt="경찰청 유실물 통합 포털인 LOST112의 습득물검색 페이지 캡쳐 화면" /><!-- 웹접근성 2026-01-06 : aria-hidden 삭제, alt값 입력 -->
+              </div>
+              <p class="lostproperty-text" data-animation="fade-up">
+                수도권광역급행철도에이선(동북선도시철도)의
+                <strong class="text-primary05">유실물은 경찰청 유실물 통합 포털인 LOST112</strong
+                >의<br />
+                <strong>습득물 현황으로 확인</strong>하실 수 있습니다.
+              </p>
+              <div class="btn-wrap" data-animation="fade-up">
+                <a
+                  href="https://www.lost112.go.kr/find/seoulMetroFindList.do"
+                  target="_blank"
+                  class="btn-white lg"
+                  aria-label="유실물 시스템 새 창 열림"
+                ><!-- 웹접근성 2026-01-27 : aria 추가 -->
+                  <span>유실물 시스템 바로가기</span>
+                  <i class="ico-arrow-right03" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

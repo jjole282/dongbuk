@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li class="is-active">
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li>
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li>
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">안전관리체계</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>안전관리체계</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="visual-box" data-animation="fade-up">
+              <div class="visual-box-img-wrap">
+                <img
+                  src="/assets/images/safety/bulb-img.png"
+                  alt=""
+                  class="visual-box-img"
+                /><!-- 웹접근성 2026-01-06 : aria 삭제 -->
+              </div>
+              <div class="visual-box-body">
+                <p class="visual-box-title">철도안전관리체계란?</p>
+                <p class="visual-box-desc">
+                  철도를 운영하거나 철도시설을 관리하기 위하여 갖추어야 하는 인력, 시설, 차량, 장비,
+                  운영절차, 교육훈련 및 비상대응계획 등 안전관리에 관한 유기적 체계를 말하며,
+                  철도안전관리시스템(SMS), 열차운행체계 및 유지관리체계로 구성되어 있습니다.
+                </p>
+              </div>
+            </div>
+            <!-- 안전관리체계 -->
+            <div class="safe-wrap">
+              <div class="safe-box">
+                <div class="safe-box-circle" data-animation="fade-up">
+                  <i class="ico-secure" aria-hidden="true"></i>
+                  <span class="safe-box-title">안전 관리시스템<br />(SMS)</span>
+                </div>
+                <ul class="safe-box-list" data-animation="fade-up">
+                  <li>철도안전경영</li>
+                  <li>문서화</li>
+                  <li>위험관리</li>
+                  <li>요구사항준수</li>
+                  <li>사고조사 및 보고</li>
+                  <li>내부점검</li>
+                  <li>비상대응</li>
+                  <li>교육훈련</li>
+                  <li>안전정보</li>
+                  <li>안전문화</li>
+                </ul>
+              </div>
+              <div class="safe-box">
+                <div class="safe-box-circle" data-animation="fade-up">
+                  <i class="ico-train" aria-hidden="true"></i>
+                  <span class="safe-box-title">열차운행체계</span>
+                </div>
+                <ul class="safe-box-list" data-animation="fade-up">
+                  <li>철도운영 개요</li>
+                  <li>철도사업면허</li>
+                  <li>열차운행조직 및 인력</li>
+                  <li>열차운행방법 및 절차</li>
+                  <li>열차운행계획</li>
+                  <li>승무 및 역무</li>
+                  <li>철도경비</li>
+                  <li>철도보호 및 질서유지</li>
+                  <li>역전운영 기록관리</li>
+                  <li>위탁업무관리</li>
+                </ul>
+              </div>
+              <div class="safe-box">
+                <div class="safe-box-circle" data-animation="fade-up">
+                  <i class="ico-system" aria-hidden="true"></i>
+                  <span class="safe-box-title">유지관리체계</span>
+                </div>
+                <ul class="safe-box-list" data-animation="fade-up">
+                  <li>유지관리 개요</li>
+                  <li>유지관리조직 및 인력</li>
+                  <li>유지관리방법 및 절차</li>
+                  <li>유지관리 이행계획</li>
+                  <li>유지관리 기록</li>
+                  <li>유지관리 설비 및 장비</li>
+                  <li>유지관리 부품</li>
+                  <li>철도차량 제작감독</li>
+                  <li>위탁업무 관리</li>
+                </ul>
+              </div>
+              <div class="safe-box">
+                <div class="safe-box-circle" data-animation="fade-up">
+                  <i class="ico-paper" aria-hidden="true"></i>
+                  <span class="safe-box-title">부속서</span>
+                </div>
+                <ul class="safe-box-list" data-animation="fade-up">
+                  <li>인적자원관리 프로그램</li>
+                  <li>비상대응계획</li>
+                </ul>
+              </div>
+            </div>
+            <!--// 안전관리체계 -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

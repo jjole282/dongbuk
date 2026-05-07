@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>이용안내</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>역정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>열차시간표</span></a>
+              </li>
+              <li>
+                <a href="#"><span>실시간 열차 정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>운임안내</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>운임제도</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>승차권안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>여객운송약관</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>편의시설</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>편의시설 소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>교통약자 편의시설</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>이용자 편의시설</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>유실물센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>간편지연증명서</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>승강설비가동현황</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">승강설비가동현황</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>승강설비가동현황</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="text-list-box">
+              <ul class="text-list">
+                <li>에스컬레이터 정기점검은 단시간 정지로 '점검중' 미현시</li>
+                <li>
+                  동북선도시철도운영(주)에서는 시민의 안전을 위해 매달 자체 점검을 실시하고 있습니다.
+                </li>
+              </ul>
+            </div>
+            <div class="search-wrap">
+              <!-- 셀렉트 -->
+              <div class="select-box">
+                <button
+                  type="button"
+                  class="select-btn"
+                  id="select-trigger-date"
+                  aria-expanded="false"
+                  title="승강설비 가동 날짜 선택"
+                ><!-- 웹접근성 2026-01-27 : aria-haspopup 삭제, title 추가 --><!-- 웹접근성 2026-01-27 : aria-describedby 추가 -->
+                  <span>2025-07-14</span>
+                </button>
+                <ul class="select-list" hidden tabindex="-1"><!-- 웹접근성 2026-01-27 : role 삭제 --><!-- 웹접근성 2026-01-06 : role 추가 -->
+                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                    <button type="button"><span>2025-07-14</span></button>
+                  </li>
+                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                    <button type="button"><span>2025-07-13</span></button>
+                  </li>
+                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                    <button type="button"><span>2025-07-12</span></button>
+                  </li>
+                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                    <button type="button"><span>2025-07-11</span></button>
+                  </li>
+                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                    <button type="button"><span>2025-07-10</span></button>
+                  </li>
+                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                    <button type="button"><span>2025-07-09</span></button>
+                  </li>
+                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                    <button type="button"><span>2025-07-08</span></button>
+                  </li>
+                </ul>
+              </div>
+              <!--// 셀렉트 -->
+              <!-- 버튼 -->
+              <div class="btn-wrap">
+                <button class="btn-primary md"><span>검색</span></button>
+              </div>
+              <!--// 버튼 -->
+            </div>
+            <div class="table-wrap">
+              <table>
+                <caption>
+                  승강설비 가동 현황을 시설, 운행 구간, 위치, 비고 항목으로 제공하는 표입니다.
+                </caption>
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">시설</th>
+                    <th scope="col">운행구간</th>
+                    <th scope="col">위치</th>
+                    <th scope="col">비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="4">현황이 없습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 버튼 클릭시 열차지연증명서 나옴 -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

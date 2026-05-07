@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>고객참여</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>고객의 소리</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>작성하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>문화마당</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>촬영신청</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>광고문의</span></a>
+              </li>
+              <li>
+                <a href="#"><span>이벤트/공모</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이벤트/공모 참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>당첨자 확인</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>참여후기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>자주묻는 질문</span></a>
+              </li>
+              <li>
+                <a href="#"><span>부패방지신고센터</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">신청하기</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>고객참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>문화마당</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+
+            <div class="table-view table-wrap">
+              <h3 class="heading-sm">신청자 정보</h3>
+              <table>
+                <caption><!-- 웹접근성 2026-01-06 : 추가 -->
+                  신청 작성자, 전화번호, 이메일에 대한 정보
+                </caption>
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">작성자</th>
+                    <td class="align-left">심채원</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">전화번호</th>
+                    <td class="align-left">01072537493</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">이메일</th>
+                    <td class="align-left">hj123@naver.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-view table-wrap">
+              <h3 class="heading-sm">공연 및 행사정보</h3>
+              <table>
+                <caption><!-- 웹접근성 2026-01-06 : 추가 -->
+                  공연 및 행사정보에 대한 정보
+                </caption>
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">구분</th>
+                    <td class="align-left">공연</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">공연자명</th>
+                    <td class="align-left">심채원</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">공연구성</th>
+                    <td class="align-left">노래 5곡 버스킹</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">공연내용</th>
+                    <td class="align-left">
+                      안녕하세용안녕하세용안녕하세용안녕하세용안녕하세용안녕하세용안녕하세용
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">공연일자</th>
+                    <td class="align-left">2025-11-21</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">공연내용</th>
+                    <td class="align-left">17:00~19:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 답변 -->
+            <div class="table-view answer">
+              <div class="title-area">
+                <h3>
+                  <i class="ico-arrow-line" aria-hidden="true"></i>
+                  [답변] 안녕하세요! 동북선도시철도운영㈜ 입니다.
+                </h3>
+              </div>
+              <div class="info-area">
+                <dl>
+                  <dt>답변자</dt>
+                  <dd>관리자</dd>
+                </dl>
+                <dl>
+                  <dt>작성일</dt>
+                  <dd>2025-06-05</dd>
+                </dl>
+              </div>
+              <div class="cont-area">
+                <!-- 내용 -->
+                <div class="text-area">
+                  안녕하세요! 동북선도시철도운영㈜ 입니다.<br />
+                  문화마당 관련 사용은 현재 공사중이라 사용이 불가능합니다.
+                </div>
+              </div>
+              <div class="btn-wrap justify-between">
+                <a href="#" class="btn-line sm"><span>목록</span></a>
+                <a href="#" class="btn-secondary sm"><span>삭제</span></a>
+              </div>
+            </div>
+            <!--// 답변 -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

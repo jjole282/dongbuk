@@ -10,7 +10,7 @@
 @use '@/scss/common/table' as *;
 @use '@/scss/common/button' as *;
 @use '@/scss/common/input' as *;
-// @use '@/scss/common/box' as *;
+@use '@/scss/common/box' as *;
 @use '@/scss/common/icon' as *;
 @use '@/scss/common/textList' as *;
 // @use '@/scss/common/search' as *;
@@ -25,7 +25,7 @@
 
 // 페이지
 @use '@/scss/pages/main' as *; // 메인
-// @use '@/scss/pages/meta' as *; // 공통
+@use '@/scss/pages/meta' as *; // 공통
 @use '@/scss/pages/information' as *; //01 이용안내
 // @use '@/scss/pages/customer' as *; // 01 고객참여
 @use '@/scss/pages/safetyManagement' as *; // 05 안전기술

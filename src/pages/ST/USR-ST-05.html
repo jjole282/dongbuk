@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li>
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">안전장비 및 사용법</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>안전장비 및 사용법</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap print-block"><!-- 2025-12-23 : print-block 클래스 추가 -->
+              <div class="tabs" role="tablist" aria-label="안정장비 사용법"><!-- 웹접근성 2026-01-27 : aria-label 값 변경 -->
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  소화기 사용법
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  소화전 사용법
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  승강설비 사용방법
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-4"
+                  aria-controls="panel-4"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  방독면 착용법
+                </button>
+                <button
+                  class="tab-btn wide"
+                  role="tab"
+                  id="tab-5"
+                  aria-controls="panel-5"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  AED(자동제세동기) 사용법
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <!-- 소화기 사용법 -->
+                  <h3 class="heading-sm">소화기 사용법</h3>
+                  <ol class="step-wrap" data-animation="fade-up">
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 1</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/fire-step01.png" alt="소화기 안전핀 제거" />
+                      </div>
+                      <div class="step-title">안전핀 제거</div>
+                      <p class="step-desc">
+                        소화기의 안전핀을 뽑습니다.<br />
+                        이때 상단 레버만 손으로 잡습니다.
+                      </p>
+                      <i class="ico-arrow-right02" aria-hidden="true"></i>
+                    </li>
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 2</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/fire-step02.png" alt="소화기 화재 방향 조준" />
+                      </div>
+                      <div class="step-title">화재 방향 조준</div>
+                      <p class="step-desc">
+                        호스를 불 쪽으로 향합니다.<br />
+                        (바람을 등지고 3~5m 전방에서)
+                      </p>
+                      <i class="ico-arrow-right02" aria-hidden="true"></i>
+                    </li>
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 3</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/fire-step03.png" alt="소화기 레버 당기기" />
+                      </div>
+                      <div class="step-title">상단 레버</div>
+                      <p class="step-desc">상단 레버(손잡이)를<br />힘껏 움켜잡습니다.</p>
+                      <i class="ico-arrow-right02" aria-hidden="true"></i>
+                    </li>
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 4</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/fire-step04.png" alt="소화기 약제 방사" />
+                      </div>
+                      <div class="step-title">약제 방사</div>
+                      <p class="step-desc">불길 양 옆으로 골고루 약제를<br />방사합니다.</p>
+                    </li>
+                  </ol>
+                  <!--// 소화기 사용법 -->
+                  <!-- 리스트 -->
+                  <div class="text-list-box" data-animation="fade-up">
+                    <h4 class="text-list-title">소화기 사용시 유의사항</h4>
+                    <ul class="text-list">
+                      <li>
+                        소화기를 방사할 때 너무 가까이 접근하여 화상을 입지 않도록 주의해야 합니다.
+                      </li>
+                      <li>바람을 등지고 상하로 방사합니다.</li>
+                      <li>지하공간이나 창이 없는 곳에서 사용하면 질식의 우려가 있습니다.</li>
+                      <li>방사할 때 기화에 따른 동상을 주의하세요.</li>
+                      <li>방사된 가스는 마시지 말고 사용 후 즉시 환기하여야 합니다.</li>
+                    </ul>
+                  </div>
+                  <!--// 리스트 -->
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-4"
+                  role="tabpanel"
+                  aria-labelledby="tab-4"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-5"
+                  role="tabpanel"
+                  aria-labelledby="tab-5"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

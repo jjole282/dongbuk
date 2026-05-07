@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>고객참여</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>고객의 소리</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>작성하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>문화마당</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>촬영신청</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>광고문의</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>이벤트/공모</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>이벤트/공모 참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>당첨자 확인</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>참여후기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>자주묻는 질문</span></a>
+              </li>
+              <li>
+                <a href="#"><span>부패방지신고센터</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">이벤트/공모 참여</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>고객참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>이벤트/공모</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>이벤트/공모 참여</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="이벤트/공모 참여"><!-- 웹접근성 2026-01-27 : aria 값 수정 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  진행중인 이벤트/공모
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                ><!-- 웹접근성 2026-01-06 : 중복 aria-selected,tabindex 삭제 -->
+                  마감된 이벤트/공모
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  aria-hidden="true"
+                  hidden
+                >
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div class="tab-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2">
+                  <!-- search -->
+                  <div class="search-bar">
+                    <p class="search-text">총 <span>23</span>건</p>
+                    <div class="search-box">
+                      <div class="input-box">
+                        <label for="search" class="txt-hide">검색어 입력란</label><!-- 웹접근성 2026-01-06 : label 추가 -->
+                        <input
+                          type="text"
+                          aria-label="검색어 입력"
+                          placeholder="검색어를 입력하세요."
+                          id="search"
+                        /><!-- 웹접근성 2026-01-06 : id 추가 -->
+                      </div>
+                      <div class="btn-wrap">
+                        <button class="btn-primary sm">
+                          <i class="ico-search" aria-hidden="true"></i>
+                          <span>검색</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// search -->
+                  <!-- table -->
+                  <div class="table-scroll">
+                    <div class="table-wrap">
+                      <table>
+                        <caption>
+                          마감된 이벤트/공모 - 번호,	제목,	신청기간,	등록일에 대한 정보를 제공
+                        </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                        <colgroup>
+                          <col width="10%" />
+                          <col />
+                          <col width="20%" />
+                          <col width="20%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">신청기간</th>
+                            <th scope="col">등록일</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>2</td>
+                            <td>동북선도시철도 열차 창문 투명 OLED 콘텐츠 공모전</td>
+                            <td>2024-12-16 ~ 2025-01-10</td>
+                            <td>2024-12-16</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>동북선도시철도 열차 창문 투명 OLED 콘텐츠 공모전</td>
+                            <td>2024-12-16 ~ 2025-01-10</td>
+                            <td>2024-12-16</td>
+                          </tr>
+                          <!-- empty case -->
+                          <!-- <tr class="empty">
+                            <td colspan="4">
+                              <i class="ico-empty" aria-hidden="true"></i>
+                              <span>조회내용이 없습니다.</span>
+                            </td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <!--// table -->
+                  <!-- pagination -->
+                  <div class="pagination-box">
+                    <ul>
+                      <li class="page-item prev">
+                        <a href="#">
+                          <span>이전</span>
+                        </a>
+                      </li>
+                      <li class="page-item on">
+                        <a href="#" aria-label="현재 페이지">1</a><!-- 웹접근성 2026-01-27 : aria 추가 -->
+                      </li>
+                      <li class="page-item">
+                        <a href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#">3</a>
+                      </li>
+                      <li class="page-item next">
+                        <a href="#">
+                          <span>다음</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--// pagination -->
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

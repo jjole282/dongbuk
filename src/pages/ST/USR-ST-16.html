@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>안전/기술</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>안전관리체계</span></a>
+              </li>
+              <li>
+                <a href="#"><span>비상시 행동요령</span></a>
+              </li>
+              <li>
+                <a href="#"><span>안전장비 및 사용법</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지하철이용 안전수칙</span></a>
+              </li>
+              <li>
+                <a href="#"><span>종합관제센터</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>차량소개</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">차량소개</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>안전/기술</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>차량소개</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="열차편의시설 및 내부특징">
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  열차소개 및 외부특징
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  열차편의시설 및 내부특징
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <!-- 이미지 -->
+                  <div class="img-box" data-animation="fade-up">
+                    <img src="/assets/images/safety/train-facility.png" alt="" />
+                  </div>
+                  <!--// 이미지 -->
+                  <h3 class="heading-sm" data-animation="fade-up">내부 특징</h3>
+                  <ul class="train-feature facility" data-animation="fade-up">
+                    <li data-animation="fade-up">
+                      <img src="/assets/images/safety/train-facility01.png" alt="" />
+                      <div class="desc">
+                        <span class="num">1</span>
+                        <p class="txt">높낮이가 다른 핸드스트랩</p>
+                      </div>
+                    </li>
+                    <li data-animation="fade-up">
+                      <img src="/assets/images/safety/train-facility02.png" alt="" />
+                      <div class="desc">
+                        <span class="num">2</span>
+                        <p class="txt">천정명 추가 핸드레일</p>
+                      </div>
+                    </li>
+                    <li data-animation="fade-up">
+                      <img src="/assets/images/safety/train-facility03.png" alt="" />
+                      <div class="desc">
+                        <span class="num">3</span>
+                        <p class="txt">복층형 강화유리(측창문)</p>
+                      </div>
+                    </li>
+                    <li data-animation="fade-up">
+                      <img src="/assets/images/safety/train-facility04.png" alt="" />
+                      <div class="desc">
+                        <span class="num">4</span>
+                        <p class="txt">의자폭 확대</p>
+                      </div>
+                    </li>
+                    <li data-animation="fade-up">
+                      <img src="/assets/images/safety/train-facility05.png" alt="" />
+                      <div class="desc">
+                        <span class="num">5</span>
+                        <p class="txt">넓고 개방된 객실 간 연결통로</p>
+                      </div>
+                    </li>
+                    <li data-animation="fade-up">
+                      <img src="/assets/images/safety/train-facility06.png" alt="" />
+                      <div class="desc">
+                        <span class="num">6</span>
+                        <p class="txt">실내 동영상 표시장치 개선</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

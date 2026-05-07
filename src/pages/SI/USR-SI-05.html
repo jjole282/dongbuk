@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>이용안내</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>역정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>열차시간표</span></a>
+              </li>
+              <li>
+                <a href="#"><span>실시간 열차 정보</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>운임안내</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>운임제도</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>승차권안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>여객운송약관</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>편의시설</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>편의시설 소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>교통약자 편의시설</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>이용자 편의시설</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>유실물센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>간편지연증명서</span></a>
+              </li>
+              <li>
+                <a href="#"><span>승강설비가동현황</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">승차권 안내</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>운임안내</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>승차권 안내</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="line-box" data-animation="fade-up">
+              <div class="line-box-img-wrap">
+                <img src="/assets/images/information/card-img01.png" alt="" /><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+              </div>
+              <div class="line-box-body">
+                <p class="line-box-title">교통카드</p>
+                <ul class="line-box-list">
+                  <li>
+                    RF교통카드는 무선주파수(Radio Frequency)방식의 비접촉식 요금징수 카드이며 지불방식에 따라 선불카드와 후불카드로 구분합니다.
+                  </li>
+                  <li>
+                    선불카드는 일정 금액을 먼저 지불하고 충전하여 사용하다 해당금액이 소진 되면 일정
+                    금액을 재충전 후 계속 사용할 수 있는 카드입니다.
+                  </li>
+                  <li>
+                    후불카드는 기존의 신용카드에 RF교통기능을 추가한 카드로서 교통수단 이용 금액이
+                    신용카드 결제일에 포함되는 카드입니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 class="heading-sm" data-animation="fade-up">1회용 교통카드</h3>
+            <ol class="step-wrap" data-animation="fade-up">
+              <li class="step-item" data-animation="fade-up">
+                <div class="step-image">
+                  <img src="/assets/images/information/card-img02.png" alt="" />
+                  <div class="step-title">교통카드 구입</div>
+                </div>
+                <p class="step-desc">
+                  1회용 발매기에서 목적지를 선택한 후 <br />이용운임과 보증금을 투입하고,
+                  <br />1회용 교통카드를 발급받으세요.
+                </p>
+              </li>
+              <li class="step-item" data-animation="fade-up">
+                <div class="step-image">
+                  <img src="/assets/images/information/train-img.png" alt="" />
+                  <div class="step-title">승차 및 하차</div>
+                </div>
+                <p class="step-desc">
+                  개찰구 오른쪽 교통카드 단말기에 <br />1회용 교통카드를 접촉하세요.
+                </p>
+              </li>
+              <li class="step-item" data-animation="fade-up">
+                <div class="step-image">
+                  <img src="/assets/images/information/deposit-img.png" alt="" />
+                  <div class="step-title">보증금 환급</div>
+                </div>
+                <p class="step-desc">
+                  하차 후 보증금 환급기에 1회용<br />교통카드를 투입하면 보증금을<br />돌려받을 수
+                  있습니다.
+                </p>
+              </li>
+            </ol>
+
+            <div class="text-list-box mt-40" data-animation="fade-up">
+              <h4 class="text-list-title">1회용 교통카드 이용시 유의사항</h4>
+              <ul class="text-list">
+                <li>
+                  다른 교통카드와 함께 접촉하시면 안 됩니다. 1회용 교통카드 1장만 교통카드 단말기의
+                  교통카드 대는 곳에 접촉하세요.
+                </li>
+                <li>
+                  1회용 교통카드는 재사용되므로 훼손하시면 안 됩니다. 본인의 부주의로 1회용
+                  교통카드가 분실·훼손된 경우 보증금을 돌려받을 수 없습니다.
+                </li>
+                <li>
+                  목적지를 잘못 선택하여 하차할 수 없는 경우에는 [교통카드 정산/충전기] 또는
+                  역직원에게 목적지를 수정(추가요금 지불)하고 하차하시면 됩니다.
+                </li>
+                <li>
+                  교통카드 단말기에 접촉 시 오류(Error)표시가 나거나 반응이 없는 경우, 역직원에게
+                  문의하세요.
+                </li>
+                <li>다른 교통수단과 환승 할인을 받을 수 없습니다.</li>
+              </ul>
+            </div>
+
+            <div class="text-list-box mt-40" data-animation="fade-up">
+              <h4 class="text-list-title">우대용 교통카드</h4>
+              <ul class="text-list">
+                <li>
+                  할인 승차권 사용 여객 대상자(만 65세 이상 경로우대자, 장애인, 유공자)가 이용하는
+                  반영구적 교통카드
+                </li>
+              </ul>
+            </div>
+
+            <h3 class="heading-sm" data-animation="fade-up">우대용 카드 적용 대상자</h3>
+            <div class="table-scroll" data-animation="fade-up">
+              <div class="table-wrap">
+                <table>
+                  <caption>
+                    우대용 카드 적용 대상자 - 구분, 적용 대상자에 대한 정보를 제공
+                  </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                  <colgroup>
+                    <col style="width: 20%" />
+                    <col style="width: 80%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">적용 대상자</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>경로자</td>
+                      <td class="align-left">
+                        <strong>[적용대상]</strong>
+                        <ul>
+                          <li>• 노인복지법 제26조에 정한 노인(만 65세 이상 어르신)</li>
+                        </ul>
+                        <strong class="mt-10">[카드발급]</strong>
+                        <ul>
+                          <li>• 동주민센터(단순무임), 신한은행(신용/체크카드)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>장애인</td>
+                      <td class="align-left">
+                        <strong>[적용대상]</strong>
+                        <ul>
+                          <li>
+                            • 장애인 복지법 제2조에 정한 장애인(지체/청각/언어/지적 장애 등으로
+                            신분확인 가능한 증명서를 발급받은 사람)
+                          </li>
+                          <li>• 장애의 정도가 심한 장애인(중증장애인)의 동승보호자 1인</li>
+                        </ul>
+                        <strong class="mt-10">[카드발급]</strong>
+                        <ul>
+                          <li>• 동주민센터(단순무임/신용/체크카드)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>유공자</td>
+                      <td class="align-left">
+                        <strong>[적용대상]</strong>
+                        <ul>
+                          <li>
+                            • 독립유공자 예우에 관한 법률 시행령 제14조, 국가유공자 등 예우 및
+                            지원에 관한 법률 시행령 제85조제1항, 5·18민주유공자예우 및 단체설립에
+                            관한 법률 제87조, 보훈보상대상자 지원에 관한 법률 제54조제1항에 정한
+                            사람
+                          </li>
+                          <li>
+                            • 독립유공자, 전상군경, 공상군경, 4·19혁명 부상자, 공상공무원 및
+                            특별공로상이자로서 상이등급 1~7급 해당자 및 상이등급 1급의 동승보호자
+                            1인
+                          </li>
+                          <li>
+                            • 5·18민주화운동부상자로서 1~14급 해당자 및 장해등급 1급의 동승보호자
+                            1인
+                          </li>
+                          <li>
+                            • 보훈보상대상자(재해부상군경, 재해부상공무원, 지원공상군경,
+                            지원공상공무원) 및 다른 사람의 보호없이 활동이 어려운 경우 이를 직접
+                            보호하기 위한 동승보호자 1인
+                          </li>
+                        </ul>
+                        <strong class="mt-10">[카드발급]</strong>
+                        <ul>
+                          <li>• 관할 보훈지청(신용/체크카드)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

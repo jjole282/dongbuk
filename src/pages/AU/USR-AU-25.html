@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에스지레일㈜_채용공고 목록</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>회사소개</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>에스지레일(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>동북선도시철도운영(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li class="on">
+                    <a href="#"><span>인재상</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-intro">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">인재상</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>동북선도시철도운영(주)</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>인재상</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="talent-wrap">
+              <div class="title" data-animation="fade-up">
+                <p><strong>안전</strong>한 광역철도,</p>
+                <p><strong>편리</strong>한 교통 서비스</p>
+              </div><!-- 웹접근성 2026-01-06 : h3 태그 div로 변경 -->
+              <div class="talent-box">
+                <div class="item" data-animation="fade-up">
+                  <p class="title">
+                    안전분야 최고를<br />
+                    지향하는 인재
+                  </p>
+                  <p class="text">세계 최고 수준의 안전 전문가가<br />되기 위해 노력하는 인재</p>
+                </div>
+                <div class="item" data-animation="fade-up">
+                  <p class="title">
+                    혁신을<br />
+                    주도하는 인재
+                  </p>
+                  <p class="text">
+                    실패를 두려워하지 않고<br />이를 통해 배우고 성장함으로써,<br />끊임없이
+                    발전을<br />주도해 나가는 인재
+                  </p>
+                </div>
+                <div class="item" data-animation="fade-up">
+                  <p class="title">열린 마음으로<br />협력하는 인재</p>
+                  <p class="text">
+                    나와 동료의 성공, 회사 발전에<br />기여하고 협력 할 수 있는<br />영향력 있는
+                    인재
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>고객참여</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>고객의 소리</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>작성하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>문화마당</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>촬영신청</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신청하기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>광고문의</span></a>
+              </li>
+              <li>
+                <a href="#"><span>이벤트/공모</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>이벤트/공모 참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>당첨자 확인</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>참여후기</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>자주묻는 질문</span></a>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>부패방지신고센터</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>신고하기</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">이용안내</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>고객참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>부패방지신고센터</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="line-box">
+              <div class="line-box-img-wrap">
+                <img src="/assets/images/customer/communication-img.png" alt="" /><!-- 웹접근성 2026-01-06 : aria 삭제 -->
+              </div>
+              <div class="line-box-body">
+                <p class="line-box-title">소통의 장</p>
+                <p class="line-box-desc">
+                  수도권광역급행철도에이선(동북선도시철도)의 핵심가치(안전 First, 고객만족, 상호존중,
+                  변화관리, 주인정신) 정착을 위해 “소통의 장”을 마련하여 윤리경영과 청렴문화를
+                  유지하기 위한 목적으로 설치되었으며, 제보자로부터 신뢰를 확보하기 위해 중립적이고
+                  독립적인 조직으로 운영되고 있습니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="btn-wrap">
+              <a href="#" class="btn-primary lg"><span>신고하기</span></a>
+            </div>
+
+            <div class="text-list-box">
+              <h3 class="text-list-title">이용안내</h3>
+              <ul class="text-list">
+                <li>
+                  동북선도시철도 임·직원의 비리행위, 직위를 이용한 부당한 요구, 불공정한 업무처리 등에 대한
+                  제보를 받습니다.
+                </li>
+                <li>제보자의 비밀은 철저히 보호됩니다.</li>
+                <li>
+                  제보내용이 부정확하거나 허위인 경우에는 처리되지 않을 수 있으므로 6하 원칙에
+                  의거하여 정확하게 작성하여 주시기 바랍니다.
+                </li>
+                <li>
+                  제보는 익명이며, 제보내용이 내부공익으로 합당하지 않고 사실 로서의 개연성이 낮다고
+                  인정되는 경우에 한하여 예외적으로 접수·처리되지 않을 수 있습니다.
+                </li>
+                <li>
+                  동북선도시철도 이용과 관련한 불편 또는 개선사항 등은 "고객서비스 - 고객의 소리" 메뉴를
+                  이용하여 주시기 바랍니다.
+                </li>
+              </ul>
+            </div>
+
+            <div class="text-list-box">
+              <h3 class="text-list-title">제보하기</h3>
+              <ul class="text-list">
+                <li>
+                  직장내 성희롱 및 괴롭힘의 예방 (건전한 조직문화 저해행위· 공정한 직무수행
+                  저해행위)
+                </li>
+                <li>
+                  투명하고 깨끗한 동북선도시철도 (공정한 직무수행 저해행위·부당이득 수수행위·정보, 보안관련
+                  위반행위·기타 비윤리적 행위(청렴의무위반, 윤리행동지침 위반행위 등))
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

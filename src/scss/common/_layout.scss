@@ -329,7 +329,6 @@ body {
               border-left: 1px solid $color-fill11;
               &.is-hover > a {
                 background-color: $color-primary01;
-                //border: 1px solid $color-primary01;
                 &::after {
                   @include background('/assets/icons/ico-gnb-arrow02.svg', center, 100%);
                 }
@@ -377,7 +376,7 @@ body {
                     @include background('/assets/icons/ico-gnb-arrow02.svg', center, 100%);
                   }
                   span {
-                    color: $color-text00;
+                    color: $color-stroke00;
                   }
                   ::before {
                     display: none;
@@ -665,7 +664,7 @@ body.scroll-lock {
       background: $color-primary01;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       span {
-        @include font(16, 700, $color: $color-text00);
+        @include font(16, 700, $color: $color-stroke00);
       }
     }
     /* 2depth 패널 */
@@ -855,17 +854,44 @@ body.scroll-lock {
     max-width: $layoutSubWidth;
     width: 100%;
     margin: 0 auto;
-    padding: rem(100) 0 rem(110);
+    padding: rem(60) 0 rem(60);
+    @include desktop-medium {
+      padding: rem(40) rem(30) rem(100);
+      max-width: none;
+    }
+    @include responsive {
+      justify-content: center;
+      gap: 0;
+    }
+    @include mobile {
+      padding: rem(30) rem(20) rem(100);
+    }
+    @media (min-width: 1400px) {
+      &:has(> .page-meta) {
+        padding-inline: 0;
+      }
+    }
     .section-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: rem(60);
+      @include mobile {
+        margin-bottom: rem(20);
+      }
       .header-info {
         .section-title {
+          color: $color-text00;
+          @include mobile {
+            margin-bottom: rem(10);
+          }
+          @include mobile-sm {
+            font-size: rem-m(20);
+            margin-bottom: 0;
+          }
           strong {
             display: block;
-            @include font(60, 700);
+            @include font(60, 700, $color: $color-text00);
             @include mobile {
               margin-bottom: rem(10);
             }
@@ -873,19 +899,27 @@ body.scroll-lock {
               font-size: rem-m(20);
               margin-bottom: 0;
             }
-          }
-          span {
-            display: block;
-            @include font(40, 700);
-            @include mobile {
-              margin-bottom: rem(10);
+            &.type02 {
+              font-size: rem(52);
+              font-family: $font-family-gmarket;
+              margin-bottom: rem(16);
+              @include mobile-sm {
+                font-size: rem-m(20);
+              }
             }
-            @include mobile-sm {
-              font-size: rem-m(20);
-              margin-bottom: 0;
+            span {
+              display: block;
+              @include font(40, 700);
+              @include mobile {
+                margin-bottom: rem(10);
+              }
+              @include mobile-sm {
+                font-size: rem-m(20);
+                margin-bottom: 0;
+              }
             }
-          }
         
+          }
         }
         .section-meta {
           position: relative;
@@ -900,6 +934,7 @@ body.scroll-lock {
             position: relative;
             li {
               position: relative;
+              color: $color-text00;
               &::after {
                 position: absolute;
                 content: '';
@@ -953,9 +988,9 @@ body.scroll-lock {
             }
           }
         }
-      }
-      .header-visual {
-        width: 48.6%;
+        .header-visual {
+          width: 48.6%;
+        }
       }
     }
   }
@@ -985,7 +1020,7 @@ body.scroll-lock {
     li {
       position: relative;
       a {
-        color: $color-text00;
+        color: #fff;
         font-size: 1rem;
         font-weight: 400;
       }
@@ -1027,12 +1062,54 @@ body.scroll-lock {
     display: flex;
     justify-content: space-between;
     address {
+      color: #fff;
       p {
         line-height: rem(25);
         font-size: 1rem;
-        color: $color-text00;
+        color: #fff;
         font-weight: 300;
       }
+    }
+  }
+}
+// footerPop
+#footerPop {
+  &[hidden] {
+    display: none;
+  }
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 1000;
+  .modal-dialog {
+    background-color: $color-fill00;
+    border-radius: rem(16);
+    width: rem(460);
+    overflow: hidden;
+    outline: none;
+    @include mobile-sm {
+      width: calc(100% - rem(40));
+      margin: 0 rem(20);
+    }
+    .modal-header {
+      padding: rem(24) rem(32);
+      @include flexBetween();
+      border: 1px solid $color-stroke05;
+      h3 {
+        @include font(24, 700, $color: $color-text01);
+      }
+      button {
+        i {
+          filter: brightness(0) saturate(100%) invert(11%) sepia(5%) saturate(544%)
+            hue-rotate(315deg) brightness(96%) contrast(90%);
+        }
+      }
+    }
+    .modal-body {
+      padding: rem(32);
+      @include font(16, 400, $color: $color-text02);
     }
   }
 }

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>회사소개</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li>
+                <a href="#"><span>에스지레일(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="is-active">
+                <a href="#"><span>동북선도시철도운영(주)</span></a>
+                <ul class="lnb-depth2-list">
+                  <li class="on">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>인재상</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>채용공고</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>찾아오시는 길</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-intro">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">회사소개</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>동북선도시철도운영(주)</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>회사소개</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="회사소개"><!-- 웹접근성 2026-01-27 : aria-label 값 수정 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  CEO인사말
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  CI소개
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-3"
+                  aria-controls="panel-3"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  캐릭터소개
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="tab-4"
+                  aria-controls="panel-4"
+                  aria-selected="false"
+                  tabindex="0"
+                >
+                  경영이념
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-5"
+                  aria-controls="panel-5"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  연혁
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-6"
+                  aria-controls="panel-6"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  조직도
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-7"
+                  aria-controls="panel-7"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  윤리경영
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-8"
+                  aria-controls="panel-8"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  안전경영방침
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-3"
+                  role="tabpanel"
+                  aria-labelledby="tab-3"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-4"
+                  role="tabpanel"
+                  aria-labelledby="tab-4"
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <div class="philosophy-wrap" data-animation="fade-up">
+                    <div class="philosophy-center">
+                      <p data-animation="fade-up">
+                        행복한 주민,<br />
+                        <span>튼튼</span>한 <span>광역</span>급행철도
+                      </p>
+                    </div>
+
+                    <div class="philosophy-row">
+                      <div class="philosophy-item">
+                        <div class="item-text" data-animation="fade-up">
+                          <p class="item-title">장애・사고 ZERO화</p>
+                          <p class="item-desc">
+                            현장위주의 안전관리 강화<br />
+                            과학적 안전관리 시스템 구축<br />
+                            안전시설 적기 투자
+                          </p>
+                        </div>
+                        <div class="item-icon" data-animation="fade-up">
+                          <i class="ico-service-01" aria-hidden="true"></i>
+                          <span>안전우선</span>
+                        </div>
+                      </div>
+
+                      <div class="philosophy-item">
+                        <div class="item-icon" data-animation="fade-up">
+                          <i class="ico-service-04" aria-hidden="true"></i>
+                          <span>지속경영</span>
+                        </div>
+                        <div class="item-text" data-animation="fade-up">
+                          <p class="item-title">경영 리스크 ZERO화</p>
+                          <p class="item-desc">
+                            시스템중심의 업무프로세스 정립<br />
+                            수익중심의 재무건전 실현<br />
+                            소프트웨어적 경영혁신
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="philosophy-row">
+                      <div class="philosophy-item">
+                        <div class="item-text" data-animation="fade-up">
+                          <p class="item-title">불편・불안 ZERO화</p>
+                          <p class="item-desc">
+                            이용주민 불편•불안 요인 개선<br />
+                            주민점검 서비스 활동 강화
+                          </p>
+                        </div>
+                        <div class="item-icon" data-animation="fade-up">
+                          <i class="ico-service-03" aria-hidden="true"></i>
+                          <span>고객만족</span>
+                        </div>
+                      </div>
+
+                      <div class="philosophy-item">
+                        <div class="item-icon" data-animation="fade-up">
+                          <i class="ico-growth" aria-hidden="true"></i>
+                          <span>성과개선</span>
+                        </div>
+                        <div class="item-text" data-animation="fade-up">
+                          <p class="item-title">현장기술력 확보</p>
+                          <p class="item-desc">
+                            현장중심경영 추진<br />
+                            상생 협력 노사관계<br />
+                            이해관계자 협력 강화
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-5"
+                  role="tabpanel"
+                  aria-labelledby="tab-5"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+
+                <div
+                  class="tab-panel"
+                  id="panel-6"
+                  role="tabpanel"
+                  aria-labelledby="tab-6"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-7"
+                  role="tabpanel"
+                  aria-labelledby="tab-7"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-8"
+                  role="tabpanel"
+                  aria-labelledby="tab-8"
+                  hidden
+                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                  <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>

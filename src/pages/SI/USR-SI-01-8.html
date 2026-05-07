@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- lnb -->
+          <aside id="lnb-layout" class="lnb-wrap">
+            <!-- title -->
+            <div class="lnb-title">
+              <strong>이용안내</strong>
+            </div>
+            <!--// title -->
+            <!-- menu -->
+            <ul class="lnb-list">
+              <li class="is-active">
+                <a href="#"><span>역정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>열차시간표</span></a>
+              </li>
+              <li>
+                <a href="#"><span>실시간 열차 정보</span></a>
+              </li>
+              <li>
+                <a href="#"><span>운임안내</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>운임제도</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>승차권안내</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>여객운송약관</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>편의시설</span></a>
+                <ul class="lnb-depth2-list">
+                  <li>
+                    <a href="#"><span>편의시설 소개</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>교통약자 편의시설</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>이용자 편의시설</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>유실물센터</span></a>
+              </li>
+              <li>
+                <a href="#"><span>간편지연증명서</span></a>
+              </li>
+              <li>
+                <a href="#"><span>승강설비가동현황</span></a>
+              </li>
+            </ul>
+            <!--// menu -->
+          </aside>
+          <!--// lnb -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <!-- header -->
+            <div class="section-header">
+              <h2 class="section-title">역정보</h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <!-- 웹접근성 2026-01-27 : 추가 -->
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <!--// 웹접근성 2026-01-27 : 추가 -->
+                  <li>
+                    <a href="#"><span>이용안내</span></a>
+                  </li>
+                  <li class="is-active">
+                    <a href="#"><span>역정보</span></a>
+                  </li>
+                </ul>
+                <div class="tool-button">
+                  <button type="button" class="btn-print" onclick="window.print()">
+                    <span class="txt-hide">프린트하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--// header -->
+            <div class="tab-wrap radius">
+              <div class="tabs" data-tab-level="main" role="tablist" aria-label="GTX 노선 선택"><!-- 웹접근성 2026-01-27 : aria 값 수정 -->
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="main-tab-1"
+                  aria-controls="main-panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  운정중앙역 - 서울역
+                </button>
+                <button
+                  class="tab-btn is-active"
+                  role="tab"
+                  id="main-tab-2"
+                  aria-controls="main-panel-2"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  수서역 - 동탄역
+                </button>
+              </div>
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="main-panel-1"
+                  role="tabpanel"
+                  aria-labelledby="main-tab-1"
+                >
+                  <!-- station line -->
+                  <div class="station-line-wrap">
+                    <div class="station-line">
+                      <button type="button" class="station-link on" title="선택됨"><!-- 웹접근성 2026-01-27 : 선택되는 button에 title 추가 -->
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">운정중앙</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">킨텍스</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">대곡</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">연신내</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">서울역</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!--// station line -->
+                  <!-- station slide -->
+                  <div class="station-slide-wrap">
+                    <div class="station-slide">
+                      <!-- 역 선택 -->
+                      <div class="station-bar" role="group" aria-label="역 선택">
+                        <div class="station-text">
+                          <span class="station-value">x101</span>
+                          <span class="station-label">운정중앙</span>
+                        </div>
+                        <button class="station-btn next" title="도착역 선택">킨텍스</button><!-- 웹접근성 2026-01-27 : aria를 title로 변경 -->
+                      </div>
+                      <!--// 역 선택 -->
+                      <!-- 역 이름 -->
+                      <div class="station-name">
+                        <span class="station-name-en" lang="en">Unjeong</span>
+                        <span class="station-name-zh" lang="zh">雲井中央</span>
+                        <span class="station-name-ja" lang="ja">ウンジョンチュンアン</span>
+                      </div>
+                      <!--// 역 이름 -->
+                    </div>
+                  </div>
+                  <!--// station slide -->
+                  <!-- 서브탭 영역 -->
+                  <div class="tab-wrap">
+                    <div class="tabs" data-tab-level="sub" aria-label="역 정보 메뉴"><!-- 웹접근성 2026-01-27 : aria 값 수정 -->
+                      <button
+                        class="tab-btn is-active"
+                        id="main1-sub-tab-1"
+                        aria-controls="main1-sub-panel-1"
+                      >
+                        상세정보
+                      </button>
+                      <button
+                        class="tab-btn"
+                        id="main1-sub-tab-2"
+                        aria-controls="main1-sub-panel-2"
+                      >
+                        비상대피로
+                      </button>
+                      <button
+                        class="tab-btn"
+                        id="main1-sub-tab-3"
+                        aria-controls="main1-sub-panel-3"
+                      >
+                        편의시설
+                      </button>
+                      <button
+                        class="tab-btn"
+                        id="main1-sub-tab-4"
+                        aria-controls="main1-sub-panel-4"
+                      >
+                        열차시간표
+                      </button>
+                    </div>
+
+                    <div class="subtab-panels">
+                      <div
+                        class="subtab-panel"
+                        id="main1-sub-panel-1"
+                        role="tabpanel"
+                        aria-labelledby="main1-sub-tab-1"
+                      >
+                        <!-- 기본정보 -->
+                        <h3 data-animation="fade-up">기본정보</h3>
+                        <div class="station-info-box" data-animation="fade-up">
+                          <dl class="info-item phone">
+                            <dt>연락처</dt>
+                            <dd>1551-2979</dd>
+                          </dl>
+                          <dl class="info-item address">
+                            <dt>주소</dt>
+                            <dd>경기도 파주시 운정중앙로 60</dd>
+                          </dl>
+                          <dl class="info-item route">
+                            <dt>환승노선</dt>
+                            <dd>단독역사</dd>
+                          </dl>
+                        </div>
+                        <div class="station-info-img" data-animation="fade-up">
+                          <div class="img-item">
+                            <img src="/assets/images/information/x101_1.png" alt="" />
+                          </div>
+                          <div class="img-item">
+                            <img src="/assets/images/information/x101_2.png" alt="" />
+                          </div>
+                          <div class="img-item">
+                            <img src="/assets/images/information/x101_3.png" alt="" />
+                          </div>
+                        </div>
+                        <!--// 기본정보 -->
+
+                        <h3 data-animation="fade-up">역사 특징</h3>
+                        <div class="station-feature" data-animation="fade-up">
+                          동북선도시철도 운정중앙역의 역사구조는 B9층이며 B1층에는 운정지하차도와 결합하여
+                          GTX 버스환승센터가 조성되어 있습니다.
+                        </div>
+                        <!-- 출입구 정보 -->
+                        <h3 data-animation="fade-up">출입구 정보</h3>
+                        <div class="map-box" data-animation="fade-up">
+                          <div class="map-image">
+                            <a href="#none" target="_blank" aria-label="운정중앙역 출입구 정보 새 창 열림"><!-- 웹접근성 2026-01-27 : aria 추가 -->
+                              <img
+                                src="/assets/images/information/x101_4.png"
+                                alt="운정중앙역 출입구 정보"
+                              />
+                            </a>
+                          </div>
+                        </div>
+                        <div class="info-list" data-animation="fade-up">
+                          <dl class="info-item">
+                            <dt><span class="badge-num">1번 출입구</span></dt>
+                            <dd>산내마을, 운정중앙공원, 임시주차장</dd>
+                          </dl>
+                          <dl class="info-item">
+                            <dt><span class="badge-num">2번 출입구</span></dt>
+                            <dd>심학고등학교, 한울마을, 임시주차장</dd>
+                          </dl>
+                        </div>
+                        <!--// 출입구 정보 -->
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="main1-sub-panel-2"
+                        role="tabpanel"
+                        aria-labelledby="main1-sub-tab-2"
+                        aria-hidden="true"
+                        hidden
+                      >
+                        <h3 data-animation="fade-up">비상대피로</h3>
+                        <div class="escape-box" data-animation="fade-up">
+                          <div class="escape-image">
+                            <img
+                              src="/assets/images/information/x101_escape.png"
+                              alt="운정중앙역 비상대피로"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="main1-sub-panel-3"
+                        role="tabpanel"
+                        aria-labelledby="main1-sub-tab-3"
+                        aria-hidden="true"
+                        hidden
+                      >
+                        <h3 data-animation="fade-up">교통약자 편의시설</h3>
+                        <div class="table-scroll" data-animation="fade-up">
+                          <div class="table-wrap">
+                            <table>
+                              <caption>
+                                교통약자 편의시설 - 엘리베이터, 에스컬레이터, 유도점자타일, 	경사로, 전동휠체어 급속충전기, 장애인용화장실에 대한 정보를 제공
+                              </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                              <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">엘리베이터</th>
+                                  <th scope="col">에스컬레이터</th>
+                                  <th scope="col">유도점자타일</th>
+                                  <th scope="col">경사로</th>
+                                  <th scope="col">전동휠체어 급속충전기</th>
+                                  <th scope="col">장애인용 화장실</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>12</td>
+                                  <td>24</td>
+                                  <td>O</td>
+                                  <td>O</td>
+                                  <td>O</td>
+                                  <td>2</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
+                        <div class="table-wrap mt-40">
+                          <h3 data-animation="fade-up">역사 편의시설</h3>
+                          <table data-animation="fade-up">
+                            <caption>
+                              이용자 편의시설 - 물품보관함,	ATM, 자판기에 대한 정보를 제공
+                            </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">물품보관함</th>
+                                <th scope="col">ATM</th>
+                                <th scope="col">자판기</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>-</td>
+                                <td>1</td>
+                                <td>2</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="main1-sub-panel-4"
+                        role="tabpanel"
+                        aria-labelledby="main1-sub-tab-4"
+                        aria-hidden="true"
+                        hidden
+                      >
+                        <h3 data-animation="fade-up">열차시간표</h3>
+                        <div class="table-wrap" data-animation="fade-up">
+                          <table>
+                            <caption>
+                              열차시간표 - 구분	상행선 (운정중앙 방면),	하행선 (서울 방면)에 대한 정보를 제공
+                            </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                            <colgroup>
+                              <col style="width: 20%" />
+                              <col style="width: 40%" />
+                              <col style="width: 40%" />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">상행선 (운정중앙 방면)</th>
+                                <th scope="col">하행선 (서울 방면)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>첫차</td>
+                                <td>05:47</td>
+                                <td>05:34</td>
+                              </tr>
+                              <tr>
+                                <td>막차</td>
+                                <td>00:55:47</td>
+                                <td>00:42</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="table-wrap train-schedule" data-animation="fade-up">
+                          <table>
+                            <caption>
+                              열차시간표 - 운정중앙 방면,	시간,	서울 방면에 대한 정보를 제공
+                            </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                            <colgroup>
+                              <col style="width: 45%" />
+                              <col style="width: 10%" />
+                              <col style="width: 45%" />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">운정중앙 방면</th>
+                                <th scope="col">시간</th>
+                                <th scope="col">서울 방면</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align-right">
+                                  <span class="label">첫차47분</span>
+                                </td>
+                                <td>
+                                  <strong class="hour">05</strong>
+                                </td>
+                                <td class="align-left">
+                                  <span class="label">첫차34분</span>
+                                  <span>44분</span>
+                                  <span>55분</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-right">
+                                  <span>02분</span>
+                                  <span>17분</span>
+                                  <span>27분</span>
+                                  <span>37분</span>
+                                  <span>47분</span>
+                                  <span>53분</span>
+                                </td>
+                                <td>
+                                  <strong class="hour">06</strong>
+                                </td>
+                                <td class="align-left">
+                                  <span>02분</span>
+                                  <span>17분</span>
+                                  <span>27분</span>
+                                  <span>37분</span>
+                                  <span>47분</span>
+                                  <span>53분</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-right">
+                                  <span>01분</span>
+                                  <span>07분</span>
+                                  <span>13분</span>
+                                  <span>19분</span>
+                                  <span>37분</span>
+                                  <span>47분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                </td>
+                                <td>
+                                  <strong class="hour">07</strong>
+                                </td>
+                                <td class="align-left">
+                                  <span>01분</span>
+                                  <span>07분</span>
+                                  <span>13분</span>
+                                  <span>19분</span>
+                                  <span>37분</span>
+                                  <span>47분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// 서브탭 영역 -->
+                </div>
+                <div
+                  class="tab-panel"
+                  id="main-panel-2"
+                  role="tabpanel"
+                  aria-labelledby="main-tab-2"
+                  aria-hidden="true"
+                  hidden
+                >
+                  <!-- station line -->
+                  <div class="station-line-wrap">
+                    <div class="station-line">
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">수서</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">성남</span>
+                      </button>
+                      <button type="button" class="station-link">
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">구성</span>
+                      </button>
+                      <button type="button" class="station-link on" title="선택됨"><!-- 웹접근성 2026-01-27 : 선택되는 button에 title 추가 -->
+                        <span class="circle" aria-hidden="true"></span>
+                        <span class="text">동탄</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!--// station line -->
+                  <!-- station slide -->
+                  <div class="station-slide-wrap">
+                    <div class="station-slide">
+                      <!-- 역 선택 -->
+                      <div class="station-bar" role="group" aria-label="역 선택">
+                        <button class="station-btn prev" title="출발역 선택">구성</button><!-- 웹접근성 2026-01-27 : aria를 title로 변경 -->
+                        <div class="station-text">
+                          <span class="station-value">x111</span>
+                          <span class="station-label">동탄</span>
+                        </div>
+                      </div>
+                      <!--// 역 선택 -->
+                      <!-- 역 이름 -->
+                      <div class="station-name">
+                        <span class="station-name-en" lang="en">Dongtan</span>
+                        <span class="station-name-zh" lang="zh">東灘</span>
+                        <span class="station-name-ja" lang="ja">トンタン</span>
+                      </div>
+                      <!--// 역 이름 -->
+                    </div>
+                  </div>
+                  <!--// station slide -->
+                  <!-- 서브탭 영역 -->
+                  <div class="tab-wrap">
+                    <div class="tabs" data-tab-level="sub" aria-label="역 정보 메뉴"><!-- 웹접근성 2026-01-27 : aria 값 수정 -->
+                      <button
+                        class="tab-btn is-active"
+                        id="main2-sub-tab-1"
+                        aria-controls="main2-sub-panel-1"
+                      >
+                        상세정보
+                      </button>
+                      <button
+                        class="tab-btn"
+                        id="main2-sub-tab-2"
+                        aria-controls="main2-sub-panel-2"
+                      >
+                        비상대피로
+                      </button>
+                      <button
+                        class="tab-btn"
+                        id="main2-sub-tab-3"
+                        aria-controls="main2-sub-panel-3"
+                      >
+                        편의시설
+                      </button>
+                      <button
+                        class="tab-btn"
+                        id="main2-sub-tab-4"
+                        aria-controls="main2-sub-panel-4"
+                      >
+                        열차시간표
+                      </button>
+                    </div>
+
+                    <div class="subtab-panels">
+                      <div
+                        class="subtab-panel"
+                        id="main2-sub-panel-1"
+                        role="tabpanel"
+                        aria-labelledby="main2-sub-tab-1"
+                      >
+                        <!-- 기본정보 -->
+                        <h3 data-animation="fade-up">기본정보</h3>
+                        <div class="station-info-box" data-animation="fade-up">
+                          <dl class="info-item phone">
+                            <dt>연락처</dt>
+                            <dd>1551-2979</dd>
+                          </dl>
+                          <dl class="info-item address">
+                            <dt>주소</dt>
+                            <dd>경기도 화성시 동탄역로 151</dd>
+                          </dl>
+                          <dl class="info-item route">
+                            <dt>환승노선</dt>
+                            <dd>SRT노선</dd>
+                          </dl>
+                        </div>
+                        <div class="station-info-img" data-animation="fade-up">
+                          <div class="img-item">
+                            <img src="/assets/images/information/x111_1.png" alt="" />
+                          </div>
+                          <div class="img-item">
+                            <img src="/assets/images/information/x111_2.png" alt="" />
+                          </div>
+                          <div class="img-item">
+                            <img src="/assets/images/information/x111_3.png" alt="" />
+                          </div>
+                        </div>
+                        <!--// 기본정보 -->
+
+                        <h3 data-animation="fade-up">역사 특징</h3>
+                        <div class="station-feature" data-animation="fade-up">
+                          동북선도시철도 동탄역의 역사구조는 B6층으로 되어 있습니다. 동북선도시철도 동탄역은 SRT
+                          동탄역과 승강장을 공유하고 있으며 SRT와 환승이 가능한 환승역사입니다
+                        </div>
+
+                        <!-- 출입구 정보 -->
+                        <h3 data-animation="fade-up">출입구 정보</h3>
+                        <div class="map-box" data-animation="fade-up">
+                          <div class="map-image">
+                            <a href="#none" target="_blank" aria-label="동탄역 출입구 정보 새 창 열림"><!-- 웹접근성 2026-01-27 : aria 추가 -->
+                              <img src="/assets/images/information/x111_4.png" alt="동탄역 출입구 정보" />
+                            </a>
+                          </div>
+                        </div>
+                        <div class="info-list" data-animation="fade-up">
+                          <dl class="info-item">
+                            <dt><span class="badge-num">1번 출입구</span></dt>
+                            <dd>롯데백화점 동탄점, 동탄5동 행정복지센터</dd>
+                          </dl>
+                          <dl class="info-item">
+                            <dt><span class="badge-num">2번 출입구</span></dt>
+                            <dd>동탄롯데캐슬, 동탄역 공영주차장, 동화성세무서</dd>
+                          </dl>
+                          <dl class="info-item">
+                            <dt><span class="badge-num">3번 출입구</span></dt>
+                            <dd>치동초등학교, 치동고등학교, 치동천1호공원, 치동중학교</dd>
+                          </dl>
+                          <dl class="info-item">
+                            <dt><span class="badge-num">4번 출입구</span></dt>
+                            <dd>
+                              여울초등학교, 동탄여울공원, 한국토지주택공사 경기남부지역본부,
+                              자라뫼공원, 화성동탄경찰서
+                            </dd>
+                          </dl>
+                        </div>
+                        <!--// 출입구 정보 -->
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="main2-sub-panel-2"
+                        role="tabpanel"
+                        aria-labelledby="main2-sub-tab-2"
+                        aria-hidden="true"
+                        hidden
+                      >
+                        <h3 data-animation="fade-up">비상대피로</h3>
+                        <div class="escape-box" data-animation="fade-up">
+                          <div class="escape-image">
+                            <img
+                              src="/assets/images/information/x111_escape.png"
+                              alt="동북선도시철도 동탄역 비상 대피 안내도"
+                              aria-describedby="desc-111"
+                            /><!-- 웹접근성 2026-01-27 : alt값 수정, aria 추가 -->
+                            />
+                          </div>
+                          <!-- 웹접근성 2026-01-27 : 추가 -->
+                          <div id="desc-111" class="txt-hide">
+                            본 이미지는 동북선도시철도 동탄역의 지상 및 지하 층별 구조를 나타낸 안내도입니다. 승강장, 연결 통로, 환승 동선과 함께 비상 상황 발생 시 승객이 이동해야 할 대피 경로와 출구 위치가 표시되어 있습니다.
+                          </div>
+                          <!--// 웹접근성 2026-01-27 : 추가 -->
+                        </div>
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="main2-sub-panel-3"
+                        role="tabpanel"
+                        aria-labelledby="main2-sub-tab-3"
+                        aria-hidden="true"
+                        hidden
+                      >
+                        <h3 data-animation="fade-up">교통약자 편의시설</h3>
+                        <div class="table-scroll" data-animation="fade-up">
+                          <div class="table-wrap">
+                            <table>
+                              <caption>
+                               교통약자 편의시설 - 엘리베이터, 에스컬레이터, 유도점자타일, 	경사로, 전동휠체어 급속충전기, 장애인용화장실에 대한 정보를 제공
+                              </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                              <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">엘리베이터</th>
+                                  <th scope="col">에스컬레이터</th>
+                                  <th scope="col">유도점자타일</th>
+                                  <th scope="col">경사로</th>
+                                  <th scope="col">전동휠체어 급속충전기</th>
+                                  <th scope="col">장애인용 화장실</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>7</td>
+                                  <td>48</td>
+                                  <td>O</td>
+                                  <td>O</td>
+                                  <td>O</td>
+                                  <td>4</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
+                        <div class="table-wrap mt-40">
+                          <h3 data-animation="fade-up">역사 편의시설</h3>
+                          <table data-animation="fade-up">
+                            <caption>
+                              이용자 편의시설 - 물품보관함,	ATM, 자판기에 대한 정보를 제공
+                            </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">물품보관함</th>
+                                <th scope="col">ATM</th>
+                                <th scope="col">자판기</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div
+                        class="subtab-panel"
+                        id="main2-sub-panel-4"
+                        role="tabpanel"
+                        aria-labelledby="main2-sub-tab-4"
+                        aria-hidden="true"
+                        hidden
+                      >
+                        <h3 data-animation="fade-up">열차시간표</h3>
+                        <div class="table-wrap" data-animation="fade-up">
+                          <table>
+                            <caption>
+                              열차시간표 - 구분	상행선 (운정중앙 방면),	하행선 (서울 방면)에 대한 정보를 제공
+                            </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                            <colgroup>
+                              <col style="width: 20%" />
+                              <col style="width: 40%" />
+                              <col style="width: 40%" />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">상행선 (운정중앙 방면)</th>
+                                <th scope="col">하행선 (서울 방면)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>첫차</td>
+                                <td>05:47</td>
+                                <td>05:34</td>
+                              </tr>
+                              <tr>
+                                <td>막차</td>
+                                <td>00:55:47</td>
+                                <td>00:42</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="table-wrap train-schedule" data-animation="fade-up">
+                          <table>
+                            <caption>
+                              열차시간표 - 운정중앙 방면,	시간,	서울 방면에 대한 정보를 제공
+                            </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
+                            <colgroup>
+                              <col style="width: 45%" />
+                              <col style="width: 10%" />
+                              <col style="width: 45%" />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">운정중앙 방면</th>
+                                <th scope="col">시간</th>
+                                <th scope="col">서울 방면</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align-right">
+                                  <span class="label">첫차47분</span>
+                                </td>
+                                <td>
+                                  <strong class="hour">05</strong>
+                                </td>
+                                <td class="align-left">
+                                  <span class="label">첫차34분</span>
+                                  <span>44분</span>
+                                  <span>55분</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-right">
+                                  <span>02분</span>
+                                  <span>17분</span>
+                                  <span>27분</span>
+                                  <span>37분</span>
+                                  <span>47분</span>
+                                  <span>53분</span>
+                                </td>
+                                <td>
+                                  <strong class="hour">06</strong>
+                                </td>
+                                <td class="align-left">
+                                  <span>02분</span>
+                                  <span>17분</span>
+                                  <span>27분</span>
+                                  <span>37분</span>
+                                  <span>47분</span>
+                                  <span>53분</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-right">
+                                  <span>01분</span>
+                                  <span>07분</span>
+                                  <span>13분</span>
+                                  <span>19분</span>
+                                  <span>37분</span>
+                                  <span>47분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                </td>
+                                <td>
+                                  <strong class="hour">07</strong>
+                                </td>
+                                <td class="align-left">
+                                  <span>01분</span>
+                                  <span>07분</span>
+                                  <span>13분</span>
+                                  <span>19분</span>
+                                  <span>37분</span>
+                                  <span>47분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                  <span>53분</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// 서브탭 영역 -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>
