@@ -102,7 +102,7 @@ tr {
     background-color: #f2f5ff;
   }
   th {
-    @include font(16, 700, $color: $color-text01);
+    @include font(16, 500, $color: $color-text01);
     border-bottom: 1px solid $color-stroke04;
     border-left: 1px solid $color-stroke04;
     border-right: 1px solid $color-stroke04;
@@ -111,7 +111,8 @@ tr {
     vertical-align: middle;
     height: rem(56);
     background-color: $color-primary04;
-    font-weight: 700;
+    white-space: normal;
+    overflow-wrap: break-word;
     &.no-pd {
       padding-inline: 0 !important;
     }
@@ -192,6 +193,12 @@ tr {
       display: none;
       @include mobile {
         display: block;
+      }
+    }
+    .text-list {
+      text-align: left;
+      li {
+        font-size: rem(16);
       }
     }
   }

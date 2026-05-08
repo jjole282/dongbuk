@@ -71,18 +71,17 @@
 }
 .line-box {
   display: flex;
-  gap: rem(24);
-  padding: rem(30) rem(40);
-  border-radius: rem(16);
+  padding: rem(20);
   color: $color-primary01;
   margin-bottom: rem(40);
-  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.04);
-  border: 1px solid $color-stroke04;
+  border-top: 1px solid $color-stroke04;
+  border-bottom: 1px solid $color-stroke04;
   &-img-wrap {
     width: rem(100);
     flex-shrink: 0;
   }
   &-list {
+    padding-left: rem(20);
     li {
       position: relative;
       padding-left: rem(10);
@@ -101,9 +100,21 @@
     }
   }
   &-title {
-    @include font(28, 700, $color: $color-primary01);
-    margin-bottom: rem(8);
+    @include font(24, 500, $color: $color-primary01);
+    margin-bottom: rem(16);
     font-family: $font-family-gmarket;
+    position: relative;
+    padding-left: rem(20);
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: rem(3);
+      left: 0;
+      width: rem(4);
+      height: rem(24);
+      background-color: $color-primary01;
+    }
   }
   &-desc {
     @include font(16, 500, $color: $color-text02);

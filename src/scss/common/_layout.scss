@@ -333,7 +333,7 @@ body {
                   @include background('/assets/icons/ico-gnb-arrow02.svg', center, 100%);
                 }
                 span {
-                  color: $color-text00;
+                  color: $color-stroke00;
                 }
               }
               > a {
@@ -507,7 +507,7 @@ body {
   }
   .all-menu-col {
     .all-menu-title {
-      @include font(24, 700);
+      @include font(24, 700, $color: $color-text01);
       margin-bottom: rem(50);
     }
     .all-menu-list {
@@ -528,7 +528,6 @@ body {
             white-space: nowrap;
             @include font(20, 600, 1.3, $color: $color-text09);
             transition: color 0.3s ease, text-decoration-color 0.3s ease;
-            font-weight: 500;
           }
         }
       }
@@ -876,6 +875,11 @@ body.scroll-lock {
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: rem(60);
+      @include responsive {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-m(20);
+      }
       @include mobile {
         margin-bottom: rem(20);
       }
@@ -988,8 +992,11 @@ body.scroll-lock {
             }
           }
         }
-        .header-visual {
-          width: 48.6%;
+      }
+      .header-visual {
+        width: 48.6%;
+        @include responsive {
+          width: 100%;
         }
       }
     }
@@ -1003,6 +1010,9 @@ body.scroll-lock {
 .box-line {
   border: 1px solid $color-stroke07;
   padding: rem(40);
+  @include mobile {
+    padding: rem-m(20);
+  }
 }
 #footer {
   padding: rem(50) rem(10) rem(73);

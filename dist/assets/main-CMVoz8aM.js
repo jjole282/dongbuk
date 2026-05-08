@@ -1371,6 +1371,7 @@ function initCommon() {
   initQuickMenuSlide();
   initSelectFilter();
   initSelectEmail();
+  initScrollAnimation();
   initAccordionToggleAll();
 }
 document.addEventListener("DOMContentLoaded", initCommon);

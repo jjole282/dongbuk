@@ -895,7 +895,7 @@ function initCommon() {
   initQuickMenuSlide()
   initSelectFilter()
   initSelectEmail()
-  //initScrollAnimation()
+  initScrollAnimation()
   initAccordionToggleAll()
   // initAutoMainPopupSwiper()메인 페이지 자동 팝업
 }

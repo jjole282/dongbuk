@@ -834,7 +834,7 @@ section {
                 width: rem(45);
                 height: rem(45);
                 background-color: $color-primary01;
-                @include font(14, 500, 1, $color-text00);
+                @include font(14, 500, 1, $color-stroke00);
                 margin-right: rem(16);
                 border-radius: 999px;
               }
@@ -1163,6 +1163,10 @@ section {
           font-size: rem(18);
           font-weight: 400;
           color: $color-stroke00;
+          @include mobile-sm {
+            margin-top: rem-m(5);
+            font-size: rem-m(14);
+          }
         }
       }
     }
@@ -1199,6 +1203,11 @@ section {
       position: absolute;
       top: rem(110);
       left: rem(70);
+      @include responsive {
+        left: auto;
+        right: 0;
+        top: 0;
+      }
       .tabs {
         display: flex;
         justify-content: space-between;

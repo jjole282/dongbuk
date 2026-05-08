@@ -172,11 +172,14 @@
   }
   // 역정보
   .station-slide-wrap {
-    padding: rem(70) rem(50);
+    padding: rem(70) rem(50) rem(30);
     border: 1px solid $color-stroke07;
     margin-bottom: rem(80);
-    @include flexCenter();
     text-align: center;
+    @include flexCenter();
+    @include mobile {
+      padding-top: rem-m(45);
+    }
     .station-slide {
       width: 100%;
       .station-bar {
@@ -191,21 +194,33 @@
           background-color: $color-fill00;
           border-radius: rem(60);
           padding: rem(24);
+          @include mobile {
+            padding: rem-m(14) rem-m(8);
+            border-width: rem-m(5);
+          }
           .station-select {
             padding-right: rem(77);
             display: flex;
             align-items: center;
             .station-select-value {
               margin-right: rem(52);
-              color: $color-text00;
+              color: $color-stroke00;
               background-color: $color-primary01;
               border-radius: rem(40);
               padding: rem(10) rem(17);
               @include font(20, 500);
+              @include mobile {
+                margin-right: rem-m(14);
+              }
             }
             .station-select-txt {
-              font-size: rem(40);
+              font-family: $font-family-gmarket;
+              font-size: rem(32);
               font-weight: 700;
+              color: $color-text00;
+              @include mobile {
+                font-size: rem-m(18);
+              }
             }
             &::after {
               display: block;
@@ -218,6 +233,11 @@
               height: rem(15);
               @include background('/assets/icons/arrow2.svg', center, 25px);
               transition: transform 0.3s ease;
+              @include mobile {
+                background-size: contain;
+                width: rem-m(15);
+                height: rem-m(9);
+              }
             }
             &.is-active {
               &::after {
@@ -251,6 +271,9 @@
           &::before {
             //transform: translateY(-50%) rotate(-180deg);
           }
+          @include mobile {
+            display: none;
+          }
         }
         &.next {
           padding-right: rem(34);
@@ -261,11 +284,14 @@
             top: 50%;
             transform: translateY(-50%) rotate(180deg);
           }
+          @include mobile {
+            display: none;
+          }
         }
       }
       .station-box {
         position: relative;
-        top: rem(10);
+        top: rem(20);
         .station-list {
           display: none;
           position: absolute;
@@ -318,10 +344,14 @@
               }
               .station-text {
                 line-height: rem(45);
+                color: $color-text01;
+                @include mobile {
+                  line-height: 1.5;
+                }
                 @include mobile-sm {
                   //width: rem-m(170);
                   width: auto;
-                  padding: rem(16) rem(10);
+                  padding: rem(10) rem(10);
                 }
               }
               .station-value {
@@ -329,7 +359,7 @@
                 width: rem(45);
                 height: rem(45);
                 background-color: $color-primary01;
-                @include font(14, 500, 1, $color-text00);
+                @include font(14, 500, 1, $color-stroke00);
                 margin-right: rem(16);
                 border-radius: 999px;
               }
@@ -341,13 +371,14 @@
         }
       }
       .station-name {
-        margin-top: rem(30);
+        margin-top: rem(46);
         display: flex;
-        gap: rem(10);
+        gap: rem(30);
         justify-content: center;
+        align-items: center;
         span {
           position: relative;
-          @include font(20, 500, $color: $color-text01);
+          @include font(18, 400, $color: $color-stroke03);
           @include mobile-sm {
             font-size: rem-m(14);
           }
@@ -356,12 +387,12 @@
             &::before {
               position: absolute;
               content: '';
-              left: 0;
+              left: rem(-15);
               top: 50%;
               transform: translateY(-50%);
               width: 1px;
               height: rem(20);
-              background-color: $color-stroke01;
+              background-color: $color-stroke03;
             }
           }
         }
@@ -370,11 +401,634 @@
   }
   .subtab-panels {
     h3 {
-      @include font(40, 700);
-      margin: rem(80) 0 rem(40);
+      @include font(24, 700, $color: $color-text00);
+      margin: rem(80) 0 rem(20);
     }
     .map-box {
       margin: rem(48) 0 rem(40);
+      .map-image {
+        img {
+          vertical-align: top;
+        }
+      }
+    }
+    .escape-box {
+      margin-top: rem(80);
+    }
+    .justify-between {
+      flex-direction: column;
+      .btn-wrap {
+        margin-top: rem(20);
+        .btn-map {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+  .txt-info {
+    margin-top: rem(20);
+    position: relative;
+    padding-left: rem(20);
+    &::before {
+      display: block;
+      content: '';
+      width: rem(14);
+      height: rem(14);
+      position: absolute;
+      top: rem(5);
+      left: 0;
+      background: url('/assets/icons/ico-info.svg') no-repeat 0 0 / contain;
+    }
+  }
+  // 승차권안내
+  .step-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(80);
+    @include responsive {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(60);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(70);
+    }
+    .step-item {
+      position: relative;
+      @include flexCenterColumn();
+      padding: rem(30) 0 rem(20);
+      border-radius: rem(16);
+      border: 1px solid $color-stroke05;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-top: 5px solid $color-primary02;
+        border-radius: rem(16);
+        top: 0;
+        z-index: -1;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        right: rem(-60);
+        width: rem(40);
+        height: rem(40);
+        @include background('/assets/icons/ico-arrow-circle.png', center, 100%);
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 999px;
+        @include responsive {
+          right: rem(-48);
+        }
+        @include mobile {
+          right: initial;
+          bottom: rem(-55);
+          transform: rotate(90deg);
+        }
+      }
+      &:last-child::before {
+        display: none;
+      }
+      &:nth-of-type(2)::before {
+        @include responsive {
+          display: none;
+        }
+        @include mobile {
+          display: block;
+        }
+      }
+      .step-image {
+        width: rem(130);
+        margin-bottom: rem(20);
+      }
+      .step-title {
+        @include font(18, 700, $color: $color-primary01);
+        font-family: $font-family-gmarket;
+        @include mobile {
+          font-size: rem(20);
+        }
+      }
+      .step-desc {
+        @include font(16, $color: $color-text02);
+        position: relative;
+        padding-top: rem(20);
+        &::after {
+          content: '';
+          position: absolute;
+          width: calc(100% + 20px);
+          left: -10px;
+          right: 0;
+          top: 0;
+          height: rem(2);
+          background: repeating-linear-gradient(90deg, $color-stroke05 0 3px, transparent 3px 5px);
+        }
+      }
+      @include responsive {
+        &:nth-of-type(2) {
+          i {
+            display: none;
+          }
+        }
+      }
+      @include mobile {
+        &:nth-of-type(2) {
+          i {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  //운임계산하기
+  .station-search-form {
+    display: flex;
+    justify-content: center;
+    gap: rem(24);
+    align-items: center;
+    margin: rem(30) 0 rem(130);
+    @include mobile {
+      flex-direction: column;
+    }
+    .btn-line {
+      &.refresh {
+        border: 1px solid $color-text01;
+        border-radius: rem(8);
+        width: rem(52);
+        height: rem(52);
+        span {
+          width: rem(20);
+          height: rem(20);
+        }
+      }
+    }
+  }
+  .pin {
+    &.pin-start {
+      &::after {
+        content: '출발';
+        background: url('/assets/icons/pin-start.svg') no-repeat 0 0 / contain;
+      }
+    }
+    &.pin-end {
+      &::after {
+        content: '도착';
+        background: url('/assets/icons/pin-end.svg') no-repeat 0 0 / contain;
+      }
+    }
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: rem(-70);
+      left: 50%;
+      transform: translateX(-50%);
+      width: rem(70);
+      height: rem(70);
+      padding: 10px;
+      box-sizing: border-box;
+      font-family: $font-family-gmarket;
+      color: $color-text00;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: rem(50);
+      z-index: 2;
+    }
+  }
+  .floating-switch {
+    position: absolute;
+    top: -80px;
+    left: 45%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: rem(25);
+    padding: rem(12) rem(26);
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+    z-index: 10;
+    white-space: nowrap;
+    .switch-btn {
+      position: relative;
+      min-width: rem(52);
+      height: rem(27);
+      padding: 0 rem(8);
+      border: 0;
+      background: transparent;
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: 1.5;
+      font-family: $font-family-gmarket;
+      cursor: pointer;
+      z-index: 1;
+      + .switch-btn::before {
+        content: "";
+        position: absolute;
+        left: rem(-12);
+        top: 50%;
+        width: 1px;
+        height: rem(18);
+        background: $color-stroke06;
+        transform: translateY(-50%);
+      }
+      &.active {
+      color: $color-error;
+      font-weight: 700;
+    }
+    }
+    &[hidden] {
+      display: none;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      rotate: 45deg;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.04);
+    }
+  }
+  .select-box-form {
+    display: flex;
+    align-items: center;
+    .label {
+      margin-right: rem(8);
+      font-size: 1rem;
+      color: $color-text01;
+    }
+    .select-box {
+      min-width: rem(204) !important;
+    }
+  }
+
+  // 편의시설
+  .amenity-wrap {
+    background-color: $color-primary06;
+    border-radius: rem(16);
+    padding: rem(50) rem(80);
+    @include mobile {
+      padding: rem(20);
+    }
+    .amenity-title {
+      @include font(40, 700);
+      font-family: $font-family-gmarket;
+      text-align: center;
+      margin-bottom: rem(60);
+      @include mobile {
+        @include font(25, 700);
+        margin-bottom: rem(20);
+      }
+      strong {
+        color: $color-primary01;
+      }
+    }
+    .amenity-list {
+      display: flex;
+      flex-direction: column;
+      gap: rem(60);
+      @include mobile {
+        gap: rem(25);
+      }
+      li {
+        position: relative;
+        .amenity-label {
+          position: absolute;
+          top: rem(-30);
+          left: rem(40);
+          width: rem(320);
+          height: rem(50);
+          border-radius: rem(50);
+          @include font(20, 700, $color: $color-text00);
+          font-family: $font-family-gmarket;
+          text-align: center;
+          line-height: rem(50);
+          background-color: #000;
+          @include mobile {
+            display: none;
+          }
+        }
+        img {
+          box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2);
+          border-radius: rem(50);
+          @include mobile {
+            border-radius: rem(20);
+          }
+        }
+      }
+    }
+  }
+  // 교통약자 편의시설
+  .amenity-prm-wrap {
+    background-color: $color-primary06;
+    border-radius: rem(16);
+    padding: rem(50) rem(50) rem(50) rem(70);
+    margin-bottom: rem(40);
+    @include mobile {
+      padding: rem(20);
+    }
+    .amenity-prm-list {
+      display: flex;
+      flex-direction: column;
+      gap: rem(42);
+      @include mobile {
+        gap: rem(25);
+      }
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: rem(28);
+        background-color: $color-fill00;
+        border-radius: rem(200);
+        box-shadow: $shadow-default;
+        padding: rem(20) 0;
+        @include responsive {
+          flex-direction: column;
+          text-align: center;
+          border-radius: rem(30);
+          padding: rem(30) rem(20);
+        }
+        @include responsive {
+          border-radius: rem(10);
+          gap: rem(20);
+        }
+        div:first-child {
+          width: rem(260);
+          flex-shrink: 0;
+          @include responsive {
+            width: rem(500);
+          }
+          @include mobile {
+            width: 100%;
+          }
+          img {
+            border-radius: rem(20);
+          }
+        }
+        .amenity-prm-label {
+          @include font(20, 700, $color: $color-primary01);
+          font-family: $font-family-gmarket;
+          margin-bottom: rem(0.8);
+        }
+        .amenity-prm-desc {
+          word-break: keep-all;
+          padding-right: rem(20);
+          @include font(16, 400, $color: $color-text02);
+          @include responsive {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+  //이용자 편의시설
+  .fc-photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: rem(20);
+    margin-bottom: rem(40);
+    li {
+        flex: 0 0 calc(24% - rem(10));
+        .photo-box {
+          padding: rem(10) rem(10) rem(13);
+          border: 1px solid $color-stroke06;
+          border-radius: 4px;
+          background-color: $color-fill00;
+          box-shadow: 2px 4px 10px rgba(0,0,0,.07);
+          img {
+            width: 100%;
+          }
+          span {
+            display: block;
+            margin-top: rem(10);
+            font-size: rem(18);
+            font-weight: 700;
+            text-align: center;
+          }
+        }
+        @include mobile {
+          flex: 0 0 calc(50% - rem(10));
+        }
+    }
+  }
+  // 유실물 센터
+  .line-box {
+    &.info {
+      flex-wrap: wrap;
+    }
+  }
+  // .info-box-wrap {
+  //   display: flex;
+  //   gap: rem(40);
+  //   @include mobile {
+  //     flex-direction: column;
+  //     gap: rem(20);
+  //   }
+  //   .info-box {
+  //     flex: 1;
+  //   }
+  // }
+  .heading-sm.lostproperty {
+    font-size: rem(20) !important;
+    font-family: $font-family-gmarket !important;
+    color: $color-primary01;
+    margin-bottom: rem(12);
+  }
+  .lostproperty-step-wrap {
+    background: $color-fill06;
+    border-radius: rem(20);
+    padding: rem(56) rem(40) rem(40);
+    .step-box {
+      .step-item {
+        border-radius: rem(16);
+        border: 1px solid $color-primary01;
+        background-color: $color-fill00;
+        box-shadow: 0 3px 10px rgba(79, 96, 155, 0.2);
+        position: relative;
+        &::after {
+          position: absolute;
+          content: '';
+          width: rem(22);
+          height: rem(22);
+          bottom: rem(-32);
+          left: 50%;
+          transform: translateX(-50%);
+          @include background('/assets/images/information/lostproperty-step-arrow.svg', center, 100% 100%);
+        }
+        & + .step-item {
+          margin-top: rem(58);
+        }
+        &:last-child::after {
+          display: none;
+        }
+        .step-num {
+          position: absolute;
+          top: rem(-16);
+          left: rem(30);
+          @include flexCenter();
+          background-color: $color-primary01;
+          border-radius: rem(100);
+          width: rem(200);
+          font-weight: 700;
+          padding: rem(4) 0;
+          font-family: $font-family-gmarket;
+          color: $color-text00;
+        }
+        .step-content {
+          display: flex;
+          align-items: center;
+          gap: rem(30);
+          padding: rem(30) rem(40) rem(30) rem(40);
+          @include mobile {
+            flex-direction: column;
+            padding: rem(30) rem(20);
+          }
+          img {
+            width: rem(101);
+          }
+          .step-text {
+            @include font(18, 400, $color: $color-text02);
+            font-family: $font-family-gmarket;
+            strong {
+              font-size: rem(28);
+              color: $color-primary02;
+            }
+          }
+        }
+      }
+    }
+  }
+  .lostproperty-wrap {
+    position: relative;
+    margin-top: rem(40);
+    @include flexCenterColumn();
+    padding: rem(80) 0 rem(50);
+    @include mobile {
+      padding: rem(40) rem(30);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $color-primary06;
+      width: 100%;
+      height: 50%;
+      border-radius: rem(16) rem(16) 0 0;
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $color-primary01;
+      width: 100%;
+      height: 50%;
+      border-radius: 0 0 rem(16) rem(16);
+      z-index: -1;
+    }
+    .lostproperty-img {
+      width: rem(714);
+      @include mobile {
+        width: 100%;
+      }
+    }
+    .lostproperty-text {
+      margin-top: rem(50);
+      @include font(18, 500, $color: $color-text00);
+      font-family: $font-family-gmarket;
+    }
+    .btn-wrap {
+      margin-top: rem(20);
+      span {
+        margin-right: rem(4);
+      }
+    }
+  }
+  // 간편지연증명서
+  .certificate-wrap {
+    margin-top: rem(40);
+    background-color: #f5f5f5;
+    border-radius: rem(16);
+    padding: rem(40) 0;
+    @include flexCenterColumn();
+    @include mobile {
+      padding: rem(20);
+    }
+    .certificate-box {
+      position: relative;
+      border: 1px solid $color-stroke04;
+      background-color: $color-fill00;
+      width: rem(700);
+      padding: 0 rem(50) rem(50);
+      @include flexCenterColumn();
+      overflow: hidden;
+      @include mobile {
+        width: 100%;
+        padding: 0 rem(20) rem(20);
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        width: rem(700);
+        height: rem(15);
+        left: 0;
+        top: 0;
+        @include background('/assets/images/information/certificate-bg01.png', center, 100% 100%);
+      }
+      h3 {
+        margin-top: rem(111);
+        @include font(32, 700);
+      }
+      .certificate-message {
+        margin-top: rem(50);
+        @include font(24, 500, $color: $color-text02);
+        span {
+          color: $color-primary01;
+        }
+      }
+      .certificate-date {
+        margin-top: rem(100);
+        @include font(24, 500, $color: $color-text02);
+      }
+      .certificate-logo {
+        margin-top: rem(100);
+        width: rem(200);
+      }
+      .certificate-notice {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        text-align: left;
+        position: relative;
+        margin-top: rem(65);
+        padding: rem(30);
+        background-color: $color-fill05;
+        border-radius: rem(8);
+        @include font(16, 500, $color: $color-text02);
+        .certificate-caution {
+          color: $color-primary01;
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          width: rem(708);
+          height: rem(182);
+          left: rem(-50);
+          top: rem(-182);
+          @include background('/assets/images/information/certificate-bg02.png', center, 100% 100%);
+        }
+      }
+    }
+    .btn-wrap {
+      margin-top: rem(40);
     }
   }
 
