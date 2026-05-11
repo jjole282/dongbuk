@@ -9,7 +9,7 @@
   .btn-primary {
     display: inline-flex;
     background-color: $color-primary01;
-    color: $color-text00;
+    color: $color-stroke00;
     @include flexCenter();
     transition: background-color 0.2s ease, color 0.2s ease;
     span {
@@ -26,7 +26,7 @@
     }
     &.md {
       min-width: rem(78);
-      height: rem(52);
+      height: rem(44);
       padding: rem(0) rem(18);
     }
     &.sm {
@@ -62,8 +62,8 @@
   }
   .btn-secondary {
     display: inline-flex;
-    background-color: $color-secondary07;
-    color: $color-text00;
+    background-color: $color-fill02;
+    color: $color-stroke00;
     @include flexCenter();
     transition: background-color 0.2s ease, color 0.2s ease;
     span {
@@ -178,7 +178,6 @@
     background-color: $color-fill00;
     color: $color-primary01;
     border: 1px solid $color-primary01;
-    border-radius: rem(8);
     @include flexCenter();
     transition: background-color 0.2s ease, color 0.2s ease;
     span {

@@ -895,7 +895,9 @@ body.scroll-lock {
           }
           strong {
             display: block;
-            @include font(60, 700, $color: $color-text00);
+            font-family: $font-family-gmarket;
+            margin-bottom: rem(16);
+            @include font(40, 700, $color: $color-text00);
             @include mobile {
               margin-bottom: rem(10);
             }
@@ -924,9 +926,13 @@ body.scroll-lock {
             }
         
           }
+          span {
+            font-size: rem(28);
+          }
         }
         .section-meta {
           position: relative;
+          margin-top: rem(16);
           @include flexBetween();
           //padding-bottom: rem(13);
           @include mobile {

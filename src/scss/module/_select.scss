@@ -9,12 +9,11 @@
   flex-wrap: wrap;
   min-width: auto !important;
   .select-btn {
-    border: 1px solid $color-stroke00;
+    border: 1px solid $color-stroke03;
     background-color: $color-fill00;
-    border-radius: rem(8);
     padding: 0 rem(12);
     text-align: left;
-    height: rem(52);
+    height: rem(44);
     position: relative;
     span {
       @include font(18, 600);
@@ -63,8 +62,7 @@
     left: 0;
     width: 100%;
     background-color: $color-fill00;
-    border: 1px solid $color-stroke00;
-    border-radius: rem(8);
+    border: 1px solid $color-stroke03;
     z-index: 10;
     display: none;
     height: rem(150);
@@ -90,7 +88,7 @@
         @include font(18, 500, 1.3);
       }
       &:hover {
-        background-color: $color-fill00;
+        background-color: #f4f5f6;
         span {
           font-weight: 600;
         }

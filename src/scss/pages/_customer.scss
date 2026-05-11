@@ -1,0 +1,663 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.page-customer {
+  // 이용안내
+  .text-list-box + h3 {
+    margin-top: rem(40);
+  }
+  .step-wrap.step-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: rem(46);
+    @include responsive {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(48);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: rem(56);
+    }
+    .step-item {
+      position: relative;
+      @include flexCenterColumn();
+      padding: rem(20) rem(20);
+      border-radius: rem(16);
+      border: 1px solid $color-stroke05;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-top: 5px solid $color-primary02;
+        border-radius: rem(16);
+        top: 0;
+        z-index: -1;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        right: rem(-40);
+        width: rem(30);
+        height: rem(30);
+        @include background('/assets/icons/ico-arrow-circle.png', center, 100%);
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 999px;
+        @include mobile {
+          right: initial;
+          bottom: rem(-45);
+          transform: rotate(90deg);
+        }
+      }
+      &:last-child::before {
+        display: none;
+      }
+      &:nth-of-type(even)::before {
+        @include responsive {
+          display: none;
+        }
+        @include mobile {
+          display: block;
+        }
+      }
+      .step-image {
+        width: rem(130);
+        position: relative;
+        padding-bottom: rem(20);
+        &::after {
+          content: '';
+          position: absolute;
+          width: calc(100% + 20px);
+          left: -10px;
+          bottom: 0;
+          height: rem(2);
+          background: repeating-linear-gradient(90deg, $color-stroke05 0 3px, transparent 3px 5px);
+        }
+      }
+      .step-title {
+        display: block;
+        position: relative;
+        padding-top: rem(20);
+        @include font(16, 700, $color: $color-primary02);
+        font-family: $font-family-gmarket;
+        @include mobile {
+          font-size: rem(20);
+        }
+      }
+      .step-desc {
+        @include font(16, $color: $color-text02);
+        position: relative;
+        padding-top: rem(20);
+        &::after {
+          content: '';
+          position: absolute;
+          width: calc(100% + 20px);
+          left: -10px;
+          right: 0;
+          top: 0;
+          height: rem(2);
+          background: repeating-linear-gradient(90deg, $color-stroke05 0 3px, transparent 3px 5px);
+        }
+      }
+      @include responsive {
+        &:nth-of-type(2) {
+          i {
+            display: none;
+          }
+        }
+      }
+      @include mobile {
+        &:nth-of-type(2) {
+          i {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  // 본인확인 안내
+  .phone-auth-wrap {
+    background-color: $color-fill06;
+    padding: rem(40);
+    border: 1px solid $color-stroke05;
+    @include flexCenterColumn();
+    .title {
+      @include font(20, 700, $color: $color-text01);
+      font-family: $font-family-gmarket;
+      margin-bottom: rem(20);
+    }
+    .desc {
+      @include font(16, 500, $color: $color-text02);
+      margin-bottom: rem(40);
+    }
+    .img {
+      width: rem(200);
+      margin-bottom: rem(40);
+    }
+    .btn-wrap {
+      button {
+        width: rem(300);
+      }
+    }
+  }
+  // 글쓰기 버튼
+  .line-box + .btn-wrap {
+    justify-content: center;
+    margin-bottom: rem(40);
+    a {
+      width: rem(300);
+    }
+  }
+  // 작성하기
+  .terms-box {
+    padding: rem(20) rem(12);
+    border: 1px solid $color-stroke04;
+    border-radius: rem(8);
+    height: rem(210);
+    overflow-y: auto;
+    strong {
+      color: $color-text01;
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-fill03;
+      border-radius: 12px;
+    }
+  }
+  .radio-box {
+    margin-top: rem(20);
+    & + .form-section {
+      margin-top: rem(40);
+    }
+    & + h3 {
+      margin-top: rem(40);
+    }
+  }
+  .form-section {
+    & + h3 {
+      margin-top: rem(40);
+    }
+    border-top: 2px solid $color-primary02;
+    @include mobile {
+      border-top: 1px solid $color-primary02;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: rem(130) minmax(0, 1fr);
+      border-bottom: 1px solid $color-stroke04;
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+      &.double {
+        grid-template-columns: rem(130) minmax(0, 1fr) rem(130) minmax(0, 1fr);
+        @include mobile {
+          grid-template-columns: rem(130) minmax(0, 1fr);
+        }
+        .form-label,
+        .form-field {
+          border-bottom: 1px solid $color-stroke04;
+        }
+        border-bottom: none;
+        + .form-row:not(.double) {
+          grid-template-columns: rem(130) minmax(0, 1fr);
+          @include mobile {
+            grid-template-columns: rem(130) minmax(0, 1fr);
+          }
+        }
+      }
+      &.period {
+        grid-template-columns: rem(130) minmax(0, 1fr) rem(223);
+        @include desktop-medium {
+          grid-template-columns: 1fr;
+        }
+        .form-label,
+        .form-field {
+          border-bottom: 1px solid $color-stroke04;
+        }
+        border-bottom: none;
+        .input-box.date {
+          width: initial;
+        }
+        .form-field {
+          &:last-child {
+            border-left: 1px solid $color-stroke04;
+            @include mobile {
+              border-left: none;
+            }
+          }
+        }
+      }
+    }
+    .form-label {
+      padding: rem(16) rem(20);
+      background-color: $color-primary04;
+      text-align: left;
+      color: $color-text01;
+      border-right: 1px solid $color-stroke04;
+      @include mobile {
+        border-right: 0 none;
+      }
+      label,
+      span {
+        font-weight: 700;
+      }
+    }
+    .form-field {
+      display: flex;
+      align-items: center;
+      padding: rem(6) rem(20);
+      min-width: 0;
+      @include desktop-medium {
+        display: block;
+        min-height: rem(50);
+        padding: rem(20);
+      }
+      * {
+        min-width: 0;
+      }
+      .input-box {
+        width: 100%;
+        input {
+          border: 1px solid $color-stroke04;
+        }
+      }
+      .select-box {
+        .select-btn {
+          border: 1px solid $color-stroke04;
+        }
+      }
+      .radio-box {
+        margin-top: 0;
+        gap: rem(10);
+        @include desktop-medium {
+          justify-content: flex-start;
+        }
+        .radio-item {
+          white-space: nowrap;
+          label {
+            font-weight: 500;
+          }
+        }
+      }
+      // 이메일 선택
+      .email-box {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto 1fr;
+        //flex-wrap: wrap;
+        > * {
+           //flex: 0 0 auto;
+        }
+        .input-box {
+          width: clamp(rem(140), 45vw, rem(200));
+          min-width: 0;
+          @include mobile {
+            width: 100%;
+          }
+        }
+        .input-box + span {
+          margin: 0 rem(10);
+        }
+        .select-box {
+          margin-left: rem(10);
+          width: clamp(rem(140), 45vw, rem(180));
+          min-width: 0;
+          //flex: 0 0 100%;
+          @include mobile-sm {
+            width: 100%;
+            grid-column: 1/-1;
+            margin-left: 0;
+            margin-top: rem(10);
+          }
+          .select-btn {
+            border: 1px solid $color-stroke04;
+          }
+          .select-list span {
+            font-size: rem(16);
+          }
+        }
+      }
+      // 사업자번호, 회사 FAX
+      .multi-box {
+        display: flex;
+        align-items: center;
+        .input-box {
+          width: clamp(rem(140), 45vw, rem(200));
+          min-width: 0;
+          @include mobile {
+            width: 100%;
+          }
+        }
+        .input-box + span {
+          margin: 0 rem(10);
+        }
+      }
+      textarea {
+        width: 100%;
+        min-height: rem(206);
+        padding: rem(12);
+        border: 1px solid $color-stroke04;
+        border-radius: rem(2);
+        resize: none;
+      }
+      // 파일
+      &.file {
+        display: flex;
+        align-items: center;
+        @include mobile {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem(10);
+        }
+        .btn-primary.xs {
+          flex-shrink: 0;
+          i {
+            filter: brightness(0) saturate(100%) invert(100%);
+            width: rem(20);
+            height: rem(20);
+            margin-right: rem(04);
+          }
+          &:focus-visible {
+            box-shadow: 0 0 0 4px rgba(26, 92, 255, 0.25);
+          }
+        }
+        .noti-text {
+          position: relative;
+          margin-left: rem(12);
+          @include font(16, 500, $color: $color-text02);
+          padding-left: rem(10);
+          flex: 1 1 auto;
+          min-width: 0;
+          text-align: left;
+          &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: rem(10);
+            width: rem(4);
+            height: rem(4);
+            background-color: $color-stroke03;
+            border-radius: 999px;
+          }
+          span {
+            color: $color-error;
+          }
+        }
+        &.has-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .file-box {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            margin-top: rem(12);
+          }
+        }
+        &:has(.file-area) {
+          flex-direction: column;
+          align-items: baseline;
+          > div {
+            display: flex;
+            align-items: center;
+          }
+          .file-area {
+            margin-top: rem(10);
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: rem(23) rem(20);
+            background-color: $color-fill06;
+            border-radius: rem(16);
+            border: 1px solid $color-stroke05;
+            strong {
+              position: relative;
+              flex-shrink: 0;
+              @include font(16, 700);
+              padding-right: rem(30);
+              @include mobile-sm {
+                align-self: baseline;
+              }
+            }
+            ul {
+              display: flex;
+              flex-direction: column;
+              gap: rem(8);
+              flex: 1;
+              min-width: 0;
+              li {
+                .ico-modal-close {
+                  width: rem(20);
+                  height: rem(20);
+                  filter: invert(63%) sepia(7%) saturate(142%) hue-rotate(177deg) brightness(95%)
+                    contrast(81%);
+                  margin-right: rem(5);
+                }
+                & + li {
+                  margin-top: rem(8);
+                }
+              }
+            }
+          }
+        }
+        .btn-wrap {
+          min-width: auto;
+        }
+        .file-desc-wrap {
+          display: flex;
+          align-items: center;
+          padding-left: rem(56);
+          label {
+            display: block;
+            width: rem(130);
+            color: $color-primary01;
+          }
+        }
+      }
+      .time-info {
+        @include flexCenterColumn();
+        width: 100%;
+        .time-input {
+          @include flexCenter();
+          margin-bottom: rem(10);
+          span {
+            @include font(16, 600, $color: $color-text02);
+          }
+          .input-box {
+            width: rem(60);
+            margin: 0 rem(6);
+          }
+        }
+        .desc {
+          @include font(16, 600, $color: $color-primary01);
+        }
+      }
+      &:has(.fee-box) {
+        .input-box {
+          width: auto !important;
+        }
+      }
+      .fee-box {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: rem(12);
+        gap: rem(10);
+        .input-box {
+          width: auto !important;
+          gap: 0;
+          flex: 0 0 auto;
+        }
+        input {
+          width: rem(44);
+          margin: 0 rem(5);
+        }
+      }
+    }
+    & + .btn-wrap {
+      margin-top: rem(40);
+      justify-content: space-between;
+      gap: rem(10);
+    }
+    // 공연 행사 form
+    &.event {
+      .form-field {
+        .input-box,
+        .select-box {
+          width: clamp(rem(100), 45vw, rem(240));
+          .select-list {
+            height: rem(100);
+          }
+        }
+        .select-wrap {
+          display: flex;
+          align-items: center;
+          > span {
+            margin: 0 rem(12);
+          }
+          > .select-box {
+            width: rem(160);
+            .select-list {
+              height: rem(150);
+            }
+          }
+        }
+      }
+    }
+  }/*
+  .table-scroll {
+    .table-wrap {
+      
+      @include mobile {
+        width: 100%;
+      } 2025-12-23 : 삭제
+    }
+  } */
+  // 문화마당 이용안내
+  // 리스트 + 테이블
+  .text-list-box + .table-wrap {
+    margin-top: rem(12);
+  }
+  .media-box {
+    ul {
+      margin-bottom: rem(40);
+      
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+      li {
+        figure {
+          aspect-ratio: auto;
+          img {
+            height: rem(200);
+            @include mobile {
+              height: auto;
+            }
+          }
+        }
+        .title {
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  // 문화마당 작성하기
+  // h3 + 약관
+  .heading-sm:has(~ .terms-box) {
+    margin-bottom: rem(20);
+  }
+  // 촬영하기
+  .shot-auth-wrap {
+    width: rem(924);
+    margin: 0 auto;
+    background-color: $color-primary06;
+    padding: rem(20);
+    border-radius: rem(16);
+    @include flexCenterColumn();
+    @include responsive {
+      width: 100%;
+    }
+    .title {
+      @include font(20, 700, $color: $color-primary01);
+      font-family: $font-family-gmarket;
+      margin-bottom: rem(20);
+    }
+    .desc {
+      @include font(16, 500, $color: $color-text02);
+      margin-bottom: rem(40);
+    }
+    .img {
+      width: rem(135);
+      margin-bottom: rem(20);
+    }
+    .btn-wrap {
+      button {
+        width: rem(300);
+      }
+    }
+  }
+  .workflow-wrap {
+    background-color: $color-primary02;
+    border-radius: rem(10);
+    padding: rem(10) rem(30);
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(20);
+    @include mobile {
+      //flex-direction: column;
+      gap: rem(20);
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    li {
+      @include flexCenter();
+      gap: rem(10);
+      flex: 1;
+      @include mobile {
+        flex: none;
+      }
+      .num {
+        @include flexCenter();
+        width: rem(36);
+        height: rem(36);
+        border-radius: 999px;
+        @include font(20, 600, $color: $color-text00);
+        background-color: $color-fill00;
+        color: $color-primary02;
+      }
+      .txt {
+        @include font(20, 600, $color: $color-text00);
+        @include responsive {
+          font-size: rem(14);
+          align-items: flex-start;
+        }
+      }
+      &:first-child {
+        justify-content: flex-start;
+      }
+      & + li {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          --color: #fff;
+          width: 100%;
+          height: 100%;
+          border-top: 1px solid $color-stroke00;
+          border-right: 1px solid $color-stroke00;
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+          width: rem(40);
+          height: rem(40);
+          left: rem(-30);
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@
     align-items: center;
     h3 {
       @include font(16, 700);
+      color: $color-text00;
     }
   }
   .info-area {
@@ -27,6 +28,7 @@
       dt {
         @include font(16, 700);
         position: relative;
+        color: $color-text01;
         &::after {
           position: absolute;
           content: '';
@@ -44,14 +46,14 @@
     }
   }
   .cont-area {
-    border-bottom: 1px solid $color-stroke04;
+    //border-bottom: 1px solid $color-stroke04;
     font-size: 1rem;
-    color: $color-text01;
+    color: $color-text02;
     font-weight: 400;
     line-height: 1.5;
     word-break: break-word;
     border-top: 1px solid $color-stroke09;
-    padding: rem(40) 0 rem(80);
+    padding: rem(20) 0;
     @include mobile-sm {
       padding: rem-m(20) 0;
     }
@@ -61,7 +63,7 @@
       white-space: nowrap;
     }
     .file-area {
-      margin-top: rem(40);
+      margin-top: rem(20);
       display: flex;
       align-items: center;
       padding: rem(23) rem(20);
@@ -71,6 +73,7 @@
       strong {
         position: relative;
         flex-shrink: 0;
+        color: $color-text01;
         @include font(16, 700);
         padding-right: rem(30);
         @include mobile-sm {
@@ -220,7 +223,7 @@
     }
   }
   .btn-wrap {
-    margin-top: rem(80);
+    margin-top: rem(20);
     justify-content: flex-start;
   }
   .faq-label {
@@ -251,7 +254,6 @@
   }
   // 답변보기
   &.answer {
-    margin-top: rem(40);
     .title-area {
       border-top: 1px solid $color-stroke03;
       h3 {

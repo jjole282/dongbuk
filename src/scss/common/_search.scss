@@ -1,0 +1,13 @@
+@use "@/scss/common/mixin" as *;
+@use "@/scss/common/variable" as *;
+@use "@/scss/common/color" as *;
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  gap: rem(20) rem(8);
+  margin-bottom: rem(20);
+  .select-box {
+    width: rem(300);
+  }
+}

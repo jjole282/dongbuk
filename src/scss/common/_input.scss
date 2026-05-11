@@ -8,7 +8,7 @@
     width: 100%;
     border: 1px solid $color-stroke03;
     background-color: $color-fill00;
-    border-radius: rem(8);
+    border-radius: rem(2);
     padding: rem(10) rem(12);
     text-align: left;
     height: rem(44);
@@ -35,6 +35,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: rem(10);
+  }
+  .search-wrap {
+    margin-bottom: 0;
   }
   .search-text {
     position: relative;

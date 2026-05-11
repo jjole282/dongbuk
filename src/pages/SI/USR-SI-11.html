@@ -22,170 +22,80 @@
       <!-- main -->
       <main id="sub-content" role="main">
         <div class="inner">
-          <!-- lnb -->
-          <aside id="lnb-layout" class="lnb-wrap">
-            <!-- title -->
-            <div class="lnb-title">
-              <strong>이용안내</strong>
-            </div>
-            <!--// title -->
-            <!-- menu -->
-            <ul class="lnb-list">
-              <li>
-                <a href="#"><span>역정보</span></a>
-              </li>
-              <li>
-                <a href="#"><span>열차시간표</span></a>
-              </li>
-              <li>
-                <a href="#"><span>실시간 열차 정보</span></a>
-              </li>
-              <li>
-                <a href="#"><span>운임안내</span></a>
-                <ul class="lnb-depth2-list">
-                  <li class="on">
-                    <a href="#"><span>운임제도</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>승차권안내</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>여객운송약관</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>편의시설</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>편의시설 소개</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>교통약자 편의시설</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>이용자 편의시설</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>유실물센터</span></a>
-              </li>
-              <li>
-                <a href="#"><span>간편지연증명서</span></a>
-              </li>
-              <li class="is-active">
-                <a href="#"><span>승강설비가동현황</span></a>
-              </li>
-            </ul>
-            <!--// menu -->
-          </aside>
-          <!--// lnb -->
-          <!-- contents -->
-          <section id="page-content" class="page-information">
-            <!-- header -->
-            <div class="section-header">
-              <h2 class="section-title">승강설비가동현황</h2>
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Train Station Guide</strong><span>역 주변 관광안내</span>
+              </h2>
               <div class="section-meta">
                 <ul class="location-nav">
-                  <!-- 웹접근성 2026-01-27 : 추가 -->
                   <li class="home">
                     <a href="#"><span class="txt-hide">홈</span></a>
                   </li>
-                  <!--// 웹접근성 2026-01-27 : 추가 -->
                   <li>
                     <a href="#"><span>이용안내</span></a>
                   </li>
+                  <li>
+                    <a href="#"><span>편의시설</span></a>
+                  </li>
                   <li class="is-active">
-                    <a href="#"><span>승강설비가동현황</span></a>
+                    <span>역 주변 관광안내</span>
                   </li>
                 </ul>
-                <div class="tool-button">
-                  <button type="button" class="btn-print" onclick="window.print()">
-                    <span class="txt-hide">프린트하기</span>
-                  </button>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/assets/images/information/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <ul class="station-tour-list">
+              <li>
+                <dl>
+                  <dt>
+                    <strong>1. 북서울 꿈의숲</strong>
+                  </dt>
+                  <dd>
+                    <p>강북의 '서울숲'으로 불리는 대규모 공원입니다. <br>칠폭지, 월영지 등 수경 시설과 울창한 숲이 있어 산책과 피크닉을 즐기기 좋습니다.</p>
+                    <span class="location">위례호수공원역 인근</span>
+                  </dd>
+                </dl>
+                <div class="img-wrap">
+                  <img src="/assets/images/information/station-tour-01.png" alt="">
                 </div>
-              </div>
-            </div>
-            <!--// header -->
-            <div class="text-list-box">
-              <ul class="text-list">
-                <li>에스컬레이터 정기점검은 단시간 정지로 '점검중' 미현시</li>
-                <li>
-                  동북선도시철도운영(주)에서는 시민의 안전을 위해 매달 자체 점검을 실시하고 있습니다.
-                </li>
-              </ul>
-            </div>
-            <div class="search-wrap">
-              <!-- 셀렉트 -->
-              <div class="select-box">
-                <button
-                  type="button"
-                  class="select-btn"
-                  id="select-trigger-date"
-                  aria-expanded="false"
-                  title="승강설비 가동 날짜 선택"
-                ><!-- 웹접근성 2026-01-27 : aria-haspopup 삭제, title 추가 --><!-- 웹접근성 2026-01-27 : aria-describedby 추가 -->
-                  <span>2025-07-14</span>
-                </button>
-                <ul class="select-list" hidden tabindex="-1"><!-- 웹접근성 2026-01-27 : role 삭제 --><!-- 웹접근성 2026-01-06 : role 추가 -->
-                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                    <button type="button"><span>2025-07-14</span></button>
-                  </li>
-                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                    <button type="button"><span>2025-07-13</span></button>
-                  </li>
-                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                    <button type="button"><span>2025-07-12</span></button>
-                  </li>
-                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                    <button type="button"><span>2025-07-11</span></button>
-                  </li>
-                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                    <button type="button"><span>2025-07-10</span></button>
-                  </li>
-                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                    <button type="button"><span>2025-07-09</span></button>
-                  </li>
-                  <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                    <button type="button"><span>2025-07-08</span></button>
-                  </li>
-                </ul>
-              </div>
-              <!--// 셀렉트 -->
-              <!-- 버튼 -->
-              <div class="btn-wrap">
-                <button class="btn-primary md"><span>검색</span></button>
-              </div>
-              <!--// 버튼 -->
-            </div>
-            <div class="table-wrap">
-              <table>
-                <caption>
-                  승강설비 가동 현황을 시설, 운행 구간, 위치, 비고 항목으로 제공하는 표입니다.
-                </caption>
-                <colgroup>
-                  <col style="width: 25%" />
-                  <col style="width: 25%" />
-                  <col style="width: 25%" />
-                  <col style="width: 25%" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th scope="col">시설</th>
-                    <th scope="col">운행구간</th>
-                    <th scope="col">위치</th>
-                    <th scope="col">비고</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td colspan="4">현황이 없습니다.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!-- 버튼 클릭시 열차지연증명서 나옴 -->
+              </li>
+              <li>
+                <dl>
+                  <dt>
+                    <strong>2. 한양도성 순성길</strong>
+                  </dt>
+                  <dd>
+                    <p>도심의 풍경과 역사적인 도성을 따라 걷는 서울의 대표적인 트레킹 코스입니다.<br>성북동이나 대학로 인근에서 진입이 용이합니다.</p>
+                    <span class="location">전 노선 연결</span>
+                  </dd>
+                </dl>
+                <div class="img-wrap">
+                  <img src="/assets/images/information/station-tour-01.png" alt="">
+                </div>
+              </li>
+              <li>
+                <dl>
+                  <dt>
+                    <strong>3. 길상사 _ <span>성북동 역사·문화 탐방</span></strong>
+                  </dt>
+                  <dd>
+                    <p>성북동에 위치한 조용한 사찰로, 법정 스님의 흔적이 남아있는 도심 속 힐링 공간입니다.</p>
+                    <span class="location">장지천교 구간</span>
+                  </dd>
+                </dl>
+                <div class="img-wrap">
+                  <img src="/assets/images/information/station-tour-01.png" alt="">
+                </div>
+              </li>
+            </ul>
           </section>
           <!--// contents -->
         </div>

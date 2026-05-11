@@ -732,87 +732,17 @@
       <!-- main -->
       <main id="sub-content" role="main">
         <div class="inner">
-          <!-- lnb -->
-          <aside id="lnb-layout" class="lnb-wrap">
-            <!-- title -->
-            <div class="lnb-title">
-              <strong>고객참여</strong>
-            </div>
-            <!--// title -->
-            <!-- menu -->
-            <ul class="lnb-list">
-              <li class="is-active">
-                <a href="#"><span>고객의 소리</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li class="on">
-                    <a href="#"><span>작성하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>문화마당</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>신청하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>촬영신청</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>신청하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>광고문의</span></a>
-              </li>
-              <li>
-                <a href="#"><span>이벤트/공모</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이벤트/공모 참여</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>당첨자 확인</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>참여후기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>자주묻는 질문</span></a>
-              </li>
-              <li>
-                <a href="#"><span>부패방지신고센터</span></a>
-              </li>
-            </ul>
-            <!--// menu -->
-          </aside>
-          <!--// lnb -->
-          <!-- contents -->
-          <section id="page-content" class="page-customer">
-            <!-- header -->
-            <div class="section-header">
-              <h2 class="section-title">작성하기</h2>
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Customer Engagement</strong><span>작성목록</span>
+              </h2>
               <div class="section-meta">
                 <ul class="location-nav">
-                  <!-- 웹접근성 2026-01-27 : 추가 -->
                   <li class="home">
                     <a href="#"><span class="txt-hide">홈</span></a>
                   </li>
-                  <!--// 웹접근성 2026-01-27 : 추가 -->
                   <li>
                     <a href="#"><span>고객참여</span></a>
                   </li>
@@ -820,103 +750,266 @@
                     <a href="#"><span>고객의 소리</span></a>
                   </li>
                   <li class="is-active">
-                    <a href="#"><span>작성하기</span></a>
+                    <span>작성목록</span>
                   </li>
                 </ul>
-                <div class="tool-button">
-                  <button type="button" class="btn-print" onclick="window.print()">
-                    <span class="txt-hide">프린트하기</span>
-                  </button>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/assets/images/customer/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="이용안내">
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  이용안내
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  고객의 소리
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                >
+                  <div class="line-box" data-animation="fade-up">
+                    <div class="line-box-body">
+                      <ul class="line-box-list">
+                        <li>본 게시판은 비공개용 게시판입니다.</li>
+                        <li>해당 게시판에 작성하는 민원 및 상담내용은 처리 부서와 담당자 이외에는 열람을 할 수 없으며,민원 및 상담에 대한 처리 결과는 본 게시판으로 회신하여 드립니다.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="text-list-box">
+                    <h3 class="text-list-title">민원신청</h3>
+                    <ul class="text-list">
+                      <li class="no-bullet">
+                        민원사항이 있을 경우 고객의 소리에서 처리부서를 지정하여 문의하시기 바랍니다.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="text-list-box">
+                    <h3 class="text-list-title">주의사항</h3>
+                    <ul class="text-list">
+                      <li class="no-bullet">
+                        시민 참여공간 운영 목적에 부합하고 건전한 토론 문화 정립을 위하여 아래 사항에
+                        해당할 경우, 사전 예고 없이 삭제하니 양해 바랍니다.
+                      </li>
+                      <li>비실명 사용 또는 인적사항을 허위로 작성하는 경우</li>
+                      <li>비속어 사용, 타인을 비방 · 위해 하는 내용</li>
+                      <li>상업성 광고, 장난성 · 반복성 게시물</li>
+                    </ul>
+                  </div>
+
+                  <h3 class="heading-sm">처리절차</h3>
+                  <ol class="step-wrap step-5">
+                    <li class="step-item">
+                      <div class="step-image">
+                        <img src="/assets/images/customer/process-img01.png" alt="" />
+                      </div>
+                      <span class="step-title">접수</span>
+                    </li>
+                    <li class="step-item">
+                      <div class="step-image">
+                        <img src="/assets/images/customer/process-img02.png" alt="" />
+                      </div>
+                      <span class="step-title">처리부서지정</span>
+                    </li>
+                    <li class="step-item">
+                      <div class="step-image">
+                        <img src="/assets/images/customer/process-img03.png" alt="" />
+                      </div>
+                      <span class="step-title">검토(처리부서)</span>
+                    </li>
+                    <li class="step-item">
+                      <div class="step-image">
+                        <img src="/assets/images/customer/process-img04.png" alt="" />
+                      </div>
+                      <span class="step-title">답변완료</span>
+                    </li>
+                    <li class="step-item">
+                      <div class="step-image">
+                        <img src="/assets/images/customer/process-img05.png" alt="" />
+                      </div>
+                      <span class="step-title">결과확인(고객)<br />홈페이지 환급</span>
+                    </li>
+                  </ol>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                >
+                  <div class="line-box">
+                    <div class="line-box-body flex-center">
+                      <ul class="line-box-list">
+                        <li class="text-primary">본 게시판은 비공개용 게시판입니다.</li>
+                        <li>
+                          해당 게시판에 작성하는 민원 및 상담내용은 처리 부서와 담당자 이외에는 열람을 할
+                          수 없으며, 민원 및 상담에 대한 처리 결과는 본 게시판으로 회신하여 드립니다.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="btn-wrap">
+                    <a href="#" class="btn-primary lg"><span>글쓰기</span></a>
+                  </div>
+
+                  <!-- search -->
+                  <div class="search-bar">
+                    <p class="search-text">총 <span>23</span>건</p>
+                    <div class="search-wrap">
+                      <!-- 셀렉트 -->
+                      <div class="select-box">
+                        <button
+                          type="button"
+                          class="select-btn"
+                          id="select-trigger-date"
+                          aria-expanded="false" 
+                          aria-describedby="date-desc"
+                          title="열차 지연 날짜 선택"
+                        >
+                          <span>2025-07-14</span>
+                        </button>
+                        <ul class="select-list" hidden tabindex="-1">
+                          <li>
+                            <button type="button"><span>2025-07-14</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span>2025-07-13</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span>2025-07-12</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span>2025-07-11</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span>2025-07-10</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span>2025-07-09</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span>2025-07-08</span></button>
+                          </li>
+                        </ul>
+                      </div>
+                      <p id="date-desc" class="txt-hide">
+                        날짜를 선택하면 해당 날짜의 정보가 자동으로 표시됩니다.
+                      </p>
+                      <!--// 셀렉트 -->
+                      <!-- 버튼 -->
+                      <div class="btn-wrap">
+                        <button class="btn-primary md"><span>검색</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// search -->
+                  <div class="table-scroll">
+                    <div class="table-wrap">
+                      <table class="table-list">
+                        <caption>
+                          고객의 소리 게시글 목록 - 번호, 제목, 첨부, 등록일, 상태 정보 제공
+                        </caption>
+                        <colgroup>
+                          <col style="width: 12%" />
+                          <col style="width: auto" />
+                          <col style="width: 10%" />
+                          <col style="width: 17%" />
+                          <col style="width: 17%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">첨부</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">상태</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td class="align-left">
+                              <a class="link ellipsis" href="#">열차안이 너무 더워요..</a>
+                            </td>
+                            <td><i class="ico-file" aria-hidden="true"></i></td>
+                            <td>2025-06-05</td>
+                            <td>
+                              <strong class="text-primary">답변완료</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td class="align-left">
+                              <a class="link ellipsis" href="#">열차안이 너무 더워요..</a>
+                            </td>
+                            <td><i class="ico-file" aria-hidden="true"></i></td>
+                            <td>2025-06-05</td>
+                            <td>
+                              <strong>접수</strong>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="pagination-box">
+                    <ul>
+                      <li class="page-item prev">
+                        <a href="#">
+                          <span>이전</span>
+                        </a>
+                      </li>
+                      <li class="page-item on">
+                        <a href="#" aria-label="현재 페이지">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#">3</a>
+                      </li>
+                      <li class="page-item next">
+                        <a href="#">
+                          <span>다음</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            <!--// header -->
-            <div class="line-box">
-              <div class="line-box-img-wrap">
-                <img src="/assets/images/customer/private-img.png" alt="" /><!-- 웹접근성 2026-01-06 : aria 삭제 -->
-              </div>
-              <div class="line-box-body flex-center">
-                <ul class="line-box-list">
-                  <li class="text-primary">본 게시판은 비공개용 게시판입니다.</li>
-                  <li>
-                    해당 게시판에 작성하는 민원 및 상담내용은 처리 부서와 담당자 이외에는 열람을 할
-                    수 없으며, 민원 및 상담에 대한 처리 결과는 본 게시판으로 회신하여 드립니다.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="btn-wrap">
-              <a href="#" class="btn-primary lg"><span>글쓰기</span></a>
-            </div>
-
-            <!-- search -->
-            <div class="search-bar">
-              <p class="search-text">총 <span>23</span>건</p>
-            </div>
-            <!--// search -->
-            <div class="table-scroll">
-              <div class="table-wrap">
-                <table class="table-list">
-                  <caption>
-                    고객의 소리 게시글 목록 - 번호, 제목, 첨부, 등록일, 상태 정보 제공
-                  </caption><!-- 웹접근성 2026-02-11 : 문구 수정 -->
-                  <colgroup><!-- 2025-12-12 : col style 값들 수정 -->
-                    <col style="width: 12%" />
-                    <col style="width: auto" />
-                    <col style="width: 10%" />
-                    <col style="width: 17%" />
-                    <col style="width: 17%" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th scope="col">번호</th>
-                      <th scope="col">제목</th>
-                      <th scope="col">첨부</th>
-                      <th scope="col">등록일</th>
-                      <th scope="col">상태</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td class="align-left">
-                        <a class="link ellipsis" href="#">열차안이 너무 더워요..</a>
-                      </td>
-                      <td><i class="ico-file" aria-hidden="true"></i></td>
-                      <td>2025-06-05</td>
-                      <td>
-                        <strong class="text-primary">답변완료</strong>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div class="pagination-box">
-              <ul>
-                <li class="page-item prev">
-                  <a href="#">
-                    <span>이전</span>
-                  </a>
-                </li>
-                <li class="page-item on">
-                  <a href="#" aria-label="현재 페이지">1</a><!-- 웹접근성 2026-01-27 : aria 추가 -->
-                </li>
-                <li class="page-item">
-                  <a href="#">2</a>
-                </li>
-                <li class="page-item">
-                  <a href="#">3</a>
-                </li>
-                <li class="page-item next">
-                  <a href="#">
-                    <span>다음</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <!--// tab -->
           </section>
           <!--// contents -->
         </div>

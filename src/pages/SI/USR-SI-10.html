@@ -22,259 +22,172 @@
       <!-- main -->
       <main id="sub-content" role="main">
         <div class="inner">
-          <!-- lnb -->
-          <aside id="lnb-layout" class="lnb-wrap">
-            <!-- title -->
-            <div class="lnb-title">
-              <strong>이용안내</strong>
-            </div>
-            <!--// title -->
-            <!-- menu -->
-            <ul class="lnb-list">
-              <li>
-                <a href="#"><span>역정보</span></a>
-              </li>
-              <li>
-                <a href="#"><span>열차시간표</span></a>
-              </li>
-              <li>
-                <a href="#"><span>실시간 열차 정보</span></a>
-              </li>
-              <li>
-                <a href="#"><span>운임안내</span></a>
-                <ul class="lnb-depth2-list">
-                  <li class="on">
-                    <a href="#"><span>운임제도</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>승차권안내</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>여객운송약관</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>편의시설</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>편의시설 소개</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>교통약자 편의시설</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>이용자 편의시설</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>유실물센터</span></a>
-              </li>
-              <li class="is-active">
-                <a href="#"><span>간편지연증명서</span></a>
-              </li>
-              <li>
-                <a href="#"><span>승강설비가동현황</span> </a>
-              </li>
-            </ul>
-            <!--// menu -->
-          </aside>
-          <!--// lnb -->
-          <!-- contents -->
-          <section id="page-content" class="page-information">
-            <!-- header -->
-            <div class="section-header">
-              <h2 class="section-title">간편지연증명서</h2>
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Train Station Guide</strong><span>간편지연증명서</span>
+              </h2>
               <div class="section-meta">
                 <ul class="location-nav">
-                  <!-- 웹접근성 2026-01-27 : 추가 -->
                   <li class="home">
                     <a href="#"><span class="txt-hide">홈</span></a>
                   </li>
-                  <!--// 웹접근성 2026-01-27 : 추가 -->
                   <li>
                     <a href="#"><span>이용안내</span></a>
                   </li>
+                  <li>
+                    <a href="#"><span>편의시설</span></a>
+                  </li>
                   <li class="is-active">
-                    <a href="#"><span>간편지연증명서</span></a>
+                    <span>간편지연증명서</span>
                   </li>
                 </ul>
-                <div class="tool-button">
-                  <button type="button" class="btn-print" onclick="window.print()">
-                    <span class="txt-hide">프린트하기</span>
-                  </button>
-                </div>
               </div>
             </div>
-            <!--// header -->
-            <div class="tab-wrap radius"><!-- 2023-01-26 : 탭 관련 신규 추가 -->
-              <div class="tabs" data-tab-level="main" role="tablist" aria-label="GTX 노선 선택"><!-- 웹접근성 2026-01-27 : aria 추가 -->
-                <button
-                  class="tab-btn is-active"
-                  role="tab"
-                  id="tab-1"
-                  aria-selected="true"
-                  tabindex="0"
-                ><!-- 2026-02-25 : aria-controls 삭제 -->
-                  운정중앙역 - 서울역
-                </button>
-                <button
-                  class="tab-btn"
-                  role="tab"
-                  id="tab-2"
-                  aria-selected="false"
-                  tabindex="-1"
-                ><!-- 2026-02-25 : aria-controls 삭제 -->
-                  수서역 - 동탄역
-                </button>
+            <div class="header-visual">
+              <img src="/assets/images/information/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+          <!-- contents -->
+          <section id="page-content" class="page-information">
+            <div class="line-box" data-animation="fade-up">
+              <div class="line-box-body">
+                <p class="line-box-title">간편지연 안내</p>
+                <ul class="line-box-list">
+                  <li>
+                    수도권광역급행철도에이선(동북선도시철도) 운영 구간에서 발생한 열차지연 정보는 5분 이상 열차
+                    지연 시 게시하고 있습니다.
+                  </li>
+                  <li>
+                    게시된 지연시간은 해당 시간대에 발생한 최대 지연 시간이며 5분단위로 게시하고
+                    있습니다.
+                  </li>
+                  <li>
+                    30분 이상 지연된 경우에는 고객 콜센터 <strong>1551-2979</strong>로 문의하여 주시기
+                    바랍니다.
+                  </li>
+                </ul>
               </div>
-              <div class="tab-panels">
-                <div class="tab-panel" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
-                  <!-- 웹접근성 2026-01-27 : 기존 소스는 이 안에 넣어둠 -->
-                   <div class="text-list-box">
-                    <ul class="text-list">
-                      <li>
-                        수도권광역급행철도에이선(동북선도시철도) 운영 구간에서 발생한 열차지연 정보는 5분 이상 열차
-                        지연 시 게시하고 있습니다.
-                      </li>
-                      <li>
-                        게시된 지연시간은 해당 시간대에 발생한 최대 지연 시간이며 5분단위로 게시하고
-                        있습니다.
-                      </li>
-                      <li>
-                        30분 이상 지연된 경우에는 고객 콜센터 <strong>1551-2979</strong>로 문의하여 주시기
-                        바랍니다.
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="search-wrap">
-                    <!-- 셀렉트 -->
-                    <div class="select-box">
-                      <button
-                        type="button"
-                        class="select-btn"
-                        id="select-trigger-date"
-                        aria-expanded="false" 
-                        aria-describedby="date-desc"
-                        title="열차 지연 날짜 선택"
-                      ><!-- 웹접근성 2026-01-27 : aria-haspopup 삭제, title 추가 --><!-- 웹접근성 2026-01-27 : aria-describedby 추가 -->
-                        <span>2025-07-14</span>
-                      </button>
-                      <ul class="select-list" hidden tabindex="-1"><!-- 웹접근성 2026-01-27 : role 삭제 --><!-- 웹접근성 2026-01-06 : role 추가 -->
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button"><span>2025-07-14</span></button>
-                        </li>
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button"><span>2025-07-13</span></button>
-                        </li>
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button"><span>2025-07-12</span></button>
-                        </li>
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button"><span>2025-07-11</span></button>
-                        </li>
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button"><span>2025-07-10</span></button>
-                        </li>
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button"><span>2025-07-09</span></button>
-                        </li>
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button"><span>2025-07-08</span></button>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- 웹접근성 2026-01-27 : 추가 -->
-                    <p id="date-desc" class="txt-hide">
-                      날짜를 선택하면 해당 날짜의 정보가 자동으로 표시됩니다.
+            </div>
+            <div class="search-wrap">
+              <!-- 셀렉트 -->
+              <div class="select-box">
+                <button
+                  type="button"
+                  class="select-btn"
+                  id="select-trigger-date"
+                  aria-expanded="false" 
+                  aria-describedby="date-desc"
+                  title="열차 지연 날짜 선택"
+                >
+                  <span>2025-07-14</span>
+                </button>
+                <ul class="select-list" hidden tabindex="-1">
+                  <li>
+                    <button type="button"><span>2025-07-14</span></button>
+                  </li>
+                  <li>
+                    <button type="button"><span>2025-07-13</span></button>
+                  </li>
+                  <li>
+                    <button type="button"><span>2025-07-12</span></button>
+                  </li>
+                  <li>
+                    <button type="button"><span>2025-07-11</span></button>
+                  </li>
+                  <li>
+                    <button type="button"><span>2025-07-10</span></button>
+                  </li>
+                  <li>
+                    <button type="button"><span>2025-07-09</span></button>
+                  </li>
+                  <li>
+                    <button type="button"><span>2025-07-08</span></button>
+                  </li>
+                </ul>
+              </div>
+              <p id="date-desc" class="txt-hide">
+                날짜를 선택하면 해당 날짜의 정보가 자동으로 표시됩니다.
+              </p>
+              <!--// 셀렉트 -->
+              <!-- 버튼 -->
+              <div class="btn-wrap">
+                <button class="btn-primary md"><span>검색</span></button>
+              </div>
+            </div>
+            <div aria-live="polite">
+              <div class="table-wrap">
+                <table>
+                  <caption>
+                    동북선 첫차 ~ 09시, 09시 ~ 18시, 18시 ~ 막차의 상행, 하행에 대한 정보를 제공
+                  </caption>
+                  <colgroup>
+                    <col style="width: 15%" />
+                    <col style="width: 15%" />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2">노선</th>
+                      <th scope="col">첫차 ~ 09시</th>
+                      <th scope="col">09시 ~ 18시</th>
+                      <th scope="col">18시 ~ 막차</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2"><span class="color-text01">동북선</span></td>
+                      <td>상행</td>
+                      <td>-</td>
+                      <td><a href="#" class="text-link">5분 지연</a></td>
+                      <td><a href="#" class="text-link">5분 지연</a></td>
+                    </tr>
+                    <tr>
+                      <td>하행</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td><a href="#" class="text-link">5분 지연</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="certificate-wrap" id="print-area">
+                <h2 id="certificate-heading" class="txt-hide" style="padding-bottom: 15px;">2025-12-25 (첫 차~09시)</h2>
+                <div class="certificate-box">
+                  <span class="logo">
+                    <img src="/assets/images/information/certificate-logo.svg" alt="동북선도시철도공사">
+                  </span>
+                  <h3>열차 지연 증명서</h3>
+                  <p class="certificate-message">
+                    열차 이용에 불편을 끼쳐드려 대단히 죄송합니다.<br />귀하께서 승차하신
+                    <span>동북선도시철도 하행선</span> 열차가<br />
+                    <span>5분 지연</span> 되었음을 증명합니다.
+                  </p>
+                  <p class="certificate-date">2025-08-12</p>
+                  <div class="certificate-notice">
+                    <p>
+                      본 간편지연증명서는 <strong class="date">2025-08-12</strong>
+                      <strong class="time">첫차 ~ 09시</strong>까지 이 노선에서 발생한 최대지연 시간을
+                      기재한 것이며, 고객님의 열차 이용을 증명하거나 운행지연으로 발생된 손해를
+                      증명하지 않습니다.
                     </p>
-                    <!--// 웹접근성 2026-01-27 : 추가 -->
-                    <!--// 셀렉트 -->
-                    <!-- 버튼 -->
-                    <!-- <div class="btn-wrap">
-                      <button class="btn-primary md"><span>검색</span></button>
-                    </div> 웹접근성 2026-01-27 : 삭제 -->
-                    <!--// 버튼 -->
+                    <p>
+                      30분 이상 지연된 경우에는 고객 콜센터(1551-2979)로 문의하여 주시기 바랍니다.
+                    </p>
+                    <p class="certificate-caution">
+                      ※ 주의사항 : 본 지연증명서의 내용을 무단으로 복제, 변경하거나, 개인 홈페이지,
+                      블로그 등에 공개하는 것을 금지합니다.
+                    </p>
                   </div>
-                  <div aria-live="polite"><!-- 웹접근성 2026-01-27 : 신규 추가 -->
-                    <div class="table-wrap">
-                      <table>
-                        <caption>
-                         운정중앙역 ~ 서울역 방면 - 노선	첫차 ~ 09시	09시 ~ 18시	18시 ~ 막차에 대한 정보를 제공
-                        </caption>
-                        <colgroup>
-                          <col style="width: 15%" />
-                          <col style="width: 15%" />
-                          <col />
-                          <col />
-                          <col />
-                        </colgroup>
-                        <thead>
-                          <tr>
-                            <th scope="col" colspan="2">노선</th>
-                            <th scope="col">첫차 ~ 09시</th>
-                            <th scope="col">09시 ~ 18시</th>
-                            <th scope="col">18시 ~ 막차</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td rowspan="2">동북선도시철도</td>
-                            <td>상행</td>
-                            <td>-</td>
-                            <td><a href="#" class="text-link">5분 지연</a></td>
-                            <td><a href="#" class="text-link">5분 지연</a></td>
-                          </tr>
-                          <tr>
-                            <td>하행</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td><a href="#" class="text-link">5분 지연</a></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="certificate-wrap" id="print-area"><!-- 2025-12-23 : id 추가 -->
-                      <h2 id="certificate-heading" class="txt-hide" style="padding-bottom: 15px;">2025-12-25 (첫 차~09시)</h2><!-- 2025-12-23 : class 추가 -->
-                      <div class="certificate-box"><!-- 2025-12-23 : id 삭제 -->
-                        <h3>열차 지연 증명서</h3>
-                        <p class="certificate-message">
-                          열차 이용에 불편을 끼쳐드려 대단히 죄송합니다.<br />귀하께서 승차하신
-                          <span>동북선도시철도 하행선</span> 열차가<br />
-                          <span>5분 지연</span> 되었음을 증명합니다.
-                        </p>
-                        <p class="certificate-date">2025-08-12</p>
-                        <div class="certificate-logo">
-                          <img src="/assets/images/main/logo.png" alt="gtx 로고" />
-                        </div>
-                        <div class="certificate-notice">
-                          <p>
-                            본 간편지연증명서는 <strong class="date">2025-08-12</strong>
-                            <strong class="time">첫차 ~ 09시</strong>까지 이 노선에서 발생한 최대지연 시간을
-                            기재한 것이며, 고객님의 열차 이용을 증명하거나 운행지연으로 발생된 손해를
-                            증명하지 않습니다.
-                          </p>
-                          <p>
-                            30분 이상 지연된 경우에는 고객 콜센터(1551-2979)로 문의하여 주시기 바랍니다.
-                          </p>
-                          <p class="certificate-caution">
-                            ※ 주의사항 : 본 지연증명서의 내용을 무단으로 복제, 변경하거나, 개인 홈페이지,
-                            블로그 등에 공개하는 것을 금지합니다.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="btn-wrap">
-                        <a href="#" class="btn-primary lg btn-print-certificate" id="print-btn">
-                          <span>인쇄</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--// 웹접근성 2026-01-27 : 기존 소스는 이 안에 넣어둠 -->
                 </div>
-                <div class="tab-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
-                  
+                <div class="btn-wrap">
+                  <a href="#" class="btn-primary lg btn-print-certificate" id="print-btn">
+                    <span>인쇄</span>
+                  </a>
                 </div>
               </div>
             </div>

@@ -6,6 +6,7 @@
   .text-list-title {
     @include font(24, 700);
     margin-bottom: rem(12);
+    color: $color-text01;
   }
   .text-list {
     > li {
@@ -29,6 +30,7 @@
         color: $color-primary01;
       }
       &.no-bullet {
+        padding-left: 0;
         &::before {
           display: none;
         }
