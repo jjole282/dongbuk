@@ -3,6 +3,21 @@
 @use '@/scss/common/color' as *;
 
 .table-view {
+  td,
+  th {
+    &:first-child {
+      border-left: 0 none;
+    }
+  }
+  td,
+  th {
+    &:last-child {
+      border-right: 0 none;
+    }
+  }
+  th {
+    font-weight: 700;
+  }
   .title-area {
     padding: rem(16) rem(20);
     border-top: 2px solid $color-secondary07;
@@ -15,8 +30,8 @@
     }
   }
   .info-area {
-    padding: rem(16) rem(20);
-    border-top: 1px solid $color-stroke09;
+    //padding: rem(16) rem(20);
+    //border-top: 1px solid $color-stroke09;
     display: flex;
     gap: rem(20);
     @include mobile-sm {
@@ -57,10 +72,21 @@
     @include mobile-sm {
       padding: rem-m(20) 0;
     }
+    .faq-answer {
+      display: flex;
+      gap: rem(10);
+      padding: 0 rem(20);
+      .text-area {
+        padding: 0;
+      }
+    }
     .faq-label {
       margin-right: 0;
       flex: 0 0 auto;
       white-space: nowrap;
+      &.type02 {
+        background-color: $color-primary02;
+      }
     }
     .file-area {
       margin-top: rem(20);
@@ -104,6 +130,9 @@
     }
     &:has(+ form) {
       border-bottom: 0;
+    }
+    &:has(.faq-answer) {
+      background-color: $color-fill06;
     }
     .video-area {
       iframe {
@@ -183,6 +212,12 @@
     .subtitle-title {
       font-size: 1rem;
     }
+    &.bd-bottom {
+      border-bottom: 2px solid $color-secondary01;
+    }
+    + form {
+      margin-top: -1px;
+    }
   }
   .post-nav {
     border-top: 1px solid $color-secondary07;
@@ -200,6 +235,7 @@
         display: flex;
         align-items: center;
         white-space: nowrap;
+        color: $color-text01;
         &::after {
           position: absolute;
           content: '';
@@ -219,6 +255,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        a {
+          color: $color-text02;
+        }
       }
     }
   }
@@ -241,21 +280,13 @@
   &.table-wrap {
     th {
       padding: rem(20) rem(16);
-      border-top: 1px solid $color-stroke06;
-    }
-    tr:first-child {
-      border-top: 2px solid $color-primary01;
-    }
-    tr:last-child {
-      th {
-        border-bottom: 1px solid $color-stroke06;
-      }
+      border-top: 1px solid $color-stroke04;
     }
   }
   // 답변보기
   &.answer {
     .title-area {
-      border-top: 1px solid $color-stroke03;
+      border-top: 2px solid $color-secondary01;
       h3 {
         i {
           margin-right: rem(10);

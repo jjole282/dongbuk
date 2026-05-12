@@ -127,6 +127,9 @@ tr {
     word-break: break-word;
     vertical-align: middle;
     background-color: $color-fill00;
+    a {
+      color: $color-text02;
+    }
     strong {
       color: $color-text01;
       display: inline-block;
@@ -220,9 +223,9 @@ tr {
       }
     }
     td {
-      color: $color-text09;
+      color: $color-text02;
       a {
-        color: $color-text09;
+        color: $color-text02;
       }
       &.align-left {
         padding-left: rem(20);
@@ -232,7 +235,7 @@ tr {
         height: rem(30);
         border-radius: 999px;
         background-color: $color-primary01;
-        @include font(20, 500, $color: $color-text00);
+        @include font(20, 500, $color: $color-stroke00);
         @include flexCenter();
         display: inline-flex;
         flex-shrink: 0;

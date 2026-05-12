@@ -22,105 +22,36 @@
       <!-- main -->
       <main id="sub-content" role="main">
         <div class="inner">
-          <!-- lnb -->
-          <aside id="lnb-layout" class="lnb-wrap">
-            <!-- title -->
-            <div class="lnb-title">
-              <strong>고객참여</strong>
-            </div>
-            <!--// title -->
-            <!-- menu -->
-            <ul class="lnb-list">
-              <li>
-                <a href="#"><span>고객의 소리</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>작성하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>문화마당</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>신청하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>촬영신청</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>신청하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>광고문의</span></a>
-              </li>
-              <li class="is-active">
-                <a href="#"><span>이벤트/공모</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이벤트/공모 참여</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>당첨자 확인</span></a>
-                  </li>
-                  <li class="on">
-                    <a href="#"><span>참여후기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>자주묻는 질문</span></a>
-              </li>
-              <li>
-                <a href="#"><span>부패방지신고센터</span></a>
-              </li>
-            </ul>
-            <!--// menu -->
-          </aside>
-          <!--// lnb -->
-          <!-- contents -->
-          <section id="page-content" class="page-customer">
-            <!-- header -->
-            <div class="section-header">
-              <h2 class="section-title">참여후기</h2>
+           <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Customer Engagement</strong><span>참여후기</span>
+              </h2>
               <div class="section-meta">
                 <ul class="location-nav">
-                  <!-- 웹접근성 2026-01-27 : 추가 -->
                   <li class="home">
                     <a href="#"><span class="txt-hide">홈</span></a>
                   </li>
-                  <!--// 웹접근성 2026-01-27 : 추가 -->
                   <li>
                     <a href="#"><span>고객참여</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>이벤트/공모</span></a>
+                    <a href="#"><span>고객의 소리</span></a>
                   </li>
                   <li class="is-active">
-                    <a href="#"><span>참여후기</span></a>
+                    <span>참여후기</span>
                   </li>
                 </ul>
-                <div class="tool-button">
-                  <button type="button" class="btn-print" onclick="window.print()">
-                    <span class="txt-hide">프린트하기</span>
-                  </button>
-                </div>
               </div>
             </div>
-            <!--// header -->
+            <div class="header-visual">
+              <img src="/assets/images/customer/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
             <form id="" action="#" method="#">
               <div class="terms-box" tabindex="0" role="region" aria-label="개인정보 처리방침">
                 동북선도시철도운영㈜는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br /><br />
@@ -145,13 +76,13 @@
 
               <fieldset class="radio-box">
                 <legend class="txt-hide">개인정보 처리방침 동의 여부</legend>
-                <p id="agree-help" class="txt-hide">동의 또는 동의하지 않음을 선택하세요.</p><!-- 웹접근성 2026-02-06 : 추가 -->
+                <p id="agree-help" class="txt-hide">동의 또는 동의하지 않음을 선택하세요.</p>
                 <div class="radio-item">
-                  <input type="radio" id="radio01" name="agreement" value="yes" /><!-- 웹접근성 2026-02-06 : required삭제, value 추가 -->
+                  <input type="radio" id="radio01" name="agreement" value="yes" />
                   <label for="radio01">위의 정책에 동의합니다.</label>
                 </div>
                 <div class="radio-item">
-                  <input type="radio" id="radio02" name="agreement" value="no" /><!-- 웹접근성 2026-02-06 : required삭제, value 추가 -->
+                  <input type="radio" id="radio02" name="agreement" value="no" />
                   <label for="radio02">동의하지 않습니다.</label>
                 </div>
               </fieldset>
@@ -191,7 +122,7 @@
                       </div>
                       <span aria-hidden="true">@</span>
                       <div class="input-box">
-                        <label for="emailDomain" class="txt-hide">이메일 도메인 입력란</label><!-- 웹접근성 2026-01-06 : 추가 -->
+                        <label for="emailDomain" class="txt-hide">이메일 도메인 입력란</label>
                         <input
                           id="emailDomain"
                           name="emailDomain"
@@ -205,31 +136,31 @@
                           class="select-btn"
                           aria-expanded="false"
                           title="이메일 도메인 설정"
-                        ><!-- 웹접근성 2026-01-27 : id, aria-haspopup 삭제, title 추가 -->
+                        >
                           <span>이메일 선택</span>
                         </button>
-                        <ul class="select-list" hidden tabindex="-1"><!-- 웹접근성 2026-01-27 : role 삭제 --><!-- 웹접근성 2026-01-06 : role 추가 -->
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                        <ul class="select-list" hidden tabindex="-1">
+                          <li>
                             <button type="button">
                               <span>naver.com</span>
                             </button>
                           </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                          <li>
                             <button type="button">
                               <span>gmail.com</span>
                             </button>
                           </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                          <li>
                             <button type="button">
                               <span>hanmail.net</span>
                             </button>
                           </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                          <li>
                             <button type="button">
                               <span>nate.com</span>
                             </button>
                           </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
+                          <li>
                             <button type="button">
                               <span>kakao.com</span>
                             </button>
@@ -259,18 +190,18 @@
                 </div>
                 <div class="form-row">
                   <div class="form-label">
-                    <span>첨부파일</span><!-- 웹접근성 2026-01-06 : label을 span으로 변경 -->
+                    <span>첨부파일</span>
                   </div>
                   <div class="form-field file">
                     <div class="btn-wrap">
-                      <label for="file-upload" class="custom-file btn-primary xs"><!-- 웹접근성 2026-01-27 : custom-file 추가 -->
+                      <label for="file-upload" class="custom-file btn-primary xs">
                         <input
                           type="file"
                           id="file-upload"
                           aria-describedby="file-notice"
-                        /><!-- 웹접근성 2026-01-27 : 위치 변경, class 삭제 -->
-                        <div class="file-txt"><!-- 웹접근성 2026-01-27 : 신규 태그 추가 및 위치 이동 -->
-                          <i class="ico-file"></i><!-- 웹접근성 2026-01-27 : aria 삭제 -->
+                        />
+                        <div class="file-txt">
+                          <i class="ico-file"></i>
                           <span>파일첨부</span>
                         </div>
                       </label>

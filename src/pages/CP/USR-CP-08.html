@@ -22,87 +22,17 @@
       <!-- main -->
       <main id="sub-content" role="main">
         <div class="inner">
-          <!-- lnb -->
-          <aside id="lnb-layout" class="lnb-wrap">
-            <!-- title -->
-            <div class="lnb-title">
-              <strong>고객참여</strong>
-            </div>
-            <!--// title -->
-            <!-- menu -->
-            <ul class="lnb-list">
-              <li>
-                <a href="#"><span>고객의 소리</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li class="on">
-                    <a href="#"><span>작성하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li class="is-active">
-                <a href="#"><span>문화마당</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li class="on">
-                    <a href="#"><span>신청하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>촬영신청</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이용안내</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>신청하기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>광고문의</span></a>
-              </li>
-              <li>
-                <a href="#"><span>이벤트/공모</span></a>
-                <ul class="lnb-depth2-list">
-                  <li>
-                    <a href="#"><span>이벤트/공모 참여</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>당첨자 확인</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>참여후기</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>자주묻는 질문</span></a>
-              </li>
-              <li>
-                <a href="#"><span>부패방지신고센터</span></a>
-              </li>
-            </ul>
-            <!--// menu -->
-          </aside>
-          <!--// lnb -->
-          <!-- contents -->
-          <section id="page-content" class="page-customer">
-            <!-- header -->
-            <div class="section-header">
-              <h2 class="section-title">신청하기</h2>
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Customer Engagement</strong><span>개인정보수집동의&amp;글쓰기</span>
+              </h2>
               <div class="section-meta">
                 <ul class="location-nav">
-                  <!-- 웹접근성 2026-01-27 : 추가 -->
                   <li class="home">
                     <a href="#"><span class="txt-hide">홈</span></a>
                   </li>
-                  <!--// 웹접근성 2026-01-27 : 추가 -->
                   <li>
                     <a href="#"><span>고객참여</span></a>
                   </li>
@@ -110,438 +40,621 @@
                     <a href="#"><span>문화마당</span></a>
                   </li>
                   <li class="is-active">
-                    <a href="#"><span>신청하기</span></a>
+                    <span>개인정보수집동의&&amp;글쓰기</span>
                   </li>
                 </ul>
-                <div class="tool-button">
-                  <button type="button" class="btn-print" onclick="window.print()">
-                    <span class="txt-hide">프린트하기</span>
-                  </button>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/assets/images/customer/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="이용안내">
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  이용안내
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  문화마당
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                >
+                  <div class="line-box type02">
+                    <h3 class="heading-sm">문화마당 위치</h3>
+                    <p>도시 생활에서 만나는 문화의 즐거움, 동북선 지하역사에서 이동만이 아닌 문화공간을 만들고 즐길 수 있습니다.</p>
+                  </div>
+                  <div class="media-box">
+                    <ul>
+                      <li>
+                        <figure>
+                          <img
+                            src="/assets/images/customer/culture-img01.png"
+                            alt="공연장 이미지"
+                          />
+                        </figure>
+                        <p class="title">공연장위치1</p>
+                      </li>
+                      <li>
+                        <figure>
+                          <img
+                            src="/assets/images/customer/culture-img02.png"
+                            alt="공연장 이미지"
+                          />
+                        </figure>
+                        <p class="title">공연장위치2</p>
+                      </li>
+                      <li>
+                        <figure>
+                          <img src="/assets/images/customer/culture-img03.png" alt="공연장 이미지" />
+                        </figure>
+                        <p class="title">공연장위치3</p>
+                      </li>
+                      <li>
+                        <figure>
+                          <img src="/assets/images/customer/culture-img04.png" alt="공연장 이미지" />
+                        </figure>
+                        <p class="title">공연장위치4</p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="text-list-box">
+                    <h3 class="text-list-title">운영시간</h3>
+                    <ul class="text-list">
+                      <li>매일 10시~20시</li>
+                    </ul>
+                  </div>
+
+                  <div class="text-list-box">
+                    <h3 class="text-list-title">공연신청</h3>
+                    <ul class="text-list">
+                      <li>하루 1회, 최대 2시간까지 가능</li>
+                    </ul>
+                  </div>
+                  <div class="table-scroll mt-20">
+                    <div class="table-wrap">
+                      <table>
+                        <caption>
+                          공연신청 - 구분,	공연허용인원, 면적, 개인엠프, 비고에 대한 정보를 제공
+                        </caption>
+                        <colgroup>
+                          <col style="width: 15%" />
+                          <col style="width: 15%" />
+                          <col style="width: 15%" />
+                          <col style="width: 15%" />
+                          <col />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">공연허용인원</th>
+                            <th scope="col">면적</th>
+                            <th scope="col">개인엠프</th>
+                            <th scope="col">비고</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>왕십리역</td>
+                            <td>4인 이하</td>
+                            <td>72㎡</td>
+                            <td>불가</td>
+                            <td>어쿠스틱 연주만 가능</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <h3 class="heading-sm mt-40">행사신청 : 하루 1회, 최대 4시간 가능</h3>
+                  <div class="table-wrap">
+                    <table>
+                      <caption>
+                        행사신청 - 구분,	사용용도,	면적에 대한 정보를 제공
+                      </caption>
+                      <colgroup>
+                        <col style="width: 20%">
+                        <col style="width: 60%">
+                        <col style="width: 20%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">사용용도</th>
+                          <th scope="col">면적</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>왕십리역</td>
+                          <td rowspan="2">사진, 전시회, 홍보, 캠페인 등</td>
+                          <td>72㎡</td>
+                        </tr>
+                        <tr>
+                          <td>고려대역</td>
+                          <td>131.76㎡</td>
+                        </tr>
+                        <tr>
+                          <td>고려대역</td>
+                          <td colspan="2">준비중</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="text-list-box mt-40">
+                    <h3 class="text-list-title">공연 및 행사 불승인 사항</h3>
+                    <ul class="text-list">
+                      <li>정당이나 종교 등 특정 사상을 전파하는 공연 및 행사</li>
+                      <li>상업행위가 주목적인 공연 및 행사</li>
+                      <li>시민의 불쾌감이나 모욕감을 주는 공연 및 행사</li>
+                      <li>역사 공간에 적합하지 않은 공연 및 행사</li>
+                      <li>
+                        문화마당 신청에 안내된 역사별 허용 기준(개인앰프, 사용용도)를 지키지 않거나 음주,
+                        욕설 등 공공장소 이용자의 정상적 이용을 방해하는 행위를 하는 경우 공연 및 행사
+                        신청을 제한합니다.
+                        <p>(1회차 : 1개월 제한, 2회차 : 3개월 제한, 3회차 : 영구 제한 / 누적 기준)</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                >
+                  <form id="" action="#" method="#">
+                    <h3 class="heading-sm" id="notice-heading">문화마당 공연 및 행사 시 유의사항 확인</h3>
+                    <div
+                      class="terms-box"
+                      tabindex="0"
+                      role="region"
+                      aria-label="공연 및 행사 시 유의사항"
+                      aria-labelledby="notice-heading"
+                    >
+                      <strong>공연 및 행사 시 유의사항</strong><br><br>
+                      1. 공연 및 행사 시 시민 보행에 방해되지 않도록 주의해야 합니다.<br><br>
+                      2. 과도한 소음 등으로 인한 민원 발생이 되지 않도록 유의해야 합니다.<br><br>
+                      3. 물품 판매, 팁박스, 모금 행위 등 영리 목적의 상업행위는 불가합니다.<br><br>
+                      4. 정치, 종교적 내용의 공연 및 행사는 허용하지 않습니다.<br><br>
+                      5. 문화마당 신청에 안내된 역사별 허용 기준(공연 허용 인원, 개인앰프, 사용용도)를
+                      지키지 않거나 음주, 욕설 등 공공장소 이용자의 정상적 이용을 방해하는 행위를 하는
+                      경우 공연 및 행사 신청을 제한합니다.
+                      <p>
+                        (1회차 : 1개월 제한, 2회차 : 3개월 제한, 3회차 : 영구 제한 / 누적 기준)<br><br>
+                        6. 부득이한 사유로 공연이 어려운 경우 신청 취소를 부탁드립니다.<br><br>
+                        7. 수도권관역급행철도에이선(동북선도시철도)/동북선도시철도운영은 공연장소를 제공하고 있으며,
+                        공연 및 행사로 인한 분쟁 및 저작권 책임은 해당 공연자 및 행사자에게 있으니 이 점
+                        유의하시어 신청해주시기 바랍니다.<br>
+                      </p>
+                    </div>
+                    <fieldset class="radio-box">
+                      <legend class="txt-hide">문화마당 공연 및 행사 시 유의사항 동의 여부</legend>
+                      <p id="agree-help" class="txt-hide">동의 또는 동의하지 않음을 선택하세요.</p>
+                      <div class="radio-item">
+                        <input type="radio" id="radio01" name="agreement01" value="yes" />
+                        <label for="radio01">위의 유의사항에 동의합니다.</label>
+                      </div>
+                      <div class="radio-item">
+                        <input type="radio" id="radio02" name="agreement01" value="no" />
+                        <label for="radio02">동의하지 않습니다.</label>
+                      </div>
+                    </fieldset>
+
+                    <h3 class="heading-sm" id="privacy-heading">개인정보 수집동의</h3>
+                    <div
+                      class="terms-box"
+                      tabindex="0"
+                      role="region"
+                      aria-label="개인정보 수집동의"
+                      aria-labelledby="privacy-heading"
+                    >
+                      동북선도시철도운영㈜는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br><br>
+                      <strong>1. 개인정보의 수집 및 이용 목적</strong><br>
+                      - 동북선도시철도선 고객의 소리 서비스 이용에 따른 본인식별 확인<br>
+                      - 고객상담, 고객불만접수 및 처리 의사소통 경로 확보<br>
+                      - 불량회원의 부정이용방지 및 허가되지 않은 사용 방지<br><br>
+
+                      <strong>2. 수집하는 개인정보의 항목</strong><br>
+                      - 필수 항목: 성명, 전화번호, 이메일<br><br>
+
+                      <strong>3. 개인정보 보유 및 이용기간</strong><br>
+                      - 게시물 등록 후 혼선방지, 불법적 사용자에 대한 관련 기관 수사협조 등의 이유로 1년간
+                      보존 후 파기 합니다.<br>
+                      - 단 개인정보 파기를 요청한 경우에는 지체 없이 파기합니다.<br><br>
+
+                      <strong
+                        >※ 위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있으나 동의를 거부할 경우
+                        고객의 소리 서비스 이용에 제한을 받을 수 있습니다.</strong
+                      >
+                    </div>
+
+                    <fieldset class="radio-box">
+                      <legend class="txt-hide">개인정보 수집 동의 여부</legend>
+                      <div class="radio-item">
+                        <input type="radio" id="radio03" name="agreement02" required />
+                        <label for="radio03">위의 정책에 동의합니다.</label>
+                      </div>
+                      <div class="radio-item">
+                        <input type="radio" id="radio04" name="agreement02" />
+                        <label for="radio04">동의하지 않습니다.</label>
+                      </div>
+                    </fieldset>
+
+                    <h3 class="heading-sm">신청자 정보</h3>
+                    <div class="form-section">
+                      <div class="form-row">
+                        <div class="form-label">
+                          <span>작성자</span>
+                        </div>
+                        <div class="form-field">
+                          <span class="form-value">홍길동</span>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-label">
+                          <span>전화번호</span>
+                        </div>
+                        <div class="form-field">
+                          <span class="form-value">010-1234-5467</span>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-label">
+                          <label for="emailLocal">이메일</label>
+                        </div>
+                        <div class="form-field">
+                          <fieldset class="email-box">
+                            <legend class="txt-hide">이메일 주소 입력</legend>
+                            <div class="input-box">
+                              <input
+                                id="emailLocal"
+                                name="emailLocal"
+                                type="text"
+                                autocomplete="off"
+                                aria-label="이메일 아이디"
+                              />
+                            </div>
+                            <span aria-hidden="true">@</span>
+                            <div class="input-box">
+                              <label for="emailDomain">
+                                <input
+                                  id="emailDomain"
+                                  name="emailDomain"
+                                  type="text"
+                                  aria-label="이메일 도메인"
+                                />
+                              </label>
+                            </div>
+                            <div class="select-box sm" data-filter="email">
+                              <button
+                                type="button"
+                                class="select-btn"
+                                aria-expanded="false"
+                                title="이메일 도메인 설정"
+                              >
+                                <span>이메일 선택</span>
+                              </button>
+                              <ul class="select-list" hidden tabindex="-1">
+                                <li>
+                                  <button type="button">
+                                    <span>naver.com</span>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button type="button">
+                                    <span>gmail.com</span>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button type="button">
+                                    <span>hanmail.net</span>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button type="button">
+                                    <span>nate.com</span>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button type="button">
+                                    <span>kakao.com</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h3 class="heading-sm">공연 및 행사 정보</h3>
+                    <div class="form-section event">
+                      <div class="form-row">
+                        <div class="form-label">
+                          <span>구분</span>
+                        </div>
+                        <div class="form-field">
+                          <div class="select-box sm">
+                            <button
+                              type="button"
+                              class="select-btn"
+                              id="select-trigger-event"
+                              aria-haspopup="listbox"
+                              aria-expanded="false"
+                              title="공연 및 행사 구분 선택"
+                            >
+                              <span>선택</span>
+                            </button>
+                            <ul class="select-list" hidden tabindex="-1">
+                              <li>
+                                <button type="button">
+                                  <span>공연</span>
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button">
+                                  <span>행사</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-label">
+                          <label for="name">공연자명</label>
+                        </div>
+                        <div class="form-field">
+                          <div class="input-box">
+                            <input type="text" id="name" name="name" placeholder="성명을 입력하세요" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-label">
+                          <label for="content01">공연구성</label>
+                        </div>
+                        <div class="form-field">
+                          <textarea name="content01" id="content01"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-label">
+                          <label for="content02">공연내용</label>
+                        </div>
+                        <div class="form-field">
+                          <textarea name="content02" id="content02"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-label">
+                          <label for="date">공연일자</label>
+                        </div>
+                        <div class="form-field">
+                          <div class="input-box date">
+                            <input type="text" id="date" name="date" placeholder="날짜를 선택해주세요" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-label">
+                          <span>공연시간</span>
+                        </div>
+                        <div class="form-field">
+                          <div class="select-wrap">
+                            <div class="select-box sm">
+                              <button
+                                type="button"
+                                class="select-btn"
+                                id="select-trigger-time"
+                                aria-expanded="false"
+                                title="공연 시작시간 선택"
+                              >
+                                <span>시작시간 선택</span>
+                              </button>
+                              <ul class="select-list" hidden tabindex="-1" role="listbox">
+                                <li>
+                                  <button type="button"><span>00:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>01:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>02:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>03:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>04:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>05:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>06:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>07:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>08:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>09:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>10:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>11:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>12:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>13:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>14:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>15:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>16:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>17:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>18:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>19:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>20:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>21:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>22:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>23:00</span></button>
+                                </li>
+                              </ul>
+                            </div>
+                            <span>~</span>
+                            <div class="select-box sm">
+                              <button
+                                type="button"
+                                class="select-btn"
+                                id="select-trigger-time2"
+                                aria-expanded="false"
+                                title="공연 종료시간 선택"
+                              >
+                                <span>종료시간 선택</span>
+                              </button>
+                              <ul class="select-list" hidden tabindex="-1">
+                                <li>
+                                  <button type="button"><span>00:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>01:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>02:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>03:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>04:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>05:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>06:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>07:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>08:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>09:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>10:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>11:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>12:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>13:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>14:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>15:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>16:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>17:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>18:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>19:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>20:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>21:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>22:00</span></button>
+                                </li>
+                                <li>
+                                  <button type="button"><span>23:00</span></button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="btn-wrap">
+                      <button type="button" class="btn-secondary sm"><span>취소</span></button>
+                      <button type="submit" class="btn-primary sm"><span>신청</span></button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <!--// header -->
-            <form id="" action="#" method="#">
-              <h3 class="heading-sm" id="notice-heading">문화마당 공연 및 행사 시 유의사항 확인</h3>
-              <div
-                class="terms-box"
-                tabindex="0"
-                role="region"
-                aria-label="공연 및 행사 시 유의사항"
-                aria-labelledby="notice-heading"
-              >
-                <strong>공연 및 행사 시 유의사항</strong><br /><br />
-                1. 공연 및 행사 시 시민 보행에 방해되지 않도록 주의해야 합니다.<br /><br />
-                2. 과도한 소음 등으로 인한 민원 발생이 되지 않도록 유의해야 합니다.<br /><br />
-                3. 물품 판매, 팁박스, 모금 행위 등 영리 목적의 상업행위는 불가합니다.<br /><br />
-                4. 정치, 종교적 내용의 공연 및 행사는 허용하지 않습니다.<br /><br />
-                5. 문화마당 신청에 안내된 역사별 허용 기준(공연 허용 인원, 개인앰프, 사용용도)를
-                지키지 않거나 음주, 욕설 등 공공장소 이용자의 정상적 이용을 방해하는 행위를 하는
-                경우 공연 및 행사 신청을 제한합니다.
-                <p>
-                  (1회차 : 1개월 제한, 2회차 : 3개월 제한, 3회차 : 영구 제한 / 누적 기준)<br /><br />
-                  6. 부득이한 사유로 공연이 어려운 경우 신청 취소를 부탁드립니다.<br /><br />
-                  7. 수도권관역급행철도에이선(동북선도시철도)/동북선도시철도운영은 공연장소를 제공하고 있으며,
-                  공연 및 행사로 인한 분쟁 및 저작권 책임은 해당 공연자 및 행사자에게 있으니 이 점
-                  유의하시어 신청해주시기 바랍니다.<br />
-                </p>
-              </div>
-              <fieldset class="radio-box">
-                <legend class="txt-hide">문화마당 공연 및 행사 시 유의사항 동의 여부</legend><!-- 웹접근성 2026-01-06 : 텍스트 수정 -->
-                <p id="agree-help" class="txt-hide">동의 또는 동의하지 않음을 선택하세요.</p><!-- 웹접근성 2026-02-06 : 추가 -->
-                <div class="radio-item">
-                  <input type="radio" id="radio01" name="agreement01" value="yes" /><!-- 웹접근성 2026-02-06 : required삭제, value 추가 -->
-                  <label for="radio01">위의 유의사항에 동의합니다.</label>
-                </div>
-                <div class="radio-item">
-                  <input type="radio" id="radio02" name="agreement01" value="no" /><!-- 웹접근성 2026-02-06 : required삭제, value 추가 -->
-                  <label for="radio02">동의하지 않습니다.</label>
-                </div>
-              </fieldset>
-
-              <h3 class="heading-sm" id="privacy-heading">개인정보 수집동의</h3>
-              <div
-                class="terms-box"
-                tabindex="0"
-                role="region"
-                aria-label="개인정보 수집동의"
-                aria-labelledby="privacy-heading"
-              ><!-- 웹접근성 2026-01-06 : aria-label 값 수정 -->
-                동북선도시철도운영㈜는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br /><br />
-                <strong>1. 개인정보의 수집 및 이용 목적</strong><br />
-                - 동북선도시철도선 고객의 소리 서비스 이용에 따른 본인식별 확인<br />
-                - 고객상담, 고객불만접수 및 처리 의사소통 경로 확보<br />
-                - 불량회원의 부정이용방지 및 허가되지 않은 사용 방지<br /><br />
-
-                <strong>2. 수집하는 개인정보의 항목</strong><br />
-                - 필수 항목: 성명, 전화번호, 이메일<br /><br />
-
-                <strong>3. 개인정보 보유 및 이용기간</strong><br />
-                - 게시물 등록 후 혼선방지, 불법적 사용자에 대한 관련 기관 수사협조 등의 이유로 1년간
-                보존 후 파기 합니다.<br />
-                - 단 개인정보 파기를 요청한 경우에는 지체 없이 파기합니다.<br /><br />
-
-                <strong
-                  >※ 위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있으나 동의를 거부할 경우
-                  고객의 소리 서비스 이용에 제한을 받을 수 있습니다.</strong
-                >
-              </div>
-
-              <fieldset class="radio-box">
-                <legend class="txt-hide">개인정보 수집 동의 여부</legend><!-- 웹접근성 2026-01-06 : 텍스트 수정 -->
-                <div class="radio-item">
-                  <input type="radio" id="radio03" name="agreement02" required />
-                  <label for="radio03">위의 정책에 동의합니다.</label>
-                </div>
-                <div class="radio-item">
-                  <input type="radio" id="radio04" name="agreement02" />
-                  <label for="radio04">동의하지 않습니다.</label>
-                </div>
-              </fieldset>
-
-              <h3 class="heading-sm">신청자 정보</h3>
-              <div class="form-section">
-                <div class="form-row">
-                  <div class="form-label">
-                    <span>작성자</span>
-                  </div>
-                  <div class="form-field">
-                    <span class="form-value">홍길동</span>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-label">
-                    <span>전화번호</span>
-                  </div>
-                  <div class="form-field">
-                    <span class="form-value">010-1234-5467</span>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-label">
-                    <label for="emailLocal">이메일</label>
-                  </div>
-                  <div class="form-field">
-                    <fieldset class="email-box">
-                      <legend class="txt-hide">이메일 주소 입력</legend>
-                      <div class="input-box">
-                        <input
-                          id="emailLocal"
-                          name="emailLocal"
-                          type="text"
-                          autocomplete="off"
-                          aria-label="이메일 아이디"
-                        />
-                      </div>
-                      <span aria-hidden="true">@</span>
-                      <div class="input-box">
-                        <label for="emailDomain"><!-- 웹접근성 2026-01-06 : 추가 -->
-                          <input
-                            id="emailDomain"
-                            name="emailDomain"
-                            type="text"
-                            aria-label="이메일 도메인"
-                          />
-                        </label>
-                      </div>
-                      <div class="select-box sm" data-filter="email">
-                        <button
-                          type="button"
-                          class="select-btn"
-                          aria-expanded="false"
-                          title="이메일 도메인 설정"
-                        ><!-- 웹접근성 2026-01-27 : id, aria-haspopup 삭제, title 추가 -->
-                          <span>이메일 선택</span>
-                        </button>
-                        <ul class="select-list" hidden tabindex="-1"><!-- 웹접근성 2026-01-27 : role 삭제 --><!-- 웹접근성 2026-01-06 : role 추가 -->
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button">
-                              <span>naver.com</span>
-                            </button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button">
-                              <span>gmail.com</span>
-                            </button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button">
-                              <span>hanmail.net</span>
-                            </button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button">
-                              <span>nate.com</span>
-                            </button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button">
-                              <span>kakao.com</span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </fieldset>
-                  </div>
-                </div>
-              </div>
-
-              <h3 class="heading-sm">공연 및 행사 정보</h3>
-              <div class="form-section event">
-                <div class="form-row">
-                  <div class="form-label">
-                    <span>구분</span>
-                  </div>
-                  <div class="form-field">
-                    <div class="select-box sm">
-                      <button
-                        type="button"
-                        class="select-btn"
-                        id="select-trigger-event"
-                        aria-haspopup="listbox"
-                        aria-expanded="false"
-                        title="공연 및 행사 구분 선택"
-                      ><!-- 웹접근성 2026-01-27 : aria-haspopup 삭제, title 추가 -->
-                        <span>선택</span>
-                      </button>
-                      <ul class="select-list" hidden tabindex="-1"><!-- 웹접근성 2026-01-06 : role 추가 -->
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button">
-                            <span>공연</span>
-                          </button>
-                        </li>
-                        <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                          <button type="button">
-                            <span>행사</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-label">
-                    <label for="name">공연자명</label>
-                  </div>
-                  <div class="form-field">
-                    <div class="input-box">
-                      <input type="text" id="name" name="name" placeholder="성명을 입력하세요" />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-label">
-                    <label for="content01">공연구성</label>
-                  </div>
-                  <div class="form-field">
-                    <textarea name="content01" id="content01"></textarea>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-label">
-                    <label for="content02">공연내용</label>
-                  </div>
-                  <div class="form-field">
-                    <textarea name="content02" id="content02"></textarea>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-label">
-                    <label for="date">공연일자</label>
-                  </div>
-                  <div class="form-field">
-                    <div class="input-box date">
-                      <input type="text" id="date" name="date" placeholder="날짜를 선택해주세요" />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-label">
-                    <span>공연시간</span>
-                  </div>
-                  <div class="form-field">
-                    <div class="select-wrap">
-                      <div class="select-box sm">
-                        <button
-                          type="button"
-                          class="select-btn"
-                          id="select-trigger-time"
-                          aria-expanded="false"
-                          title="공연 시작시간 선택"
-                        >
-                          <span>시작시간 선택</span>
-                        </button><!-- 웹접근성 2026-01-27 : aria-haspopup 삭제, title 추가 -->
-                        <ul class="select-list" hidden tabindex="-1" role="listbox"><!-- 웹접근성 2026-01-06 : role 추가 -->
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>00:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>01:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>02:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>03:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>04:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>05:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>06:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>07:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>08:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>09:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>10:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>11:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>12:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>13:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>14:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>15:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>16:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>17:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>18:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>19:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>20:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>21:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>22:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>23:00</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>~</span>
-                      <div class="select-box sm">
-                        <button
-                          type="button"
-                          class="select-btn"
-                          id="select-trigger-time2"
-                          aria-expanded="false"
-                          title="공연 종료시간 선택"
-                        ><!-- 웹접근성 2026-01-27 : id, aria-haspopup 삭제, title 추가 -->
-                          <span>종료시간 선택</span>
-                        </button>
-                        <ul class="select-list" hidden tabindex="-1"><!-- 웹접근성 2026-01-27 : role 삭제 --><!-- 웹접근성 2026-01-06 : role 추가 -->
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>00:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>01:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>02:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>03:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>04:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>05:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>06:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>07:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>08:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>09:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>10:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>11:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>12:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>13:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>14:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>15:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>16:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>17:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>18:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>19:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>20:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>21:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>22:00</span></button>
-                          </li>
-                          <li><!-- 웹접근성 2026-01-27 : role, aria-selected 삭제 -->
-                            <button type="button"><span>23:00</span></button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="btn-wrap">
-                <button type="button" class="btn-secondary sm"><span>취소</span></button>
-                <button type="submit" class="btn-primary sm"><span>신청</span></button>
-              </div>
-            </form>
+            <!--// tab -->
           </section>
           <!--// contents -->
         </div>
@@ -557,13 +670,5 @@
       <!--// footerPopup -->
     </div>
     <script type="module" src="../../js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        window.initDatePicker?.('#date', {
-          enableTime: false,
-          inline: false,
-        })
-      })
-    </script>
   </body>
 </html>

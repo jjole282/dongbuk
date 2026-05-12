@@ -193,6 +193,20 @@
       gap: rem(20);
     }
   }
+  &.type02 {
+    border: 1px solid $color-stroke04;
+    background-color: $color-primary04;
+    padding: rem(30) rem(40);
+    display: block;
+    text-align: left;
+    h3 {
+      margin-bottom: rem(8);
+    }
+    p {
+      color: $color-stroke02;
+      font-size: rem(18);
+    }
+  }
 }
 .info-box {
   position: relative;
@@ -250,10 +264,14 @@
   }
 }
 .media-box {
+  padding: 0 10.7%;
+  @include responsive {
+    padding: 0;
+  }
   ul {
     display: grid;
-    gap: rem(40);
-    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+    grid-template-columns: repeat(4, 1fr);
     @include mobile {
       grid-template-columns: repeat(2, 1fr);
       gap: rem(20);
@@ -263,10 +281,9 @@
       gap: rem(20);
     }
     li {
-      padding: rem(20) rem(20) rem(16);
+      padding: rem(10) rem(10) rem(13);
       border: 1px solid $color-stroke04;
-      border-radius: rem(16);
-      box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.07);
+      border-radius: rem(8);
       figure {
         margin-bottom: rem(16);
         border-radius: rem(16);
@@ -274,7 +291,7 @@
         overflow: hidden;
         img {
           object-fit: cover;
-          border-radius: rem(16);
+          border-radius: rem(4);
         }
       }
 
@@ -332,6 +349,30 @@
     span {
       display: block;
       color: $color-text03;
+    }
+  }
+}
+.box-primary04 {
+  margin-top: rem(40);
+  background-color: $color-primary04;
+  border-radius: rem(8);
+  padding: rem(24);
+  .list01 {
+    li {
+      position: relative;
+      padding-left: rem(12);
+      @include font(18, 700, $color: $color-primary01);
+      &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: rem(11);
+        left: 0;
+        width: rem(4);
+        height: rem(4);
+        border-radius: 50%;
+        background-color: $color-primary01;
+      }
     }
   }
 }

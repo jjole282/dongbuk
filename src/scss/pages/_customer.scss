@@ -541,17 +541,18 @@
     margin-top: rem(12);
   }
   .media-box {
+    margin-bottom: rem(80);
     ul {
-      margin-bottom: rem(40);
-      
       @include mobile {
         grid-template-columns: 1fr;
       }
       li {
         figure {
           aspect-ratio: auto;
+          margin-bottom: rem(10);
           img {
             height: rem(200);
+            vertical-align: top;
             @include mobile {
               height: auto;
             }
@@ -559,6 +560,8 @@
         }
         .title {
           text-align: center;
+          color: $color-text01;
+          margin-bottom: 0;
         }
       }
     }

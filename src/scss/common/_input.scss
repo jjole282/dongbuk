@@ -14,8 +14,13 @@
     height: rem(44);
     position: relative;
     @include font(16, 400);
-    &::placeholder {
-      color: $color-text03;
+     &::placeholder {
+      color: $color-text02 !important;
+      //opacity: 1;
+    }
+    &::-webkit-input-placeholder {
+      color: $color-text02 !important;
+      //opacity: 1;
     }
   }
   &:has(.input-unit) {
@@ -228,7 +233,6 @@
     height: rem(44);
     padding: rem(10) rem(12);
     border: 1px solid $color-stroke04;
-    border-radius: rem(8);
     background-color: $color-fill00;
     color: $color-text01;
     font-size: 1rem;
@@ -248,6 +252,17 @@
     &:read-only {
       cursor: not-allowed;
     }
+  }
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(46);
+    height: rem(46);
+    background: url('/assets/icons/ico-calendar.svg') no-repeat 0 0 / contain;
+    pointer-events: none;
   }
 }
 .custom-file {

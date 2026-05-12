@@ -1,16 +1,17 @@
 // datepicker
-/*
+
 import flatpickr from 'flatpickr'
 import { Korean } from 'flatpickr/dist/l10n/ko.js'
 import 'flatpickr/dist/flatpickr.min.css'
 // swiper
+/*
 import Swiper from 'swiper'
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'*/
 
-// 웹접근성 2026-01-27 : 전체적 수정
+
 export function initStationCardInteractions() {
   const selectBtns = Array.from(document.querySelectorAll('.station-select'))
   if (!selectBtns.length) return
@@ -340,12 +341,12 @@ export function initSelectEmail() {
     })
   })*/
 }
-/*
+
 // 날짜 선택
 export function initDatePicker(selector, options = {}) {
   // 기본 설정
   const defaultOptions = {
-    locale: 'ko',
+    locale: 'Korean',
     dateFormat: 'Y-m-d',
     minDate: new Date().fp_incr(1), // 내일부터 선택 가능
     enableTime: false, // 시간선택
@@ -393,7 +394,7 @@ export function initAccessibleDatePicker(selector, options = {}) {
   }
 
   return flatpickr(selector, accessibleOptions)
-}*/
+}
 
 function initScrollAnimation(customOptions = {}, container = document) {
   const main = document.querySelector('#wrap[data-main]')
@@ -897,6 +898,7 @@ function initCommon() {
   initSelectEmail()
   initScrollAnimation()
   initAccordionToggleAll()
+  initDatePicker('#date')
   // initAutoMainPopupSwiper()메인 페이지 자동 팝업
 }
 

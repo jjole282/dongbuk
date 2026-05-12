@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동북선도시철도</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <%- include('./components/_header') %>
+      <!--// header -->
+
+      <!-- 전체메뉴 -->
+      <%- include('./components/_allmenu.ejs') %>
+      <!--// 전체메뉴 -->
+
+      <!-- 모바일 메뉴 -->
+      <%- include('./components/_mobilemenu.ejs') %>
+      <!--// 모바일 메뉴 -->
+
+      <!-- main -->
+      <main id="sub-content" role="main">
+        <div class="inner">
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Customer Engagement</strong><span>신청하기</span>
+              </h2>
+              <div class="section-meta">
+                <ul class="location-nav">
+                  <li class="home">
+                    <a href="#"><span class="txt-hide">홈</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>고객참여</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>문화마당</span></a>
+                  </li>
+                  <li class="is-active">
+                    <span>신청하기</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-visual">
+              <img src="/assets/images/customer/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+          <!-- contents -->
+          <section id="page-content" class="page-customer">
+            <!-- tab -->
+            <div class="tab-wrap">
+              <div class="tabs" role="tablist" aria-label="이용안내">
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-1"
+                  aria-controls="panel-1"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  이용안내
+                </button>
+                <button
+                  class="tab-btn"
+                  role="tab"
+                  id="tab-2"
+                  aria-controls="panel-2"
+                  aria-selected="true"
+                  tabindex="0"
+                >
+                  문화마당
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div
+                  class="tab-panel"
+                  id="panel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                  hidden
+                >
+                  <div class="line-box type02">
+                    <h3 class="heading-sm">문화마당 위치</h3>
+                    <p>도시 생활에서 만나는 문화의 즐거움, 동북선 지하역사에서 이동만이 아닌 문화공간을 만들고 즐길 수 있습니다.</p>
+                  </div>
+                  <div class="media-box">
+                    <ul>
+                      <li>
+                        <figure>
+                          <img
+                            src="/assets/images/customer/culture-img01.png"
+                            alt="공연장 이미지"
+                          />
+                        </figure>
+                        <p class="title">공연장위치1</p>
+                      </li>
+                      <li>
+                        <figure>
+                          <img
+                            src="/assets/images/customer/culture-img02.png"
+                            alt="공연장 이미지"
+                          />
+                        </figure>
+                        <p class="title">공연장위치2</p>
+                      </li>
+                      <li>
+                        <figure>
+                          <img src="/assets/images/customer/culture-img03.png" alt="공연장 이미지" />
+                        </figure>
+                        <p class="title">공연장위치3</p>
+                      </li>
+                      <li>
+                        <figure>
+                          <img src="/assets/images/customer/culture-img04.png" alt="공연장 이미지" />
+                        </figure>
+                        <p class="title">공연장위치4</p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="text-list-box">
+                    <h3 class="text-list-title">운영시간</h3>
+                    <ul class="text-list">
+                      <li>매일 10시~20시</li>
+                    </ul>
+                  </div>
+
+                  <div class="text-list-box">
+                    <h3 class="text-list-title">공연신청</h3>
+                    <ul class="text-list">
+                      <li>하루 1회, 최대 2시간까지 가능</li>
+                    </ul>
+                  </div>
+                  <div class="table-scroll mt-20">
+                    <div class="table-wrap">
+                      <table>
+                        <caption>
+                          공연신청 - 구분,	공연허용인원, 면적, 개인엠프, 비고에 대한 정보를 제공
+                        </caption>
+                        <colgroup>
+                          <col style="width: 15%" />
+                          <col style="width: 15%" />
+                          <col style="width: 15%" />
+                          <col style="width: 15%" />
+                          <col />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">공연허용인원</th>
+                            <th scope="col">면적</th>
+                            <th scope="col">개인엠프</th>
+                            <th scope="col">비고</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>왕십리역</td>
+                            <td>4인 이하</td>
+                            <td>72㎡</td>
+                            <td>불가</td>
+                            <td>어쿠스틱 연주만 가능</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <h3 class="heading-sm mt-40">행사신청 : 하루 1회, 최대 4시간 가능</h3>
+                  <div class="table-wrap">
+                    <table>
+                      <caption>
+                        행사신청 - 구분,	사용용도,	면적에 대한 정보를 제공
+                      </caption>
+                      <colgroup>
+                        <col style="width: 20%">
+                        <col style="width: 60%">
+                        <col style="width: 20%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">사용용도</th>
+                          <th scope="col">면적</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>왕십리역</td>
+                          <td rowspan="2">사진, 전시회, 홍보, 캠페인 등</td>
+                          <td>72㎡</td>
+                        </tr>
+                        <tr>
+                          <td>고려대역</td>
+                          <td>131.76㎡</td>
+                        </tr>
+                        <tr>
+                          <td>고려대역</td>
+                          <td colspan="2">준비중</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="text-list-box mt-40">
+                    <h3 class="text-list-title">공연 및 행사 불승인 사항</h3>
+                    <ul class="text-list">
+                      <li>정당이나 종교 등 특정 사상을 전파하는 공연 및 행사</li>
+                      <li>상업행위가 주목적인 공연 및 행사</li>
+                      <li>시민의 불쾌감이나 모욕감을 주는 공연 및 행사</li>
+                      <li>역사 공간에 적합하지 않은 공연 및 행사</li>
+                      <li>
+                        문화마당 신청에 안내된 역사별 허용 기준(개인앰프, 사용용도)를 지키지 않거나 음주,
+                        욕설 등 공공장소 이용자의 정상적 이용을 방해하는 행위를 하는 경우 공연 및 행사
+                        신청을 제한합니다.
+                        <p>(1회차 : 1개월 제한, 2회차 : 3개월 제한, 3회차 : 영구 제한 / 누적 기준)</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-panel"
+                  id="panel-2"
+                  role="tabpanel"
+                  aria-labelledby="tab-2"
+                >
+                  <div class="line-box" data-animation="fade-up">
+                    <div class="line-box-body">
+                      <p class="line-box-title"><b>본인확인</b></p>
+                      <ul class="line-box-list">
+                        <li>
+                          실명인증은 인터넷상의 개인식별번호를 의하며, 주민등록번호를 사용하지 않고도
+                          본인임을 확인할 수 있는 수단입니다.
+                        </li>
+                        <li>
+                          수도권광역급행철도에이선(동북선도시철도)은 원활한 홈페이지서비스 이용과 익명의 사용자로
+                          인한 피해를 방지하고자 본인확인제도를 시행하고 있습니다.
+                        </li>
+                        <li class="text-primary">
+                          본인(휴대폰)인증을 통해 본인확인을 해 주시기 바랍니다.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="phone-auth-wrap">
+                    <p class="title">휴대폰 인증</p>
+                    <p class="desc">
+                      휴대폰인증으로 본인을 확인합니다. 단, 본인 명의의 휴대폰만 가능합니다.
+                    </p>
+                    <div class="img">
+                      <img src="/assets/images/customer/phone-img.png" alt="" />
+                    </div>
+                    <div class="btn-wrap">
+                      <button class="btn-primary lg" aria-label="휴대폰 인증하기 새 창 열림"><span>휴대폰 인증하기</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// tab -->
+          </section>
+          <!--// contents -->
+        </div>
+      </main>
+      <!--// main -->
+
+      <!-- footer -->
+      <%- include('./components/_footer.ejs') %>
+      <!--// footer -->
+
+      <!-- footerPopup -->
+      <%- include('./components/_footerpopup.ejs') %>
+      <!--// footerPopup -->
+    </div>
+    <script type="module" src="../../js/main.js"></script>
+  </body>
+</html>
