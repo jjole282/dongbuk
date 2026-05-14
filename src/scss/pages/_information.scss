@@ -481,6 +481,27 @@
     }
     &.col-04 {
       grid-template-columns: repeat(4, 1fr);
+      @include responsive {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(40);
+      }
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+        gap: rem(20);
+      }
+      .step-item {
+        @include mobile {
+          min-height: auto;
+        }
+        &::before {
+          @include responsive {
+            display: none;
+          }
+          @include mobile {
+            display: none !important;
+          }
+        }
+      }
     }
     .step-item {
       position: relative;

@@ -108,11 +108,11 @@
       .img-box-text {
         margin-top: rem(12);
         font-family: $font-family-gmarket;
-        @include font(20, $color: $color-text00);
+        @include font(20, $color: $color-stroke00);
       }
     }
     img {
-      border-radius: rem(16);
+      vertical-align: top;
       @include mobile {
         width: 100%;
         height: 100%;
@@ -145,6 +145,39 @@
     @include responsive {
       flex-direction: column;
     }
+    &-type02 {
+      margin-bottom: rem(40);
+      display: flex;
+      @include responsive {
+        flex-direction: column;
+      }
+      .img-box {
+        margin-bottom: 0;
+        flex: 1;
+      }
+      .report-item {
+        width: rem(457);
+        padding: rem(20);
+        background-color: $color-fill05;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include responsive {
+          width: 100%;
+        }
+        .ico-report {
+          margin-bottom: rem(24);
+        }
+        .report-item-title {
+          @include font(20, 600, 1.5, $color-text01);
+        }
+        .report-item-desc {
+          margin-top: rem(8);
+          text-align: center;
+        }
+      }
+    }
   }
   // 안전장비 사용법
   .tab-wrap {
@@ -168,9 +201,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: rem(40);
     margin-bottom: rem(40);
-    background-color: $color-fill05;
+    background-color: $color-primary04;
     padding: rem(40) rem(50);
-    border-radius: rem(8);
+    position: relative;
+    //border-radius: rem(8);
     @include responsive {
       grid-template-columns: repeat(2, 1fr);
       gap: rem(32);
@@ -187,14 +221,9 @@
       text-align: center;
       .step-num {
         flex-shrink: 0;
-        @include font(16, 400, $color: $color-text00);
-        background-color: $color-primary02;
-        border-radius: rem(50);
+        @include font(16, 400, $color: $color-primary01);
         @include flexCenter;
-        min-width: rem(91);
-        height: rem(36);
-        padding: 0 rem(16);
-        margin-bottom: rem(12);
+        font-weight: 700;
       }
       .step-image {
         width: rem(200);
@@ -206,8 +235,29 @@
         }
       }
       .step-title {
-        @include font(20, 700, 1.3);
+        @include font(20, 600, 1.3);
         margin-bottom: rem(8);
+        margin-top: rem(94);
+        color: $color-text01;
+        position: relative;
+        @include responsive {
+          margin-top: 0;
+        }
+        &::before {
+          display: block;
+          content: '';
+          position: absolute;
+          top: rem(-56);
+          left: 50%;
+          transform: translateX(-50%);
+          width: rem(14);
+          height: rem(14);
+          background-color: $color-stroke03;
+          border-radius: 50%;
+          @include responsive {
+            display: none;
+          }
+        }
       }
       .step-desc {
         @include font(16, $color: $color-text02);
@@ -271,15 +321,6 @@
       grid-template-columns: repeat(3, 1fr);
       position: relative;
       overflow: hidden;
-      &::before {
-        position: absolute;
-        content: '';
-        width: rem(777);
-        height: rem(300);
-        right: rem(-170);
-        bottom: rem(-88);
-        @include background('/assets/images/safety/safe-bg.png', center, 100% 100%);
-      }
 
       .step-item {
         background-color: $color-primary03;
@@ -350,12 +391,122 @@
         }
       }
     }
+    &.step-type02 {
+      border: 1px solid $color-stroke05;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(40) rem(88);
+      @include responsive {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(40);
+      }
+      @include mobile-sm {
+        grid-template-columns: repeat(1, 1fr);
+        gap: rem(20);
+        padding: rem(20);
+      }
+      .step-item {
+        padding: rem(40);
+        border-radius: rem(8);
+        background-color: $color-stroke00;
+        border: 1px solid $color-stroke04;
+        border-top: 4px solid $color-primary02;
+        .step-title {
+          margin-top: 0;
+          &::before {
+            display: none;
+          }
+        }
+        .step-num {
+          margin-bottom: rem(24);
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -19%;
+          width: rem(40);
+          height: rem(40);
+          @include background('/assets/icons/ico-arrow-circle.png', center, 100%);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+          border-radius: 999px;
+          @include responsive {
+            display: none;
+          }
+        }
+        &:last-child::before {
+          display: none;
+        }
+        &:nth-of-type(3)::before {
+          display: none;
+        }
+      }
+    }
     // AED(자동제세동기)
     &.line {
-      .step-image {
-        border: 1px solid $color-stroke04;
-        border-radius: 999px;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      padding: rem(40) 19.5%;
+      @include responsive {
+        padding: rem(40);
       }
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+        gap: rem-m(20);
+      }
+      .step-item {
+        width: 100%;
+        &:nth-child(odd) {
+          &::before {
+            display: block;
+            @include responsive {
+              display: none;
+            }
+          }
+        }
+        &:nth-child(even) {
+          &::before {
+            display: none;
+          }
+        }
+      }
+      .step-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &.step-line {
+      &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: rem(332);
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $color-stroke04;
+        @include responsive {
+          display: none;
+        }
+      }
+    }
+  }
+  .list-box-wrap {
+    display: flex;
+    gap: rem(80);
+    margin-top: rem(24);
+    @include responsive {
+      flex-direction: column;
+      gap: 0;
+    }
+    .img-box {
+      width: rem(570);
+      @include responsive {
+        width: 100%;
+      }
+    }
+    .text-list-box {
+      flex: 1;
     }
   }
   // 열차 내 안전수칙

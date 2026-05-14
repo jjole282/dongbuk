@@ -281,12 +281,7 @@ tr {
     &.type02 {
       th {
         background-color: $color-fill10;
-        &:first-child {
-          border-left: 1px solid $color-stroke08;
-        }
-        &:last-child {
-          border-right: 1px solid $color-stroke08;
-        }
+        font-weight: 700;
       }
       td {
         &:first-child {

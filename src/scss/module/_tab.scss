@@ -9,15 +9,16 @@
         gap: rem(10);
         overflow-x: auto;
         margin-bottom: rem(40);
+        align-items: stretch;
         .tab-btn {
             display: block;
             padding: rem(16);
-            border: 1px solid $color-stroke03;
+            border: 1px solid $color-stroke05;
             flex: 1;
             text-align: center;
             font-size: rem(18);
-            font-weight: 700;
-            color: $color-text00;
+            font-weight: 500;
+            color: $color-stroke02;
             font-family: $font-family-gmarket;
             &.is-active {
                 background-color: $color-primary01;

@@ -131,7 +131,7 @@ function initMobileGnbTabsAccordion() {
   const mobDepth2Link = document.querySelectorAll('.mobile-depth2-list > li > a')
   const mobDepth3List = document.querySelectorAll('.mobile-depth3-list > li')
 
-  // 2025-12-19 : 추가
+  // 2026-12-19 : 추가
   // 공통: 선택 상태 초기화
   /* 웹접근성 2026-01-27 : 삭제
   const clearSelected = (links) => {
@@ -158,7 +158,7 @@ function initMobileGnbTabsAccordion() {
       })
   }
 
-  // 탭 : 2025-12-19 수정
+  // 탭 : 2026-12-19 수정
   mobLink.forEach((link) => {
     link.addEventListener('click', (e) => {
       const li = link.closest('li')
@@ -172,7 +172,7 @@ function initMobileGnbTabsAccordion() {
       link.setAttribute('aria-selected', 'true')
       link.setAttribute('aria-current', 'page')
 
-      // 2025-12-19 추가 : (선택사항) depth1 전환 시, 다른 depth1들의 depth2 열림/선택 상태도 정리
+      // 2026-12-19 추가 : (선택사항) depth1 전환 시, 다른 depth1들의 depth2 열림/선택 상태도 정리
       mobList.forEach((item) => {
         if (item === li) return
         item.querySelectorAll('.mobile-depth2-list > li.on').forEach((d2li) => {
@@ -183,7 +183,7 @@ function initMobileGnbTabsAccordion() {
     })
   })
 
-  // depth2 아코디언 : 2025-12-19 수정
+  // depth2 아코디언 : 2026-12-19 수정
   mobDepth2Link.forEach((link) => {
     link.addEventListener('click', (e) => {
       const li = link.closest('li')

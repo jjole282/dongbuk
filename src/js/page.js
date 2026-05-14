@@ -400,7 +400,7 @@ function initScrollAnimation(customOptions = {}, container = document) {
   const main = document.querySelector('#wrap[data-main]')
   // 1. 기본 옵션
   const defaultOptions = {
-    duration: 500,// 2025-12-29 : 900값을 수정
+    duration: 500,// 2026-12-29 : 900값을 수정
     easing: 'ease',
     once: true,
     offset: 80,

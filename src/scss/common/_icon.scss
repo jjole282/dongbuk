@@ -96,6 +96,11 @@
   width: rem(28);
   height: rem(28);
 }
+.ico-down {
+  background-image: url('/assets/icons/ico-down.svg');
+  width: rem(20);
+  height: rem(20);
+}
 @for $i from 1 through 4 {
   $num: if($i < 10, '0#{$i}', '#{$i}');
   .ico-safe-#{$num} {

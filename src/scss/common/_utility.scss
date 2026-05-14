@@ -57,6 +57,9 @@
 .mt-40 {
   margin-top: rem(40) !important;
 }
+.pd-0 {
+  padding: 0 !important;
+}
 .pl-24 {
   padding-left: rem(24) !important;
 }
@@ -157,6 +160,7 @@
 .fw-400 {
   font-weight: 400 !important;
 }
+
 
 // animation
 [data-animation] {

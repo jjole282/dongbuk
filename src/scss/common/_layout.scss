@@ -133,7 +133,7 @@ body {
   }
   .inner {
     position: relative;
-    max-width: $layoutMainWidth;
+    max-width: $layoutSubWidth;
     margin: 0 auto;
     @include flex;
     @include desktop-medium {

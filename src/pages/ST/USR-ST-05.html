@@ -22,67 +22,39 @@
       <!-- main -->
       <main id="sub-content" role="main">
         <div class="inner">
-          <!-- lnb -->
-          <aside id="lnb-layout" class="lnb-wrap">
-            <!-- title -->
-            <div class="lnb-title">
-              <strong>안전/기술</strong>
-            </div>
-            <!--// title -->
-            <!-- menu -->
-            <ul class="lnb-list">
-              <li>
-                <a href="#"><span>안전관리체계</span></a>
-              </li>
-              <li>
-                <a href="#"><span>비상시 행동요령</span></a>
-              </li>
-              <li class="is-active">
-                <a href="#"><span>안전장비 및 사용법</span></a>
-              </li>
-              <li>
-                <a href="#"><span>지하철이용 안전수칙</span></a>
-              </li>
-              <li>
-                <a href="#"><span>종합관제센터</span></a>
-              </li>
-              <li>
-                <a href="#"><span>차량소개</span></a>
-              </li>
-            </ul>
-            <!--// menu -->
-          </aside>
-          <!--// lnb -->
-          <!-- contents -->
-          <section id="page-content" class="page-safety">
-            <!-- header -->
-            <div class="section-header">
-              <h2 class="section-title">안전장비 및 사용법</h2>
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Safety/Technology</strong><span>안전장비 및 사용법</span>
+              </h2>
               <div class="section-meta">
                 <ul class="location-nav">
-                  <!-- 웹접근성 2026-01-27 : 추가 -->
                   <li class="home">
                     <a href="#"><span class="txt-hide">홈</span></a>
                   </li>
-                  <!--// 웹접근성 2026-01-27 : 추가 -->
                   <li>
                     <a href="#"><span>안전/기술</span></a>
                   </li>
+                  <li>
+                    <a href="#"><span>안전관리</span></a>
+                  </li>
                   <li class="is-active">
-                    <a href="#"><span>안전장비 및 사용법</span></a>
+                    <span>안전장비 및 사용법</span>
                   </li>
                 </ul>
-                <div class="tool-button">
-                  <button type="button" class="btn-print" onclick="window.print()">
-                    <span class="txt-hide">프린트하기</span>
-                  </button>
-                </div>
               </div>
             </div>
-            <!--// header -->
+            <div class="header-visual">
+              <img src="/assets/images/safety/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
             <!-- tab -->
-            <div class="tab-wrap print-block"><!-- 2025-12-23 : print-block 클래스 추가 -->
-              <div class="tabs" role="tablist" aria-label="안정장비 사용법"><!-- 웹접근성 2026-01-27 : aria-label 값 변경 -->
+            <div class="tab-wrap print-block">
+              <div class="tabs" role="tablist" aria-label="안정장비 사용법">
                 <button
                   class="tab-btn is-active"
                   role="tab"
@@ -141,15 +113,15 @@
                   id="panel-1"
                   role="tabpanel"
                   aria-labelledby="tab-1"
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <!-- 소화기 사용법 -->
                   <h3 class="heading-sm">소화기 사용법</h3>
-                  <ol class="step-wrap" data-animation="fade-up">
+                  <ol class="step-wrap step-line">
                     <li class="step-item" data-animation="fade-up">
-                      <span class="step-num">STEP 1</span>
                       <div class="step-image">
                         <img src="/assets/images/safety/fire-step01.png" alt="소화기 안전핀 제거" />
                       </div>
+                      <span class="step-num">STEP 1</span>
                       <div class="step-title">안전핀 제거</div>
                       <p class="step-desc">
                         소화기의 안전핀을 뽑습니다.<br />
@@ -158,10 +130,10 @@
                       <i class="ico-arrow-right02" aria-hidden="true"></i>
                     </li>
                     <li class="step-item" data-animation="fade-up">
-                      <span class="step-num">STEP 2</span>
                       <div class="step-image">
                         <img src="/assets/images/safety/fire-step02.png" alt="소화기 화재 방향 조준" />
                       </div>
+                      <span class="step-num">STEP 2</span>
                       <div class="step-title">화재 방향 조준</div>
                       <p class="step-desc">
                         호스를 불 쪽으로 향합니다.<br />
@@ -170,19 +142,19 @@
                       <i class="ico-arrow-right02" aria-hidden="true"></i>
                     </li>
                     <li class="step-item" data-animation="fade-up">
-                      <span class="step-num">STEP 3</span>
                       <div class="step-image">
                         <img src="/assets/images/safety/fire-step03.png" alt="소화기 레버 당기기" />
                       </div>
+                      <span class="step-num">STEP 3</span>
                       <div class="step-title">상단 레버</div>
                       <p class="step-desc">상단 레버(손잡이)를<br />힘껏 움켜잡습니다.</p>
                       <i class="ico-arrow-right02" aria-hidden="true"></i>
                     </li>
                     <li class="step-item" data-animation="fade-up">
-                      <span class="step-num">STEP 4</span>
                       <div class="step-image">
                         <img src="/assets/images/safety/fire-step04.png" alt="소화기 약제 방사" />
                       </div>
+                      <span class="step-num">STEP 4</span>
                       <div class="step-title">약제 방사</div>
                       <p class="step-desc">불길 양 옆으로 골고루 약제를<br />방사합니다.</p>
                     </li>
@@ -210,7 +182,7 @@
                   role="tabpanel"
                   aria-labelledby="tab-2"
                   hidden
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
                 </div>
 
@@ -220,7 +192,7 @@
                   role="tabpanel"
                   aria-labelledby="tab-3"
                   hidden
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
                 </div>
 
@@ -230,7 +202,7 @@
                   role="tabpanel"
                   aria-labelledby="tab-4"
                   hidden
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
                 </div>
 
@@ -240,7 +212,7 @@
                   role="tabpanel"
                   aria-labelledby="tab-5"
                   hidden
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
                 </div>
               </div>

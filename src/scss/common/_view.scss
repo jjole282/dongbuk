@@ -30,8 +30,8 @@
     }
   }
   .info-area {
-    //padding: rem(16) rem(20);
-    //border-top: 1px solid $color-stroke09;
+    padding: rem(16) rem(20);
+    border-top: 1px solid $color-stroke09;
     display: flex;
     gap: rem(20);
     @include mobile-sm {
@@ -89,13 +89,13 @@
       }
     }
     .file-area {
-      margin-top: rem(20);
+      margin-top: 0;
       display: flex;
       align-items: center;
       padding: rem(23) rem(20);
-      background-color: $color-fill12;
-      border-radius: rem(16);
-      border: 1px solid $color-fill11;
+      background-color: $color-fill06;
+      border-radius: rem(8);
+      border: 1px solid $color-stroke05;
       strong {
         position: relative;
         flex-shrink: 0;
@@ -112,18 +112,35 @@
         gap: rem(8);
         flex: 1;
         min-width: 0;
-        li > a {
+        li {
           display: flex;
-          align-items: center;
-          min-width: 0;
-          @include font(16, 400, $color: $color-text09);
-          i {
-            flex-shrink: 0;
-            margin-right: rem(4);
-          }
-          .ellipsis {
-            width: 100%;
+          gap: rem(10);
+          > a {
+            display: flex;
+            align-items: center;
             min-width: 0;
+            @include font(16, 400, $color: $color-text02);
+            i {
+              flex-shrink: 0;
+              margin-right: rem(4);
+              &.ico-file {
+                background-image: url('/assets/icons/ico-file-gray-24.svg');
+              }
+            }
+            .ellipsis {
+              width: 100%;
+              min-width: 0;
+            }
+          }
+          .btn-wrap {
+            margin-top: 0;
+            .btn-line {
+              border-radius: rem(8);
+              span {
+                font-size: rem(14);
+                margin-left: rem(4);
+              }
+            }
           }
         }
       }
@@ -146,6 +163,9 @@
       }
     }
     .img-area {
+      img {
+        vertical-align: top;
+      }
       & + .img-area {
         margin-top: rem(20);
       }
@@ -198,7 +218,7 @@
       width: 100%;
       overflow: auto;
       table {
-        // width: auto !important; 2025-12-17 : 사용자가 테이블 생성시 width px값 자동 입력되서 삭제
+        // width: auto !important; 2026-12-17 : 사용자가 테이블 생성시 width px값 자동 입력되서 삭제
         th,
         td {
           border: 1px solid #ddd;
@@ -293,6 +313,13 @@
         }
         @include font(18, 700, $color: $color-primary01);
       }
+    }
+  }
+  //faq
+  &.faq-view {
+    .info-area {
+      border-top: 0 none;
+      padding: 0;
     }
   }
 }

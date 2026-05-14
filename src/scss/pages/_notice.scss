@@ -1,0 +1,21 @@
+@use '@/scss/common/mixin' as *;
+@use '@/scss/common/variable' as *;
+@use '@/scss/common/color' as *;
+
+.page-notice {
+  // 알림마당
+  .table-view {
+    .cont-area {
+      padding: rem(20);
+      .text-area {
+        padding: rem(20) 0 0;
+      }
+      .file-area {
+        margin-top: rem(20);
+      }
+      .subtitle-area {
+        margin-bottom: rem(40);
+      }
+    }
+  }
+}

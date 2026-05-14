@@ -22,67 +22,39 @@
       <!-- main -->
       <main id="sub-content" role="main">
         <div class="inner">
-          <!-- lnb -->
-          <aside id="lnb-layout" class="lnb-wrap">
-            <!-- title -->
-            <div class="lnb-title">
-              <strong>안전/기술</strong>
-            </div>
-            <!--// title -->
-            <!-- menu -->
-            <ul class="lnb-list">
-              <li>
-                <a href="#"><span>안전관리체계</span></a>
-              </li>
-              <li>
-                <a href="#"><span>비상시 행동요령</span></a>
-              </li>
-              <li class="is-active">
-                <a href="#"><span>안전장비 및 사용법</span></a>
-              </li>
-              <li>
-                <a href="#"><span>지하철이용 안전수칙</span></a>
-              </li>
-              <li>
-                <a href="#"><span>종합관제센터</span></a>
-              </li>
-              <li>
-                <a href="#"><span>차량소개</span></a>
-              </li>
-            </ul>
-            <!--// menu -->
-          </aside>
-          <!--// lnb -->
-          <!-- contents -->
-          <section id="page-content" class="page-safety">
-            <!-- header -->
-            <div class="section-header">
-              <h2 class="section-title">안전장비 및 사용법</h2>
+          <!-- header -->
+          <div class="section-header">
+            <div class="header-info">
+              <h2 class="section-title">
+                <strong>Safety/Technology</strong><span>안전장비 및 사용법</span>
+              </h2>
               <div class="section-meta">
                 <ul class="location-nav">
-                  <!-- 웹접근성 2026-01-27 : 추가 -->
                   <li class="home">
                     <a href="#"><span class="txt-hide">홈</span></a>
                   </li>
-                  <!--// 웹접근성 2026-01-27 : 추가 -->
                   <li>
                     <a href="#"><span>안전/기술</span></a>
                   </li>
+                  <li>
+                    <a href="#"><span>안전관리</span></a>
+                  </li>
                   <li class="is-active">
-                    <a href="#"><span>안전장비 및 사용법</span></a>
+                    <span>안전장비 및 사용법</span>
                   </li>
                 </ul>
-                <div class="tool-button">
-                  <button type="button" class="btn-print" onclick="window.print()">
-                    <span class="txt-hide">프린트하기</span>
-                  </button>
-                </div>
               </div>
             </div>
-            <!--// header -->
+            <div class="header-visual">
+              <img src="/assets/images/safety/sub-visual.jpg" alt="">
+            </div>
+          </div>
+          <!--// header -->
+          <!-- contents -->
+          <section id="page-content" class="page-safety">
             <!-- tab -->
             <div class="tab-wrap">
-              <div class="tabs" role="tablist" aria-label="안정장비 사용법"><!-- 웹접근성 2026-01-27 : aria-label 값 변경 -->
+              <div class="tabs" role="tablist" aria-label="안정장비 사용법">
                 <button
                   class="tab-btn"
                   role="tab"
@@ -142,7 +114,7 @@
                   role="tabpanel"
                   aria-labelledby="tab-1"
                   hidden
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
                 </div>
 
@@ -152,7 +124,7 @@
                   role="tabpanel"
                   aria-labelledby="tab-2"
                   hidden
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
                 </div>
                 <div
@@ -160,7 +132,7 @@
                   id="panel-3"
                   role="tabpanel"
                   aria-labelledby="tab-3"
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
                 </div>
                 <div
@@ -169,7 +141,7 @@
                   role="tabpanel"
                   aria-labelledby="tab-4"
                   hidden
-                ><!-- 웹접근성 2026-01-06 : aria-hidden, tabindex 삭제 -->
+                >
                   <p class="txt-hide">이 탭에는 현재 제공되는 정보가 없습니다.</p>
                 </div>
                 <div
@@ -177,42 +149,35 @@
                   id="panel-5"
                   role="tabpanel"
                   aria-labelledby="tab-5"
-                ><!-- 웹접근성 2026-01-06 : aria-hidden 삭제 -->
+                >
                   <!-- AED(자동제세동기) 사용법 -->
-                  <ol class="step-wrap line" data-animation="fade-up">
+                  <ol class="step-wrap step-type02 line" data-animation="fade-up">
                     <li class="step-item" data-animation="fade-up">
-                      <span class="step-num">STEP 1</span>
+                      <span class="step-num">STEP 1.</span>
                       <div class="step-image">
-                        <img src="/assets/images/safety/aed-step01.png" alt="자동심장충격기 전원켜기" />
-                      </div>
-                      <div class="step-title">자동심장충격기 전원켜기</div>
-                      <i class="ico-arrow-right02" aria-hidden="true"></i>
-                    </li>
-                    <li class="step-item" data-animation="fade-up">
-                      <span class="step-num">STEP 2</span>
-                      <div class="step-image">
-                        <img src="/assets/images/safety/aed-step02.png" alt="두 개의 패드 부착" />
-                      </div>
-                      <div class="step-title">두 개의 패드 부착</div>
-                      <i class="ico-arrow-right02" aria-hidden="true"></i>
-                    </li>
-                    <li class="step-item" data-animation="fade-up">
-                      <span class="step-num">STEP 3</span>
-                      <div class="step-image">
-                        <img src="/assets/images/safety/aed-step03.png" alt="심장리듬 분석" />
-                      </div>
-                      <div class="step-title">
-                        환자에게서 손을 떼고<br />
-                        심장리듬 분석
+                        <img src="/assets/images/safety/aed-step01.png" alt="1.전원켜기:기기에서 나오는 음성 지시를 따르세요." />
                       </div>
                       <i class="ico-arrow-right02" aria-hidden="true"></i>
                     </li>
                     <li class="step-item" data-animation="fade-up">
-                      <span class="step-num">STEP 4</span>
+                      <span class="step-num">STEP 2.</span>
                       <div class="step-image">
-                        <img src="/assets/images/safety/aed-step04.png" alt="제세동(심장충격) 시행" />
+                        <img src="/assets/images/safety/aed-step02.png" alt="2.패드부착:[Pad 1] 오른쪽 빗장뼈(쇄골) 아래, [Pad 2] 왼쪽 젖꼭지 아래 중간 겨드랑이 선" />
                       </div>
-                      <div class="step-title">제세동(심장충격)<br />시행하기</div>
+                      <i class="ico-arrow-right02" aria-hidden="true"></i>
+                    </li>
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 3.</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/aed-step03.png" alt="3.심장 리듬 분석 : 환자에게서 손을 떼세요" />
+                      </div>
+                      <i class="ico-arrow-right02" aria-hidden="true"></i>
+                    </li>
+                    <li class="step-item" data-animation="fade-up">
+                      <span class="step-num">STEP 4.</span>
+                      <div class="step-image">
+                        <img src="/assets/images/safety/aed-step04.png" alt="4. 전기 충격 시행 : 쇼크 버튼을 누른 후 가슴 압박을 다시 시작하세요. 심장 충격 필요" />
+                      </div>
                     </li>
                   </ol>
                   <!--// AED(자동제세동기) 사용법 -->

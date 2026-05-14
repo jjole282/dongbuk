@@ -307,9 +307,26 @@
       }
     }
     &.video-list {
+      grid-template-columns: repeat(3, 1fr);
       li {
         position: relative;
         min-width: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: $color-primary04;
+        border-color: $color-stroke05;
+        figure {
+          border-radius: 0;
+          img {
+            border-radius: rem(8);
+          }
+        }
+        .title {
+          padding: 0 rem(20);
+        }
+        .date {
+          padding: 0 rem(20) rem(20);
+        }
         .play-btn {
           position: absolute;
           left: 50%;
@@ -317,7 +334,7 @@
           transform: translate(-50%, -50%);
           width: rem(60);
           height: rem(60);
-          @include background('/images/notice/playbtn.png', center, 100% 100%);
+          @include background('/assets/images/notice/playbtn.png', center, 100% 100%);
         }
         /*
         &::after {
