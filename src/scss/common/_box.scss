@@ -49,7 +49,7 @@
   gap: rem(24);
   padding: rem(36);
   background-color: $color-primary04;
-  border-radius: rem(8);
+  border: 1px solid $color-stroke04;
   color: $color-text01;
   margin-bottom: rem(40);
   &-img-wrap {

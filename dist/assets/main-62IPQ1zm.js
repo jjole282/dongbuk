@@ -275,7 +275,7 @@ function activateMainTab(tabBtns, activeIndex) {
     const panel = document.getElementById(panelId);
     const isActive = i === activeIndex;
     btn.setAttribute("aria-selected", isActive);
-    btn.setAttribute("tabindex", isActive ? "0" : "-1");
+    btn.removeAttribute("tabindex");
     btn.classList.toggle("is-active", isActive);
     if (panel) {
       panel.hidden = !isActive;
@@ -369,7 +369,7 @@ function activateSubTab(subBtns, activeIndex) {
     const panel = document.getElementById(panelId);
     const isActive = i === activeIndex;
     btn.setAttribute("aria-selected", String(isActive));
-    btn.setAttribute("tabindex", isActive ? "0" : "-1");
+    btn.removeAttribute("tabindex");
     btn.classList.toggle("is-active", isActive);
     if (panel) {
       panel.hidden = !isActive;
@@ -967,7 +967,7 @@ const home = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty
           tabs.forEach((tab, i) => {
             const selected = i === index;
             tab.setAttribute("aria-selected", String(selected));
-            tab.setAttribute("tabindex", selected ? "0" : "-1");
+            tab.removeAttribute("tabindex");
             tab.classList.toggle("is-active", selected);
             const panelId = tab.getAttribute("aria-controls");
             if (!panelId) return;

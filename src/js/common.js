@@ -262,7 +262,7 @@ function activateMainTab(tabBtns, activeIndex) {
     const isActive = i === activeIndex
 
     btn.setAttribute('aria-selected', isActive)
-    btn.setAttribute('tabindex', isActive ? '0' : '-1')
+    btn.removeAttribute('tabindex')//btn.setAttribute('tabindex', isActive ? '0' : '-1')
     btn.classList.toggle('is-active', isActive)
 
     if (panel) {
@@ -378,7 +378,7 @@ function activateSubTab(subBtns, activeIndex) {
 
      // ✅ [ADD] roving tabindex + aria-selected
     btn.setAttribute('aria-selected', String(isActive))
-    btn.setAttribute('tabindex', isActive ? '0' : '-1')
+    btn.removeAttribute('tabindex')//btn.setAttribute('tabindex', isActive ? '0' : '-1')
     btn.classList.toggle('is-active', isActive)
 
     if (panel) {

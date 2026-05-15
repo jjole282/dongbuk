@@ -57,7 +57,7 @@
             const selected = i === index;
 
             tab.setAttribute('aria-selected', String(selected));
-            tab.setAttribute('tabindex', selected ? '0' : '-1');
+            tab.removeAttribute('tabindex');//tab.setAttribute('tabindex', selected ? '0' : '-1');
             tab.classList.toggle('is-active', selected);
 
             const panelId = tab.getAttribute('aria-controls');
