@@ -4,12 +4,11 @@ import flatpickr from 'flatpickr'
 import { Korean } from 'flatpickr/dist/l10n/ko.js'
 import 'flatpickr/dist/flatpickr.min.css'
 // swiper
-/*
 import Swiper from 'swiper'
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/pagination'*/
+import 'swiper/css/pagination'
 
 
 export function initStationCardInteractions() {
@@ -891,6 +890,18 @@ document.addEventListener('mousedown', markPointer, true)
   
 }
 
+// 연혁
+const swiper = new Swiper('.history-swiper', {
+  modules: [Navigation, A11y],
+  slidesPerView: 'auto',
+  spaceBetween: 180,
+
+  navigation: {
+    nextEl: '.history-swiper-next',
+    prevEl: '.history-swiper-prev',
+  },
+})
+
 function initCommon() {
   initStationCardInteractions()
   initQuickMenuSlide()
@@ -900,6 +911,7 @@ function initCommon() {
   initAccordionToggleAll()
   initDatePicker('#date')
   // initAutoMainPopupSwiper()메인 페이지 자동 팝업
+  //initHistorySwiper()
 }
 
 document.addEventListener('DOMContentLoaded', initCommon)

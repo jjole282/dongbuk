@@ -8,6 +8,9 @@ body {
   text-rendering: optimizeLegibility;
   font-weight: 500;
 }
+body {
+  overflow-x: hidden;
+}
 .skip-link {
   position: absolute;
   left: 0;
@@ -874,7 +877,7 @@ body.scroll-lock {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: rem(60);
+      margin-bottom: rem(80);
       @include responsive {
         flex-direction: column;
         align-items: flex-start;
@@ -1003,6 +1006,9 @@ body.scroll-lock {
         width: 48.6%;
         @include responsive {
           width: 100%;
+        }
+        img {
+          vertical-align: top;
         }
       }
     }

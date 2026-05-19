@@ -5,68 +5,46 @@
 .page-intro {
   // 경영이념
   .service-wrap {
-    @include background('/assets/images/intro/sg-img.png', center, cover);
-    color: $color-text00;
+    background-color: $color-primary04;
     text-align: center;
-    padding-top: rem(80);
-    .service-tit-sm {
-      position: relative;
-      @include font(14, 300, 1.5);
-      margin-bottom: rem(27);
-      &::before {
-        position: absolute;
-        content: '';
-        width: rem(28);
-        height: 1px;
-        background-color: $color-fill00;
-        top: rem(-4);
-        left: 50%;
-        transform: translateX(-50%);
-      }
+    padding: rem(60) rem(120);
+    text-align: center;
+    @include responsive {
+      padding: rem-m(40);
+    }
+    @include mobile {
+      padding: rem-m(20);
     }
     .service-tit {
-      @include font(32, 700, 1.3);
+      display: inline-block;
+      margin-bottom: rem(40);
+      @include font(28, 700, 1.5);
       font-family: $font-family-gmarket;
-      @include mobile {
-        font-size: rem(28);
-      }
+      color: $color-stroke00;
+      background-color: $color-secondary03;
+      padding: rem(17) rem(32);
       @include mobile-sm {
         font-size: rem(24);
       }
     }
     .service-box {
-      margin-top: rem(151);
-      .service-list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        border-top: 1px solid rgba(255, 255, 255, 0.35);
-        @include mobile {
-          grid-template-columns: repeat(1, 4fr);
-        }
-        li {
-          padding: rem(32) 0;
-          transition: background-color 0.3s ease;
-          & + li {
-            border-left: 1px solid rgba(255, 255, 255, 0.35);
-            @include mobile {
-              border-left: none;
-              border-top: 1px solid rgba(255, 255, 255, 0.35);
-            }
-          }
-          &:hover {
-            background-color: rgba(15, 45, 148, 0.7);
-          }
-          .service-content {
-            .service-title {
-              margin-top: rem(24);
-              @include font(20, 700, 1.3);
-            }
-            .service-text {
-              margin-top: rem(8);
-              @include font(16, 500, 1.5);
-            }
-          }
-        }
+      margin-top: rem(40);
+      padding: 0 20%;
+      @include responsive {
+        padding: 0 rem-m(20);
+      }
+      span {
+        display: block;
+        @include font(24, 500);
+      }
+      strong {
+        margin-top: rem(20);
+        word-break: break-word;
+        @include font(40, 700);
+      }
+      p {
+        margin-top: rem(20);
+        @include font(18, 700);
       }
     }
   }
@@ -78,20 +56,22 @@
       &-img {
         @include mobile-sm {
           width: rem-m(200);
+          text-align: center;
         }
       }
       &-desc {
         margin-top: rem(24);
         text-align: center;
+        color: $color-text01;
       }
     }
     .ci-section {
-      margin-top: rem(60);
       &-title {
         @include font(24, 700);
         margin-bottom: rem(24);
         font-size: rem(24) !important;
         font-family: $font-family-base !important;
+        color: $color-text01;
       }
       &-body {
         .ci-imgs {
@@ -100,19 +80,8 @@
           border-radius: rem(16);
           padding: rem(33) 0;
           > .ci-img {
-            width: 50%;
             @include flexCenter();
             position: relative;
-            &:first-child::after {
-              content: '';
-              position: absolute;
-              right: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              width: 1px;
-              height: rem(100);
-              background-color: $color-stroke05;
-            }
             img {
               @include mobile-sm {
                 padding: rem-m(20);
@@ -133,6 +102,44 @@
           justify-content: end;
           button span {
             margin-right: rem(4);
+          }
+        }
+      }
+      &.type01 {
+        margin-top: rem(60);
+        .ci-imgs {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          @include mobile {
+            gap: rem-m(20);
+          }
+          .ci-img {
+            @include mobile {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .ci-section-list {
+      margin-top: rem(60);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: rem(60) rem(40);
+      > li {
+        width: calc(50% - rem(20));
+        @include mobile {
+          width: 100%;
+        }
+        .ci-section-body {
+          .ci-imgs {
+            padding: rem(45);
+            min-height: rem(250);
+            @include mobile {
+              padding: rem-m(20);
+            }
           }
         }
       }
@@ -164,6 +171,12 @@
         @include mobile-sm {
           padding: rem-m(30);
         }
+        .line-box-type02 {
+          border-top: 1px solid $color-stroke04;
+          border-bottom: 1px solid $color-stroke04;
+          padding: rem(30);
+          background-color: $color-fill06;
+        }
         &::after {
           content: '';
           position: absolute;
@@ -171,7 +184,7 @@
           right: rem(-92);
           width: rem(315);
           height: rem(44);
-          background-color: #041495;
+          background-color: $color-primary01;
           transform: rotate(45deg);
           @include mobile-sm {
             display: none;
@@ -184,7 +197,7 @@
           left: rem(-92);
           width: rem(315);
           height: rem(44);
-          background-color: #041495;
+          background-color: $color-primary01;
           transform: rotate(45deg);
           @include mobile-sm {
             display: none;
@@ -195,12 +208,14 @@
         @include font(40, 700);
         font-family: $font-family-gmarket;
         text-align: center;
+        color: $color-text00;
+        margin-bottom: rem(50);
         @include mobile-sm {
           font-size: rem-m(25);
         }
       }
       ol {
-        margin-top: rem(50);
+        margin-top: rem(36);
         @include mobile-sm {
           margin-top: rem-m(25);
         }
@@ -219,7 +234,7 @@
             border-radius: rem(999);
             background-color: $color-primary01;
             @include flexCenter();
-            @include font(18, 700, $color: $color-text00);
+            @include font(18, 700, $color: $color-stroke00);
             font-family: $font-family-gmarket;
           }
           .text {
@@ -245,23 +260,29 @@
           & + li {
             margin-top: rem(36);
           }
+          &:nth-of-type(even) {
+            .label {
+              background-color: $color-fill03;
+            }
+          }
         }
       }
       .date {
         margin: rem(50);
         text-align: center;
         font-size: rem(24);
+        color: $color-text01;
       }
       .box {
         display: flex;
         align-items: center;
         justify-content: flex-end;
         div:first-child {
-          width: rem(155);
-          margin-right: rem(50);
+          width: rem(84);
+          margin-right: rem(243);
         }
         div:last-child {
-          width: rem(264);
+          width: rem(245);
         }
       }
     }
@@ -301,31 +322,57 @@
     }
   }
   // 연혁
-  .history-wrap {
-    .history-box {
-      @include background('/assets/images/intro/sg-img02.png', center, cover);
-      color: $color-text00;
-      text-align: center;
-      padding: rem(70) 0;
+  .history-swiper {
+    position: relative;
+    margin-top: rem(40);
+    max-width: none;
+    width: calc(100vw - ((100vw - 1400px) / 2));
+    overflow: hidden;
+    @include responsive {
+      width: 100%;
     }
-    .history-tit-sm {
+    .history-nav {
+      position: absolute;
+      right: calc((100vw - 1200px) / 2);
+      top: -90px;
+      z-index: 10;
+    }
+
+    .swiper-wrapper {
+      padding-top: rem(24);
       position: relative;
-      @include font(14, 300, 1.5);
-      margin-bottom: rem(27);
-      &::before {
-        position: absolute;
-        content: '';
-        width: rem(28);
-        height: 1px;
-        background-color: $color-fill00;
-        top: rem(-4);
-        left: 50%;
-        transform: translateX(-50%);
-      }
+      z-index: 1;
+    }
+
+    .swiper-slide {
+      width: rem(315);
+      flex-shrink: 0;
+    }
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: rem(4);
+      background-color: $color-primary01;
+      z-index: 2;
+    }
+  }
+  .history-wrap {
+    .history-head {
+      position: relative;
+    }
+    .history-box {
+      color: $color-text01;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .history-tit {
-      @include font(32, 700, 1.3);
+      @include font(40, 700, 1.5);
       font-family: $font-family-gmarket;
+      color: $color-text01;
       @include mobile {
         font-size: rem(28);
       }
@@ -336,101 +383,76 @@
     .history-list {
       margin-top: rem(40);
       position: relative;
-      height: rem(680);
-      padding-left: rem(32);
       @include mobile {
         height: auto;
       }
       @include mobile-sm {
         padding: 0 rem(30);
       }
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: rem(272);
-        width: 1px;
-        height: 100%;
-        background-color: $color-stroke05;
-        @include mobile {
-          left: rem(130);
+      .left {
+        @include font(28, 700, $color:$color-primary01);
+        font-family: $font-family-gmarket;
+      }
+      .right {
+        margin-top: rem(20);
+        .date {
+          @include font(20, 600, $color:$color-text01);
         }
-        @include mobile-sm {
-          //left: 47.8%;
+        .text {
+          font-size: rem(18);
+          margin-left: rem(20);
         }
       }
-      > li {
-        display: grid;
-        grid-template-columns: rem(240) rem(20) 1fr; // left / dot / right
-        align-items: start;
-        @include mobile {
-          grid-template-columns: rem(100) rem(20) 1fr;
+      .thumb {
+        margin-top: rem(24);
+      }
+    }
+    .history-nav {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: rem(10);
+      overflow: initial;
+      width: rem(110);
+      [class^='history-swiper'] {
+        position: relative;
+        width: rem(50);
+        height: rem(50);
+        border: 2px solid $color-primary01;
+        border-radius: 50%;
+        background-color: $color-fill00;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+        &::after {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: rem(8);
+          height: rem(8);
+          margin-left: rem(-4);
+          transform: translate(-50%, -50%);
+          width: rem(6);
+          height: rem(6);
+          color: $color-text01;
+          border-top: 2px solid $color-primary01;
         }
-        @include mobile-sm {
-          //grid-template-columns: repeat(3, 1fr);
-        }
-        &:first-child {
-          padding-top: rem(10);
-        }
-        & + li {
-          padding-top: rem(109);
-        }
-        .dot {
-          width: rem(19);
-          height: rem(19);
-          border: 4px solid #014195;
-          border-radius: 999px;
-          z-index: 1;
-          background-color: $color-fill00;
-          box-sizing: border-box;
-          grid-column: 2;
-          justify-self: start;
-          transform: translateX(-50%);
-          margin-top: 4px;
-          @include mobile {
-            grid-template-columns: repeat(3, 1fr);
-            justify-self: center;
-          }
-        }
-        .left {
-          position: relative;
-          .year {
-            @include font(24, 700);
-          }
-        }
-        .right {
-          position: relative;
-          display: flex;
-          align-items: center;
-          flex: 1;
-          padding-left: rem(80);
-          gap: rem(20);
-          @include mobile {
-            flex-direction: column;
-            padding-left: 0;
-            align-items: flex-start;
-          }
-          .date {
-            display: inline-block;
-            width: rem(120);
-            @include font(20, 700, 1.3);
-          }
-          .text {
-            @include font(18, 600, $color: $color-text02);
-            @include mobile-sm {
-              font-size: rem-m(14);
-            }
-          }
-          ul li {
-            display: flex;
-            gap: rem(20);
-            @include mobile {
-              flex-direction: column;
-            }
-            & + li {
-              margin-top: rem(30);
-            }
-          }
+      }
+      .history-swiper-prev::after {
+        border-left: 2px solid $color-primary01;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+
+      .history-swiper-next::after {
+        border-right: 2px solid $color-primary01;
+        transform: translateY(-50%) rotate(45deg);
+      }
+      .swiper-button-disabled {
+        border-color: #9FA0A0;
+        &::after {
+          border-color: #9FA0A0;
         }
       }
     }
@@ -454,7 +476,7 @@
       .location-text {
         strong {
           display: block;
-          @include font(28, 400, $color: $color-text00);
+          @include font(28, 400, $color: $color-stroke00);
           font-family: $font-family-gmarket;
           margin-bottom: rem(8);
           @include mobile-sm {
@@ -462,7 +484,7 @@
           }
         }
         p {
-          @include font(18, 500, $color: $color-text00);
+          @include font(18, 500, $color: $color-stroke00);
           span {
             font-weight: 700;
             font-family: $font-family-gmarket;
@@ -535,13 +557,18 @@
               height: rem(35);
               @include flexCenter();
               border: 1px solid $color-stroke01;
+              color: $color-text01;
             }
             .direction-text {
               @include font(16, 400);
+              color: $color-text01;
             }
             & + dl {
               margin-top: rem(12);
             }
+          }
+          .direction-text {
+            color: $color-text01;
           }
         }
       }
@@ -549,42 +576,38 @@
   }
   // ceo 인사말
   .ceo-intro-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(60);
+    @include responsive {
+      flex-direction: column;
+      gap: rem-m(20);
+    }
     .ceo-box {
+      width: rem(664);
+      position: relative;
       @include background('/assets/images/intro/ceo-bg.png', center, cover);
-      aspect-ratio: 1100 / 340; // 높이는 비율로 자동 계산
+      aspect-ratio: 664 / 393; // 높이는 비율로 자동 계산
       @include flexBetween();
+      @include responsive {
+        width: 100%;
+      }
       .ceo-text {
         font-family: $font-family-gmarket;
-        position: relative;
-        top: clamp(rem(50), 2vw, rem(70));
-        left: clamp(rem(80), 2vw, rem(100));
-        @include responsive {
-          width: 56%;
-        }
-        @include mobile {
-          top: clamp(rem(30), 2vw, rem(70));
-          left: clamp(rem(60), 2vw, rem(100));
-          width: 65%;
-        }
-        @include mobile-sm {
-          top: clamp(rem(20), 2vw, rem(70));
-          left: clamp(rem(20), 2vw, rem(100));
-          width: 68%;
-        }
+        position: absolute;
+        top: rem(30);
+        left: rem(32);
         p {
-          @include font(18, $color: $color-text02);
+          @include font(18, $color: $color-stroke00);
           margin-bottom: rem(8);
-          @include mobile {
-            display: none;
+          &.ceo-text-headline {
+            font-size: rem(24);
           }
         }
         strong {
-          @include font(26, 400);
+          @include font(24, 400);
           @include responsive {
             font-size: rem(24);
-          }
-          @include mobile {
-            font-size: rem-m(14);
           }
         }
       }
@@ -592,16 +615,15 @@
         width: rem(370);
       }
     }
+    .ceo-speech-wrap {
+      flex: 1;
+    }
     .ceo-speech {
-      margin-top: rem(40);
-      padding: 0 rem(240) 0 rem(50);
-      @include responsive {
-        padding: 0;
-      }
       p {
         @include font(18, 500, $color: $color-text02);
         strong {
-          color: #af1d2f;
+          color: $color-primary01;
+          text-decoration: underline;
         }
         & + p {
           margin-top: rem(25);
@@ -618,6 +640,7 @@
       span {
         margin-left: rem(16);
         @include font(24, 700);
+        color: $color-text01;
       }
     }
     &.sg {
@@ -1098,6 +1121,48 @@
           border-radius: 999px;
         }
       }
+    }
+  }
+  // 조직도
+  .tree {
+    padding: rem(60) rem(150) 0;
+    @include responsive {
+      padding: 0;
+    }
+  }
+  // 준비중
+  .comming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: rem(90) rem(118);
+    .comm01 {
+      padding-top: rem(63);
+      letter-spacing: -1px;
+      position: relative;
+      @include font(50, 300, 1.2);
+      color: $color-text01;
+      strong {
+        font-weight: 600;
+      }
+      &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(403);
+        height: rem(47);
+        background: url('/assets/images/intro/logo-comming.svg') no-repeat 0 0 / contain;
+      }
+    }
+    .comm02 {
+      margin-top: rem(23);
+      letter-spacing: -1px;
+      @include font(16, 400);
+      color: $color-text01;
     }
   }
 }
