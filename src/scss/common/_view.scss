@@ -89,7 +89,8 @@
       }
     }
     .file-area {
-      margin-top: 0;
+      //margin-top: 0;
+      margin-top: rem(20);
       display: flex;
       align-items: center;
       padding: rem(23) rem(20);
@@ -305,8 +306,9 @@
   }
   // 답변보기
   &.answer {
+    margin-top: rem(20);
     .title-area {
-      border-top: 2px solid $color-secondary01;
+      border-top: 1px solid $color-stroke02;
       h3 {
         i {
           margin-right: rem(10);

@@ -21,7 +21,7 @@
       @include font(28, 700, 1.5);
       font-family: $font-family-gmarket;
       color: $color-stroke00;
-      background-color: $color-secondary03;
+      background-color: $color-primary01;
       padding: rem(17) rem(32);
       @include mobile-sm {
         font-size: rem(24);
@@ -38,6 +38,7 @@
         @include font(24, 500);
       }
       strong {
+        display: block;
         margin-top: rem(20);
         word-break: break-word;
         @include font(40, 700);
@@ -324,7 +325,7 @@
   // 연혁
   .history-swiper {
     position: relative;
-    margin-top: rem(40);
+    margin-top: rem(60);
     max-width: none;
     width: calc(100vw - ((100vw - 1400px) / 2));
     overflow: hidden;
@@ -339,7 +340,7 @@
     }
 
     .swiper-wrapper {
-      padding-top: rem(24);
+      padding-top: rem(16);
       position: relative;
       z-index: 1;
     }
@@ -381,7 +382,6 @@
       }
     }
     .history-list {
-      margin-top: rem(40);
       position: relative;
       @include mobile {
         height: auto;
@@ -390,17 +390,17 @@
         padding: 0 rem(30);
       }
       .left {
-        @include font(28, 700, $color:$color-primary01);
+        @include font(32, 700, $color:$color-primary01);
         font-family: $font-family-gmarket;
       }
       .right {
-        margin-top: rem(20);
+        margin-top: rem(16);
         .date {
-          @include font(20, 600, $color:$color-text01);
+          @include font(18, 600, $color:$color-text01);
         }
         .text {
           font-size: rem(18);
-          margin-left: rem(20);
+          margin-left: rem(12);
         }
       }
       .thumb {

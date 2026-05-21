@@ -13,7 +13,6 @@
     }
     .cont-list {
       border: 1px solid $color-stroke05;
-      border-radius: rem(16);
       padding: rem(30);
       display: grid;
       grid-template-columns: repeat(2, minmax(rem(300), rem(380)));

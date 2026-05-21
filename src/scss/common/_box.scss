@@ -132,9 +132,14 @@
   }
   &.info {
     padding: rem(15) rem(40);
-    gap: rem(60);
+    gap: 0 rem(60);
     font-family: $font-family-gmarket;
     align-items: center;
+    @include responsive {
+      @include flexCenterColumn();
+      padding: rem-m(22.5);
+      gap: rem-m(20);
+    }
     .line-box-left {
       @include flexCenter();
       gap: rem(12);
@@ -153,7 +158,11 @@
     }
     .line-box-right {
       display: flex;
-      gap: rem(20);
+      gap: rem(40);
+      @include responsive {
+        flex-direction: column;
+        gap: 0;
+      }
       div {
         display: flex;
         align-items: center;
@@ -186,11 +195,6 @@
           @include font(20, 500, $color: $color-text02);
         }
       }
-    }
-    @include responsive {
-      @include flexCenterColumn();
-      padding: rem(22.5);
-      gap: rem(20);
     }
   }
   &.type02 {

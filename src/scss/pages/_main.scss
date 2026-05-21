@@ -82,10 +82,10 @@ section {
   }
 }
 .main-title {
-  font-size: rem(60);
-  font-weight: 600;
-  letter-spacing: -0.8px;
+  font-size: rem(40);
+  font-weight: 700;
   color: $color-text01;
+  font-family: $font-family-gmarket;
   @include mobile {
     font-size: rem-m(28);
   }
@@ -198,6 +198,7 @@ section {
    Section 1: mainquick
 ========================================================= */
 #s1.mainquick {
+  position: relative;
   height: 100vh;
   min-height: 100vh;
   position: relative;
@@ -263,6 +264,10 @@ section {
   bottom: rem(165);
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
+  @include mobile {
+    bottom: 1%;
+  }
   .label {
     font-size: 1rem;
     letter-spacing: rem(-0.5);
@@ -362,30 +367,34 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-        gap: 10px;
+        gap: rem(10);
         color: #fff;
         text-decoration: none;
-        border-radius: 12px;
-        padding: 8px 10px;
-        min-height: 74px;
+        border-radius: rem(12);
+        padding: rem(8) rem(10);
+        min-height: rem(74);
         width: 100%;
         @include mobile {
           flex-direction: row;
           min-height: auto;
-          padding: rem-m(16) rem-m(14);
+          padding: rem-m(16) rem-m(12);
           align-items: center;
+          justify-content: space-between;
+          gap: 0;
         }
         &:hover {
           background: rgba(0, 0, 0, 0.12);
           text-decoration: none;
         }
-        strong {
+        .tit {
           @include font(18, 700);
+          font-family: $font-family-gmarket;
           display: block;
           text-align: left;
           width: 100%;
           @include mobile {
             font-size: rem-m(14);
+            width: auto;
           }
         }
         .qicon {
@@ -395,6 +404,12 @@ section {
             width: rem-m(32);
             height: rem-m(32);
           }
+          img {
+            @include mobile {
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
       }
     }
@@ -403,13 +418,13 @@ section {
 
 @include responsive {
   .mainquick-copy {
-    margin-top: 120px;
+    margin-top: rem(120);
   }
   .mainquick-title {
-    font-size: 44px;
+    font-size: rem(44);
   }
   .quickbar {
-    height: 180px;
+    //height: 180px;
   }
   .quicklist {
     grid-template-columns: repeat(3, 1fr);
@@ -425,23 +440,20 @@ section {
 
 @include mobile-sm {
   .mainquick-copy {
-    margin-top: 90px;
+    margin-top: rem(90);
     max-width: 92%;
   }
   .mainquick-kicker {
-    font-size: 16px;
+    font-size: rem(16);
   }
   .mainquick-title {
-    font-size: 36px;
-  }
-  .quickbar {
-    height: 210px;
+    font-size: rem(36);
   }
   .scroll-cta {
-    bottom: 220px;
+    bottom: rem(220);
   }
   .mainquick-inner {
-    padding-bottom: 250px;
+    padding-bottom: rem(250);
   }
 }
 
@@ -475,10 +487,9 @@ section {
     padding: rem-m(54) 0;
   }
   .tcard {
-    background: #fff;
     color: #111;
-    border-radius: 10px;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    border-radius: rem(10);
+    box-shadow: 0 rem(18) 40px rgba(0, 0, 0, 0.22);
     overflow: hidden;
 
     &-head {
@@ -496,8 +507,9 @@ section {
 
     &-title {
       margin: 0;
-      font-size: rem(30);
-      font-weight: 700;
+      font-size: rem(28);
+      font-weight: 500;
+      font-family: $font-family-gmarket;
       @include mobile {
         font-size: rem-m(18);
       }
@@ -533,30 +545,34 @@ section {
 
     &-body {
       padding: rem(46) rem(40) rem(36);
+      background-color: $color-stroke00;
       @include mobile {
         padding: rem-m(20);
       }
       .station-bar {
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         @include mobile {
           justify-content: center;
         }
         .station-btn {
-          position: relative;
+          position: absolute;
+          top: rem(40);
           color: $color-text04;
           font-size: rem(25);
           font-weight: 700;
           min-width: rem(100);
           &.next {
-            margin-right: rem(50);
+            right: rem(50);
+            //margin-right: rem(50);
             @include mobile {
               display: none;
             }
           }
           &.prev {
-            margin-left: rem(50);
+            //margin-left: rem(50);
+            left: rem(50);
             @include mobile {
               display: none;
             }
@@ -571,7 +587,7 @@ section {
             display: block;
             content: '';
             position: absolute;
-            top: rem(19);
+            top: rem(-20);
             left: 50%;
             margin-left: rem(-7);
             width: rem(14);
@@ -610,9 +626,8 @@ section {
               display: block;
               padding-right: rem(34);
               margin-top: rem(10);
-              font-size: rem(44);
-              color: $color-text01;
-              font-weight: 700;
+              font-family: $font-family-gmarket;
+              @include font(32, 700, 1.3, $color: $color-text01);
               @include mobile {
                 font-size: rem-m(24);
               }
@@ -631,6 +646,7 @@ section {
               }
             }
             .station-btn {
+              padding-top: rem(10);
               width: 100%;
               border: 0;
               background: transparent;
@@ -716,6 +732,9 @@ section {
         margin-top: rem(28);
         .station-time-txt {
           display: inline-block;
+          @include mobile {
+            display: block;
+          }
           + .station-time-txt {
             margin-left: rem(20);
             @include mobile {
@@ -733,6 +752,7 @@ section {
         .time-txt {
           color: $color-text06;
           font-weight: 500;
+          width: rem(42);
         }
         &[aria-labelledby="tr-title"] {
           display: flex;
@@ -763,6 +783,7 @@ section {
             th {
               padding: rem(11) rem(8);
               height: auto;
+              background-color: $color-fill08;
             }
           }
         }
@@ -794,7 +815,7 @@ section {
             border-radius: 12px;
           }
           @include mobile-sm {
-            width: rem-m(200);
+            width: rem-m(240);
             top: rem-m(10);
             left: 50%;
           }
@@ -854,10 +875,11 @@ section {
     &-h3 {
       margin: 0 0 rem(16);
       font-size: rem(20);
-      font-weight: 600;
+      font-weight: 700;
       display: flex;
       align-items: center;
       gap: rem(10);
+      color: $color-text00;
       @include mobile {
         font-size: rem-m(14);
         margin-bottom: rem-m(8);
@@ -925,11 +947,16 @@ section {
     padding: rem-m(52) 0;
   }
 }
-
+.main-notice {
+  position: relative;
+}
 .main-notice-wrap {
-  margin-top: rem(30);
+  margin-top: rem(50);
+  @include responsive {
+    margin-top: rem-m(24);
+  }
   .main-tab-wrap {
-    position: relative;
+    //position: relative;
     display: grid;
     grid-template-columns: rem(220) 1fr;
     gap: rem(16);
@@ -942,33 +969,52 @@ section {
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
+        flex-wrap: wrap;
         @include desktop-medium {
           flex-direction: row;
+          justify-content: flex-start;
+          gap: rem-m(20);
+        }
+        @include mobile {
+          margin-bottom: 0;
+          gap: rem-m(5);
         }
         .tab-btn {
           position: relative;
-          width: 100%;
-          padding: rem(20) rem(12);
+          width: 45%;
+          padding: rem(25) rem(12);
           font-size: rem(18);
           text-align: left;
           margin-top: rem(5);
           border: 0 none;
           color: $color-text01;
+          font-family: $font-family-base;
+          @include desktop-medium {
+            flex: none;
+            width: auto;
+            margin-top: 0;
+          }
           &.is-active {
             font-size: rem(20);
-            font-weight: 600;
-            color: $color-text07;
+            font-weight: 700;
             background: none;
+            @include desktop-medium {
+              margin-top: rem-m(-5) !important;
+              padding-bottom: rem(28);
+            }
             &::after {
               display: block;
               content: '';
               position: absolute;
               bottom: rem(10);
               left: 0;
-              width: 40%;
-              height: 4px;
-              background-color: $color-secondary07;
+              width: 100%;
+              height: rem(4);
+              background-color: $color-primary01;
               border-radius: rem(5);
+              @include mobile {
+                height: rem-m(2);
+              }
             }
           }
           &:first-child {
@@ -994,10 +1040,13 @@ section {
               position: absolute;
               bottom: rem(10);
               left: 0;
-              width: 40%;
-              height: 4px;
+              width: 100%;
+              height: rem(4);
               background-color: $color-secondary07;
               border-radius: rem(5);
+              @include responsive {
+                height: rem-m(2);
+              }
             }
           }
         }
@@ -1025,6 +1074,10 @@ section {
               display: block;
               color: $color-primary01;
               margin-bottom: rem(24);
+              font-size: rem(20);
+              @include responsive {
+                margin-bottom: rem-m(12);
+              }
             }
             &:hover {
               .board-title,
@@ -1042,25 +1095,40 @@ section {
             white-space: nowrap;
             text-overflow: ellipsis;
             @include responsive {
-              width: 70%;
+              width: 100%;
+              font-size: rem-m(20);
+            }
+            @include mobile {
+              margin-bottom: rem-m(4);
             }
           }
           .board-contents {
-            height: rem(48);
+            height: rem(56);
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            color: $color-text02;
+            font-size: rem(20);
+            @include responsive {
+              font-size: rem-m(16);
+            }
           }
           .board-date {
             position: absolute;
-            top: rem(56);
+            top: rem(60);
             right: 0;
             font-size: rem(14);
             padding-left: rem(24);
+            @include responsive {
+              position: relative;
+              top: 0;
+              margin-bottom: rem-m(12);
+            }
             span {
               display: block;
               line-height: rem(20);
+              color: $color-text02;
             }
             &::before {
               display: block;
@@ -1071,7 +1139,7 @@ section {
               transform: translateY(-50%);
               width: rem(20);
               height: rem(20);
-              background: url('/assets/icons/ico-calendar.svg') no-repeat;
+              background: url('/assets/icons/ico-calendar-main.svg') no-repeat;
               background-size: contain;
             }
           }
@@ -1080,7 +1148,7 @@ section {
     }
     .add-btn {
       position: absolute;
-      top: rem(-70);
+      top: 0;
       right: 0;
       display: block;
       width: rem(40);
@@ -1092,7 +1160,7 @@ section {
 }
 .main-banner {
   padding-left: rem(220);
-  margin-top: rem(114);
+  margin-top: rem(140);
   @include desktop-medium {
     padding-left: 0;
     margin-top: rem-m(52);
@@ -1101,7 +1169,7 @@ section {
     display: flex;
     justify-content: space-between;
     gap: rem(20);
-    @include mobile {
+    @include responsive {
       flex-direction: column;
       gap: rem-m(20) 0;
     }
@@ -1109,8 +1177,12 @@ section {
       position: relative;
       width: 50%;
       height: rem(214);
-      @include mobile {
+      @include responsive {
         width: 100%;
+        height: rem-m(250);
+      }
+      @include mobile {
+        height: rem-m(200);
       }
       &::before {
         display: block;
@@ -1133,6 +1205,7 @@ section {
         background: url('/assets/icons/bn-arrow-right.svg') no-repeat center center;
         background-size: auto;
       }
+      /*
       &.list01 {
         background: url('/assets/images/main/banner01.jpg') no-repeat 0 0;
         background-size: cover;
@@ -1145,18 +1218,37 @@ section {
         &::before {
           background: url('/assets/icons/bn-icon02.svg') no-repeat center center;
         }
-      }
+      }*/
       a {
         display: block;
         color: $color-text00;
-        padding: rem(30);
         height: 100%;
+        position: relative;
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: left center;
+          @include responsive {
+            object-fit: cover;
+          }
+        }
         .title {
           font-size: rem(28);
           color: $color-stroke00;
           @include mobile {
             font-size: rem-m(20);
           }
+          span {
+            margin-left: rem(17);
+          }
+        }
+        .text {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: rem(30);
         }
         .desc {
           margin-top: rem(15);
@@ -1179,7 +1271,7 @@ section {
 ========================================================= */
 #s4.media {
   background: #efefef;
-  padding: 88px 0 110px;
+  padding: rem(110) 0;
   @include mobile {
     padding: rem-m(52) 0;
   }
@@ -1196,7 +1288,13 @@ section {
     gap: 0;
   }
   .inner {
-    margin-top: rem-m(52);
+    margin-top: rem(57);
+    @include desktop-medium {
+      margin-top: rem(100);
+    }
+    @include mobile {
+      margin-top: rem(57);
+    }
   }
   .main-tab-wrap {
     .tab-header {
@@ -1274,8 +1372,16 @@ section {
       > li {
           transition: transform 0.3s ease;
           width: 100%;
+          &:nth-child(odd) {
+            margin-top: rem(-57);
+            @include mobile {
+              margin-top: rem-m(20);
+            }
+          }
           + li {
-            margin-top: rem-m(20);
+            @include mobile {
+              margin-top: rem-m(20);
+            }
           }
         &:hover {
           transform: translateY(-10px);
@@ -1289,10 +1395,15 @@ section {
           display: block;
           .content-thumb {
             box-shadow: 0 2px 50px rgba(0, 0, 0, 0.2);
+            height: rem(246);
+            border-radius: rem(8);
             img {
               border-radius: rem(8);
               vertical-align: top;
               transition: filter 0.3s ease;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
             }
           }
           .content-info {

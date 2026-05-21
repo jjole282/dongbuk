@@ -1018,6 +1018,9 @@ body.scroll-lock {
 .container {
   width: min(var(--max), calc(100% - 48px));
   margin: 0 auto;
+  @include mobile {
+    width: min(var(--max), calc(100% - 40px));
+  }
 }
 .box-line {
   border: 1px solid $color-stroke07;
@@ -1031,6 +1034,12 @@ body.scroll-lock {
   @include mobile {
     padding: rem-m(20) rem-m(20) rem-m(40);
   }
+  .inner {
+    position: relative;
+    @include mobile {
+      padding-top: rem-m(63);
+    }
+  }
   .footer-nav {
     display: flex;
     gap: rem(40);
@@ -1038,6 +1047,7 @@ body.scroll-lock {
     padding-bottom: rem(30);
     @include mobile {
       gap: rem-m(20);
+      padding-bottom: rem-m(16);
     }
     li {
       position: relative;
@@ -1045,6 +1055,9 @@ body.scroll-lock {
         color: #fff;
         font-size: 1rem;
         font-weight: 400;
+        @include mobile {
+          font-size: rem-m(12);
+        }
       }
       &::before {
         display: block;
@@ -1083,6 +1096,9 @@ body.scroll-lock {
     padding-top: rem(23);
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      padding-top: rem-m(16);
+    }
     address {
       color: #fff;
       p {
@@ -1090,6 +1106,27 @@ body.scroll-lock {
         font-size: 1rem;
         color: #fff;
         font-weight: 300;
+        @include mobile {
+          line-height: rem-m(25);
+          font-size: rem-m(12);
+        }
+        strong {
+          @include mobile {
+            display: block;
+          }
+        }
+      }
+    }
+    .logo {
+      @include mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      img {
+        @include mobile {
+          width: rem-m(200);
+        }
       }
     }
   }

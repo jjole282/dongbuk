@@ -6,6 +6,9 @@
   // 역정보 (라디오 탭버튼, 셀렉트)
   h3 ~ h3 {
     margin-top: rem(80);
+    @include responsive {
+      margin-top: rem-m(40);
+    }
   }
   .station-line-wrap {
     padding-bottom: rem(60);
@@ -416,11 +419,29 @@
       margin-top: rem(80);
     }
     .justify-between {
-      flex-direction: column;
+      @include mobile {
+        flex-direction: column;
+      }
       .btn-wrap {
-        margin-top: rem(20);
+        @include mobile {
+          margin-top: rem(20);
+        }
         .btn-map {
-          margin-left: 0 !important;
+          @include mobile-sm {
+            width: 100%;
+          }
+          &:first-child {
+            @include mobile {
+              margin-left: 0;
+            }
+          }
+          + .btn-map {
+            margin-left: rem(10);
+            @include mobile-sm {
+              margin-left: 0;
+              margin-top: rem-m(10);
+            }
+          }
         }
       }
     }
@@ -768,7 +789,6 @@
   // 교통약자 편의시설
   .amenity-prm-wrap {
     background-color: $color-primary04;
-    border-radius: rem(16);
     padding: rem(50) rem(50) rem(50) rem(70);
     margin-bottom: rem(40);
     @include mobile {
@@ -785,7 +805,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        gap: rem(28);
+        gap: rem(10);
         background-color: $color-fill00;
         border-radius: rem(8);
         padding: rem(20) 0;
@@ -803,14 +823,17 @@
         div:first-child {
           width: rem(260);
           flex-shrink: 0;
+          position: relative;
+          left: rem(-28);
           @include responsive {
             width: rem(500);
+            left: 0;
           }
           @include mobile {
             width: 100%;
           }
           img {
-            border-radius: rem(20);
+            border-radius: rem(8);
           }
         }
         .amenity-prm-label {
@@ -868,8 +891,17 @@
   // 유실물 센터
   .line-box {
     margin-bottom: rem(80);
+    @include responsive {
+      margin-bottom: rem-m(40);
+    }
     &.info {
       flex-wrap: wrap;
+      .line-box-title {
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+      }
     }
   }
   // .info-box-wrap {

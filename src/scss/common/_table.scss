@@ -87,6 +87,11 @@ tr {
   }
   & + .table-wrap {
     margin-top: rem(40);
+    &.table-mobile {
+      @include responsive {
+        margin-top: 0;
+      }
+    }
   }
   & + h3 {
     margin-top: rem(40);
